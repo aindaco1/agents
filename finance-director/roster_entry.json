@@ -26,7 +26,7 @@
     "Strategic not transactional"
   ],
   "model_recommendations": {
-    "tier": "analytical-complex",
+    "tier": "heavy-reasoning",
     "best_overall": "claude-sonnet-4-6",
     "anthropic": {
       "model": "claude-sonnet-4-6",
@@ -47,7 +47,8 @@
       "model": "qwen3-235b",
       "alt": "deepseek-r1"
     },
-    "notes": "Scenario modeling, financial planning, and cross-functional tradeoff work need more reasoning than routine ops, but usually not the most expensive frontier model."
+    "notes": "Scenario modeling, financial planning, and cross-functional tradeoff work need more reasoning than routine ops, but usually not the most expensive frontier model.",
+    "_original_tier": "analytical-complex"
   },
   "slug": "finance-director",
   "entrypoint": "SOUL.md",
@@ -103,5 +104,15 @@
     "reasoning_effort": "medium",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "heavy-reasoning",
+    "alias": "opus",
+    "fallback_chain": [
+      "opus",
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

@@ -26,7 +26,7 @@
     "Needs IC researchers for execution"
   ],
   "model_recommendations": {
-    "tier": "deep-reasoning",
+    "tier": "heavy-reasoning",
     "best_overall": "claude-opus-4-5",
     "anthropic": {
       "model": "claude-opus-4-5",
@@ -47,7 +47,8 @@
       "model": "deepseek-r1",
       "alt": "qwen3-235b"
     },
-    "notes": "Methodology design, multi-source synthesis, and rigorous research planning justify premium reasoning models and larger thinking budgets."
+    "notes": "Methodology design, multi-source synthesis, and rigorous research planning justify premium reasoning models and larger thinking budgets.",
+    "_original_tier": "deep-reasoning"
   },
   "slug": "research-director",
   "entrypoint": "SOUL.md",
@@ -105,5 +106,15 @@
     "reasoning_effort": "high",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "heavy-reasoning",
+    "alias": "opus",
+    "fallback_chain": [
+      "opus",
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

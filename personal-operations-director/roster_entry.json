@@ -26,7 +26,7 @@
     "Needs specialists for deep expertise"
   ],
   "model_recommendations": {
-    "tier": "structured-reasoning",
+    "tier": "heavy-reasoning",
     "best_overall": "claude-sonnet-4-6",
     "anthropic": {
       "model": "claude-sonnet-4-6",
@@ -46,7 +46,8 @@
       "model": "qwen3-30b",
       "alt": "llama-4-scout"
     },
-    "notes": "Planning and coordination benefit from some reasoning headroom, but speed and consistency still matter more than maximal depth."
+    "notes": "Planning and coordination benefit from some reasoning headroom, but speed and consistency still matter more than maximal depth.",
+    "_original_tier": "structured-reasoning"
   },
   "slug": "personal-operations-director",
   "entrypoint": "SOUL.md",
@@ -94,5 +95,15 @@
     "reasoning_effort": "low",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "heavy-reasoning",
+    "alias": "opus",
+    "fallback_chain": [
+      "opus",
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

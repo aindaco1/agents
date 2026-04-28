@@ -30,7 +30,7 @@
     "Adds a step to the content pipeline — speed vs. accuracy tradeoff"
   ],
   "model_recommendations": {
-    "tier": "analytical",
+    "tier": "heavy-reasoning",
     "best_overall": "claude-sonnet-4-6",
     "anthropic": {
       "model": "claude-sonnet-4-6",
@@ -50,7 +50,8 @@
       "model": "qwen3-235b",
       "alt": "mistral-small-3.1"
     },
-    "notes": "Precision, source fidelity, and attention to detail matter more than creativity. Light reasoning helps surface implicit claims without overcomplicating the task."
+    "notes": "Precision, source fidelity, and attention to detail matter more than creativity. Light reasoning helps surface implicit claims without overcomplicating the task.",
+    "_original_tier": "analytical"
   },
   "slug": "fact-checker",
   "entrypoint": "SOUL.md",
@@ -100,5 +101,15 @@
     "reasoning_effort": "low",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "heavy-reasoning",
+    "alias": "opus",
+    "fallback_chain": [
+      "opus",
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

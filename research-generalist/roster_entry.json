@@ -125,5 +125,14 @@
     "reasoning_effort": "medium",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "strong-general",
+    "alias": "premium",
+    "fallback_chain": [
+      "premium",
+      "local",
+      "codex"
+    ]
   }
 }

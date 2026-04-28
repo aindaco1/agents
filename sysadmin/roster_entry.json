@@ -109,5 +109,14 @@
     "reasoning_effort": "low",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "structured-routine",
+    "alias": "cheap",
+    "fallback_chain": [
+      "cheap",
+      "local",
+      "premium"
+    ]
   }
 }

@@ -29,7 +29,7 @@
     "If the source is logically flawed, will not 'fix' it by adding new content"
   ],
   "model_recommendations": {
-    "tier": "editing",
+    "tier": "creative-writing",
     "best_overall": "claude-sonnet-4-6",
     "anthropic": {
       "model": "claude-sonnet-4-6",
@@ -49,7 +49,8 @@
       "model": "llama-4-maverick",
       "alt": "mistral-small-3.1"
     },
-    "notes": "Optimize for faithful paraphrase and human cadence. Do not add new information. Preserve structure and approximate length."
+    "notes": "Optimize for faithful paraphrase and human cadence. Do not add new information. Preserve structure and approximate length.",
+    "_original_tier": "editing"
   },
   "slug": "batty-replic-humanization-editor",
   "entrypoint": "SOUL.md",
@@ -110,5 +111,14 @@
     "reasoning_effort": "off",
     "verbosity": "low",
     "tool_bias": "none"
+  },
+  "hermes_model_hint": {
+    "tier": "creative-writing",
+    "alias": "claude",
+    "fallback_chain": [
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

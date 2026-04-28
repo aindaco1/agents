@@ -112,5 +112,14 @@
     "reasoning_effort": "off",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "creative-writing",
+    "alias": "claude",
+    "fallback_chain": [
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

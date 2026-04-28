@@ -103,5 +103,15 @@
     "reasoning_effort": "high",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "heavy-reasoning",
+    "alias": "opus",
+    "fallback_chain": [
+      "opus",
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }

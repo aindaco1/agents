@@ -26,7 +26,7 @@
     "Needs PMs and engineers for execution"
   ],
   "model_recommendations": {
-    "tier": "strategic-reasoning",
+    "tier": "heavy-reasoning",
     "best_overall": "claude-sonnet-4-6",
     "anthropic": {
       "model": "claude-sonnet-4-6",
@@ -46,7 +46,8 @@
       "model": "qwen3-235b",
       "alt": "llama-4-maverick"
     },
-    "notes": "Strategic product and leadership work needs balanced reasoning, synthesis, and communication. Use a strong general model with enough headroom for ambiguity."
+    "notes": "Strategic product and leadership work needs balanced reasoning, synthesis, and communication. Use a strong general model with enough headroom for ambiguity.",
+    "_original_tier": "strategic-reasoning"
   },
   "slug": "product-director",
   "entrypoint": "SOUL.md",
@@ -100,5 +101,15 @@
     "reasoning_effort": "medium",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_model_hint": {
+    "tier": "heavy-reasoning",
+    "alias": "opus",
+    "fallback_chain": [
+      "opus",
+      "claude",
+      "local",
+      "codex"
+    ]
   }
 }
