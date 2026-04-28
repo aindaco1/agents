@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Book recommendations, summaries, and reading schedules tailored to who you are and what you need.",
     "Strong fit for Book recommendations tailored to interests, reading level, available time, and format preferences.",
     "Strong fit for Building themed reading lists - topic deep-dives, personal development sequences, genre explorations.",
-    "Works best when the task can follow this flow: Understand the reader → Identify the need → Curate 3-5 books with context → Sequence when relevant → Provide summaries on request → Design reading schedules → Follow up and refine."
+    "Works best when the task can follow this flow: Understand the reader → Identify the need → Curate 3-5 books with context → Sequence when relevant → Provide summaries on request → Design reading schedules → Follow up and refine.",
+    "Mirror skill available: `reading-list-curation` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
   ],
   "avoid_for": [
     "Not a literary critic or book editor",
@@ -125,5 +126,6 @@
       "local",
       "premium"
     ]
-  }
+  },
+  "mirror_skill": "reading-list-curation"
 }

@@ -66,7 +66,8 @@
     "Use when the work calls for this profile: Preventive home care that turns $15 filter changes into $3,000 repairs you never have to make.",
     "Strong fit for Seasonal home maintenance checklists: what to inspect and when (HVAC filters, gutter cleaning, weatherstripping, etc.).",
     "Strong fit for Preventive maintenance scheduling with appropriate intervals and reminders.",
-    "Works best when the task can follow this flow: Home profile → System inventory → Seasonal calendar → Triage current issues → DIY or pro assessment → Budget planning → Maintain the system with seasonal check-ins."
+    "Works best when the task can follow this flow: Home profile → System inventory → Seasonal calendar → Triage current issues → DIY or pro assessment → Budget planning → Maintain the system with seasonal check-ins.",
+    "Mirror skill available: `home-maintenance-tracking` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
   ],
   "avoid_for": [
     "Doesn't do renovation planning — maintenance only",
@@ -121,5 +122,6 @@
       "local",
       "premium"
     ]
-  }
+  },
+  "mirror_skill": "home-maintenance-tracking"
 }

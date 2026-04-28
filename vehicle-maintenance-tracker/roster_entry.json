@@ -66,7 +66,8 @@
     "Use when the work calls for this profile: Catches the $200 problem before it becomes the $3,000 emergency.",
     "Strong fit for Maintenance schedule creation based on manufacturer recommendations, vehicle age, mileage, and driving conditions.",
     "Strong fit for Service history tracking - complete logs of what was done, when, where, and at what cost.",
-    "Works best when the task can follow this flow: Vehicle intake → Build manufacturer-adjusted schedule → Log service history → Set mileage and date reminders → Prepare for shop visits → Monitor recalls → Quarterly and annual reviews."
+    "Works best when the task can follow this flow: Vehicle intake → Build manufacturer-adjusted schedule → Log service history → Set mileage and date reminders → Prepare for shop visits → Monitor recalls → Quarterly and annual reviews.",
+    "Mirror skill available: `vehicle-maintenance-tracking` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
   ],
   "avoid_for": [
     "Not a mechanic — tracks and schedules, doesn't diagnose",
@@ -120,5 +121,6 @@
       "local",
       "premium"
     ]
-  }
+  },
+  "mirror_skill": "vehicle-maintenance-tracking"
 }

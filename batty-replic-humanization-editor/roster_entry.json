@@ -68,7 +68,8 @@
     "Use when you already have text and want it to read less templated / less machine-assisted.",
     "Provide the source text and (optionally) target register (formal, blunt, warm, restrained).",
     "If you have a writing sample, include it as a style reference for cadence—not as a source of ideas.",
-    "By default, return only the revised text; add brief edit notes only if requested."
+    "By default, return only the revised text; add brief edit notes only if requested.",
+    "Mirror skill available: `constrained-humanization-editing` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
   ],
   "avoid_for": [
     "Brainstorming new ideas, examples, metaphors, or arguments",
@@ -128,5 +129,6 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "mirror_skill": "constrained-humanization-editing"
 }

@@ -22309,7 +22309,8 @@
         "reasoning_effort": "low",
         "verbosity": "medium",
         "tool_bias": "balanced"
-      }
+      },
+      "mirror_skill": "reading-list-curation"
     },
     {
       "role_id": "fitness-coach",
@@ -24767,7 +24768,8 @@
         "reasoning_effort": "off",
         "verbosity": "medium",
         "tool_bias": "balanced"
-      }
+      },
+      "mirror_skill": "changelog-writing"
     },
     {
       "role_id": "content-generalist",
@@ -25259,7 +25261,8 @@
         "reasoning_effort": "low",
         "verbosity": "medium",
         "tool_bias": "balanced"
-      }
+      },
+      "mirror_skill": "vehicle-maintenance-tracking"
     },
     {
       "role_id": "ai-ethics-reviewer",
@@ -27570,7 +27573,8 @@
         "reasoning_effort": "low",
         "verbosity": "medium",
         "tool_bias": "balanced"
-      }
+      },
+      "mirror_skill": "home-maintenance-tracking"
     },
     {
       "role_id": "twitter-x-strategist",
@@ -30064,7 +30068,8 @@
         "reasoning_effort": "off",
         "verbosity": "low",
         "tool_bias": "none"
-      }
+      },
+      "mirror_skill": "constrained-humanization-editing"
     }
   ]
 }
