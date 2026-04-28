@@ -29,27 +29,35 @@
   ],
   "model_recommendations": {
     "tier": "strong-general",
-    "best_overall": "claude-sonnet-4-6",
-    "anthropic": {
-      "model": "claude-sonnet-4-6",
-      "thinking": "medium"
+    "best_overall": "anthropic/claude-sonnet-4.6",
+    "primary": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6"
     },
-    "openai": {
-      "model": "gpt-5.4-mini",
-      "reasoning": "medium"
+    "secondary": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-opus-4.7"
     },
-    "google": {
-      "model": "gemini-2.5-pro",
-      "thinking": "enabled"
+    "cheap": {
+      "provider": "openrouter",
+      "model": "openrouter/free"
     },
-    "kimi": {
-      "model": "kimi-k2.5"
+    "local": {
+      "provider": "mlx-local",
+      "model": "mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit"
     },
-    "ollama": {
-      "model": "llama-4-maverick",
-      "alt": "qwen3-30b"
+    "codex": {
+      "provider": "openai-codex",
+      "model": "gpt-5.5"
     },
-    "notes": "Best default for roles that need reliable reasoning, strong writing, and good tool use without paying flagship-model costs on every task."
+    "free_openrouter": [
+      "nousresearch/hermes-3-llama-3.1-405b:free",
+      "meta-llama/llama-3.3-70b-instruct:free",
+      "qwen/qwen3-next-80b-a3b-instruct:free",
+      "z-ai/glm-4.5-air:free",
+      "minimax/minimax-m2.5:free"
+    ],
+    "notes": "Sonnet 4.6 is the default. Free alternatives (Hermes 3 405B, Llama 3.3 70B, Qwen3 Next 80B) handle general agent work acceptably when budget matters."
   },
   "slug": "go-developer",
   "entrypoint": "SOUL.md",

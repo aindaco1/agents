@@ -29,26 +29,35 @@
   ],
   "model_recommendations": {
     "tier": "creative-writing",
-    "best_overall": "claude-sonnet-4-6",
-    "anthropic": {
-      "model": "claude-sonnet-4-6",
-      "thinking": "low"
+    "best_overall": "anthropic/claude-sonnet-4.6",
+    "primary": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6"
     },
-    "openai": {
-      "model": "gpt-5.4",
-      "reasoning": "none"
+    "secondary": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-opus-4.7"
     },
-    "google": {
-      "model": "gemini-2.5-pro"
+    "cheap": {
+      "provider": "openrouter",
+      "model": "openrouter/free"
     },
-    "kimi": {
-      "model": "kimi-k2.5"
+    "local": {
+      "provider": "mlx-local",
+      "model": "mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit"
     },
-    "ollama": {
-      "model": "llama-4-maverick",
-      "alt": "mistral-small-3.1"
+    "codex": {
+      "provider": "openai-codex",
+      "model": "gpt-5.5"
     },
-    "notes": "Prioritize voice, tone, and narrative quality. Keep reasoning light so the model stays flexible and stylistically strong."
+    "free_openrouter": [
+      "nousresearch/hermes-3-llama-3.1-405b:free",
+      "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
+      "google/gemma-3-27b-it:free",
+      "meta-llama/llama-3.3-70b-instruct:free",
+      "tencent/hy3-preview:free"
+    ],
+    "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental (Dolphin Mistral Venice uncensored, Hermes 3 405B, Gemma 3 27B)."
   },
   "slug": "resume-cv-writer",
   "entrypoint": "SOUL.md",

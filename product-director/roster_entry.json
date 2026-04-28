@@ -27,27 +27,35 @@
   ],
   "model_recommendations": {
     "tier": "heavy-reasoning",
-    "best_overall": "claude-sonnet-4-6",
-    "anthropic": {
-      "model": "claude-sonnet-4-6",
-      "thinking": "medium"
+    "best_overall": "anthropic/claude-opus-4.7",
+    "primary": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-opus-4.7"
     },
-    "openai": {
-      "model": "gpt-5.4",
-      "reasoning": "medium"
+    "secondary": {
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6"
     },
-    "google": {
-      "model": "gemini-2.5-pro"
+    "cheap": {
+      "provider": "openrouter",
+      "model": "openrouter/free"
     },
-    "kimi": {
-      "model": "kimi-k2.5"
+    "local": {
+      "provider": "mlx-local",
+      "model": "mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit"
     },
-    "ollama": {
-      "model": "qwen3-235b",
-      "alt": "llama-4-maverick"
+    "codex": {
+      "provider": "openai-codex",
+      "model": "gpt-5.5"
     },
-    "notes": "Strategic product and leadership work needs balanced reasoning, synthesis, and communication. Use a strong general model with enough headroom for ambiguity.",
-    "_original_tier": "strategic-reasoning"
+    "free_openrouter": [
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "inclusionai/ling-2.6-1t:free",
+      "qwen/qwen3-coder:free",
+      "openai/gpt-oss-120b:free",
+      "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free"
+    ],
+    "notes": "Use opus for hardest reasoning. Free fallbacks are large open-weight models (Nemotron 3 Super 120B, Qwen3 Coder 480B, Ling-2.6-1T) but lag behind Opus/Sonnet on nuanced judgment."
   },
   "slug": "product-director",
   "entrypoint": "SOUL.md",
