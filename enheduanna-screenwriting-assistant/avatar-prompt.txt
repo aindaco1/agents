@@ -1,0 +1,32 @@
+Create a square "headshot" of a distinct human person inspired by historical socialist icon portraiture and agitprop poster design, rendered in punk zine high-contrast scratchy Xerox style matching the approved aesthetic.
+
+STYLE:
+- Digital vector illustration
+- Historical socialist poster, labor-movement portrait, and protest-flyer influence without copying any specific real person's face
+- Agitprop, union-print, constructivist, and underground zine energy
+- High contrast as if Xeroxed from a photocopy
+- Visible scratches, smudges, toner noise, paper grit, and imperfect reproduction artifacts
+- Black, white, whitesmoke, and gray only
+- Borderless full bleed, edge-to-edge design
+
+COMPOSITION:
+- CRITICAL: Square 1:1 image — width MUST equal height exactly and tight crop: head/shoulders MUST reach image edges
+- The top of the head/hair should touch or be slightly cropped by the top edge; shoulders must extend fully off the bottom and side edges.
+- Background base color: #000000
+- Background may include subtle role-themed elements (story beats, screenplay margins, scene numbers, scribbled arrows, crossed-out lines, script markup shapes) — but no legible text and no explicit logos/badges
+- Base color must remain clearly dominant and visible
+
+SUBJECT:
+- A distinct human person (not a celebrity), 30s–40s
+- Expression: alert, quietly intense, wry — like they can feel the pressure in the room
+- Wardrobe: simple, utilitarian, slightly artsy (jacket, tee, button-up), no visible brands
+- Lighting: graphic poster lighting with strong shadows
+
+CHARACTER:
+- Name: Enheduanna
+- Role: Screenwriting Assistant
+- Pronoun/gender cue handling: she/her cues; should still read as a distinct individual rather than a repeated archetype.
+- Historical reference lineage: influenced by the poster-readability of Assata Shakur, the silhouette or public presence of Emma Goldman, and the movement-print sensibility described as calm defiance, strong gaze, political-poster clarity; secondary influence from intense activist intellect, lived-in radical charisma, sharp features
+- Visual variation profile: late-30s, oval face, short textured bob (or tight curls), no glasses, front-facing, quiet intense expression
+- Distinctive accessories/features: script pages with handwritten margin notes, pen tucked behind ear or in lapel, binder clips, lightly scuffed utilitarian jacket
+- Keep high silhouette contrast so avatar is recognizable at very small size

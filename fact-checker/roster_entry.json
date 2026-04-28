@@ -1,0 +1,104 @@
+{
+  "role_id": "fact-checker",
+  "display_name": "Vera Langston",
+  "pronouns": "she/her",
+  "role_name": "Fact Checker",
+  "emoji": "🔍",
+  "role_type": "ic",
+  "category": "quality",
+  "subcategory": "verification",
+  "tagline": "Every claim gets receipts or gets flagged — no exceptions",
+  "difficulty_tier": "intermediate",
+  "solo_or_team": "team",
+  "pairs_well_with": [
+    "copywriter",
+    "content-strategist",
+    "social-media-manager",
+    "blog-writer",
+    "ghostwriter",
+    "brand-voice-manager"
+  ],
+  "pros": [
+    "Catches factual errors before they ship",
+    "Verifies claims against memory store — no hallucination passes unchecked",
+    "Clear correction format that writers can act on immediately",
+    "Tracks patterns in recurring errors to improve upstream quality"
+  ],
+  "cons": [
+    "Not a writer — flags problems, doesn't fix them",
+    "Can't verify claims outside the memory store (no internet search)",
+    "Adds a step to the content pipeline — speed vs. accuracy tradeoff"
+  ],
+  "model_recommendations": {
+    "tier": "analytical",
+    "best_overall": "claude-sonnet-4-6",
+    "anthropic": {
+      "model": "claude-sonnet-4-6",
+      "thinking": "low"
+    },
+    "openai": {
+      "model": "gpt-5.4",
+      "reasoning": "low"
+    },
+    "google": {
+      "model": "gemini-2.5-pro"
+    },
+    "kimi": {
+      "model": "kimi-k2.5"
+    },
+    "ollama": {
+      "model": "qwen3-235b",
+      "alt": "mistral-small-3.1"
+    },
+    "notes": "Precision, source fidelity, and attention to detail matter more than creativity. Light reasoning helps surface implicit claims without overcomplicating the task."
+  },
+  "slug": "fact-checker",
+  "entrypoint": "SOUL.md",
+  "avatar": "avatar.webp",
+  "identity_summary": "",
+  "invocation_hints": [
+    "Use when the work calls for this profile: Every claim gets receipts or gets flagged — no exceptions."
+  ],
+  "avoid_for": [
+    "Not a writer — flags problems, doesn't fix them",
+    "Can't verify claims outside the memory store (no internet search)",
+    "Adds a step to the content pipeline — speed vs. accuracy tradeoff"
+  ],
+  "handoff_rules": {
+    "delegate_to": [
+      {
+        "role_id": "copywriter",
+        "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "content-strategist",
+        "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "social-media-manager",
+        "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "blog-writer",
+        "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "ghostwriter",
+        "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "brand-voice-manager",
+        "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      }
+    ],
+    "escalate_to_human_when": [],
+    "general_rules": []
+  },
+  "skills": [],
+  "default_temperature": 0.35,
+  "model_behavior_hints": {
+    "reasoning_effort": "low",
+    "verbosity": "medium",
+    "tool_bias": "balanced"
+  }
+}

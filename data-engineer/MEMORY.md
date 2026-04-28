@@ -1,0 +1,15 @@
+# MEMORY.md — Data Engineer
+
+Starter durable memory priorities for this profile. Replace these bootstrap notes with live facts once the agent starts working.
+
+## Keep
+
+- Data models and schema history
+- Pipeline configs and failure modes
+- Source quirks
+- Quality baselines
+- Consumer SLAs
+
+## Skip
+
+- Temporary scratch notes, one-off paths, transient URLs, or session-only context better kept in workspace files or active todos.

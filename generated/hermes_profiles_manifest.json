@@ -1,0 +1,2194 @@
+{
+  "generated_from": "/Users/aindaco1/Library/Mobile Documents/com~apple~CloudDocs/agents",
+  "target_profiles_root": "/Users/aindaco1/.hermes/profiles",
+  "count": 243,
+  "items": [
+    {
+      "slug": "3d-graphics-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/3d-graphics-engineer",
+      "display_name": "Fumiko Varga",
+      "role_name": "3D/Graphics Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "academic-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/academic-researcher",
+      "display_name": "Dr. Marit Rodríguez",
+      "role_name": "Academic Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "academic-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/academic-writer",
+      "display_name": "Dr. Nadia Ehrenberg",
+      "role_name": "Academic Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "accessibility-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/accessibility-specialist",
+      "display_name": "Izumi Fontaine",
+      "role_name": "Accessibility Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "account-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/account-manager",
+      "display_name": "Lucia Ferreira",
+      "role_name": "Account Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "adhd-executive-function-coach",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/adhd-executive-function-coach",
+      "display_name": "Giselle Moretti",
+      "role_name": "ADHD Executive Function Coach",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "adventure-outdoor-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/adventure-outdoor-planner",
+      "display_name": "Sierra Blackwood",
+      "role_name": "Adventure/Outdoor Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "affiliate-partnerships-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/affiliate-partnerships-manager",
+      "display_name": "Halima Espíndola",
+      "role_name": "Affiliate/Partnerships Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "agent-performance-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/agent-performance-analyst",
+      "display_name": "Dmitri Volkov",
+      "role_name": "Agent Performance Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "agent-relations-expert",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/agent-relations-expert",
+      "display_name": "Lori",
+      "role_name": "Agent Relations Expert",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "ai-ethics-reviewer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ai-ethics-reviewer",
+      "display_name": "Rowan Achebe",
+      "role_name": "AI Ethics Reviewer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "ai-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ai-generalist",
+      "display_name": "Genji Henriksen",
+      "role_name": "AI & Automation Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "ai-llm-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ai-llm-specialist",
+      "display_name": "River Bustamante",
+      "role_name": "AI/LLM Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "ai-program-director",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ai-program-director",
+      "display_name": "Diane Okoro",
+      "role_name": "AI Program Director",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "ai-workflow-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ai-workflow-designer",
+      "display_name": "Lina Farooqi",
+      "role_name": "AI Workflow Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "airtable-builder",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/airtable-builder",
+      "display_name": "Odin Whitmore",
+      "role_name": "Airtable Builder",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "angular-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/angular-developer",
+      "display_name": "Alaric Osei",
+      "role_name": "Angular Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "api-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/api-designer",
+      "display_name": "Pedro Santiago",
+      "role_name": "API Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "audio-video-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/audio-video-engineer",
+      "display_name": "Rohan Kapoor",
+      "role_name": "Audio/Video Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "automation-architect",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/automation-architect",
+      "display_name": "Adriel Chandrasekaran",
+      "role_name": "Automation Architect",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "backend-architect",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/backend-architect",
+      "display_name": "Marcelino Vega",
+      "role_name": "Backend Architect",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "backup-recovery-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/backup-recovery-specialist",
+      "display_name": "Darnell Deschamps",
+      "role_name": "Backup & Recovery Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "batty-replic-humanization-editor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/batty-replic-humanization-editor",
+      "display_name": "Batty Replic",
+      "role_name": "Constrained Humanization Editor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "blockchain-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/blockchain-developer",
+      "display_name": "Kofi Asante",
+      "role_name": "Blockchain Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "blog-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/blog-writer",
+      "display_name": "Minato Cole",
+      "role_name": "Blog Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "bookkeeper",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/bookkeeper",
+      "display_name": "Grace Jørgensen",
+      "role_name": "Bookkeeper",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "brand-voice-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/brand-voice-manager",
+      "display_name": "Elliott Nkomo",
+      "role_name": "Brand Voice Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "browser-extension-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/browser-extension-developer",
+      "display_name": "Tariq El-Masri",
+      "role_name": "Browser Extension Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "budget-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/budget-manager",
+      "display_name": "Tomás Darvish",
+      "role_name": "Budget Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "business-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/business-analyst",
+      "display_name": "Lucero Mazumdar",
+      "role_name": "Business Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "business-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/business-generalist",
+      "display_name": "Akemi Calloway",
+      "role_name": "Business Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "calendar-optimizer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/calendar-optimizer",
+      "display_name": "Sana Abbasi",
+      "role_name": "Calendar Optimizer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "changelog-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/changelog-writer",
+      "display_name": "Riku Narayan",
+      "role_name": "Changelog Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "chatbot-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/chatbot-designer",
+      "display_name": "Devraj Silva",
+      "role_name": "Chatbot Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "chief-of-staff",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/chief-of-staff",
+      "display_name": "Frank",
+      "role_name": "Chief of Staff",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "cli-tool-builder",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/cli-tool-builder",
+      "display_name": "Ehsan Figueroa",
+      "role_name": "CLI Tool Builder",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "cloud-architect-aws",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/cloud-architect-aws",
+      "display_name": "Kavitha Nakashima",
+      "role_name": "Cloud Architect (AWS)",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "cloud-architect-azure",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/cloud-architect-azure",
+      "display_name": "Jordan Avery",
+      "role_name": "Cloud Architect (Azure)",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "cloud-architect-gcp",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/cloud-architect-gcp",
+      "display_name": "Andre Petrov",
+      "role_name": "Cloud Architect (GCP)",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "competitive-intelligence-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/competitive-intelligence-analyst",
+      "display_name": "Peizhi Holbrook",
+      "role_name": "Competitive Intelligence Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "computer-vision-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/computer-vision-engineer",
+      "display_name": "Naveen Deshpande",
+      "role_name": "Computer Vision Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "content-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/content-generalist",
+      "display_name": "Riley Sato",
+      "role_name": "Content Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "content-strategist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/content-strategist",
+      "display_name": "Naomi Baptiste",
+      "role_name": "Content Strategist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "copywriter",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/copywriter",
+      "display_name": "Isolde Reeves",
+      "role_name": "Copywriter",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "core-development-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/core-development-generalist",
+      "display_name": "Chitra Ríos",
+      "role_name": "Core Development Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "course-curriculum-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/course-curriculum-planner",
+      "display_name": "Clara Pedersen",
+      "role_name": "Course Curriculum Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "cpp-systems-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/cpp-systems-engineer",
+      "display_name": "Vera Kuznetsova",
+      "role_name": "C/C++ Systems Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "creative-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/creative-writer",
+      "display_name": "Soren Bakke",
+      "role_name": "Creative Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "crypto-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/crypto-analyst",
+      "display_name": "Raúl Jiménez",
+      "role_name": "Crypto Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "culture-values-curator",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/culture-values-curator",
+      "display_name": "Ghassan Delacroix",
+      "role_name": "Culture & Values Curator",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "data-ai-ml-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/data-ai-ml-generalist",
+      "display_name": "Hassan Al-Farsi",
+      "role_name": "Data, AI & ML Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "data-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/data-analyst",
+      "display_name": "Owen Gallagher",
+      "role_name": "Data Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "data-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/data-engineer",
+      "display_name": "Matías Contreras",
+      "role_name": "Data Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "data-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/data-researcher",
+      "display_name": "Jalila Gallardo",
+      "role_name": "Data Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "data-scientist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/data-scientist",
+      "display_name": "Ingvar Novak",
+      "role_name": "Data Scientist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "database-administrator",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/database-administrator",
+      "display_name": "Olamide Cartwright",
+      "role_name": "Database Administrator",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "database-architect-nosql",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/database-architect-nosql",
+      "display_name": "Niels Grünwald",
+      "role_name": "Database Architect (NoSQL)",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "deployment-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/deployment-engineer",
+      "display_name": "Wren Habibi",
+      "role_name": "Deployment Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "design-director",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/design-director",
+      "display_name": "Dagmar Restrepo",
+      "role_name": "Design Director",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "design-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/design-generalist",
+      "display_name": "Eiji Bai",
+      "role_name": "Design & Creative Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "developer-relations",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/developer-relations",
+      "display_name": "Nalini Das",
+      "role_name": "Developer Relations",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "devops-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/devops-engineer",
+      "display_name": "Ravi Chakraborty",
+      "role_name": "DevOps Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "digital-declutter-agent",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/digital-declutter-agent",
+      "display_name": "Nolan Bright",
+      "role_name": "Digital Declutter Agent",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "discord-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/discord-manager",
+      "display_name": "Layla Qureshi",
+      "role_name": "Discord Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "django-fastapi-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/django-fastapi-specialist",
+      "display_name": "Omid Lindgren",
+      "role_name": "Django/FastAPI Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "documentation-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/documentation-engineer",
+      "display_name": "Yuna Kobayashi",
+      "role_name": "Documentation Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "editor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/editor",
+      "display_name": "Vivian Cho",
+      "role_name": "Editor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "elixir-erlang-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/elixir-erlang-engineer",
+      "display_name": "Cormac Brennan",
+      "role_name": "Elixir/Erlang Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "email-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/email-manager",
+      "display_name": "Omar Farah",
+      "role_name": "Email Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "email-marketer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/email-marketer",
+      "display_name": "Simone Montemayor",
+      "role_name": "Email Marketer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "email-server-admin",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/email-server-admin",
+      "display_name": "Hanna Bergström",
+      "role_name": "Email Server Admin",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "embedded-systems-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/embedded-systems-engineer",
+      "display_name": "Adaeze Okonkwo",
+      "role_name": "Embedded Systems Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "emergency-prep-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/emergency-prep-planner",
+      "display_name": "Isandro Kulkarni",
+      "role_name": "Emergency Preparedness Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "engineering-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/engineering-generalist",
+      "display_name": "Casey Nguyễn",
+      "role_name": "Engineering Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "engineering-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/engineering-manager",
+      "display_name": "Anika Johansson",
+      "role_name": "Engineering Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "enheduanna-screenwriting-assistant",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/enheduanna-screenwriting-assistant",
+      "display_name": "Enheduanna",
+      "role_name": "Screenwriting Assistant",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "event-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/event-planner",
+      "display_name": "Valentina Cruz",
+      "role_name": "Event Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "fact-checker",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/fact-checker",
+      "display_name": "Vera Langston",
+      "role_name": "Fact Checker",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "family-calendar-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/family-calendar-manager",
+      "display_name": "Lucía Enomoto",
+      "role_name": "Family Calendar Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "figma-to-code-translator",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/figma-to-code-translator",
+      "display_name": "Azhar Cifuentes",
+      "role_name": "Figma-to-Code Translator",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "finance-director",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/finance-director",
+      "display_name": "Miriam Castellano",
+      "role_name": "Finance Director",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "finance-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/finance-generalist",
+      "display_name": "Katrine Park",
+      "role_name": "Finance & Trading Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "financial-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/financial-analyst",
+      "display_name": "Ethan Ferenczi",
+      "role_name": "Financial Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "fitness-coach",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/fitness-coach",
+      "display_name": "Osamu Hale",
+      "role_name": "Fitness Coach",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "framework-specialist-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/framework-specialist-generalist",
+      "display_name": "Tobias Engström",
+      "role_name": "Framework Specialist Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "frontend-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/frontend-developer",
+      "display_name": "Pranav Chandran",
+      "role_name": "Frontend Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "full-stack-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/full-stack-engineer",
+      "display_name": "Ananya Webb",
+      "role_name": "Full-Stack Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "fundraising-strategist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/fundraising-strategist",
+      "display_name": "Jianwei Delgado",
+      "role_name": "Fundraising Strategist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "game-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/game-developer",
+      "display_name": "Lamia Jaramillo",
+      "role_name": "Game Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "garden-yard-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/garden-yard-manager",
+      "display_name": "Mei-Ling Jeong",
+      "role_name": "Garden/Yard Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "ghostwriter",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ghostwriter",
+      "display_name": "Joaquín Mercer",
+      "role_name": "Ghostwriter",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "gift-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/gift-planner",
+      "display_name": "Jaiveer Tanaka",
+      "role_name": "Gift Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "github-actions-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/github-actions-specialist",
+      "display_name": "Daiyu Archer",
+      "role_name": "GitHub Actions Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "go-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/go-developer",
+      "display_name": "Dina Khoury",
+      "role_name": "Go Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "grant-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/grant-writer",
+      "display_name": "Ayo Oladipo",
+      "role_name": "Grant Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "graphql-architect",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/graphql-architect",
+      "display_name": "Niklas Bergman",
+      "role_name": "GraphQL Architect",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "growth-marketer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/growth-marketer",
+      "display_name": "Diego Eriksson",
+      "role_name": "Growth Marketer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "habit-tracker",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/habit-tracker",
+      "display_name": "Johanne Khalaji",
+      "role_name": "Habit Tracker",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "health-tracker",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/health-tracker",
+      "display_name": "Oscar Lindström",
+      "role_name": "Health Tracker",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "health-wellness-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/health-wellness-generalist",
+      "display_name": "Elena Vasquez",
+      "role_name": "Health & Wellness Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "home-family-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/home-family-generalist",
+      "display_name": "Arvid Papadopoulos",
+      "role_name": "Home & Family Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "home-maintenance-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/home-maintenance-manager",
+      "display_name": "Uma Krishnamurthy",
+      "role_name": "Home Maintenance Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "home-network-admin",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/home-network-admin",
+      "display_name": "Cayetano Mehta",
+      "role_name": "Home Network Admin",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "home-renovation-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/home-renovation-planner",
+      "display_name": "Avery Lindström",
+      "role_name": "Home Renovation Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "hr-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/hr-generalist",
+      "display_name": "Mika Saarinen",
+      "role_name": "HR & Team Management Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "hubspot-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/hubspot-manager",
+      "display_name": "Amara Diallo",
+      "role_name": "HubSpot Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "inbox-zero-agent",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/inbox-zero-agent",
+      "display_name": "Zuri Mwangi",
+      "role_name": "Inbox Zero Agent",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "infographic-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/infographic-designer",
+      "display_name": "Rafael Domínguez",
+      "role_name": "Infographic Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "infra-devops-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/infra-devops-generalist",
+      "display_name": "Delilah Okonjo",
+      "role_name": "Infrastructure & DevOps Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "investigative-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/investigative-researcher",
+      "display_name": "Tomás Aguilar",
+      "role_name": "Investigative Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "ip-patent-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ip-patent-researcher",
+      "display_name": "Meera Khatri",
+      "role_name": "IP & Patent Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "it-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/it-generalist",
+      "display_name": "Dani Czarnecki",
+      "role_name": "IT & Sysadmin Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "it-operations-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/it-operations-manager",
+      "display_name": "Emeka Obi",
+      "role_name": "IT Operations Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "java-kotlin-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/java-kotlin-engineer",
+      "display_name": "Habiba Sarkis",
+      "role_name": "Java/Kotlin Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "kids-activity-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/kids-activity-planner",
+      "display_name": "Tomás Rivera",
+      "role_name": "Kids Activity Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "kubernetes-architect",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/kubernetes-architect",
+      "display_name": "Mei-Lin Chang",
+      "role_name": "Kubernetes Architect",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "language-learning-coach",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/language-learning-coach",
+      "display_name": "Luciana Daigo",
+      "role_name": "Language Learning Coach",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "language-specialist-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/language-specialist-generalist",
+      "display_name": "Parisa Bazargan",
+      "role_name": "Language Specialist Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "leadership-ops-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/leadership-ops-generalist",
+      "display_name": "Carmen Delgado-Park",
+      "role_name": "Leadership & Operations Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "legacy-modernizer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/legacy-modernizer",
+      "display_name": "Gonzalo Ramanathan",
+      "role_name": "Legacy Modernizer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "legal-advisor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/legal-advisor",
+      "display_name": "Bharat Goto",
+      "role_name": "Legal Advisor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "linkedin-content-creator",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/linkedin-content-creator",
+      "display_name": "Juliette Moreau",
+      "role_name": "LinkedIn Content Creator",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "localization-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/localization-specialist",
+      "display_name": "Kjell Tanaka-Morrison",
+      "role_name": "Localization Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "logo-brand-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/logo-brand-designer",
+      "display_name": "Indrani Morimoto",
+      "role_name": "Logo/Brand Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "mac-power-user",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/mac-power-user",
+      "display_name": "Luz Fujimura",
+      "role_name": "Mac Power User",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "market-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/market-researcher",
+      "display_name": "Daniel Herrera",
+      "role_name": "Market Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "market-watcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/market-watcher",
+      "display_name": "Dalila Naidu",
+      "role_name": "Market Watcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "marketing-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/marketing-generalist",
+      "display_name": "Río Castillo",
+      "role_name": "Marketing Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "mcp-server-builder",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/mcp-server-builder",
+      "display_name": "Joris Torres",
+      "role_name": "MCP Server Builder",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "meal-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/meal-planner",
+      "display_name": "Ximena Sharma",
+      "role_name": "Meal Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "meme-humor-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/meme-humor-writer",
+      "display_name": "Zara Fadel",
+      "role_name": "Meme/Humor Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "mental-wellness-coach",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/mental-wellness-coach",
+      "display_name": "Xander Jabari",
+      "role_name": "Mental Wellness & Life Coach",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "mermaid-diagram-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/mermaid-diagram-specialist",
+      "display_name": "Pascale Ström",
+      "role_name": "Mermaid/Diagram Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "ml-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ml-engineer",
+      "display_name": "Amir Tehrani",
+      "role_name": "ML Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "mlops-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/mlops-engineer",
+      "display_name": "Daniela Reyes",
+      "role_name": "MLOps Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "mobile-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/mobile-developer",
+      "display_name": "Kai Nakamura",
+      "role_name": "Mobile Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "motion-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/motion-designer",
+      "display_name": "Hilde Ruiz",
+      "role_name": "Motion Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "moving-relocation-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/moving-relocation-planner",
+      "display_name": "Jasmine Martinović",
+      "role_name": "Moving/Relocation Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "network-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/network-engineer",
+      "display_name": "Leander Vargas",
+      "role_name": "Network Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "newsletter-curator",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/newsletter-curator",
+      "display_name": "Tomás Beltrán",
+      "role_name": "Newsletter Curator",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "newsletter-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/newsletter-writer",
+      "display_name": "Yael Shimoni",
+      "role_name": "Newsletter Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "niche-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/niche-generalist",
+      "display_name": "Quinn Abernathy",
+      "role_name": "Niche & Emerging Roles Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "nlp-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/nlp-engineer",
+      "display_name": "Farah Al-Rashidi",
+      "role_name": "NLP Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "note-taking-synthesizer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/note-taking-synthesizer",
+      "display_name": "Iris Papadimitriou",
+      "role_name": "Note-Taking Synthesizer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "notion-architect",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/notion-architect",
+      "display_name": "Tomás Esfahani",
+      "role_name": "Notion Architect",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "onboarding-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/onboarding-specialist",
+      "display_name": "Liwei Chen-Williams",
+      "role_name": "Onboarding Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "open-source-community-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/open-source-community-manager",
+      "display_name": "Kit Arakawa",
+      "role_name": "Open Source Community Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "open-source-maintainer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/open-source-maintainer",
+      "display_name": "Henrik Lindqvist",
+      "role_name": "Open Source Maintainer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "operations-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/operations-manager",
+      "display_name": "Florian Whitfield",
+      "role_name": "Operations Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "paid-ads-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/paid-ads-manager",
+      "display_name": "Wes Ghanem",
+      "role_name": "Paid Ads Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "patent-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/patent-analyst",
+      "display_name": "Ingrid Tran",
+      "role_name": "Patent Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "penetration-tester",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/penetration-tester",
+      "display_name": "Sage Andersen",
+      "role_name": "Penetration Tester",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "performance-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/performance-engineer",
+      "display_name": "Renzo Bautista",
+      "role_name": "Performance Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "performance-review-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/performance-review-writer",
+      "display_name": "Hemant Liang",
+      "role_name": "Performance Review Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "personal-assistant",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/personal-assistant",
+      "display_name": "Gauri Kovacs",
+      "role_name": "Personal Assistant",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "personal-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/personal-generalist",
+      "display_name": "Arlo Mendez-Kim",
+      "role_name": "Personal Generalist (Education & Learning)",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "personal-operations-director",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/personal-operations-director",
+      "display_name": "Suki Amjadi",
+      "role_name": "Personal Operations Director",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "pet-care-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/pet-care-manager",
+      "display_name": "Tanya Rowe",
+      "role_name": "Pet Care Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "php-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/php-developer",
+      "display_name": "Dalia Mansour",
+      "role_name": "PHP Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "platform-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/platform-engineer",
+      "display_name": "Sora Navarrete",
+      "role_name": "Platform Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "podcast-guest-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/podcast-guest-researcher",
+      "display_name": "Xiomara Flores",
+      "role_name": "Podcast Guest Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "podcast-producer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/podcast-producer",
+      "display_name": "Nico Ferrante",
+      "role_name": "Podcast Producer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "portfolio-tracker",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/portfolio-tracker",
+      "display_name": "Marcus Chen",
+      "role_name": "Portfolio Tracker",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "pr-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/pr-writer",
+      "display_name": "Desmond Clarke",
+      "role_name": "PR Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "presentation-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/presentation-designer",
+      "display_name": "Basima Nakamura-Singh",
+      "role_name": "Presentation Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "pricing-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/pricing-analyst",
+      "display_name": "Liam Fitzgerald",
+      "role_name": "Pricing Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "privacy-security-advisor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/privacy-security-advisor",
+      "display_name": "Leon Rydberg",
+      "role_name": "Privacy & Security Advisor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "process-management-expert",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/process-management-expert",
+      "display_name": "Lori",
+      "role_name": "Process Management Expert",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "product-director",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/product-director",
+      "display_name": "Nayeli Padmanabhan",
+      "role_name": "Product Director",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "product-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/product-generalist",
+      "display_name": "Mateo Ibarra",
+      "role_name": "Product Tools Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "product-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/product-manager",
+      "display_name": "Chiyo Nørgaard",
+      "role_name": "Product Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "product-marketing-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/product-marketing-manager",
+      "display_name": "Corwin Washington",
+      "role_name": "Product Marketing Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "productivity-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/productivity-generalist",
+      "display_name": "Priya Anand",
+      "role_name": "Productivity Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "project-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/project-manager",
+      "display_name": "Emiliano Joarder",
+      "role_name": "Project Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "prompt-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/prompt-engineer",
+      "display_name": "Gustavo Pereira",
+      "role_name": "Prompt Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "proposal-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/proposal-writer",
+      "display_name": "Nadine Khalil",
+      "role_name": "Proposal Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "python-pro",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/python-pro",
+      "display_name": "Omala Hassani",
+      "role_name": "Python Pro",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "qa-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/qa-engineer",
+      "display_name": "Freya Haugen",
+      "role_name": "QA Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "quality-security-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/quality-security-generalist",
+      "display_name": "Asha Reddy",
+      "role_name": "Quality & Security Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "rag-pipeline-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/rag-pipeline-engineer",
+      "display_name": "Linh Cheng",
+      "role_name": "RAG Pipeline Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "rails-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/rails-specialist",
+      "display_name": "Saoirse Flynn",
+      "role_name": "Rails Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "react-expert",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/react-expert",
+      "display_name": "Theo Constantinou",
+      "role_name": "React Expert",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "reading-list-curator",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/reading-list-curator",
+      "display_name": "Oren Levy",
+      "role_name": "Reading List Curator",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "real-estate-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/real-estate-analyst",
+      "display_name": "Osvaldo Alvarado",
+      "role_name": "Real Estate Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "recruiter",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/recruiter",
+      "display_name": "Kato Yamamoto",
+      "role_name": "Recruiter",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "reddit-community-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/reddit-community-manager",
+      "display_name": "Miles Kurosawa",
+      "role_name": "Reddit/Community Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "research-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/research-analyst",
+      "display_name": "Youssef Benali",
+      "role_name": "Research Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "research-director",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/research-director",
+      "display_name": "Nasreen Eriksen",
+      "role_name": "Research Director",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "research-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/research-generalist",
+      "display_name": "Bowen Lindberg",
+      "role_name": "Research & Analysis Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "restaurant-experience-scout",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/restaurant-experience-scout",
+      "display_name": "Lakshman Ozawa",
+      "role_name": "Restaurant/Experience Scout",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "resume-cv-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/resume-cv-writer",
+      "display_name": "Terrence Kim-Baptiste",
+      "role_name": "Resume/CV Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "risk-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/risk-manager",
+      "display_name": "Ottilie Lund",
+      "role_name": "Risk Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "ruby-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ruby-developer",
+      "display_name": "Elio Rossi",
+      "role_name": "Ruby Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "rust-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/rust-engineer",
+      "display_name": "Cyrus Aaltonen",
+      "role_name": "Rust Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "sales-development-rep",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/sales-development-rep",
+      "display_name": "Nora Mitchell",
+      "role_name": "Sales Development Rep",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "sales-revenue-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/sales-revenue-generalist",
+      "display_name": "Javier Mendoza",
+      "role_name": "Sales & Revenue Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "sales-strategist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/sales-strategist",
+      "display_name": "Naoko Drummond",
+      "role_name": "Sales Strategist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "salesforce-admin",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/salesforce-admin",
+      "display_name": "Kaede Chen-Watkins",
+      "role_name": "Salesforce Admin",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "script-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/script-writer",
+      "display_name": "Yara Moussaoui",
+      "role_name": "Script Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "scrum-master",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/scrum-master",
+      "display_name": "Victor Almeida",
+      "role_name": "Scrum Master",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "security-auditor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/security-auditor",
+      "display_name": "Ganesh Ivarsson",
+      "role_name": "Security Auditor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "senior-code-reviewer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/senior-code-reviewer",
+      "display_name": "Pavel Novotný",
+      "role_name": "Senior Code Reviewer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "seo-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/seo-specialist",
+      "display_name": "Dante Morales",
+      "role_name": "SEO Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "shopify-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/shopify-developer",
+      "display_name": "Camille Dubois",
+      "role_name": "Shopify Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "shopify-store-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/shopify-store-manager",
+      "display_name": "Belén Kaur",
+      "role_name": "Shopify Store Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "site-reliability-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/site-reliability-engineer",
+      "display_name": "Magnus Ibrahim",
+      "role_name": "Site Reliability Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "sleep-optimizer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/sleep-optimizer",
+      "display_name": "Nikolai Bhattarai",
+      "role_name": "Sleep Optimizer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "social-community-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/social-community-generalist",
+      "display_name": "Keiko Watanabe",
+      "role_name": "Social & Community Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "social-media-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/social-media-manager",
+      "display_name": "Elowen Dubois-Park",
+      "role_name": "Social Media Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "special-projects-manager",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/special-projects-manager",
+      "display_name": "Lena Fedorova",
+      "role_name": "Special Projects Manager",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "startup-pitch-stress-tester",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/startup-pitch-stress-tester",
+      "display_name": "Mara Keene",
+      "role_name": "Startup Pitch Stress Tester",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "strategy-consultant",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/strategy-consultant",
+      "display_name": "Dagny Patel",
+      "role_name": "Strategy Consultant",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "stripe-integration-specialist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/stripe-integration-specialist",
+      "display_name": "Dima Delgadillo",
+      "role_name": "Stripe Integration Specialist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "subscription-auditor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/subscription-auditor",
+      "display_name": "Eshani Ishihara",
+      "role_name": "Subscription Auditor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "supabase-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/supabase-developer",
+      "display_name": "Haruto Vásquez",
+      "role_name": "Supabase Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "sustainability-advisor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/sustainability-advisor",
+      "display_name": "Idris Kone",
+      "role_name": "Sustainability Advisor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "svelte-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/svelte-developer",
+      "display_name": "Opal Ganguly",
+      "role_name": "Svelte Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "swift-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/swift-developer",
+      "display_name": "Declan Murphy",
+      "role_name": "Swift Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "sysadmin",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/sysadmin",
+      "display_name": "Kamila Sousa",
+      "role_name": "Sysadmin",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "tax-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/tax-planner",
+      "display_name": "Farid Okafor",
+      "role_name": "Tax Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "tech-debt-assassin",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/tech-debt-assassin",
+      "display_name": "Paloma Iyer",
+      "role_name": "Tech Debt Assassin",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "technical-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/technical-writer",
+      "display_name": "Brigitte Lefèvre",
+      "role_name": "Technical Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "test-automation-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/test-automation-engineer",
+      "display_name": "Fernanda Raghavan",
+      "role_name": "Test Automation Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "tiktok-reels-strategist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/tiktok-reels-strategist",
+      "display_name": "Kareem Huerta",
+      "role_name": "TikTok/Reels Strategist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "trading-strategy-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/trading-strategy-analyst",
+      "display_name": "Adisa Afolabi",
+      "role_name": "Trading Strategy Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "training-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/training-developer",
+      "display_name": "Kwame Adjei",
+      "role_name": "Training Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "travel-leisure-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/travel-leisure-generalist",
+      "display_name": "Madhavi Acharya",
+      "role_name": "Travel & Leisure Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "travel-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/travel-planner",
+      "display_name": "Kael dos Santos",
+      "role_name": "Travel Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "trend-analyst",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/trend-analyst",
+      "display_name": "Juno Kim",
+      "role_name": "Trend Analyst",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "tutor",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/tutor",
+      "display_name": "Petra Novotná",
+      "role_name": "Tutor",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "twitter-x-strategist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/twitter-x-strategist",
+      "display_name": "Ursula Stein",
+      "role_name": "Twitter/X Strategist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "typescript-architect",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/typescript-architect",
+      "display_name": "Linnea Mansouri",
+      "role_name": "TypeScript Architect",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high"
+    },
+    {
+      "slug": "ui-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ui-designer",
+      "display_name": "Yuki Tanabe",
+      "role_name": "UI Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "ui-ux-engineer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ui-ux-engineer",
+      "display_name": "Mansur Lozano",
+      "role_name": "UI/UX Engineer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "ux-researcher",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/ux-researcher",
+      "display_name": "Marta Kowalczyk",
+      "role_name": "UX Researcher",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "vehicle-maintenance-tracker",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/vehicle-maintenance-tracker",
+      "display_name": "Rosa Espinoza",
+      "role_name": "Vehicle Maintenance Tracker",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "visual-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/visual-designer",
+      "display_name": "André Kowalski",
+      "role_name": "Visual Designer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "vomit-draft-essay-co-writer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/vomit-draft-essay-co-writer",
+      "display_name": "Thales Marlowe",
+      "role_name": "Vomit-Draft Essay Co-Writer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "vue-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/vue-developer",
+      "display_name": "Svea Andersson",
+      "role_name": "Vue.js Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "windows-admin",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/windows-admin",
+      "display_name": "Tomasz Chalabi",
+      "role_name": "Windows Admin",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "low"
+    },
+    {
+      "slug": "wordpress-developer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/wordpress-developer",
+      "display_name": "Marco Benedetti",
+      "role_name": "WordPress Developer",
+      "provider": "openai-codex",
+      "model": "gpt-5.4-mini",
+      "reasoning_effort": "medium"
+    },
+    {
+      "slug": "writing-generalist",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/writing-generalist",
+      "display_name": "Emilio Fuentes",
+      "role_name": "Writing Generalist",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    },
+    {
+      "slug": "youtube-content-planner",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/youtube-content-planner",
+      "display_name": "Jimena Lahiri",
+      "role_name": "YouTube Content Planner",
+      "provider": "openai-codex",
+      "model": "gpt-5.4",
+      "reasoning_effort": "none"
+    }
+  ]
+}
