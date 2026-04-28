@@ -44,7 +44,7 @@
     },
     "local": {
       "provider": "mlx-local",
-      "model": "mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit"
+      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
     },
     "codex": {
       "provider": "openai-codex",

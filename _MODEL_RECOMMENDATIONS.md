@@ -136,14 +136,6 @@ Full live list of free models on OpenRouter as of 2026-04-28. Grouped by provide
 |------|---------|-------------|
 | `z-ai/glm-4.5-air:free` | 131,072 | GLM-4.5-Air is the lightweight variant of our latest flagship model family, also purpose-built for agent-centric applications. Like… |
 
-## Non-Text Free Models (for reference)
-
-Included in OpenRouter's free tier but not text-LLM. Not used for roster routing.
-
-- `baidu/qianfan-ocr-fast:free` — Baidu: Qianfan-OCR-Fast (free)
-- `google/lyria-3-pro-preview` — Google: Lyria 3 Pro Preview
-- `google/lyria-3-clip-preview` — Google: Lyria 3 Clip Preview
-
 ## How Roster Entries Use This
 
 Each `roster_entry.json` (and the mirrored entry in `roster.json`) carries a `model_recommendations` block shaped like:
@@ -169,7 +161,5 @@ Downstream tooling (agent-run.sh) reads `hermes_model_hint.alias` to pick which 
 To resync this file after OpenRouter's free tier changes:
 
 ```bash
-curl -s https://openrouter.ai/api/v1/models | jq '.data | map(select(.pricing.prompt == "0" and .pricing.completion == "0"))'
+python3 ~/.hermes/skills/autonomous-ai-agents/hermes-roster-model-sync/scripts/sync.py
 ```
-
-Then regenerate this markdown and re-run the roster sync script so `free_openrouter` arrays reflect current availability.
