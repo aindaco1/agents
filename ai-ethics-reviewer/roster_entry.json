@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Bias auditing and fairness analysis with evidence, not just principles.",
     "Strong fit for Bias auditing: testing model outputs for demographic disparities across race, gender, age, disability, and other protected categories.",
     "Strong fit for Fairness metrics: defining and measuring equitable outcomes (demographic parity, equalized odds, calibration).",
-    "Works best when the task can follow this flow: Understand the system → Identify risk surface → Design audit (test cases + fairness metrics) → Run audit with statistical rigor → Report severity-ranked findings with recommendations → Verify fixes → Monitor ongoing."
+    "Works best when the task can follow this flow: Understand the system → Identify risk surface → Design audit (test cases + fairness metrics) → Run audit with statistical rigor → Report severity-ranked findings with recommendations → Verify fixes → Monitor ongoing.",
+    "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
   ],
   "avoid_for": [
     "Reviews take time — won't rush a thorough audit",
@@ -114,7 +115,8 @@
     "Red-teaming: adversarial testing for harmful output generation, jailbreaks, and misuse scenarios",
     "Accessibility review: ensuring AI outputs are usable by people with disabilities",
     "Stakeholder impact assessment: identifying who's affected by an AI system and how",
-    "Incident response: what to do when an AI system causes harm"
+    "Incident response: what to do when an AI system causes harm",
+    "Ethical OS risk review: apply the eight risk zones and future-proofing strategies to AI systems before launch, scale, or audit signoff"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {
@@ -130,5 +132,8 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "ethical-os-risk-review"
+  ]
 }

@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Studies how people actually use products, translating observed behavior into actionable design recommendations.",
     "Strong fit for Usability testing: moderated and unmoderated study design, task construction, and analysis.",
     "Strong fit for User interview methodology: semi-structured interviews, contextual inquiry, diary studies.",
-    "Works best when the task can follow this flow: Define the research question → Choose the right method → Design the study → Recruit representative participants → Conduct the research → Analyze with rigor → Deliver actionable insights."
+    "Works best when the task can follow this flow: Define the research question → Choose the right method → Design the study → Recruit representative participants → Conduct the research → Analyze with rigor → Deliver actionable insights.",
+    "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
   ],
   "avoid_for": [
     "Proper research takes time — not suited for same-day turnaround",
@@ -109,7 +110,8 @@
     "Heuristic evaluation using Nielsen's heuristics and WCAG accessibility standards",
     "Research synthesis: affinity mapping, thematic analysis, insight prioritization frameworks",
     "A/B test design and interpretation for UX-focused experiments",
-    "Research democratization: training non-researchers to conduct lightweight usability checks"
+    "Research democratization: training non-researchers to conduct lightweight usability checks",
+    "Ethical OS research framing: investigate how risk zones affect users, non-users, vulnerable groups, and community trust"
   ],
   "default_temperature": 0.2,
   "model_behavior_hints": {
@@ -125,5 +127,8 @@
       "local",
       "premium"
     ]
-  }
+  },
+  "hermes_skills": [
+    "ethical-os-risk-review"
+  ]
 }

@@ -65,7 +65,8 @@
     "Use when the work calls for this profile: Orchestrates AI initiatives from vision to production, ensuring every model serves the mission.",
     "Strong fit for AI program roadmaps that connect model capabilities to business outcomes.",
     "Strong fit for Evaluating build-vs-buy-vs-partner decisions for AI capabilities.",
-    "Works best when the task can follow this flow: Problem-Data-Decision framework → Feasibility → Prototype → Pilot → Production. Maintain a living AI portfolio view. Kill projects at any gate without shame."
+    "Works best when the task can follow this flow: Problem-Data-Decision framework → Feasibility → Prototype → Pilot → Production. Maintain a living AI portfolio view. Kill projects at any gate without shame.",
+    "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
   ],
   "avoid_for": [
     "Less hands-on with model training",
@@ -104,7 +105,8 @@
     "Vendor and platform evaluation - knowing when off-the-shelf beats custom",
     "Portfolio management across multiple concurrent AI initiatives",
     "Defining success metrics that go beyond model accuracy to actual business impact",
-    "Organizational readiness assessment - is the team, data, and infrastructure actually ready for this?"
+    "Organizational readiness assessment - is the team, data, and infrastructure actually ready for this?",
+    "Ethical OS program governance: embed risk-zone review, red flags, and future-proofing practices across AI initiatives"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {
@@ -120,5 +122,8 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "ethical-os-risk-review"
+  ]
 }

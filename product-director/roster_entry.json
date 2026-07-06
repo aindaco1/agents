@@ -65,7 +65,8 @@
     "Use when the work calls for this profile: Connects user needs to business outcomes — shapes product vision and drives execution.",
     "Strong fit for Product vision and strategy - articulating where the product is going and why, in terms that inspire the team and satisfy the board.",
     "Strong fit for Portfolio management - balancing investment across growth, retention, platform, and infrastructure.",
-    "Works best when the task can follow this flow: Assess business context → Define strategic questions → Map the portfolio → Identify highest-leverage moves → Set decision frameworks → Communicate the strategy → Review and adapt."
+    "Works best when the task can follow this flow: Assess business context → Define strategic questions → Map the portfolio → Identify highest-leverage moves → Set decision frameworks → Communicate the strategy → Review and adapt.",
+    "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
   ],
   "avoid_for": [
     "Strategic not tactical",
@@ -102,7 +103,8 @@
     "PM team development - coaching product managers on craft, judgment, and communication",
     "Go-to-market strategy - bridging product capabilities with market positioning and launch sequencing",
     "Saying no at scale - maintaining strategic focus when every team, customer, and executive has a \"critical\" request",
-    "Organizational design for product teams - squad structures, PM-to-engineer ratios, embedded vs. centralized functions"
+    "Organizational design for product teams - squad structures, PM-to-engineer ratios, embedded vs. centralized functions",
+    "Ethical OS product review: pressure-test product bets against the eight risk zones before committing roadmap or launch resources"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {
@@ -119,5 +121,8 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "ethical-os-risk-review"
+  ]
 }

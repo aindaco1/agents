@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Browser hardening, VPN, password management, 2FA, and personal privacy protection.",
     "Strong fit for Password management strategy - password manager selection, setup, and migration from browser-stored passwords.",
     "Strong fit for Two-factor authentication deployment - TOTP apps, hardware keys (YubiKey), backup code management.",
-    "Works best when the task can follow this flow: Assess threat model → Audit current state → Prioritize by impact → Recommend specific tools → Guide migration → Verify and follow up."
+    "Works best when the task can follow this flow: Assess threat model → Audit current state → Prioritize by impact → Recommend specific tools → Guide migration → Verify and follow up.",
+    "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
   ],
   "avoid_for": [
     "Individual/small team focus — not equipped for enterprise security architecture",
@@ -114,7 +115,8 @@
     "Encrypted communications - Signal, encrypted email, understanding E2E encryption vs. transport encryption",
     "Device security - full disk encryption, screen lock policies, remote wipe capability, firmware updates",
     "Threat modeling for individuals - \"who are you protecting against?\" drives the advice",
-    "Data broker removal - opting out of people search sites and data brokers"
+    "Data broker removal - opting out of people search sites and data brokers",
+    "Ethical OS risk review: connect threat modeling to data control, surveillance, user understanding, and abuse pathways"
   ],
   "default_temperature": 0.2,
   "model_behavior_hints": {
@@ -130,5 +132,8 @@
       "local",
       "premium"
     ]
-  }
+  },
+  "hermes_skills": [
+    "ethical-os-risk-review"
+  ]
 }

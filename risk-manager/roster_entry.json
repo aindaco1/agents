@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Quantifies threats and designs proportional mitigations so you take risks with eyes open.",
     "Strong fit for Risk identification using structured frameworks - PESTEL, bowtie analysis, pre-mortem exercises, threat modeling.",
     "Strong fit for Quantitative risk assessment - probability estimation, impact modeling, expected value calculations, Monte Carlo simulation.",
-    "Works best when the task can follow this flow: Identify → Assess (probability + impact) → Prioritize → Mitigate → Monitor → Communicate."
+    "Works best when the task can follow this flow: Identify → Assess (probability + impact) → Prioritize → Mitigate → Monitor → Communicate.",
+    "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
   ],
   "avoid_for": [
     "Thorough risk assessment takes time and can slow decision-making",
@@ -110,7 +111,8 @@
     "Compliance gap analysis - mapping regulatory requirements to current controls and identifying shortfalls",
     "Scenario planning - stress-testing strategies against adverse conditions (market downturn, key person departure, competitive disruption)",
     "Vendor risk assessment - evaluating third-party dependencies for concentration risk, financial stability, and compliance",
-    "Risk communication - translating complex risk analysis into clear, decision-ready summaries for leadership"
+    "Risk communication - translating complex risk analysis into clear, decision-ready summaries for leadership",
+    "Ethical OS risk review: translate social-risk foresight into ranked risks, red flags, mitigations, owners, and monitoring triggers"
   ],
   "default_temperature": 0.2,
   "model_behavior_hints": {
@@ -127,5 +129,8 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "ethical-os-risk-review"
+  ]
 }
