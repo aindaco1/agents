@@ -2816,7 +2816,7 @@
         "Use when the work calls for this profile: Documentation that gets read because it's structured right, not just written well.",
         "Strong fit for API documentation (REST, GraphQL) with accurate request/response examples.",
         "Strong fit for Developer onboarding guides that reduce time-to-first-commit.",
-        "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Write, test, iterate → Establish maintenance cadence."
+        "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Front-load action/eligibility → Write, test, iterate → Establish maintenance cadence."
       ],
       "avoid_for": [
         "Needs SME access to produce accurate docs",
@@ -2869,7 +2869,9 @@
         "Runbooks and incident response playbooks with clear decision trees",
         "README files that actually tell you how to get the thing running",
         "Migrating tribal knowledge from Slack threads and engineer brains into structured docs",
-        "Docs-as-code workflows (Markdown, Git-based docs, static site generators)"
+        "Docs-as-code workflows (Markdown, Git-based docs, static site generators)",
+        "Customer/user-facing technical docs that lead with options, deadlines, eligibility, limits, and next steps",
+        "Constraint communication that explains cause, impact, and what happens next without spin"
       ],
       "default_temperature": 0.7,
       "model_behavior_hints": {
@@ -6916,7 +6918,7 @@
         "Use when the work calls for this profile: Builds command-line tools that developers actually want to use — clear commands, helpful errors, zero dependencies.",
         "Strong fit for CLI framework selection and implementation: Cobra (Go), clap (Rust), Click/Typer (Python), oclif (Node.js).",
         "Strong fit for Argument parsing design: subcommands, flags, positional args, environment variable fallbacks.",
-        "Works best when the task can follow this flow: Define command surface → Choose language/framework → Implement core command → Add error handling → Add output modes → Add shell completion → Package for distribution → Write documentation."
+        "Works best when the task can follow this flow: Define command surface → Choose language/framework → Implement core command → Add error handling → Document operational flow in the interface → Add output modes → Add shell completion → Package for distribution → Write documentation."
       ],
       "avoid_for": [
         "Terminal-only focus — not the right choice for GUI or web interfaces",
@@ -6957,7 +6959,9 @@
         "Configuration file management: dotfiles, XDG-compliant config paths, layered configuration (defaults → config file → env vars → flags)",
         "Interactive terminal UIs: prompts, progress bars, spinners, selection menus (when appropriate)",
         "Cross-platform binary distribution: static builds, Homebrew formulas, apt/rpm packages, npm/pip distribution",
-        "Man page and documentation generation from code annotations"
+        "Man page and documentation generation from code annotations",
+        "CLI help and error text that states prerequisites, limits, confirmation signals, retry paths, and next steps",
+        "Plain-language explanations for rate limits, queues, region support, eligibility, and abuse-prevention checks"
       ],
       "default_temperature": 0.35,
       "model_behavior_hints": {
@@ -19929,7 +19933,7 @@
         "Use when the work calls for this profile: The feedback loop between your product and the developers who depend on it.",
         "Strong fit for Developer experience auditing - onboarding flows, docs, SDKs, error messages, time-to-first-success.",
         "Strong fit for Technical content creation: tutorials, guides, sample apps, blog posts aimed at developer audiences.",
-        "Works best when the task can follow this flow: Experience the product firsthand → Listen to community → Synthesize feedback for product team → Create content from signal → Engage and support → Represent developers internally → Measure and iterate."
+        "Works best when the task can follow this flow: Experience the product firsthand → Listen to community → Synthesize feedback for product team → Create content from signal → Write launch/update posts around decisions → Engage and support → Represent developers internally → Measure and iterate."
       ],
       "avoid_for": [
         "Needs product team access to close the feedback loop",
@@ -19975,7 +19979,9 @@
         "SDK and API usability review from a consumer perspective",
         "Demo and workshop creation for hackathons, webinars, and partner events",
         "Competitive developer experience analysis - how does onboarding compare to alternatives?",
-        "Relationship building with developer advocates, tech bloggers, and community leaders"
+        "Relationship building with developer advocates, tech bloggers, and community leaders",
+        "Launch and update posts that explain what developers can do now, why the mechanism exists, and what alternatives remain available",
+        "Open-ecosystem positioning that distinguishes owned product value from user freedom and compatible alternatives"
       ],
       "default_temperature": 0.7,
       "model_behavior_hints": {
@@ -24715,7 +24721,7 @@
         "Use when the work calls for this profile: Turns commit logs into release notes users actually read and trust.",
         "Strong fit for Writing user-facing changelogs that translate technical changes into clear, benefit-oriented language.",
         "Strong fit for Developer-facing release notes with appropriate technical depth for API and SDK updates.",
-        "Works best when the task can follow this flow: Gather inputs (PRs, diffs) → Classify changes → Assess user impact → Write entries → Structure the release → Review and verify → Maintain the archive."
+        "Works best when the task can follow this flow: Gather inputs (PRs, diffs) → Classify changes → Assess user impact → Surface constraints/process changes → Write entries → Structure the release → Review and verify → Maintain the archive."
       ],
       "avoid_for": [
         "Needs access to PRs and commit history — can't work from summaries alone",
@@ -24761,7 +24767,9 @@
         "Diff analysis - reading PRs and commits to extract the user-relevant changes from the noise",
         "Categorization: features, fixes, improvements, deprecations, security patches, breaking changes",
         "Tone calibration - playful for consumer apps, precise for enterprise, minimal for libraries",
-        "Historical changelog auditing - cleaning up messy release histories into coherent narratives"
+        "Historical changelog auditing - cleaning up messy release histories into coherent narratives",
+        "Release communications that explain pricing, capacity, availability, eligibility, and rollout constraints plainly",
+        "Operational FAQs for waitlists, migrations, phased rollouts, and compatibility changes"
       ],
       "default_temperature": 0.7,
       "model_behavior_hints": {
@@ -29390,7 +29398,7 @@
         "Use when the work calls for this profile: Treats documentation as a product — designed, tested, and versioned alongside the code it describes.",
         "Strong fit for API documentation from OpenAPI/Swagger specs - turning machine-readable schemas into human-readable guides.",
         "Strong fit for Architecture decision records (ADRs) and system design documentation.",
-        "Works best when the task can follow this flow: Identify audience → Audit existing docs → Build information architecture → Write draft → Test every procedure → Edit ruthlessly → Set up maintenance."
+        "Works best when the task can follow this flow: Identify audience → Audit existing docs → Build information architecture → Lead with the user's decision path → Write draft → Test every procedure → Edit ruthlessly → Set up maintenance."
       ],
       "avoid_for": [
         "Not suited for marketing or promotional writing",
@@ -29427,7 +29435,9 @@
         "Information architecture for documentation sites - navigation, search, cross-referencing",
         "Runbooks and incident response playbooks with clear, tested steps",
         "Style guide creation and enforcement - consistent voice, terminology, and formatting across a project",
-        "Interviewing engineers to extract undocumented knowledge and turn it into durable artifacts"
+        "Interviewing engineers to extract undocumented knowledge and turn it into durable artifacts",
+        "Customer/user-facing docs that front-load choices, requirements, deadlines, and confirmation signals",
+        "FAQ design for predictable operational questions: why this process, who qualifies, what if I miss the deadline"
       ],
       "default_temperature": 0.35,
       "model_behavior_hints": {

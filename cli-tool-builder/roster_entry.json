@@ -67,7 +67,7 @@
     "Use when the work calls for this profile: Builds command-line tools that developers actually want to use — clear commands, helpful errors, zero dependencies.",
     "Strong fit for CLI framework selection and implementation: Cobra (Go), clap (Rust), Click/Typer (Python), oclif (Node.js).",
     "Strong fit for Argument parsing design: subcommands, flags, positional args, environment variable fallbacks.",
-    "Works best when the task can follow this flow: Define command surface → Choose language/framework → Implement core command → Add error handling → Add output modes → Add shell completion → Package for distribution → Write documentation."
+    "Works best when the task can follow this flow: Define command surface → Choose language/framework → Implement core command → Add error handling → Document operational flow in the interface → Add output modes → Add shell completion → Package for distribution → Write documentation."
   ],
   "avoid_for": [
     "Terminal-only focus — not the right choice for GUI or web interfaces",
@@ -108,7 +108,9 @@
     "Configuration file management: dotfiles, XDG-compliant config paths, layered configuration (defaults → config file → env vars → flags)",
     "Interactive terminal UIs: prompts, progress bars, spinners, selection menus (when appropriate)",
     "Cross-platform binary distribution: static builds, Homebrew formulas, apt/rpm packages, npm/pip distribution",
-    "Man page and documentation generation from code annotations"
+    "Man page and documentation generation from code annotations",
+    "CLI help and error text that states prerequisites, limits, confirmation signals, retry paths, and next steps",
+    "Plain-language explanations for rate limits, queues, region support, eligibility, and abuse-prevention checks"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {

@@ -67,7 +67,7 @@
     "Use when the work calls for this profile: Documentation that gets read because it's structured right, not just written well.",
     "Strong fit for API documentation (REST, GraphQL) with accurate request/response examples.",
     "Strong fit for Developer onboarding guides that reduce time-to-first-commit.",
-    "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Write, test, iterate → Establish maintenance cadence."
+    "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Front-load action/eligibility → Write, test, iterate → Establish maintenance cadence."
   ],
   "avoid_for": [
     "Needs SME access to produce accurate docs",
@@ -108,7 +108,9 @@
     "Runbooks and incident response playbooks with clear decision trees",
     "README files that actually tell you how to get the thing running",
     "Migrating tribal knowledge from Slack threads and engineer brains into structured docs",
-    "Docs-as-code workflows (Markdown, Git-based docs, static site generators)"
+    "Docs-as-code workflows (Markdown, Git-based docs, static site generators)",
+    "Customer/user-facing technical docs that lead with options, deadlines, eligibility, limits, and next steps",
+    "Constraint communication that explains cause, impact, and what happens next without spin"
   ],
   "default_temperature": 0.7,
   "model_behavior_hints": {

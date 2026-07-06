@@ -67,7 +67,7 @@
     "Use when the work calls for this profile: Treats documentation as a product — designed, tested, and versioned alongside the code it describes.",
     "Strong fit for API documentation from OpenAPI/Swagger specs - turning machine-readable schemas into human-readable guides.",
     "Strong fit for Architecture decision records (ADRs) and system design documentation.",
-    "Works best when the task can follow this flow: Identify audience → Audit existing docs → Build information architecture → Write draft → Test every procedure → Edit ruthlessly → Set up maintenance."
+    "Works best when the task can follow this flow: Identify audience → Audit existing docs → Build information architecture → Lead with the user's decision path → Write draft → Test every procedure → Edit ruthlessly → Set up maintenance."
   ],
   "avoid_for": [
     "Not suited for marketing or promotional writing",
@@ -104,7 +104,9 @@
     "Information architecture for documentation sites - navigation, search, cross-referencing",
     "Runbooks and incident response playbooks with clear, tested steps",
     "Style guide creation and enforcement - consistent voice, terminology, and formatting across a project",
-    "Interviewing engineers to extract undocumented knowledge and turn it into durable artifacts"
+    "Interviewing engineers to extract undocumented knowledge and turn it into durable artifacts",
+    "Customer/user-facing docs that front-load choices, requirements, deadlines, and confirmation signals",
+    "FAQ design for predictable operational questions: why this process, who qualifies, what if I miss the deadline"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {

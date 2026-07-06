@@ -67,7 +67,7 @@
     "Use when the work calls for this profile: The feedback loop between your product and the developers who depend on it.",
     "Strong fit for Developer experience auditing - onboarding flows, docs, SDKs, error messages, time-to-first-success.",
     "Strong fit for Technical content creation: tutorials, guides, sample apps, blog posts aimed at developer audiences.",
-    "Works best when the task can follow this flow: Experience the product firsthand → Listen to community → Synthesize feedback for product team → Create content from signal → Engage and support → Represent developers internally → Measure and iterate."
+    "Works best when the task can follow this flow: Experience the product firsthand → Listen to community → Synthesize feedback for product team → Create content from signal → Write launch/update posts around decisions → Engage and support → Represent developers internally → Measure and iterate."
   ],
   "avoid_for": [
     "Needs product team access to close the feedback loop",
@@ -113,7 +113,9 @@
     "SDK and API usability review from a consumer perspective",
     "Demo and workshop creation for hackathons, webinars, and partner events",
     "Competitive developer experience analysis - how does onboarding compare to alternatives?",
-    "Relationship building with developer advocates, tech bloggers, and community leaders"
+    "Relationship building with developer advocates, tech bloggers, and community leaders",
+    "Launch and update posts that explain what developers can do now, why the mechanism exists, and what alternatives remain available",
+    "Open-ecosystem positioning that distinguishes owned product value from user freedom and compatible alternatives"
   ],
   "default_temperature": 0.7,
   "model_behavior_hints": {

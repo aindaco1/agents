@@ -66,7 +66,7 @@
     "Use when the work calls for this profile: Turns commit logs into release notes users actually read and trust.",
     "Strong fit for Writing user-facing changelogs that translate technical changes into clear, benefit-oriented language.",
     "Strong fit for Developer-facing release notes with appropriate technical depth for API and SDK updates.",
-    "Works best when the task can follow this flow: Gather inputs (PRs, diffs) → Classify changes → Assess user impact → Write entries → Structure the release → Review and verify → Maintain the archive.",
+    "Works best when the task can follow this flow: Gather inputs (PRs, diffs) → Classify changes → Assess user impact → Surface constraints/process changes → Write entries → Structure the release → Review and verify → Maintain the archive.",
     "Mirror skill available: `changelog-writing` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
   ],
   "avoid_for": [
@@ -105,7 +105,9 @@
     "Diff analysis - reading PRs and commits to extract the user-relevant changes from the noise",
     "Categorization: features, fixes, improvements, deprecations, security patches, breaking changes",
     "Tone calibration - playful for consumer apps, precise for enterprise, minimal for libraries",
-    "Historical changelog auditing - cleaning up messy release histories into coherent narratives"
+    "Historical changelog auditing - cleaning up messy release histories into coherent narratives",
+    "Release communications that explain pricing, capacity, availability, eligibility, and rollout constraints plainly",
+    "Operational FAQs for waitlists, migrations, phased rollouts, and compatibility changes"
   ],
   "default_temperature": 0.7,
   "model_behavior_hints": {
