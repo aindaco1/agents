@@ -1,0 +1,37 @@
+pool-marketing-docs architecture notes for Marta Sol
+
+Source architecture repo:
+- /Users/aindaco1/Library/Mobile Documents/com~apple~CloudDocs/pool-marketing-docs
+
+Repository shape:
+- Static marketing + developer docs site for The Pool.
+- Jekyll 4.x with `just-the-docs` theme.
+- GitHub Pages deployment through `.github/workflows/workflow.yml`.
+- Ruby/Bundler local preview: `bundle install`, `bundle exec jekyll serve`, `bundle exec jekyll build --trace`.
+- Plugins: `jekyll-seo-tag`, `jekyll-sitemap`, `jekyll-include-cache`.
+- `_config.yml` owns title, description, url/baseurl, theme, defaults, search, color_scheme, plugins, Sass config.
+- Docs are under `docs/overview`, `docs/development`, `docs/operations`, `docs/reference`, with Spanish localized mirror under `es/docs`.
+- i18n catalogs live in `_data/i18n/en.yml` and `_data/i18n/es.yml`.
+- Main visual files: `_layouts/homepage.html`, `_layouts/default.html`, `_layouts/support.html`, `_includes/*`, `_sass/color_schemes/pool.scss`, `_sass/custom/custom.scss`, `assets/css/home.scss`, `assets/js/site.js`.
+
+Design pattern:
+- Product homepage is custom, not a generic docs index.
+- Hero states product promise, audience, CTAs, and demo media.
+- Feature cards map to docs pages.
+- Docs nav remains available and searchable through just-the-docs.
+- Style is stark and readable: whitesmoke background, white cards, black borders, strong focus outlines, Inter/system UI body, display headings, uppercase microheadings, plain high-contrast links.
+
+Docs pattern:
+- Overview: about, terms/guidelines.
+- Development: contributing, project overview, workflows, developer notes, customization, i18n, embeds/add-ons/agents as relevant.
+- Operations: admin/operations, worker/backend, Podman/local dev, testing, merge smoke checklist, security, accessibility, SEO, performance, shipping/tax/provider docs as relevant.
+- Reference: changelog, roadmap, PR template.
+
+Source-doc sync pattern:
+- `scripts/sync_pool_docs.rb` copies selected docs from a source product repo, strips/rebuilds front matter, rewrites repository-relative links into site routes or GitHub blob/tree links, stamps Last Updated dates from git history, and sanitizes product-specific private details.
+- For another product, adapt this pattern as `scripts/sync_product_docs.rb` rather than blindly copying The Pool names.
+
+Quality gates:
+- Always run Jekyll build after site changes.
+- Use actual scripts if present for SEO/i18n/premerge/release evidence.
+- Add or preserve sitemap/canonical/OG metadata, accessible skip links/focus styles, high contrast, localized catalogs, and conservative performance defaults.
