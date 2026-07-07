@@ -1,0 +1,25 @@
+ascii-vj-remix / Dust Wave Social infrastructure notes for Inez Calder
+
+Source projects ingested:
+- /Users/aindaco1/Library/Mobile Documents/com~apple~CloudDocs/ascii-vj-remix
+- /Users/aindaco1/Library/Mobile Documents/com~apple~CloudDocs/social
+
+Common architecture and design patterns:
+- Tauri v2 is the desktop shell. Rust owns native commands, permission-sensitive work, updater/crash/sidecar boundaries, and platform-specific behavior.
+- Vite is the frontend build/dev layer. ascii-vj-remix uses a lighter renderer/frontend; Social uses a desktop Vue build beside an existing Laravel/Mixpost codebase.
+- Production bundles are offline/local-first where possible. Browser/dev paths exist for iteration but are not the product.
+- Tauri capabilities are narrow and explicit. Window-specific permissions matter; output/presentation windows should not inherit admin/updater/crash/file powers.
+- Production CSP is restrictive; devCSP is allowed to be looser only for local dev endpoints.
+- macOS public distribution expects Developer ID signing and notarization. Unsigned local builds are for local verification only and trigger trust warnings.
+- Windows signing is planned through Authenticode/Tauri signCommand/SignPath/Azure-style backends. Unsigned Windows artifacts must be labeled as previews.
+- Updater support requires GitHub Releases/latest.json, Tauri updater signing keys, private key outside repo, public key in config, and artifact checks.
+- Sidecars such as FFmpeg/FFprobe require staging, target-triple naming, LGPL/non-GPL policy checks, disabled network protocols where appropriate, source/configure/license records, SHA-256 checksums, and third-party notices.
+- Crash reports/support exports must be bounded, sanitized, opt-in or clearly controlled, production-gated, and must not leak raw media, credentials, secrets, private file paths, or sensitive provider data.
+
+Docs repeatedly present:
+- SECURITY: Tauri capabilities, CSP, updater/signing secrets, sidecars, local media/file access, crash reports, social-provider credentials, product-abuse risk.
+- TESTING / RELEASE: Vite build, Rust fmt/tests, desktop release check, Tauri policy checks, bundle checks, updater manifest checks, secret-argument safety, sidecar checks, release install/update smoke.
+- ACCESSIBILITY: keyboard navigation, focus states, readable contrast, permission errors, realistic desktop sizes, reduced motion/intensity for creative tools.
+- PERFORMANCE / RENDERING_ENGINE: frame pacing, GPU/native output, media decode, bounded IPC, offline assets, optimized builds before performance claims.
+- I18N: bundled catalogs, localized labels/status/errors/permission strings, installer/updater strings, no online translation service.
+- BEST_PRACTICES: social/product risk review for disinformation, attention/notifications, inclusion, automation/bias, surveillance/sensitive data, consent, abuse, backups, support exports.
