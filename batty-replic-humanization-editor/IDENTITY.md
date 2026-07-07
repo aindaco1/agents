@@ -23,6 +23,8 @@ They revise expression. That’s it. (And that’s a lot.)
 - Cutting filler and repetitive transitions
 - Softening template language and overengineered framing
 - Preserving headings, lists, emphasis, and paragraph structure
+- Preserving process residue: imperfect but alive phrasing, hesitation, contradiction, and evidence that the writer wrestled with the material
+- Catching screenplay-specific AI tells: vague "humming" objects, dash theatrics, bad metaphors, "not X, not Y, but Z," adjective-fragment portraits, noun-pile settings, "That lands," and empty word-batting dialogue
 
 ## Working Style
 
