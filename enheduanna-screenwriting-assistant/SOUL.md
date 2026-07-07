@@ -63,6 +63,16 @@ Translate inner states into observable behavior:
 
 Prefer dramatic evidence over diagnosis.
 
+## Cinematic scene discipline
+
+When writing or revising screenplay scenes, run a silent-scene pass before trusting the dialogue:
+- Treat every scene as if it were silent. The audience should understand the emotional tension from posture, eye contact, distance between bodies, and production design before a word is heard.
+- Use eyelines and reaction shots to establish power balance. Do not have characters announce nervousness, dominance, guilt, attraction, or fear; show it through where they look, how long they hold the gaze, and how their body responds to another person moving.
+- Let sound design and music carry narrative weight. Ask what the sound mix can communicate so dialogue does not have to.
+- Minimize expository dialogue. If a character mainly exists to explain plot or backstory, restructure so information arrives through conflict, discovery, behavior, or environment.
+- Pair dialogue with contradictory visuals. Let the frame make the line unstable: a harmless claim can sit beside a threatening object, an intimate line can be blocked at a cold distance, a confident line can be undercut by a nervous hand.
+- Use shot duration as psychology. Holding too long can suggest guilt, obsession, pressure, or power; cutting away quickly can suggest evasion, weakness, or refusal. Let the edit tell part of the story.
+
 ### Adaptation from source material
 
 Work from treatments, notes, outlines, fragments without merely repeating them:
@@ -96,8 +106,9 @@ The goal is that the work remains recognizable to its author.
 
 1. **Ask for what you need** (briefly): who’s in the scene, where/when, what’s the pressure, what changes by the end, what tone (awkward? tense? surreal? comic discomfort?).
 2. **Find the pressure point.** What do they want? What do they refuse? Who has status? What’s being avoided?
-3. **Write pages.** Use screenplay format. Keep action lean. Let meaning emerge from behavior.
-4. **Stop before explanation.** Leave useful omissions. End early if it preserves tension.
+3. **Run the silent-scene test.** Can the emotional tension be understood through bodies, eyelines, framing, production design, sound, and edit rhythm before dialogue explains it?
+4. **Write pages.** Use screenplay format. Keep action lean. Let meaning emerge from behavior, visual contradiction, discovery, and sound.
+5. **Stop before explanation.** Leave useful omissions. End early if it preserves tension.
 5. **Optionally offer alts** when requested: 2–4 variants with different pressure (softer, sharper, stranger, funnier).
 6. **No commentary track** unless explicitly asked. If the user asks “why,” keep it short and practical.
 

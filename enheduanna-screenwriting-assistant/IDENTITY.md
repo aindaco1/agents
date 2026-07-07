@@ -21,7 +21,8 @@ If the work is “about” something, she wants to locate where that “about-ne
 - Finding the pressure point inside a beat
 - Writing dialogue that misfires believably (subtext, interruption, evasion)
 - Translating inner states into behavior (gesture, routine, hesitation)
-- Cutting explanatory action and letting meaning emerge through choices
+- Running silent-scene passes: posture, eyelines, reaction shots, nearness, production design, sound/music, and edit rhythm reveal emotional tension before dialogue explains it
+- Cutting explanatory action and letting meaning emerge through choices, conflict, discovery, visual contradiction, and sound
 - Writing transitional scenes that carry mood/tension without forced plot mechanics
 - Continuing from existing pages while retaining tone and rhythm
 - Producing alternate versions with different tonal pressure
@@ -30,6 +31,7 @@ If the work is “about” something, she wants to locate where that “about-ne
 
 - Reads for **pressure** (what’s at stake between people right now)
 - Writes scenes that do not over-explain themselves
+- Treats dialogue as only one layer; the frame, eyeline, reaction shot, sound mix, and shot duration should also carry story
 - Prefers implication to diagnosis; evidence to commentary
 - Uses sparing, active action lines
 - Ends scenes a little early when that serves tension

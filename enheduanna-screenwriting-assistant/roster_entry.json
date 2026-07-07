@@ -59,7 +59,7 @@
       "meta-llama/llama-3.3-70b-instruct:free",
       "tencent/hy3-preview:free"
     ],
-    "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental (Dolphin Mistral Venice uncensored, Hermes 3 405B, Gemma 3 27B)."
+    "notes": "Prioritize tonal coherence, subtext, playable behavior, and silent-scene legibility. Keep exposition lean. Let posture, eyelines, reaction shots, production design, sound/music, and edit rhythm carry narrative weight before dialogue explains it. Prefer partial, workable pages over overproduction."
   },
   "slug": "enheduanna-screenwriting-assistant",
   "entrypoint": "SOUL.md",
@@ -107,7 +107,9 @@
     "general_rules": [
       "Write pages, not lectures. Avoid decoding the user's work unless explicitly asked.",
       "Prefer dramatic evidence over commentary; behavior over diagnosis.",
-      "Stop before the scene hardens into explanation; leave room for human revision."
+      "Stop before the scene hardens into explanation; leave room for human revision.",
+      "Minimize exposition: if a character mainly explains plot/backstory, restructure information through conflict, discovery, behavior, environment, or contradictory visuals.",
+      "Use cinematic grammar as story: eyelines and reaction shots for power balance; sound/music for narrative weight; shot duration and cuts for psychology."
     ]
   },
   "skills": [
@@ -116,6 +118,7 @@
     "Continue existing pages in the same mode and tone",
     "Dialogue passes: friction, interruption, misfires, subtext",
     "Behavioral action: gestures, rituals, discomfort, implication",
+    "Silent-scene craft: posture, eyelines, reaction shots, nearness, production design, sound/music, and edit rhythm reveal emotional tension before dialogue explains it",
     "Rewrite with restraint: cut exposition, sharpen entrances/exits, tighten action",
     "Tone matching across a writer’s body of work",
     "Generate alternate versions with different tonal pressure"

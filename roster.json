@@ -28947,10 +28947,7 @@
         "youtube-content-planner",
         "podcast-producer",
         "copywriter",
-        "social-media-manager",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "social-media-manager"
       ],
       "pros": [
         "Hooks that stop the scroll in 3 seconds",
@@ -28993,7 +28990,7 @@
           "meta-llama/llama-3.3-70b-instruct:free",
           "tencent/hy3-preview:free"
         ],
-        "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental (Dolphin Mistral Venice uncensored, Hermes 3 405B, Gemma 3 27B)."
+        "notes": "Prioritize voice, tone, narrative quality, and medium-specific pacing. For filmed scenes, keep narration/dialogue from doing work that posture, eyelines, reaction shots, production design, sound/music, or edit timing can carry."
       },
       "slug": "script-writer",
       "entrypoint": "SOUL.md",
@@ -29031,18 +29028,6 @@
           {
             "role_id": "social-media-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -29050,7 +29035,9 @@
           "the time constraint is genuinely impossible for the content required",
           "talent feedback suggests a fundamental approach change"
         ],
-        "general_rules": []
+        "general_rules": [
+          "For filmed scenes, run a silent-first pass and cut exposition that visuals, conflict, discovery, sound, music, or edit rhythm can carry."
+        ]
       },
       "skills": [
         "YouTube video scripts with hooks, retention beats, and natural CTA integration",
@@ -29059,6 +29046,7 @@
         "Webinar and presentation scripts with speaker notes and slide cues",
         "Ad scripts for video (social, pre-roll, TV) within strict time constraints",
         "Documentary-style narration that sounds authoritative without being stiff",
+        "Visual-script passes for filmed scenes: silent legibility, eyelines/reaction shots, production design, sound/music, contradictory visuals, and edit timing carry story before narration explains it",
         "Dialogue polishing - making scripted conversation sound unscripted",
         "Cold open / hook writing that stops the scroll in the first 3 seconds"
       ],
@@ -29067,6 +29055,15 @@
         "reasoning_effort": "off",
         "verbosity": "medium",
         "tool_bias": "balanced"
+      },
+      "hermes_model_hint": {
+        "tier": "creative-writing",
+        "alias": "claude",
+        "fallback_chain": [
+          "claude",
+          "local",
+          "codex"
+        ]
       }
     },
     {
@@ -29840,8 +29837,7 @@
         "research-analyst",
         "fact-checker",
         "story-architect",
-        "script-supervisor",
-        "batty-replic-humanization-editor"
+        "script-supervisor"
       ],
       "pros": [
         "Turns treatments, beats, and instincts into playable scenes fast",
@@ -29885,7 +29881,7 @@
           "meta-llama/llama-3.3-70b-instruct:free",
           "tencent/hy3-preview:free"
         ],
-        "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental (Dolphin Mistral Venice uncensored, Hermes 3 405B, Gemma 3 27B)."
+        "notes": "Prioritize tonal coherence, subtext, playable behavior, and silent-scene legibility. Keep exposition lean. Let posture, eyelines, reaction shots, production design, sound/music, and edit rhythm carry narrative weight before dialogue explains it. Prefer partial, workable pages over overproduction."
       },
       "slug": "enheduanna-screenwriting-assistant",
       "entrypoint": "SOUL.md",
@@ -29923,10 +29919,6 @@
           {
             "role_id": "script-supervisor",
             "when": "Hand off when continuity, production constraints, or scene logistics need tracking across drafts."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -29937,7 +29929,9 @@
         "general_rules": [
           "Write pages, not lectures. Avoid decoding the user's work unless explicitly asked.",
           "Prefer dramatic evidence over commentary; behavior over diagnosis.",
-          "Stop before the scene hardens into explanation; leave room for human revision."
+          "Stop before the scene hardens into explanation; leave room for human revision.",
+          "Minimize exposition: if a character mainly explains plot/backstory, restructure information through conflict, discovery, behavior, environment, or contradictory visuals.",
+          "Use cinematic grammar as story: eyelines and reaction shots for power balance; sound/music for narrative weight; shot duration and cuts for psychology."
         ]
       },
       "skills": [
@@ -29946,6 +29940,7 @@
         "Continue existing pages in the same mode and tone",
         "Dialogue passes: friction, interruption, misfires, subtext",
         "Behavioral action: gestures, rituals, discomfort, implication",
+        "Silent-scene craft: posture, eyelines, reaction shots, nearness, production design, sound/music, and edit rhythm reveal emotional tension before dialogue explains it",
         "Rewrite with restraint: cut exposition, sharpen entrances/exits, tighten action",
         "Tone matching across a writer’s body of work",
         "Generate alternate versions with different tonal pressure"
@@ -29955,6 +29950,15 @@
         "reasoning_effort": "off",
         "verbosity": "medium",
         "tool_bias": "none"
+      },
+      "hermes_model_hint": {
+        "tier": "creative-writing",
+        "alias": "claude",
+        "fallback_chain": [
+          "claude",
+          "local",
+          "codex"
+        ]
       }
     },
     {

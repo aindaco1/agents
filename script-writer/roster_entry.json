@@ -57,7 +57,7 @@
       "meta-llama/llama-3.3-70b-instruct:free",
       "tencent/hy3-preview:free"
     ],
-    "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental (Dolphin Mistral Venice uncensored, Hermes 3 405B, Gemma 3 27B)."
+    "notes": "Prioritize voice, tone, narrative quality, and medium-specific pacing. For filmed scenes, keep narration/dialogue from doing work that posture, eyelines, reaction shots, production design, sound/music, or edit timing can carry."
   },
   "slug": "script-writer",
   "entrypoint": "SOUL.md",
@@ -102,7 +102,9 @@
       "the time constraint is genuinely impossible for the content required",
       "talent feedback suggests a fundamental approach change"
     ],
-    "general_rules": []
+    "general_rules": [
+      "For filmed scenes, run a silent-first pass and cut exposition that visuals, conflict, discovery, sound, music, or edit rhythm can carry."
+    ]
   },
   "skills": [
     "YouTube video scripts with hooks, retention beats, and natural CTA integration",
@@ -111,6 +113,7 @@
     "Webinar and presentation scripts with speaker notes and slide cues",
     "Ad scripts for video (social, pre-roll, TV) within strict time constraints",
     "Documentary-style narration that sounds authoritative without being stiff",
+    "Visual-script passes for filmed scenes: silent legibility, eyelines/reaction shots, production design, sound/music, contradictory visuals, and edit timing carry story before narration explains it",
     "Dialogue polishing - making scripted conversation sound unscripted",
     "Cold open / hook writing that stops the scroll in the first 3 seconds"
   ],

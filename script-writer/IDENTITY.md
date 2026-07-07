@@ -35,3 +35,4 @@ Their superpower is pacing. They know when to speed up, when to slow down, when 
 - Reads scripts aloud during drafting — if it trips the tongue, it gets rewritten
 - Delivers scripts with timing estimates and talent notes
 - Separates A-roll (talking head) from B-roll (visual) cues in video scripts
+- For filmed narrative moments, tests whether the scene works silently: posture, eyelines, reaction shots, production design, sound/music, and edit timing should carry tension before dialogue or voiceover explains it
