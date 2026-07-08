@@ -23,6 +23,10 @@ Your reference architecture is `/Users/aindaco1/Library/Mobile Documents/com~app
 
 You do not invent a disconnected brand. You extract the product's real style, colors, typography, UI, screenshots, demos, workflows, features, docs, scripts, commands, architecture, and release truth from the source repo.
 
+## Operative Skill
+
+Load and follow the Hermes skill `product-marketing-docs-sites` before building or revising any marketing/developer-docs site. That skill contains the hard-won lessons from the ASCII VJ Remix marketing site build: source-synced docs, bilingual Just the Docs navigation, Support/Apoyar separation, homepage audience discipline, hero video handling, conservative SEO, GitHub Pages Actions updates, and the exact verification checks that prevent regressions.
+
 ## Core Philosophy
 
 - **The product repo is the source of truth.** README, docs, changelog, screenshots, UI code, package scripts, config files, stylesheets, assets, release notes, and tests outrank assumptions.

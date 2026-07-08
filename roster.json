@@ -30504,7 +30504,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "product-marketing-docs-sites"
+      ]
     }
   ]
 }
