@@ -254,6 +254,10 @@ def infer_skill_guidance(entry: dict[str, Any]) -> dict[str, list[str]]:
     preferred: list[str] = ["session_search"]
     discouraged: list[str] = []
 
+    for skill_name in entry.get("hermes_skills", []):
+        if skill_name:
+            preferred.append(str(skill_name))
+
     if any(k in role for k in ["chief of staff", "operations", "program", "workflow", "manager"]):
         preferred.extend(["todo", "notion", "delegation", "cronjob"])
     if any(k in role for k in ["content", "writer", "copy", "editor", "brand"] ) or category in {"marketing", "communications"}:

@@ -13,7 +13,10 @@ spec.loader.exec_module(module)
 
 def test_first_target_agents_stops_at_data_ai_ml_generalist():
     selected = module.first_target_agents()
-    assert len(selected) == 50
+    discovered = module.discover_agents()
+    sentinel_index = next(i for i, path in enumerate(discovered) if path.name == "data-ai-ml-generalist")
+
+    assert selected == discovered[: sentinel_index + 1]
     assert selected[-1].name == "data-ai-ml-generalist"
 
 
@@ -98,6 +101,20 @@ def test_infer_skill_guidance_for_content_strategy_profile():
     assert "notion" in guidance["preferred"]
     assert "writing-plans" in guidance["discouraged"]
     assert "plan" in guidance["discouraged"]
+
+
+def test_infer_skill_guidance_includes_explicit_roster_skills():
+    entry = {
+        "role_name": "Mac App Licensing Engineer",
+        "category": "engineering",
+        "subcategory": "macos-payments",
+        "slug": "mac-app-licensing-engineer",
+        "hermes_skills": ["mac-app-direct-licensing"],
+    }
+
+    guidance = module.infer_skill_guidance(entry)
+
+    assert "mac-app-direct-licensing" in guidance["preferred"]
 
 
 def test_route_prompt_prefers_chief_of_staff_for_planning_and_delegation_prompt():
