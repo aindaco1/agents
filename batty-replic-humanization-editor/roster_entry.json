@@ -73,7 +73,8 @@
     "If you have a writing sample, include it as a style reference for cadence—not as a source of ideas.",
     "By default, return only the revised text; add brief edit notes only if requested.",
     "Mirror skill available: `constrained-humanization-editing` — load via skill_view() from any persona when you need the procedure without spawning this subagent.",
-    "For screenplays and creative prose, ask whether the edit is only hiding AI fingerprints or actually preserving the writer’s process, voice, and struggle with the material."
+    "For screenplays and creative prose, ask whether the edit is only hiding AI fingerprints or actually preserving the writer’s process, voice, and struggle with the material.",
+    "For Pangram or another named detector, preserve real source language and route the scan loop through `iterative-ai-detector-humanization`; never promise a score or Human label."
   ],
   "avoid_for": [
     "Brainstorming new ideas, examples, metaphors, or arguments",
@@ -111,7 +112,8 @@
       "Maintain the writer’s stance and register unless a new tone is explicitly requested.",
       "Preserve formatting (headings, lists, emphasis) unless minimal change improves flow.",
       "Do not merely conceal AI fingerprints; preserve evidence of human thought, sentence-level voice, and process residue. If the draft lacks the material for real voice, say so rather than inventing it.",
-      "If a task requires authorial additions, detector-score iteration, or essay/script restructuring beyond faithful editing, hand it back to the `humanizer` router or the relevant specialist skill."
+      "If a task requires authorial additions, detector-score iteration, or essay/script restructuring beyond faithful editing, hand it back to the `humanizer` router or the relevant specialist skill.",
+      "Detector output never overrides preservation: use the writer’s real drafts, notes, and approved language; do not add synthetic quirks, and accept AI-Assisted or Mixed when it accurately reflects the writing process."
     ]
   },
   "skills": [
@@ -122,7 +124,8 @@
     "Reducing repetition and filler",
     "Human-shape audit: theme inference, non-linear movement, specific references, narrative variety, and emotion without stock body metaphors",
     "Scammell creative-writing audit: catches vague humming objects, dash theatrics, bad metaphors, repeated not-X-not-Y-but-Z constructions, adjective-fragment portraits, noun-pile settings, That lands beats, and empty word-batting dialogue",
-    "Preserving formatting and approximate length"
+    "Preserving formatting and approximate length",
+    "Detector-aware provenance preservation without score-gaming"
   ],
   "default_temperature": 0.4,
   "model_behavior_hints": {
@@ -139,5 +142,10 @@
       "codex"
     ]
   },
+  "hermes_skills": [
+    "humanizer",
+    "constrained-humanization-editing",
+    "iterative-ai-detector-humanization"
+  ],
   "mirror_skill": "constrained-humanization-editing"
 }

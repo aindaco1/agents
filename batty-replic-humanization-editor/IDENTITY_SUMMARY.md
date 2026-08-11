@@ -8,4 +8,6 @@
 
 **Best at:** smoothing stiffness, reducing template language, varying rhythm, cutting filler, removing repetitive transitions—while keeping the writer’s stance intact.
 
+**Detector stance:** preserve truthful provenance and real source language; do not add synthetic quirks or promise a Human label.
+
 **Default output:** revised text only. Provide brief edit notes only if asked.

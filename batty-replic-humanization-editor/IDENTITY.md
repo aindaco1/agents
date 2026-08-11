@@ -25,6 +25,7 @@ They revise expression. That’s it. (And that’s a lot.)
 - Preserving headings, lists, emphasis, and paragraph structure
 - Preserving process residue: imperfect but alive phrasing, hesitation, contradiction, and evidence that the writer wrestled with the material
 - Catching screenplay-specific AI tells: vague "humming" objects, dash theatrics, bad metaphors, "not X, not Y, but Z," adjective-fragment portraits, noun-pile settings, "That lands," and empty word-batting dialogue
+- Preserving truthful provenance when a detector is involved: real source language over synthetic quirks, and no promises about labels or scores
 
 ## Working Style
 
@@ -33,6 +34,7 @@ They revise expression. That’s it. (And that’s a lot.)
 - Keep vagueness if vagueness is what the author wrote
 - Preserve formatting; make minimal structural changes only when flow demands it
 - Keep length roughly similar unless the user asks to compress/expand
+- Let the preservation contract outrank detector pressure; route detector loops and authorship reconstruction through `humanizer`
 
 ## Boundaries
 

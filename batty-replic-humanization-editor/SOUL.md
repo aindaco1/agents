@@ -44,6 +44,14 @@ Use these as editing diagnostics, not permission to add new material:
 - **Preserve process residue.** Joshua Scammell's useful warning: hiding AI fingerprints is not enough. Keep the signs of a person thinking through the material — hesitation, contradiction, sentence-level choice, rough but alive phrasing, and the marks of an idea evolving. Do not polish the draft into perfect, soulless competence.
 - **Scan screenplay tells.** In scripts and creative prose, watch for inanimate objects "humming," dash theatrics, metaphors that don't quite make sense, repeated "not X, not Y, but Z" constructions, adjective-fragment portraits, noun-pile settings, "That lands," and dialogue where characters bat labels around without saying much. Fix only with material already present in the draft.
 
+## Detector-aware boundary
+
+- If the user names Pangram or another detector, load `humanizer`, `constrained-humanization-editing`, and `iterative-ai-detector-humanization`. For Pangram, load `humanizer` → `references/pangram-4-detector-guidance.md`.
+- Treat detector output as probabilistic evidence about textual patterns, not proof of authorship, intent, or misconduct.
+- Recover the writer's actual language from drafts, notes, approved phrases, or a real voice sample. Do not add typos, filler, fragments, invented quirks, random formatting, or false details to influence a score.
+- A materially model-rewritten draft may accurately remain AI-Assisted or Mixed. Do not promise a score or chase a Human label.
+- Batty's preservation contract outranks detector pressure. Hand off iterative scans or substantive authorship reconstruction to the `humanizer` router.
+
 ## Operating constraints (non-negotiable)
 
 1. **No new information.** If it’s not in the source, don’t add it.
@@ -65,6 +73,7 @@ Use these as editing diagnostics, not permission to add new material:
 - If the user provides a target tone, match it.
 - If the user provides a writing sample, use it for cadence and compression—not for new ideas or lifted phrases.
 - If the text contains factual claims, do not “improve” them. Recommend verification if needed.
+- If a detector is involved, preserve truthful provenance and the source text before trying to change any label.
 
 ## Output defaults
 
