@@ -63,6 +63,85 @@ def test_select_profile_runtime_uses_openai_recommendation_and_prefers_anthropic
     assert not any(item["provider"] == "gemini" for item in runtime["fallback_providers"])
 
 
+def test_select_profile_runtime_uses_model_map_hint_and_fallback_chain():
+    base_cfg = {"agent": {"reasoning_effort": "medium"}}
+    entry = {
+        "model_recommendations": {"tier": "strong-general"},
+        "hermes_model_hint": {
+            "tier": "strong-general",
+            "alias": "premium",
+            "fallback_chain": ["premium", "local", "codex"],
+        },
+        "model_behavior_hints": {"reasoning_effort": "high"},
+    }
+    model_map = {
+        "aliases": {
+            "premium": {"provider": "openrouter", "model": "anthropic/claude-sonnet-4.6"},
+            "local": {"provider": "mlx-local", "model": "local-model"},
+            "codex": {"provider": "openai-codex", "model": "gpt-5.6-sol"},
+        },
+        "tier_to_alias": {"strong-general": "premium"},
+        "fallback_chain": {"strong-general": ["premium", "local", "codex"]},
+    }
+
+    runtime = module.select_profile_runtime(entry, base_cfg, model_map=model_map)
+
+    assert runtime["alias"] == "premium"
+    assert runtime["tier"] == "strong-general"
+    assert runtime["provider"] == "openrouter"
+    assert runtime["model"] == "anthropic/claude-sonnet-4.6"
+    assert runtime["reasoning_effort"] == "high"
+    assert runtime["fallback_providers"] == [
+        {"provider": "mlx-local", "model": "local-model"},
+        {"provider": "openai-codex", "model": "gpt-5.6-sol"},
+    ]
+
+
+def test_select_profile_runtime_alias_override_wins_over_profile_hint():
+    entry = {
+        "model_recommendations": {"tier": "strong-general"},
+        "hermes_model_hint": {"tier": "strong-general", "alias": "premium"},
+    }
+    model_map = {
+        "aliases": {
+            "premium": {"provider": "openrouter", "model": "premium-model"},
+            "codex": {"provider": "openai-codex", "model": "gpt-5.6-sol"},
+        },
+        "tier_to_alias": {"strong-general": "premium"},
+        "fallback_chain": {"strong-general": ["premium", "codex"]},
+    }
+
+    runtime = module.select_profile_runtime(
+        entry,
+        {},
+        model_map=model_map,
+        alias_override="codex",
+    )
+
+    assert runtime["alias"] == "codex"
+    assert runtime["provider"] == "openai-codex"
+    assert runtime["model"] == "gpt-5.6-sol"
+
+
+def test_select_profile_runtime_normalizes_legacy_off_reasoning_to_none():
+    entry = {
+        "model_recommendations": {"tier": "creative-writing"},
+        "hermes_model_hint": {"tier": "creative-writing", "alias": "claude"},
+        "model_behavior_hints": {"reasoning_effort": "off"},
+    }
+    model_map = {
+        "aliases": {
+            "claude": {"provider": "openrouter", "model": "claude-model"},
+        },
+        "tier_to_alias": {"creative-writing": "claude"},
+        "fallback_chain": {"creative-writing": ["claude"]},
+    }
+
+    runtime = module.select_profile_runtime(entry, {}, model_map=model_map)
+
+    assert runtime["reasoning_effort"] == "none"
+
+
 def test_build_agent_context_contains_sharper_sections():
     entry = {
         "display_name": "Test Agent",
@@ -199,11 +278,28 @@ def test_run_profile_uses_delegated_command(monkeypatch):
 
     monkeypatch.setattr(module, "in_git_repo", lambda cwd=None: True)
     monkeypatch.setattr(module.subprocess, "call", fake_call)
+    monkeypatch.setattr(module, "load_yaml", lambda path: {})
+    monkeypatch.setattr(
+        module,
+        "load_model_map",
+        lambda: {
+            "aliases": {
+                "premium": {"provider": "openrouter", "model": "premium-model"},
+                "codex": {"provider": "openai-codex", "model": "gpt-5.6-sol"},
+            },
+            "tier_to_alias": {"strong-general": "premium"},
+            "fallback_chain": {"strong-general": ["premium", "codex"]},
+        },
+    )
 
     result = module.run_profile("chief-of-staff", "Start with the top 3 priorities", delegated=True)
 
     assert result == 0
-    assert called == [["hermes", "-w", "-p", "chief-of-staff", "chat", "-q", "Start with the top 3 priorities"]]
+    assert called == [[
+        "hermes", "-w", "-p", "chief-of-staff",
+        "--provider", "openrouter", "--model", "premium-model",
+        "chat", "-q", "Start with the top 3 priorities",
+    ]]
 
 
 def test_run_routed_profile_executes_top_match(monkeypatch):
@@ -218,8 +314,15 @@ def test_run_routed_profile_executes_top_match(monkeypatch):
             {"slug": "account-manager", "score": 8},
         ]
 
-    def fake_run_profile(slug: str, query: str | None, delegated: bool = False):
-        calls.append((slug, query, delegated))
+    def fake_run_profile(
+        slug: str,
+        query: str | None,
+        delegated: bool = False,
+        alias_override: str | None = None,
+        tier_override: str | None = None,
+        dry_run: bool = False,
+    ):
+        calls.append((slug, query, delegated, alias_override, tier_override, dry_run))
         return 0
 
     monkeypatch.setattr(module, "route_agents", fake_route_agents)
@@ -228,7 +331,7 @@ def test_run_routed_profile_executes_top_match(monkeypatch):
     result = module.run_routed_profile("Plan my week and tell me what to delegate", query="Start with the top 3 priorities", delegated=True)
 
     assert result == 0
-    assert calls == [("chief-of-staff", "Start with the top 3 priorities", True)]
+    assert calls == [("chief-of-staff", "Start with the top 3 priorities", True, None, None, False)]
 
 
 def test_run_routed_profile_uses_prompt_as_query_when_query_is_missing(monkeypatch):
@@ -236,8 +339,15 @@ def test_run_routed_profile_uses_prompt_as_query_when_query_is_missing(monkeypat
 
     monkeypatch.setattr(module, "route_agents", lambda prompt, top_n=3, limit_to_first_50=True: [{"slug": "chief-of-staff", "score": 20}])
 
-    def fake_run_profile(slug: str, query: str | None, delegated: bool = False):
-        calls.append((slug, query, delegated))
+    def fake_run_profile(
+        slug: str,
+        query: str | None,
+        delegated: bool = False,
+        alias_override: str | None = None,
+        tier_override: str | None = None,
+        dry_run: bool = False,
+    ):
+        calls.append((slug, query, delegated, alias_override, tier_override, dry_run))
         return 0
 
     monkeypatch.setattr(module, "run_profile", fake_run_profile)
@@ -245,7 +355,7 @@ def test_run_routed_profile_uses_prompt_as_query_when_query_is_missing(monkeypat
     result = module.run_routed_profile("Plan my week and tell me what to delegate", delegated=True)
 
     assert result == 0
-    assert calls == [("chief-of-staff", "Plan my week and tell me what to delegate", True)]
+    assert calls == [("chief-of-staff", "Plan my week and tell me what to delegate", True, None, None, False)]
 
 
 def test_run_routed_profile_raises_when_no_matches(monkeypatch):

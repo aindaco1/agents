@@ -49,14 +49,14 @@
     },
     "codex": {
       "provider": "openai-codex",
-      "model": "gpt-5.5"
+      "model": "gpt-5.6-sol"
     },
     "free_openrouter": [
-      "qwen/qwen3-coder:free",
-      "openai/gpt-oss-120b:free",
-      "nousresearch/hermes-3-llama-3.1-405b:free",
-      "meta-llama/llama-3.3-70b-instruct:free",
-      "z-ai/glm-4.5-air:free"
+      "nvidia/nemotron-3-ultra-550b-a55b:free",
+      "thinkingmachines/inkling:free",
+      "z-ai/glm-5.2:free",
+      "nvidia/nemotron-3-super-120b-a12b:free",
+      "minimax/minimax-m3:free"
     ],
     "notes": "Use heavy reasoning for complete desktop builds because the role must coordinate product scope, native permissions, Tauri/Rust security, cross-platform packaging, signing/notarization, updater behavior, sidecars, tests, and release evidence."
   },
@@ -126,7 +126,7 @@
     "alias": "opus",
     "fallback_chain": [
       "opus",
-      "premium",
+      "claude",
       "local",
       "codex"
     ]

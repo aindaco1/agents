@@ -48,16 +48,16 @@
     },
     "codex": {
       "provider": "openai-codex",
-      "model": "gpt-5.5"
+      "model": "gpt-5.6-sol"
     },
     "free_openrouter": [
-      "nousresearch/hermes-3-llama-3.1-405b:free",
-      "meta-llama/llama-3.3-70b-instruct:free",
-      "qwen/qwen3-next-80b-a3b-instruct:free",
-      "z-ai/glm-4.5-air:free",
-      "minimax/minimax-m2.5:free"
+      "z-ai/glm-5.2:free",
+      "minimax/minimax-m3:free",
+      "minimax/minimax-m2.7:free",
+      "thinkingmachines/inkling-small:free",
+      "google/gemma-4-31b-it:free"
     ],
-    "notes": "Sonnet 4.6 is the default. Free alternatives (Hermes 3 405B, Llama 3.3 70B, Qwen3 Next 80B) handle general agent work acceptably when budget matters."
+    "notes": "Sonnet 4.6 is the default. Free alternatives are refreshed from the live OpenRouter catalog for budget-sensitive general work."
   },
   "slug": "research-analyst",
   "entrypoint": "SOUL.md",

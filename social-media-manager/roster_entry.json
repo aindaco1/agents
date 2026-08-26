@@ -48,16 +48,16 @@
     },
     "codex": {
       "provider": "openai-codex",
-      "model": "gpt-5.5"
+      "model": "gpt-5.6-sol"
     },
     "free_openrouter": [
-      "nousresearch/hermes-3-llama-3.1-405b:free",
-      "cognitivecomputations/dolphin-mistral-24b-venice-edition:free",
-      "google/gemma-3-27b-it:free",
-      "meta-llama/llama-3.3-70b-instruct:free",
-      "tencent/hy3-preview:free"
+      "minimax/minimax-m3:free",
+      "z-ai/glm-5.2:free",
+      "thinkingmachines/inkling:free",
+      "dots-studio/dots-3-note-preview:free",
+      "google/gemma-4-31b-it:free"
     ],
-    "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental (Dolphin Mistral Venice uncensored, Hermes 3 405B, Gemma 3 27B)."
+    "notes": "Claude Sonnet 4.6 is the prose-quality default. Free alternatives are refreshed from the live OpenRouter catalog and may be less consistent."
   },
   "slug": "social-media-manager",
   "entrypoint": "SOUL.md",
@@ -116,7 +116,7 @@
   ],
   "default_temperature": 0.7,
   "model_behavior_hints": {
-    "reasoning_effort": "off",
+    "reasoning_effort": "none",
     "verbosity": "medium",
     "tool_bias": "balanced"
   },

@@ -23,6 +23,7 @@ except Exception as exc:  # pragma: no cover
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_HERMES_HOME = Path.home() / ".hermes"
 PROFILES_ROOT = DEFAULT_HERMES_HOME / "profiles"
+MODEL_MAP_PATH = DEFAULT_HERMES_HOME / "model-map.json"
 GENERATED_ROOT = ROOT / "generated"
 MANIFEST_PATH = GENERATED_ROOT / "hermes_profiles_manifest.json"
 WRAPPER_NAMES = {
@@ -78,6 +79,23 @@ def dump_yaml(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as fh:
         yaml.safe_dump(data, fh, sort_keys=False, allow_unicode=True)
+
+
+def load_model_map(path: Path = MODEL_MAP_PATH) -> dict[str, Any]:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        raise ValueError(f"Unable to load Hermes model map {path}: {exc}") from exc
+    if not isinstance(data, dict) or not isinstance(data.get("aliases"), dict):
+        raise ValueError(f"Expected an aliases mapping in {path}")
+    return data
+
+
+def normalize_reasoning_effort(value: Any, default: str = "medium") -> str:
+    effort = str(value or default).strip().lower()
+    if effort in {"off", "no", "false", "disabled"}:
+        return "none"
+    return effort
 
 
 def discover_agents() -> list[Path]:
@@ -202,16 +220,80 @@ def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> 
     return ranked[:top_n]
 
 
-def select_profile_runtime(entry: dict[str, Any], base_cfg: dict[str, Any]) -> dict[str, Any]:
+def select_profile_runtime(
+    entry: dict[str, Any],
+    base_cfg: dict[str, Any],
+    model_map: dict[str, Any] | None = None,
+    alias_override: str | None = None,
+    tier_override: str | None = None,
+) -> dict[str, Any]:
     model_cfg = entry.get("model_recommendations") or {}
     behavior = entry.get("model_behavior_hints") or {}
     default_provider = str((base_cfg.get("model") or {}).get("provider") or "openai-codex")
     default_model = str((base_cfg.get("model") or {}).get("default") or "gpt-5.4")
 
+    if model_map is not None:
+        aliases = model_map.get("aliases") or {}
+        tier_to_alias = model_map.get("tier_to_alias") or {}
+        normalize = model_map.get("tier_aliases_normalized") or {}
+        fallback_chains = model_map.get("fallback_chain") or {}
+        hint = entry.get("hermes_model_hint") or {}
+
+        raw_tier = tier_override or hint.get("tier") or model_cfg.get("tier")
+        tier = normalize.get(raw_tier, raw_tier) if raw_tier else None
+        alias = alias_override
+        if alias is None and tier_override is not None:
+            alias = tier_to_alias.get(tier)
+        if alias is None:
+            alias = hint.get("alias") or tier_to_alias.get(tier) or "premium"
+
+        primary = aliases.get(alias)
+        if not isinstance(primary, dict):
+            raise ValueError(f"Unknown Hermes model alias: {alias}")
+        provider = str(primary.get("provider") or "").strip()
+        model = str(primary.get("model") or "").strip()
+        if not provider or not model:
+            raise ValueError(f"Hermes model alias {alias!r} is missing provider/model")
+
+        chain = fallback_chains.get(tier) or hint.get("fallback_chain") or []
+        fallback_providers: list[dict[str, Any]] = []
+        seen = {(provider, model)}
+        for fallback_alias in chain:
+            fallback = aliases.get(fallback_alias)
+            if not isinstance(fallback, dict):
+                raise ValueError(
+                    f"Fallback alias {fallback_alias!r} for tier {tier!r} is not configured"
+                )
+            fallback_provider = str(fallback.get("provider") or "").strip()
+            fallback_model = str(fallback.get("model") or "").strip()
+            key = (fallback_provider, fallback_model)
+            if not all(key) or key in seen:
+                continue
+            seen.add(key)
+            fallback_providers.append(
+                {"provider": fallback_provider, "model": fallback_model}
+            )
+
+        reasoning = normalize_reasoning_effort(
+            behavior.get("reasoning_effort")
+            or (base_cfg.get("agent") or {}).get("reasoning_effort")
+            or "medium"
+        )
+        return {
+            "provider": provider,
+            "model": model,
+            "reasoning_effort": reasoning,
+            "fallback_providers": fallback_providers,
+            "alias": alias,
+            "tier": tier,
+        }
+
     openai_rec = model_cfg.get("openai") or {}
     provider = default_provider
     model = str(openai_rec.get("model") or default_model)
-    reasoning = str(openai_rec.get("reasoning") or behavior.get("reasoning_effort") or "medium")
+    reasoning = normalize_reasoning_effort(
+        openai_rec.get("reasoning") or behavior.get("reasoning_effort") or "medium"
+    )
 
     fallback_providers: list[dict[str, Any]] = []
     seen_fallbacks: set[tuple[str, str]] = set()
@@ -243,6 +325,8 @@ def select_profile_runtime(entry: dict[str, Any], base_cfg: dict[str, Any]) -> d
         "model": model,
         "reasoning_effort": reasoning,
         "fallback_providers": fallback_providers,
+        "alias": None,
+        "tier": model_cfg.get("tier"),
     }
 
 
@@ -381,7 +465,12 @@ def ensure_profile_dirs(profile_dir: Path) -> None:
         (profile_dir / rel).mkdir(parents=True, exist_ok=True)
 
 
-def write_profile(agent_dir: Path, entry: dict[str, Any], base_cfg: dict[str, Any]) -> dict[str, Any]:
+def write_profile(
+    agent_dir: Path,
+    entry: dict[str, Any],
+    base_cfg: dict[str, Any],
+    model_map: dict[str, Any] | None = None,
+) -> dict[str, Any]:
     slug = agent_dir.name
     profile_dir = PROFILES_ROOT / slug
     ensure_profile_dirs(profile_dir)
@@ -402,7 +491,7 @@ def write_profile(agent_dir: Path, entry: dict[str, Any], base_cfg: dict[str, An
     agent_context = build_agent_context(entry, identity_summary, identity_md)
     (profile_dir / "context" / "AGENT_CONTEXT.md").write_text(agent_context, encoding="utf-8")
 
-    runtime = select_profile_runtime(entry, base_cfg)
+    runtime = select_profile_runtime(entry, base_cfg, model_map=model_map)
     cfg = deepcopy(base_cfg)
     cfg.setdefault("model", {})
     cfg["model"]["provider"] = runtime["provider"]
@@ -435,6 +524,8 @@ def write_profile(agent_dir: Path, entry: dict[str, Any], base_cfg: dict[str, An
         "provider": runtime["provider"],
         "model": runtime["model"],
         "reasoning_effort": runtime["reasoning_effort"],
+        "alias": runtime["alias"],
+        "tier": runtime["tier"],
     }
     return metadata
 
@@ -452,11 +543,12 @@ def write_manifest(items: list[dict[str, Any]]) -> None:
 
 def compile_selected(agent_dirs: list[Path]) -> list[dict[str, Any]]:
     base_cfg = load_yaml(DEFAULT_HERMES_HOME / "config.yaml")
+    model_map = load_model_map() if MODEL_MAP_PATH.is_file() else None
     PROFILES_ROOT.mkdir(parents=True, exist_ok=True)
     written = []
     for agent_dir in agent_dirs:
         entry = validate_agent_dir(agent_dir)
-        written.append(write_profile(agent_dir, entry, base_cfg))
+        written.append(write_profile(agent_dir, entry, base_cfg, model_map=model_map))
     write_manifest(written)
     return written
 
@@ -481,18 +573,78 @@ def in_git_repo(cwd: Path | None = None) -> bool:
     return result.returncode == 0
 
 
-def build_run_command(slug: str, query: str | None, delegated: bool = False, cwd: Path | None = None) -> list[str]:
+def build_run_command(
+    slug: str,
+    query: str | None,
+    delegated: bool = False,
+    cwd: Path | None = None,
+    provider: str | None = None,
+    model: str | None = None,
+) -> list[str]:
     cmd = ["hermes"]
     if delegated and in_git_repo(cwd):
         cmd.append("-w")
     cmd.extend(["-p", slug])
+    if provider:
+        cmd.extend(["--provider", provider])
+    if model:
+        cmd.extend(["--model", model])
     if query is not None:
         cmd.extend(["chat", "-q", query])
     return cmd
 
 
-def run_profile(slug: str, query: str | None, delegated: bool = False) -> int:
-    return subprocess.call(build_run_command(slug, query, delegated=delegated, cwd=Path.cwd()))
+def run_profile(
+    slug: str,
+    query: str | None,
+    delegated: bool = False,
+    alias_override: str | None = None,
+    tier_override: str | None = None,
+    dry_run: bool = False,
+) -> int:
+    agent_dir = ROOT / slug
+    if not agent_dir.is_dir():
+        raise SystemExit(f"Unknown slug: {slug}")
+    entry = validate_agent_dir(agent_dir)
+    base_cfg = load_yaml(DEFAULT_HERMES_HOME / "config.yaml")
+    try:
+        model_map = load_model_map()
+        runtime = select_profile_runtime(
+            entry,
+            base_cfg,
+            model_map=model_map,
+            alias_override=alias_override,
+            tier_override=tier_override,
+        )
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+
+    cmd = build_run_command(
+        slug,
+        query,
+        delegated=delegated,
+        cwd=Path.cwd(),
+        provider=runtime["provider"],
+        model=runtime["model"],
+    )
+    if dry_run:
+        print(
+            json.dumps(
+                {
+                    "slug": slug,
+                    "tier": runtime["tier"],
+                    "alias": runtime["alias"],
+                    "provider": runtime["provider"],
+                    "model": runtime["model"],
+                    "fallback_providers": runtime["fallback_providers"],
+                    "command": cmd,
+                },
+                indent=2,
+                ensure_ascii=False,
+            )
+        )
+        return 0
+    return subprocess.call(cmd)
 
 
 def run_routed_profile(
@@ -501,13 +653,23 @@ def run_routed_profile(
     top_n: int = 3,
     limit_to_first_50: bool = True,
     delegated: bool = False,
+    alias_override: str | None = None,
+    tier_override: str | None = None,
+    dry_run: bool = False,
 ) -> int:
     ranked = route_agents(prompt, top_n=top_n, limit_to_first_50=limit_to_first_50)
     if not ranked:
         raise SystemExit(f"No matching agent found for prompt: {prompt}")
     selected = ranked[0]["slug"]
     effective_query = query if query is not None else prompt
-    return run_profile(selected, effective_query, delegated=delegated)
+    return run_profile(
+        selected,
+        effective_query,
+        delegated=delegated,
+        alias_override=alias_override,
+        tier_override=tier_override,
+        dry_run=dry_run,
+    )
 
 
 def build_wrapper_script(script_path: Path, subcommand: str) -> str:
@@ -548,6 +710,9 @@ def parse_args() -> argparse.Namespace:
     p_run.add_argument("--top", type=int, default=3, help="How many ranked matches to consider when routing")
     p_run.add_argument("--all", action="store_true", help="Route across all discovered agents instead of the first 50")
     p_run.add_argument("--delegate", action="store_true", help="Run the selected profile as a delegated Hermes subprocess; use worktree mode automatically inside git repos")
+    p_run.add_argument("--alias-override", help="Override the profile's resolved Hermes model alias")
+    p_run.add_argument("--tier-override", help="Override the profile's capability tier before alias resolution")
+    p_run.add_argument("--dry-run", action="store_true", help="Print resolved routing and command without launching Hermes")
 
     p_route = sub.add_parser("route", help="Recommend the best matching agent for a task prompt")
     p_route.add_argument("prompt", help="Task prompt to route")
@@ -591,10 +756,20 @@ def main() -> int:
                 top_n=args.top,
                 limit_to_first_50=not args.all,
                 delegated=args.delegate,
+                alias_override=args.alias_override,
+                tier_override=args.tier_override,
+                dry_run=args.dry_run,
             )
         if not args.slug:
             raise SystemExit("run requires either a slug or --route")
-        return run_profile(args.slug, args.query, delegated=args.delegate)
+        return run_profile(
+            args.slug,
+            args.query,
+            delegated=args.delegate,
+            alias_override=args.alias_override,
+            tier_override=args.tier_override,
+            dry_run=args.dry_run,
+        )
     if args.cmd == "route":
         ranked = route_agents(args.prompt, top_n=args.top, limit_to_first_50=not args.all)
         print(json.dumps({"prompt": args.prompt, "matches": ranked}, indent=2, ensure_ascii=False))

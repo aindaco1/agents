@@ -48,16 +48,16 @@
     },
     "codex": {
       "provider": "openai-codex",
-      "model": "gpt-5.5"
+      "model": "gpt-5.6-sol"
     },
     "free_openrouter": [
       "openrouter/free",
-      "openai/gpt-oss-20b:free",
-      "google/gemma-3-12b-it:free",
-      "qwen/qwen3-next-80b-a3b-instruct:free",
-      "nvidia/nemotron-nano-9b-v2:free"
+      "liquid/lfm-2.5-2.6b:free",
+      "cohere/north-mini-code:free",
+      "poolside/laguna-xs-2.1:free",
+      "nvidia/nemotron-3.5-lightning:free"
     ],
-    "notes": "The meta-router `openrouter/free` picks from the free pool automatically. Enumerated alternates give explicit control: GPT-OSS 20B, Gemma 3 12B, Nemotron Nano 9B for small-fast work."
+    "notes": "The `openrouter/free` meta-router is the routine-work default. Enumerated alternates are refreshed from the live OpenRouter catalog."
   },
   "slug": "fitness-coach",
   "entrypoint": "SOUL.md",
