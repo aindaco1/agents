@@ -14,7 +14,10 @@
     "blog-writer",
     "content-strategist",
     "brand-voice-manager",
-    "technical-writer"
+    "technical-writer",
+    "vomit-draft-essay-co-writer",
+    "enheduanna-screenwriting-assistant",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Three-level editing (structure, voice, copy) in one role",
@@ -95,6 +98,18 @@
       {
         "role_id": "technical-writer",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when the user needs a rough first draft to edit, compress, and polish into publication-ready copy."
+      },
+      {
+        "role_id": "enheduanna-screenwriting-assistant",
+        "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

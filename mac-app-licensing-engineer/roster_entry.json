@@ -135,5 +135,10 @@
   },
   "hermes_skills": [
     "mac-app-direct-licensing"
-  ]
+  ],
+  "codex_interface": {
+    "display_name": "Mac App Licensing Engineer",
+    "short_description": "Build direct-sale macOS app licensing",
+    "default_prompt": "Use $mac-app-licensing-engineer to design and verify direct-sale licensing for this macOS app."
+  }
 }

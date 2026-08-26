@@ -1,0 +1,4 @@
+interface:
+  display_name: "Desktop Updater Release Validation"
+  short_description: "Validate signed desktop updater releases"
+  default_prompt: "Use $desktop-app-updater-release-validation to implement or verify this application's signed updater and previous-version acceptance path."

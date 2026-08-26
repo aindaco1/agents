@@ -129,5 +129,9 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "desktop-app-updater-release-validation",
+    "macos-dmg-release-validation"
+  ]
 }

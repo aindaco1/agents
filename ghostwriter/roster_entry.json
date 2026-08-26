@@ -14,7 +14,10 @@
     "editor",
     "content-strategist",
     "pr-writer",
-    "blog-writer"
+    "blog-writer",
+    "vomit-draft-essay-co-writer",
+    "enheduanna-screenwriting-assistant",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Voice matching from interviews is uncanny",
@@ -95,6 +98,18 @@
       {
         "role_id": "blog-writer",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
+      },
+      {
+        "role_id": "enheduanna-screenwriting-assistant",
+        "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

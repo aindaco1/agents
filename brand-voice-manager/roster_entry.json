@@ -14,7 +14,9 @@
     "editor",
     "copywriter",
     "content-strategist",
-    "localization-specialist"
+    "localization-specialist",
+    "vomit-draft-essay-co-writer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Voice and tone guide creation with do/don't examples",
@@ -95,6 +97,14 @@
       {
         "role_id": "content-strategist",
         "when": "You hand off to the Content Strategist for what to say (you own how to say it)."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

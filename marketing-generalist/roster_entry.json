@@ -14,7 +14,8 @@
     "sales-revenue-generalist",
     "copywriter",
     "seo-specialist",
-    "content-strategist"
+    "content-strategist",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Cross-channel strategy that avoids silo thinking",
@@ -95,6 +96,10 @@
       {
         "role_id": "seo-specialist",
         "when": "You hand off to the seo-specialist for deep technical SEO audits, schema markup, and site architecture optimization."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

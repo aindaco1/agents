@@ -14,7 +14,8 @@
     "content-strategist",
     "twitter-x-strategist",
     "tiktok-reels-strategist",
-    "copywriter"
+    "copywriter",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Full-picture strategist across platforms",
@@ -95,6 +96,10 @@
       {
         "role_id": "copywriter",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

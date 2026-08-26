@@ -14,7 +14,9 @@
     "brand-voice-manager",
     "copywriter",
     "legal-advisor",
-    "social-media-manager"
+    "social-media-manager",
+    "vomit-draft-essay-co-writer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Journalist-minded — writes what editors want to publish",
@@ -91,6 +93,14 @@
       {
         "role_id": "social-media-manager",
         "when": "You hand off to the social-media-manager when PR stories need social amplification strategy."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

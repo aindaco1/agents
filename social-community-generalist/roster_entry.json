@@ -14,7 +14,8 @@
     "writing-generalist",
     "marketing-generalist",
     "ui-ux-designer",
-    "leadership-ops-generalist"
+    "leadership-ops-generalist",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Creates platform-native content for every major social network — not one-size-fits-all reposts",
@@ -87,6 +88,10 @@
       {
         "role_id": "leadership-ops-generalist",
         "when": "You don't do PR or media relations. If a journalist reaches out through social, hand off to the leadership-ops-generalist or PR."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

@@ -14,7 +14,8 @@
     "linkedin-content-creator",
     "academic-writer",
     "copywriter",
-    "editor"
+    "editor",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Recruiter background — knows what hiring managers actually look at",
@@ -91,6 +92,10 @@
       {
         "role_id": "editor",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

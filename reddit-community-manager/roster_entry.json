@@ -14,7 +14,8 @@
     "social-media-manager",
     "discord-manager",
     "pr-writer",
-    "content-strategist"
+    "content-strategist",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Deep Reddit culture fluency",
@@ -91,6 +92,10 @@
       {
         "role_id": "content-strategist",
         "when": "You hand off to the Content Strategist when community insights should reshape the content direction."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

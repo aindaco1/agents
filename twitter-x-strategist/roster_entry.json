@@ -14,7 +14,9 @@
     "social-media-manager",
     "linkedin-content-creator",
     "pr-writer",
-    "content-strategist"
+    "content-strategist",
+    "vomit-draft-essay-co-writer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Thread craft with narrative tension",
@@ -95,6 +97,14 @@
       {
         "role_id": "content-strategist",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

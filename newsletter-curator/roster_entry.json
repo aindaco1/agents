@@ -13,7 +13,8 @@
   "pairs_well_with": [
     "email-marketing-specialist",
     "content-strategist",
-    "copywriter"
+    "copywriter",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Sharp editorial eye for signal vs noise",
@@ -90,6 +91,10 @@
       {
         "role_id": "seo-specialist",
         "when": "You hand off to the SEO Specialist when newsletter content needs to be repurposed for web with search optimization."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

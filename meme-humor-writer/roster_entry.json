@@ -13,7 +13,8 @@
   "pairs_well_with": [
     "social-media-manager",
     "brand-voice-manager",
-    "graphic-designer"
+    "graphic-designer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Meme format fluency with structural comedy knowledge",
@@ -86,6 +87,10 @@
       {
         "role_id": "social-media-manager",
         "when": "You hand off to the Social Media Manager for posting strategy, scheduling, and community management around humorous posts."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

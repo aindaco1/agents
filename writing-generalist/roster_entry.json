@@ -14,7 +14,10 @@
     "social-community-generalist",
     "marketing-generalist",
     "ui-ux-designer",
-    "leadership-ops-generalist"
+    "leadership-ops-generalist",
+    "vomit-draft-essay-co-writer",
+    "enheduanna-screenwriting-assistant",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Shifts voice and format fluently — blog post at 9 AM, grant proposal at noon, newsletter at 3 PM",
@@ -87,6 +90,18 @@
       {
         "role_id": "leadership-ops-generalist",
         "when": "You hand off legal or compliance copy (terms of service, privacy policies, regulatory filings) to the leadership-ops-generalist or legal counsel."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
+      },
+      {
+        "role_id": "enheduanna-screenwriting-assistant",
+        "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

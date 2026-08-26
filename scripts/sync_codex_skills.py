@@ -57,14 +57,20 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_roster(repo: Path) -> list[dict[str, Any]]:
-    roster_path = repo / "roster.json"
-    try:
-        payload = json.loads(roster_path.read_text(encoding="utf-8"))
-        entries = payload["agents"]
-    except (OSError, json.JSONDecodeError, KeyError, TypeError) as exc:
-        raise SystemExit(f"Unable to load {roster_path}: {exc}") from exc
-    if not isinstance(entries, list):
-        raise SystemExit(f"{roster_path}: 'agents' must be a list")
+    """Load the same canonical profile entries consumed by Hermes."""
+    entries: list[dict[str, Any]] = []
+    for path in sorted(repo.glob("*/roster_entry.json")):
+        try:
+            entry = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            raise SystemExit(f"Unable to load {path}: {exc}") from exc
+        if not isinstance(entry, dict):
+            raise SystemExit(f"{path}: expected a JSON object")
+        if entry.get("role_id") != path.parent.name:
+            raise SystemExit(f"{path}: role_id must match the profile directory")
+        entries.append(entry)
+    if not entries:
+        raise SystemExit(f"{repo}: no profile roster entries found")
     return entries
 
 
@@ -155,15 +161,40 @@ def build_frontmatter(entry: dict[str, Any]) -> str:
 
 def default_openai_yaml(entry: dict[str, Any]) -> str:
     role_id = entry["role_id"]
-    short_description = f"Work as the {entry['role_name']} profile"
+    configured = entry.get("codex_interface") or {}
+    if not isinstance(configured, dict):
+        raise SystemExit(f"{role_id}: codex_interface must be an object")
+
+    display_name = configured.get("display_name") or entry["role_name"]
+    short_description = configured.get("short_description") or (
+        f"Work as the {entry['role_name']} profile"
+    )
     if len(short_description) > 64:
         short_description = f"Use the {entry['role_name']} specialist profile"
-    prompt = f"Use ${role_id} to help with this task."
+    prompt = configured.get("default_prompt") or f"Use ${role_id} to help with this task."
+
+    values = {
+        "display_name": display_name,
+        "short_description": short_description,
+        "default_prompt": prompt,
+    }
+    for key, value in values.items():
+        if not isinstance(value, str) or not value.strip():
+            raise SystemExit(f"{role_id}: codex_interface.{key} must be a string")
+    if not 25 <= len(short_description) <= 64:
+        raise SystemExit(
+            f"{role_id}: Codex short_description must contain 25-64 characters"
+        )
+    if f"${role_id}" not in prompt:
+        raise SystemExit(
+            f"{role_id}: Codex default_prompt must mention ${role_id}"
+        )
+
     return (
         "interface:\n"
-        f'  display_name: "{entry["role_name"]}"\n'
-        f'  short_description: "{short_description}"\n'
-        f'  default_prompt: "{prompt}"\n'
+        f"  display_name: {json.dumps(display_name, ensure_ascii=False)}\n"
+        f"  short_description: {json.dumps(short_description, ensure_ascii=False)}\n"
+        f"  default_prompt: {json.dumps(prompt, ensure_ascii=False)}\n"
     )
 
 
@@ -224,8 +255,10 @@ def main() -> int:
         )
 
     counts = {"created": 0, "updated": 0, "unchanged": 0, "skipped": 0}
+    metadata_counts = {"created": 0, "updated": 0, "unchanged": 0}
     skipped: list[str] = []
     changed_roles: list[str] = []
+    changed_metadata: list[str] = []
 
     for entry in entries:
         role_id = entry["role_id"]
@@ -245,24 +278,42 @@ def main() -> int:
         expected = frontmatter + "\n" + build_body(repo, entry)
         if current == expected:
             counts["unchanged"] += 1
-            continue
+        else:
+            action = "created" if current is None else "updated"
+            counts[action] += 1
+            changed_roles.append(role_id)
+            if not args.check:
+                atomic_write(skill_path, expected)
 
-        action = "created" if current is None else "updated"
-        counts[action] += 1
-        changed_roles.append(role_id)
-        if not args.check:
-            atomic_write(skill_path, expected)
-            metadata_path = skill_dir / "agents" / "openai.yaml"
-            if not metadata_path.exists():
-                atomic_write(metadata_path, default_openai_yaml(entry))
+        metadata_path = skill_dir / "agents" / "openai.yaml"
+        current_metadata = (
+            metadata_path.read_text(encoding="utf-8")
+            if metadata_path.is_file()
+            else None
+        )
+        expected_metadata = default_openai_yaml(entry)
+        if current_metadata == expected_metadata:
+            metadata_counts["unchanged"] += 1
+        else:
+            action = "created" if current_metadata is None else "updated"
+            metadata_counts[action] += 1
+            changed_metadata.append(role_id)
+            if not args.check:
+                atomic_write(metadata_path, expected_metadata)
 
     mode = "check" if args.check else "sync"
     print(
         f"{mode}: "
         + ", ".join(f"{key}={value}" for key, value in counts.items())
     )
+    print(
+        "metadata: "
+        + ", ".join(f"{key}={value}" for key, value in metadata_counts.items())
+    )
     if changed_roles:
         print("changed roles: " + ", ".join(changed_roles))
+    if changed_metadata:
+        print("changed metadata: " + ", ".join(changed_metadata))
     if skipped:
         print(
             "preserved non-mirror collisions: "
@@ -270,7 +321,7 @@ def main() -> int:
             + " (use --replace-collision ROLE_ID to replace)"
         )
 
-    return 1 if args.check and changed_roles else 0
+    return 1 if args.check and (changed_roles or changed_metadata) else 0
 
 
 if __name__ == "__main__":

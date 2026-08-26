@@ -14,7 +14,8 @@
     "product-manager",
     "ui-ux-designer",
     "engineering-manager",
-    "data-scientist"
+    "data-scientist",
+    "vomit-draft-essay-co-writer"
   ],
   "pros": [
     "Product strategy and vision",
@@ -85,6 +86,10 @@
       {
         "role_id": "data-scientist",
         "when": "You hand off to the Data Scientist for deep analytical work, experiment design, metrics infrastructure, and statistical rigor."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
       }
     ],
     "escalate_to_human_when": [

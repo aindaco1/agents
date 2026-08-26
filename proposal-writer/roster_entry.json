@@ -14,7 +14,9 @@
     "sales-strategist",
     "pricing-analyst",
     "legal-advisor",
-    "product-marketing-manager"
+    "product-marketing-manager",
+    "vomit-draft-essay-co-writer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Win themes that differentiate compellingly against competitors",
@@ -91,6 +93,10 @@
       {
         "role_id": "product-marketing-manager",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

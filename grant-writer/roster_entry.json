@@ -14,7 +14,9 @@
     "academic-writer",
     "pr-writer",
     "content-strategist",
-    "editor"
+    "editor",
+    "vomit-draft-essay-co-writer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Above-average win rate from strategic targeting",
@@ -91,6 +93,14 @@
       {
         "role_id": "editor",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

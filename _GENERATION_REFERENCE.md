@@ -132,9 +132,19 @@ Use `MEMORY.md` for durable notes, environment facts, conventions, and lessons l
     "reasoning_effort": "medium",
     "verbosity": "medium",
     "tool_bias": "balanced"
+  },
+  "hermes_skills": ["portable-procedure-name"],
+  "codex_interface": {
+    "display_name": "Optional Codex display name",
+    "short_description": "Optional 25-64 character UI description",
+    "default_prompt": "Use $role-id to help with this task."
   }
 }
 ```
+
+`hermes_skills` and `codex_interface` are optional. Use `hermes_skills` for reusable procedures that the compiled Hermes profile should prefer. Use `codex_interface` only when the generated Codex UI metadata needs a deliberate profile-specific override; its `default_prompt` must include `$<role-id>`.
+
+Each profile's `roster_entry.json` is canonical. The root `roster.json` is a generated catalog and must be refreshed with `python3 scripts/sync_roster_aggregate.py` after profile metadata changes. Both Hermes and the Codex mirror generator read the individual canonical entries.
 
 ## Quality Standards
 

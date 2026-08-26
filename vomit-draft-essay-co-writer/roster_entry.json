@@ -14,7 +14,8 @@
     "editor",
     "research-analyst",
     "fact-checker",
-    "brand-strategist"
+    "brand-strategist",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Turns messy premises into coherent, emotionally honest structure fast",
@@ -92,6 +93,10 @@
       {
         "role_id": "brand-strategist",
         "when": "Hand off when the essay is meant to function as positioning, messaging, or thought-leadership."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

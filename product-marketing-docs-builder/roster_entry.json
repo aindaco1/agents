@@ -135,5 +135,10 @@
   },
   "hermes_skills": [
     "product-marketing-docs-sites"
-  ]
+  ],
+  "codex_interface": {
+    "display_name": "Product Marketing Docs Builder",
+    "short_description": "Build integrated product sites and developer docs",
+    "default_prompt": "Use $product-marketing-docs-builder to turn this software repository into a product marketing site with accurate developer documentation."
+  }
 }

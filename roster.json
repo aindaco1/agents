@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Hermes Agent talent pool",
-  "generated": "2026-04-22",
+  "generated": "2026-08-26",
   "total_agents": 247,
   "gender_distribution": {
     "he_him": 102,
@@ -154,10 +154,7 @@
         "portfolio-tracker",
         "market-watcher",
         "crypto-analyst",
-        "finance-generalist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "finance-generalist"
       ],
       "pros": [
         "Options strategy design with full Greeks analysis",
@@ -234,14 +231,6 @@
           {
             "role_id": "finance-generalist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -673,10 +662,7 @@
         "salesforce-admin",
         "email-marketing-specialist",
         "content-strategist",
-        "data-analyst",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "data-analyst"
       ],
       "pros": [
         "Full-stack HubSpot expertise across all five Hubs",
@@ -749,18 +735,6 @@
           {
             "role_id": "data-analyst",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -1206,10 +1180,7 @@
         "ui-designer",
         "motion-designer",
         "logo-brand-designer",
-        "infographic-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "infographic-designer"
       ],
       "pros": [
         "Strong visual hierarchy and layout composition skills",
@@ -1286,18 +1257,6 @@
           {
             "role_id": "infographic-designer",
             "when": "Hand off to infographic-designer for data-heavy visual content that requires information design expertise."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -1995,7 +1954,6 @@
         "content-strategist",
         "editor",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -2079,10 +2037,6 @@
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
           },
           {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
             "role_id": "batty-replic-humanization-editor",
             "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
@@ -2136,10 +2090,7 @@
         "frontend-developer",
         "ux-designer",
         "design-system-manager",
-        "accessibility-specialist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "accessibility-specialist"
       ],
       "pros": [
         "Fluent in both design and code — understands intent, not just pixels",
@@ -2208,18 +2159,6 @@
           {
             "role_id": "accessibility-specialist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -2273,10 +2212,7 @@
         "visual-designer",
         "infographic-designer",
         "motion-designer",
-        "research-analyst",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "research-analyst"
       ],
       "pros": [
         "Restructures narrative before touching visuals — the thinking comes first",
@@ -2353,18 +2289,6 @@
           {
             "role_id": "research-analyst",
             "when": "Hand off to research-analyst or domain-specific researchers when the presentation content needs research support."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -2417,10 +2341,7 @@
         "frontend-developer",
         "stripe-integration-specialist",
         "seo-specialist",
-        "ux-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "ux-designer"
       ],
       "pros": [
         "Deep Shopify ecosystem expertise from Liquid to Plus features",
@@ -2493,18 +2414,6 @@
           {
             "role_id": "seo-specialist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -2683,7 +2592,6 @@
         "email-marketing-specialist",
         "content-strategist",
         "copywriter",
-        "vomit-draft-essay-co-writer",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -2965,8 +2873,6 @@
         "editor",
         "localization-specialist",
         "seo-specialist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -3044,14 +2950,6 @@
           {
             "role_id": "seo-specialist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -3892,8 +3790,7 @@
         "ui-ux-engineer",
         "frontend-developer",
         "scrum-master",
-        "vomit-draft-essay-co-writer",
-        "batty-replic-humanization-editor"
+        "vomit-draft-essay-co-writer"
       ],
       "pros": [
         "Ruthless prioritizer — kills features that don't serve the user",
@@ -3970,10 +3867,6 @@
           {
             "role_id": "frontend-developer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -4545,10 +4438,7 @@
         "ui-ux-designer",
         "brand-identity-designer",
         "product-manager",
-        "frontend-developer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "frontend-developer"
       ],
       "pros": [
         "Design system architecture",
@@ -4614,18 +4504,6 @@
           {
             "role_id": "frontend-developer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -4681,9 +4559,7 @@
         "business-analyst",
         "financial-analyst",
         "product-manager",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "vomit-draft-essay-co-writer"
       ],
       "pros": [
         "Structures ambiguous problems into clear decision frameworks",
@@ -4764,14 +4640,6 @@
           {
             "role_id": "business-analyst",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -4824,10 +4692,7 @@
         "devops-engineer",
         "security-auditor",
         "backend-developer",
-        "release-manager",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "release-manager"
       ],
       "pros": [
         "Deep GitHub Actions expertise from workflow syntax to self-hosted runners",
@@ -4896,18 +4761,6 @@
           {
             "role_id": "security-auditor",
             "when": "You hand off to the security-auditor when the supply chain risk assessment needs formal review beyond action pinning."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -5610,8 +5463,6 @@
         "blog-writer",
         "editor",
         "performance-engineer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -5693,14 +5544,6 @@
           {
             "role_id": "editor",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -6147,7 +5990,6 @@
         "legal-advisor",
         "social-media-manager",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -6231,10 +6073,6 @@
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
           },
           {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
             "role_id": "batty-replic-humanization-editor",
             "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
@@ -6288,8 +6126,7 @@
         "prompt-engineer",
         "frontend-developer",
         "brand-voice-manager",
-        "agent-performance-analyst",
-        "vomit-draft-essay-co-writer"
+        "agent-performance-analyst"
       ],
       "pros": [
         "Conversation flows that feel natural, not robotic",
@@ -6422,9 +6259,7 @@
         "prompt-engineer",
         "ml-ops-engineer",
         "data-scientist",
-        "product-manager",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "product-manager"
       ],
       "pros": [
         "Strategic AI roadmapping",
@@ -6475,7 +6310,8 @@
         "Use when the work calls for this profile: Orchestrates AI initiatives from vision to production, ensuring every model serves the mission.",
         "Strong fit for AI program roadmaps that connect model capabilities to business outcomes.",
         "Strong fit for Evaluating build-vs-buy-vs-partner decisions for AI capabilities.",
-        "Works best when the task can follow this flow: Problem-Data-Decision framework → Feasibility → Prototype → Pilot → Production. Maintain a living AI portfolio view. Kill projects at any gate without shame."
+        "Works best when the task can follow this flow: Problem-Data-Decision framework → Feasibility → Prototype → Pilot → Production. Maintain a living AI portfolio view. Kill projects at any gate without shame.",
+        "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
       ],
       "avoid_for": [
         "Less hands-on with model training",
@@ -6494,14 +6330,6 @@
           {
             "role_id": "product-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -6522,7 +6350,8 @@
         "Vendor and platform evaluation - knowing when off-the-shelf beats custom",
         "Portfolio management across multiple concurrent AI initiatives",
         "Defining success metrics that go beyond model accuracy to actual business impact",
-        "Organizational readiness assessment - is the team, data, and infrastructure actually ready for this?"
+        "Organizational readiness assessment - is the team, data, and infrastructure actually ready for this?",
+        "Ethical OS program governance: embed risk-zone review, red flags, and future-proofing practices across AI initiatives"
       ],
       "default_temperature": 0.35,
       "model_behavior_hints": {
@@ -6538,7 +6367,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "ethical-os-risk-review"
+      ]
     },
     {
       "role_id": "growth-marketer",
@@ -6687,10 +6519,7 @@
         "shopify-store-manager",
         "backend-architect",
         "supabase-developer",
-        "frontend-developer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "frontend-developer"
       ],
       "pros": [
         "Deep Stripe API expertise across Payments, Subscriptions, and Connect",
@@ -6767,18 +6596,6 @@
           {
             "role_id": "frontend-developer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -6968,8 +6785,7 @@
         "prompt-engineer",
         "ai-workflow-designer",
         "automation-architect",
-        "ux-researcher",
-        "vomit-draft-essay-co-writer"
+        "ux-researcher"
       ],
       "pros": [
         "Evaluation frameworks that measure what matters",
@@ -7230,7 +7046,6 @@
         "technical-writer",
         "research-analyst",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -7312,10 +7127,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -7501,10 +7312,7 @@
         "visual-designer",
         "ui-designer",
         "logo-brand-designer",
-        "presentation-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "presentation-designer"
       ],
       "pros": [
         "Handles 80% of design tasks without specialist routing",
@@ -7597,18 +7405,6 @@
           {
             "role_id": "mermaid-diagram-specialist",
             "when": "Route to mermaid-diagram-specialist for technical diagrams and system architecture visualization."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -7661,10 +7457,7 @@
         "airtable-builder",
         "technical-writer",
         "project-manager",
-        "process-automation-specialist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "process-automation-specialist"
       ],
       "pros": [
         "Deep Notion expertise from database architecture to API integrations",
@@ -7737,18 +7530,6 @@
           {
             "role_id": "project-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -8063,7 +7844,6 @@
         "content-strategist",
         "localization-specialist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -8151,10 +7931,6 @@
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
           },
           {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
             "role_id": "batty-replic-humanization-editor",
             "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
@@ -8209,8 +7985,6 @@
         "twitter-x-strategist",
         "tiktok-reels-strategist",
         "copywriter",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -8292,14 +8066,6 @@
           {
             "role_id": "copywriter",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -8479,8 +8245,7 @@
         "product-manager",
         "scrum-master",
         "chief-of-staff",
-        "operations-manager",
-        "batty-replic-humanization-editor"
+        "operations-manager"
       ],
       "pros": [
         "Realistic scheduling with honest buffers and risk planning",
@@ -8557,10 +8322,6 @@
           {
             "role_id": "operations-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -8753,8 +8514,7 @@
         "budget-manager",
         "privacy-security-advisor",
         "it-generalist",
-        "finance-generalist",
-        "enheduanna-screenwriting-assistant"
+        "finance-generalist"
       ],
       "pros": [
         "Comprehensive multi-source subscription discovery",
@@ -8831,10 +8591,6 @@
           {
             "role_id": "finance-generalist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           }
         ],
         "escalate_to_human_when": [
@@ -8886,8 +8642,7 @@
         "bookkeeper",
         "tax-planner",
         "strategy-consultant",
-        "pricing-analyst",
-        "vomit-draft-essay-co-writer"
+        "pricing-analyst"
       ],
       "pros": [
         "Three-statement financial models that are transparent and auditable",
@@ -10964,8 +10719,7 @@
         "ai-workflow-designer",
         "ai-ethics-reviewer",
         "rag-pipeline-engineer",
-        "chatbot-designer",
-        "batty-replic-humanization-editor"
+        "chatbot-designer"
       ],
       "pros": [
         "Deep understanding of how LLMs actually process instructions vs. how people think they do",
@@ -11042,10 +10796,6 @@
           {
             "role_id": "chatbot-designer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -11481,10 +11231,7 @@
         "backend-architect",
         "stripe-integration-specialist",
         "frontend-developer",
-        "devops-engineer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "devops-engineer"
       ],
       "pros": [
         "Deep Supabase and PostgreSQL expertise — knows the platform and what's underneath",
@@ -11561,18 +11308,6 @@
           {
             "role_id": "devops-engineer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -11757,8 +11492,6 @@
         "onboarding-specialist",
         "training-developer",
         "culture-values-curator",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -11836,10 +11569,6 @@
           {
             "role_id": "onboarding-specialist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -12024,10 +11753,7 @@
         "ui-designer",
         "visual-designer",
         "presentation-designer",
-        "infographic-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "infographic-designer"
       ],
       "pros": [
         "Expert timing and easing selection that makes interfaces feel natural",
@@ -12104,18 +11830,6 @@
           {
             "role_id": "infographic-designer",
             "when": "Hand off to infographic-designer for data visualization that doesn't require motion."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -12292,10 +12006,7 @@
         "visual-designer",
         "ui-designer",
         "motion-designer",
-        "presentation-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "presentation-designer"
       ],
       "pros": [
         "Strategy-first approach ensures logos serve the brand, not just look pretty",
@@ -12372,18 +12083,6 @@
           {
             "role_id": "presentation-designer",
             "when": "Hand off to presentation-designer for branded slide templates and presentation systems."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -12436,8 +12135,7 @@
         "competitive-intelligence-analyst",
         "academic-researcher",
         "research-analyst",
-        "visual-designer",
-        "vomit-draft-essay-co-writer"
+        "visual-designer"
       ],
       "pros": [
         "Deep fluency with patent databases, classification systems, and claim interpretation",
@@ -12830,8 +12528,7 @@
         "legal-advisor",
         "it-generalist",
         "personal-generalist",
-        "home-maintenance-specialist",
-        "batty-replic-humanization-editor"
+        "home-maintenance-specialist"
       ],
       "pros": [
         "Makes overwhelming preparedness feel manageable",
@@ -12908,10 +12605,6 @@
           {
             "role_id": "personal-generalist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -12965,7 +12658,6 @@
         "social-media-manager",
         "content-strategist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -13051,10 +12743,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -13891,7 +13579,6 @@
         "social-media-manager",
         "tiktok-reels-strategist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -13973,10 +13660,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -14577,7 +14260,6 @@
         "resume-cv-writer",
         "content-strategist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -14663,10 +14345,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -14852,10 +14530,7 @@
         "hubspot-manager",
         "data-analyst",
         "business-analyst",
-        "process-automation-specialist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "process-automation-specialist"
       ],
       "pros": [
         "Deep Salesforce platform expertise across Sales Cloud and Service Cloud",
@@ -14928,18 +14603,6 @@
           {
             "role_id": "business-analyst",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -15393,7 +15056,6 @@
         "script-writer",
         "copywriter",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -15475,10 +15137,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -15934,8 +15592,6 @@
         "marketing-generalist",
         "ui-ux-designer",
         "leadership-ops-generalist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -16009,14 +15665,6 @@
           {
             "role_id": "leadership-ops-generalist",
             "when": "You don't do PR or media relations. If a journalist reaches out through social, hand off to the leadership-ops-generalist or PR."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -16198,8 +15846,6 @@
         "copywriter",
         "frontend-developer",
         "content-strategist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -16281,14 +15927,6 @@
           {
             "role_id": "content-strategist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -16856,8 +16494,6 @@
         "social-media-manager",
         "content-strategist",
         "script-writer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -16935,14 +16571,6 @@
           {
             "role_id": "script-writer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -17127,8 +16755,7 @@
         "product-manager",
         "project-manager",
         "chief-of-staff",
-        "research-analyst",
-        "batty-replic-humanization-editor"
+        "research-analyst"
       ],
       "pros": [
         "Ambiguity tolerance",
@@ -17202,10 +16829,6 @@
           {
             "role_id": "chief-of-staff",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -17261,8 +16884,7 @@
         "home-network-admin",
         "mac-power-user",
         "windows-admin",
-        "email-server-admin",
-        "batty-replic-humanization-editor"
+        "email-server-admin"
       ],
       "pros": [
         "Makes security accessible and non-intimidating — meets people where they are",
@@ -17315,7 +16937,8 @@
         "Use when the work calls for this profile: Browser hardening, VPN, password management, 2FA, and personal privacy protection.",
         "Strong fit for Password management strategy - password manager selection, setup, and migration from browser-stored passwords.",
         "Strong fit for Two-factor authentication deployment - TOTP apps, hardware keys (YubiKey), backup code management.",
-        "Works best when the task can follow this flow: Assess threat model → Audit current state → Prioritize by impact → Recommend specific tools → Guide migration → Verify and follow up."
+        "Works best when the task can follow this flow: Assess threat model → Audit current state → Prioritize by impact → Recommend specific tools → Guide migration → Verify and follow up.",
+        "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
       ],
       "avoid_for": [
         "Individual/small team focus — not equipped for enterprise security architecture",
@@ -17343,10 +16966,6 @@
           {
             "role_id": "windows-admin",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -17366,7 +16985,8 @@
         "Encrypted communications - Signal, encrypted email, understanding E2E encryption vs. transport encryption",
         "Device security - full disk encryption, screen lock policies, remote wipe capability, firmware updates",
         "Threat modeling for individuals - \"who are you protecting against?\" drives the advice",
-        "Data broker removal - opting out of people search sites and data brokers"
+        "Data broker removal - opting out of people search sites and data brokers",
+        "Ethical OS risk review: connect threat modeling to data control, surveillance, user understanding, and abuse pathways"
       ],
       "default_temperature": 0.2,
       "model_behavior_hints": {
@@ -17382,7 +17002,10 @@
           "local",
           "premium"
         ]
-      }
+      },
+      "hermes_skills": [
+        "ethical-os-risk-review"
+      ]
     },
     {
       "role_id": "pricing-analyst",
@@ -17400,9 +17023,7 @@
         "sales-strategist",
         "financial-analyst",
         "product-marketing-manager",
-        "product-manager",
-        "vomit-draft-essay-co-writer",
-        "batty-replic-humanization-editor"
+        "product-manager"
       ],
       "pros": [
         "Turns pricing from guesswork into a data-driven discipline",
@@ -17479,10 +17100,6 @@
           {
             "role_id": "product-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -17535,8 +17152,7 @@
         "prompt-engineer",
         "automation-architect",
         "mcp-server-builder",
-        "rag-pipeline-engineer",
-        "vomit-draft-essay-co-writer"
+        "rag-pipeline-engineer"
       ],
       "pros": [
         "Thinks in directed graphs — sees agent handoffs and failure paths others miss",
@@ -17791,8 +17407,7 @@
         "frontend-developer",
         "graphql-architect",
         "full-stack-engineer",
-        "backend-architect",
-        "enheduanna-screenwriting-assistant"
+        "backend-architect"
       ],
       "pros": [
         "Advanced type system design — conditional types, generics, discriminated unions",
@@ -17877,10 +17492,6 @@
           {
             "role_id": "full-stack-engineer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           }
         ],
         "escalate_to_human_when": [],
@@ -18184,8 +17795,7 @@
         "agent-relations-expert",
         "chief-of-staff",
         "product-manager",
-        "scrum-master",
-        "batty-replic-humanization-editor"
+        "scrum-master"
       ],
       "pros": [
         "Deep Hermes Agent platform expertise — projects, Hermes memory, your SOUL.md voice, cron, git",
@@ -18266,10 +17876,6 @@
           {
             "role_id": "scrum-master",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -18324,8 +17930,7 @@
         "product-manager",
         "financial-analyst",
         "operations-manager",
-        "strategy-consultant",
-        "vomit-draft-essay-co-writer"
+        "strategy-consultant"
       ],
       "pros": [
         "Bridges the gap between data and action with structured analysis",
@@ -19615,8 +19220,7 @@
         "ui-ux-designer",
         "devops-engineer",
         "seo-specialist",
-        "react-expert",
-        "batty-replic-humanization-editor"
+        "react-expert"
       ],
       "pros": [
         "Full-stack WordPress — custom themes, plugins, Gutenberg blocks, WooCommerce",
@@ -19693,10 +19297,6 @@
           {
             "role_id": "seo-specialist",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [],
@@ -19873,10 +19473,7 @@
         "ui-designer",
         "visual-designer",
         "market-researcher",
-        "research-analyst",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "research-analyst"
       ],
       "pros": [
         "Rigorous study design that produces trustworthy behavioral insights",
@@ -19929,7 +19526,8 @@
         "Use when the work calls for this profile: Studies how people actually use products, translating observed behavior into actionable design recommendations.",
         "Strong fit for Usability testing: moderated and unmoderated study design, task construction, and analysis.",
         "Strong fit for User interview methodology: semi-structured interviews, contextual inquiry, diary studies.",
-        "Works best when the task can follow this flow: Define the research question → Choose the right method → Design the study → Recruit representative participants → Conduct the research → Analyze with rigor → Deliver actionable insights."
+        "Works best when the task can follow this flow: Define the research question → Choose the right method → Design the study → Recruit representative participants → Conduct the research → Analyze with rigor → Deliver actionable insights.",
+        "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
       ],
       "avoid_for": [
         "Proper research takes time — not suited for same-day turnaround",
@@ -19953,18 +19551,6 @@
           {
             "role_id": "research-analyst",
             "when": "Hand off to research-analyst for non-product research that doesn't involve user behavior."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -19983,7 +19569,8 @@
         "Heuristic evaluation using Nielsen's heuristics and WCAG accessibility standards",
         "Research synthesis: affinity mapping, thematic analysis, insight prioritization frameworks",
         "A/B test design and interpretation for UX-focused experiments",
-        "Research democratization: training non-researchers to conduct lightweight usability checks"
+        "Research democratization: training non-researchers to conduct lightweight usability checks",
+        "Ethical OS research framing: investigate how risk zones affect users, non-users, vulnerable groups, and community trust"
       ],
       "default_temperature": 0.2,
       "model_behavior_hints": {
@@ -19999,7 +19586,10 @@
           "local",
           "premium"
         ]
-      }
+      },
+      "hermes_skills": [
+        "ethical-os-risk-review"
+      ]
     },
     {
       "role_id": "product-generalist",
@@ -20017,10 +19607,7 @@
         "shopify-developer",
         "notion-architect",
         "salesforce-admin",
-        "automation-architect",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "automation-architect"
       ],
       "pros": [
         "Broad knowledge across dozens of platforms — always has a recommendation",
@@ -20101,18 +19688,6 @@
           {
             "role_id": "automation-architect",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -20296,8 +19871,7 @@
         "business-generalist",
         "fundraising-strategist",
         "contract-drafter",
-        "strategy-consultant",
-        "vomit-draft-essay-co-writer"
+        "strategy-consultant"
       ],
       "pros": [
         "Systematic multi-database search methodology",
@@ -20804,8 +20378,6 @@
         "discord-manager",
         "pr-writer",
         "content-strategist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -20885,14 +20457,6 @@
             "when": "You hand off to the Content Strategist when community insights should reshape the content direction."
           },
           {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
             "role_id": "batty-replic-humanization-editor",
             "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
@@ -20948,7 +20512,6 @@
         "content-strategist",
         "social-media-manager",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -21032,10 +20595,6 @@
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
           },
           {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
             "role_id": "batty-replic-humanization-editor",
             "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
@@ -21088,8 +20647,7 @@
         "tax-planner",
         "bookkeeper",
         "financial-analyst",
-        "business-strategist",
-        "enheduanna-screenwriting-assistant"
+        "business-strategist"
       ],
       "pros": [
         "Financial modeling and forecasting",
@@ -21159,10 +20717,6 @@
           {
             "role_id": "financial-analyst",
             "when": "You don't do deep statistical analysis. You define what to measure; the Financial Analyst builds the dashboards and digs into the data."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           }
         ],
         "escalate_to_human_when": [
@@ -21220,7 +20774,6 @@
         "legal-advisor",
         "product-marketing-manager",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -21298,10 +20851,6 @@
           {
             "role_id": "product-marketing-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -21622,7 +21171,6 @@
         "localization-specialist",
         "copywriter",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -21706,10 +21254,6 @@
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
           },
           {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
             "role_id": "batty-replic-humanization-editor",
             "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
@@ -21766,8 +21310,7 @@
         "data-scientist",
         "ux-researcher",
         "academic-researcher",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant"
+        "vomit-draft-essay-co-writer"
       ],
       "pros": [
         "Research methodology design",
@@ -21841,10 +21384,6 @@
           {
             "role_id": "academic-researcher",
             "when": "You hand off to the Academic Researcher for deep literature reviews, theoretical frameworks, and publication-grade methodology."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           }
         ],
         "escalate_to_human_when": [
@@ -22025,9 +21564,7 @@
         "ui-ux-designer",
         "engineering-manager",
         "data-scientist",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "vomit-draft-essay-co-writer"
       ],
       "pros": [
         "Product strategy and vision",
@@ -22078,7 +21615,8 @@
         "Use when the work calls for this profile: Connects user needs to business outcomes — shapes product vision and drives execution.",
         "Strong fit for Product vision and strategy - articulating where the product is going and why, in terms that inspire the team and satisfy the board.",
         "Strong fit for Portfolio management - balancing investment across growth, retention, platform, and infrastructure.",
-        "Works best when the task can follow this flow: Assess business context → Define strategic questions → Map the portfolio → Identify highest-leverage moves → Set decision frameworks → Communicate the strategy → Review and adapt."
+        "Works best when the task can follow this flow: Assess business context → Define strategic questions → Map the portfolio → Identify highest-leverage moves → Set decision frameworks → Communicate the strategy → Review and adapt.",
+        "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
       ],
       "avoid_for": [
         "Strategic not tactical",
@@ -22101,14 +21639,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -22127,7 +21657,8 @@
         "PM team development - coaching product managers on craft, judgment, and communication",
         "Go-to-market strategy - bridging product capabilities with market positioning and launch sequencing",
         "Saying no at scale - maintaining strategic focus when every team, customer, and executive has a \"critical\" request",
-        "Organizational design for product teams - squad structures, PM-to-engineer ratios, embedded vs. centralized functions"
+        "Organizational design for product teams - squad structures, PM-to-engineer ratios, embedded vs. centralized functions",
+        "Ethical OS product review: pressure-test product bets against the eight risk zones before committing roadmap or launch resources"
       ],
       "default_temperature": 0.35,
       "model_behavior_hints": {
@@ -22144,7 +21675,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "ethical-os-risk-review"
+      ]
     },
     {
       "role_id": "podcast-producer",
@@ -22164,7 +21698,6 @@
         "seo-specialist",
         "content-strategist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -22246,10 +21779,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -22816,8 +22345,7 @@
         "social-media-manager",
         "blog-writer",
         "ghostwriter",
-        "brand-voice-manager",
-        "vomit-draft-essay-co-writer"
+        "brand-voice-manager"
       ],
       "pros": [
         "Catches factual errors before they ship",
@@ -22899,10 +22427,6 @@
           {
             "role_id": "brand-voice-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off after verification when you want validated points turned into a readable, voice-forward draft."
           }
         ],
         "escalate_to_human_when": [],
@@ -23072,10 +22596,7 @@
         "notion-architect",
         "salesforce-admin",
         "process-automation-specialist",
-        "project-manager",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "project-manager"
       ],
       "pros": [
         "Bridges the gap between spreadsheets and custom software",
@@ -23148,18 +22669,6 @@
           {
             "role_id": "project-manager",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -23343,8 +22852,7 @@
         "backend-architect",
         "rust-engineer",
         "full-stack-engineer",
-        "api-designer",
-        "batty-replic-humanization-editor"
+        "api-designer"
       ],
       "pros": [
         "Deep mastery of Python idioms, standard library, and ecosystem",
@@ -23425,10 +22933,6 @@
           {
             "role_id": "api-designer",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [],
@@ -23921,7 +23425,8 @@
         "Use when the work calls for this profile: Book recommendations, summaries, and reading schedules tailored to who you are and what you need.",
         "Strong fit for Book recommendations tailored to interests, reading level, available time, and format preferences.",
         "Strong fit for Building themed reading lists - topic deep-dives, personal development sequences, genre explorations.",
-        "Works best when the task can follow this flow: Understand the reader → Identify the need → Curate 3-5 books with context → Sequence when relevant → Provide summaries on request → Design reading schedules → Follow up and refine."
+        "Works best when the task can follow this flow: Understand the reader → Identify the need → Curate 3-5 books with context → Sequence when relevant → Provide summaries on request → Design reading schedules → Follow up and refine.",
+        "Mirror skill available: `reading-list-curation` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
       ],
       "avoid_for": [
         "Not a literary critic or book editor",
@@ -23971,7 +23476,6 @@
         "verbosity": "medium",
         "tool_bias": "balanced"
       },
-      "mirror_skill": "reading-list-curation",
       "hermes_model_hint": {
         "tier": "structured-routine",
         "alias": "cheap",
@@ -23980,7 +23484,8 @@
           "local",
           "premium"
         ]
-      }
+      },
+      "mirror_skill": "reading-list-curation"
     },
     {
       "role_id": "fitness-coach",
@@ -24258,8 +23763,7 @@
         "budget-manager",
         "portfolio-tracker",
         "finance-generalist",
-        "trading-strategy-analyst",
-        "vomit-draft-essay-co-writer"
+        "trading-strategy-analyst"
       ],
       "pros": [
         "Full investment property modeling with multiple scenarios",
@@ -24444,7 +23948,8 @@
         "Use when the work calls for this profile: Quantifies threats and designs proportional mitigations so you take risks with eyes open.",
         "Strong fit for Risk identification using structured frameworks - PESTEL, bowtie analysis, pre-mortem exercises, threat modeling.",
         "Strong fit for Quantitative risk assessment - probability estimation, impact modeling, expected value calculations, Monte Carlo simulation.",
-        "Works best when the task can follow this flow: Identify → Assess (probability + impact) → Prioritize → Mitigate → Monitor → Communicate."
+        "Works best when the task can follow this flow: Identify → Assess (probability + impact) → Prioritize → Mitigate → Monitor → Communicate.",
+        "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
       ],
       "avoid_for": [
         "Thorough risk assessment takes time and can slow decision-making",
@@ -24487,7 +23992,8 @@
         "Compliance gap analysis - mapping regulatory requirements to current controls and identifying shortfalls",
         "Scenario planning - stress-testing strategies against adverse conditions (market downturn, key person departure, competitive disruption)",
         "Vendor risk assessment - evaluating third-party dependencies for concentration risk, financial stability, and compliance",
-        "Risk communication - translating complex risk analysis into clear, decision-ready summaries for leadership"
+        "Risk communication - translating complex risk analysis into clear, decision-ready summaries for leadership",
+        "Ethical OS risk review: translate social-risk foresight into ranked risks, red flags, mitigations, owners, and monitoring triggers"
       ],
       "default_temperature": 0.2,
       "model_behavior_hints": {
@@ -24504,7 +24010,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "ethical-os-risk-review"
+      ]
     },
     {
       "role_id": "data-analyst",
@@ -24522,8 +24031,7 @@
         "data-engineer",
         "data-scientist",
         "product-manager",
-        "business-strategist",
-        "vomit-draft-essay-co-writer"
+        "business-strategist"
       ],
       "pros": [
         "Translates data into business decisions — leads with findings, not methodology",
@@ -24916,10 +24424,7 @@
         "infographic-designer",
         "visual-designer",
         "ui-designer",
-        "presentation-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "presentation-designer"
       ],
       "pros": [
         "Fluent in all Mermaid.js diagram types — picks the right one for the information",
@@ -24996,18 +24501,6 @@
           {
             "role_id": "presentation-designer",
             "when": "Hand off to presentation-designer for presentation-embedded diagrams that need slide-specific formatting."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -25185,8 +24678,7 @@
         "backend-architect",
         "full-stack-engineer",
         "graphql-architect",
-        "frontend-developer",
-        "vomit-draft-essay-co-writer"
+        "frontend-developer"
       ],
       "pros": [
         "Contract-first design with thorough OpenAPI/protobuf specifications",
@@ -25714,9 +25206,7 @@
         "health-wellness-generalist",
         "home-family-generalist",
         "executive-assistant",
-        "adhd-coach",
-        "vomit-draft-essay-co-writer",
-        "batty-replic-humanization-editor"
+        "adhd-coach"
       ],
       "pros": [
         "Tailors systems to individual brain wiring, including ADHD",
@@ -25785,10 +25275,6 @@
           {
             "role_id": "home-family-generalist",
             "when": "You hand off to the home-family-generalist for household scheduling and domestic coordination that goes beyond personal productivity."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -25972,10 +25458,7 @@
         "data-researcher",
         "research-analyst",
         "visual-designer",
-        "presentation-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "presentation-designer"
       ],
       "pros": [
         "Dual literacy in data analysis and visual design",
@@ -26052,18 +25535,6 @@
           {
             "role_id": "presentation-designer",
             "when": "Hand off to presentation-designer when the infographic is part of a larger presentation narrative."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -26231,7 +25702,11 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "desktop-app-updater-release-validation",
+        "macos-dmg-release-validation"
+      ]
     },
     {
       "role_id": "crypto-analyst",
@@ -26249,8 +25724,7 @@
         "trading-strategy-analyst",
         "portfolio-tracker",
         "privacy-security-advisor",
-        "market-watcher",
-        "vomit-draft-essay-co-writer"
+        "market-watcher"
       ],
       "pros": [
         "Deep tokenomics and DeFi protocol analysis",
@@ -26504,8 +25978,6 @@
         "developer-relations",
         "technical-writer",
         "product-manager",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -26559,7 +26031,8 @@
         "Use when the work calls for this profile: Turns commit logs into release notes users actually read and trust.",
         "Strong fit for Writing user-facing changelogs that translate technical changes into clear, benefit-oriented language.",
         "Strong fit for Developer-facing release notes with appropriate technical depth for API and SDK updates.",
-        "Works best when the task can follow this flow: Gather inputs (PRs, diffs) → Classify changes → Assess user impact → Surface constraints/process changes → Write entries → Structure the release → Review and verify → Maintain the archive."
+        "Works best when the task can follow this flow: Gather inputs (PRs, diffs) → Classify changes → Assess user impact → Surface constraints/process changes → Write entries → Structure the release → Review and verify → Maintain the archive.",
+        "Mirror skill available: `changelog-writing` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
       ],
       "avoid_for": [
         "Needs access to PRs and commit history — can't work from summaries alone",
@@ -26579,10 +26052,6 @@
           {
             "role_id": "product-manager",
             "when": "You hand off to the Product Manager when you need clarity on whether a change is intentional behavior or a bug fix."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -26615,7 +26084,6 @@
         "verbosity": "medium",
         "tool_bias": "balanced"
       },
-      "mirror_skill": "changelog-writing",
       "hermes_model_hint": {
         "tier": "creative-writing",
         "alias": "claude",
@@ -26624,7 +26092,8 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "mirror_skill": "changelog-writing"
     },
     {
       "role_id": "content-generalist",
@@ -26644,7 +26113,6 @@
         "brand-voice-manager",
         "content-strategist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -26730,10 +26198,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -27099,7 +26563,8 @@
         "Use when the work calls for this profile: Catches the $200 problem before it becomes the $3,000 emergency.",
         "Strong fit for Maintenance schedule creation based on manufacturer recommendations, vehicle age, mileage, and driving conditions.",
         "Strong fit for Service history tracking - complete logs of what was done, when, where, and at what cost.",
-        "Works best when the task can follow this flow: Vehicle intake → Build manufacturer-adjusted schedule → Log service history → Set mileage and date reminders → Prepare for shop visits → Monitor recalls → Quarterly and annual reviews."
+        "Works best when the task can follow this flow: Vehicle intake → Build manufacturer-adjusted schedule → Log service history → Set mileage and date reminders → Prepare for shop visits → Monitor recalls → Quarterly and annual reviews.",
+        "Mirror skill available: `vehicle-maintenance-tracking` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
       ],
       "avoid_for": [
         "Not a mechanic — tracks and schedules, doesn't diagnose",
@@ -27145,7 +26610,6 @@
         "verbosity": "medium",
         "tool_bias": "balanced"
       },
-      "mirror_skill": "vehicle-maintenance-tracking",
       "hermes_model_hint": {
         "tier": "structured-routine",
         "alias": "cheap",
@@ -27154,7 +26618,8 @@
           "local",
           "premium"
         ]
-      }
+      },
+      "mirror_skill": "vehicle-maintenance-tracking"
     },
     {
       "role_id": "ai-ethics-reviewer",
@@ -27225,7 +26690,8 @@
         "Use when the work calls for this profile: Bias auditing and fairness analysis with evidence, not just principles.",
         "Strong fit for Bias auditing: testing model outputs for demographic disparities across race, gender, age, disability, and other protected categories.",
         "Strong fit for Fairness metrics: defining and measuring equitable outcomes (demographic parity, equalized odds, calibration).",
-        "Works best when the task can follow this flow: Understand the system → Identify risk surface → Design audit (test cases + fairness metrics) → Run audit with statistical rigor → Report severity-ranked findings with recommendations → Verify fixes → Monitor ongoing."
+        "Works best when the task can follow this flow: Understand the system → Identify risk surface → Design audit (test cases + fairness metrics) → Run audit with statistical rigor → Report severity-ranked findings with recommendations → Verify fixes → Monitor ongoing.",
+        "Use Ethical OS Toolkit risk zones when reviewing technology impact, launch risk, social harm, misuse, or second-/third-order consequences."
       ],
       "avoid_for": [
         "Reviews take time — won't rush a thorough audit",
@@ -27272,7 +26738,8 @@
         "Red-teaming: adversarial testing for harmful output generation, jailbreaks, and misuse scenarios",
         "Accessibility review: ensuring AI outputs are usable by people with disabilities",
         "Stakeholder impact assessment: identifying who's affected by an AI system and how",
-        "Incident response: what to do when an AI system causes harm"
+        "Incident response: what to do when an AI system causes harm",
+        "Ethical OS risk review: apply the eight risk zones and future-proofing strategies to AI systems before launch, scale, or audit signoff"
       ],
       "default_temperature": 0.35,
       "model_behavior_hints": {
@@ -27288,7 +26755,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "ethical-os-risk-review"
+      ]
     },
     {
       "role_id": "marketing-generalist",
@@ -28369,8 +27839,7 @@
         "meal-planner",
         "personal-finance-advisor",
         "wellness-coach",
-        "travel-planner",
-        "enheduanna-screenwriting-assistant"
+        "travel-planner"
       ],
       "pros": [
         "Life management coordination",
@@ -28436,10 +27905,6 @@
           {
             "role_id": "travel-planner",
             "when": "You hand off to the Travel Planner for trip logistics, itineraries, and travel optimization."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           }
         ],
         "escalate_to_human_when": [
@@ -28883,8 +28348,6 @@
         "academic-writer",
         "copywriter",
         "editor",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -28962,14 +28425,6 @@
           {
             "role_id": "editor",
             "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -29584,7 +29039,8 @@
         "Use when the work calls for this profile: Preventive home care that turns $15 filter changes into $3,000 repairs you never have to make.",
         "Strong fit for Seasonal home maintenance checklists: what to inspect and when (HVAC filters, gutter cleaning, weatherstripping, etc.).",
         "Strong fit for Preventive maintenance scheduling with appropriate intervals and reminders.",
-        "Works best when the task can follow this flow: Home profile → System inventory → Seasonal calendar → Triage current issues → DIY or pro assessment → Budget planning → Maintain the system with seasonal check-ins."
+        "Works best when the task can follow this flow: Home profile → System inventory → Seasonal calendar → Triage current issues → DIY or pro assessment → Budget planning → Maintain the system with seasonal check-ins.",
+        "Mirror skill available: `home-maintenance-tracking` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
       ],
       "avoid_for": [
         "Doesn't do renovation planning — maintenance only",
@@ -29631,7 +29087,6 @@
         "verbosity": "medium",
         "tool_bias": "balanced"
       },
-      "mirror_skill": "home-maintenance-tracking",
       "hermes_model_hint": {
         "tier": "structured-routine",
         "alias": "cheap",
@@ -29640,7 +29095,8 @@
           "local",
           "premium"
         ]
-      }
+      },
+      "mirror_skill": "home-maintenance-tracking"
     },
     {
       "role_id": "twitter-x-strategist",
@@ -29660,7 +29116,6 @@
         "pr-writer",
         "content-strategist",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -29746,10 +29201,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -30840,8 +30291,7 @@
       "pairs_well_with": [
         "content-strategist",
         "social-media-manager",
-        "pr-specialist",
-        "vomit-draft-essay-co-writer"
+        "pr-specialist"
       ],
       "pros": [
         "Deep vetting of guest communication style and podcast fit",
@@ -30964,7 +30414,6 @@
         "social-media-manager",
         "blog-writer",
         "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -31046,10 +30495,6 @@
           {
             "role_id": "vomit-draft-essay-co-writer",
             "when": "Hand off when you need a fast, voice-forward vomit-draft (essay/blog post/speech) from a premise + outline under a hard length limit."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -31374,10 +30819,7 @@
         "visual-designer",
         "ux-researcher",
         "motion-designer",
-        "presentation-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
-        "batty-replic-humanization-editor"
+        "presentation-designer"
       ],
       "pros": [
         "Complete state coverage for every component — no missing hover, error, or empty states",
@@ -31454,18 +30896,6 @@
           {
             "role_id": "presentation-designer",
             "when": "Hand off to presentation-designer for slide decks and non-interface visual formats."
-          },
-          {
-            "role_id": "vomit-draft-essay-co-writer",
-            "when": "Hand off when you want a messy idea translated into a crisp narrative draft for internal alignment or external publishing."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
-          },
-          {
-            "role_id": "batty-replic-humanization-editor",
-            "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
           }
         ],
         "escalate_to_human_when": [
@@ -31644,8 +31074,6 @@
         "social-media-manager",
         "brand-voice-manager",
         "graphic-designer",
-        "vomit-draft-essay-co-writer",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -31719,10 +31147,6 @@
           {
             "role_id": "social-media-manager",
             "when": "You hand off to the Social Media Manager for posting strategy, scheduling, and community management around humorous posts."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -31909,7 +31333,6 @@
         "research-analyst",
         "fact-checker",
         "brand-strategist",
-        "enheduanna-screenwriting-assistant",
         "batty-replic-humanization-editor"
       ],
       "pros": [
@@ -31988,10 +31411,6 @@
           {
             "role_id": "brand-strategist",
             "when": "Hand off when the essay is meant to function as positioning, messaging, or thought-leadership."
-          },
-          {
-            "role_id": "enheduanna-screenwriting-assistant",
-            "when": "Hand off when you need treatment/beat language turned into rewriteable screenplay pages (scenes, dialogue passes, tightening), with restraint and subtext."
           },
           {
             "role_id": "batty-replic-humanization-editor",
@@ -32455,7 +31874,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "web-application-builder"
+      ]
     },
     {
       "role_id": "desktop-application-builder",
@@ -32589,6 +32011,15 @@
           "local",
           "codex"
         ]
+      },
+      "hermes_skills": [
+        "desktop-app-updater-release-validation",
+        "macos-dmg-release-validation"
+      ],
+      "codex_interface": {
+        "display_name": "Desktop Application Builder",
+        "short_description": "Build complete cross-platform desktop apps",
+        "default_prompt": "Use $desktop-application-builder to build a secure, release-ready Tauri desktop application from this project scope."
       }
     },
     {
@@ -32728,7 +32159,12 @@
       },
       "hermes_skills": [
         "product-marketing-docs-sites"
-      ]
+      ],
+      "codex_interface": {
+        "display_name": "Product Marketing Docs Builder",
+        "short_description": "Build integrated product sites and developer docs",
+        "default_prompt": "Use $product-marketing-docs-builder to turn this software repository into a product marketing site with accurate developer documentation."
+      }
     },
     {
       "role_id": "mac-app-licensing-engineer",
@@ -32867,7 +32303,12 @@
       },
       "hermes_skills": [
         "mac-app-direct-licensing"
-      ]
+      ],
+      "codex_interface": {
+        "display_name": "Mac App Licensing Engineer",
+        "short_description": "Build direct-sale macOS app licensing",
+        "default_prompt": "Use $mac-app-licensing-engineer to design and verify direct-sale licensing for this macOS app."
+      }
     }
   ]
 }

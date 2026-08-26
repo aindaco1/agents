@@ -129,5 +129,8 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "web-application-builder"
+  ]
 }

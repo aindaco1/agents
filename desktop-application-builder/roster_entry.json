@@ -130,5 +130,14 @@
       "local",
       "codex"
     ]
+  },
+  "hermes_skills": [
+    "desktop-app-updater-release-validation",
+    "macos-dmg-release-validation"
+  ],
+  "codex_interface": {
+    "display_name": "Desktop Application Builder",
+    "short_description": "Build complete cross-platform desktop apps",
+    "default_prompt": "Use $desktop-application-builder to build a secure, release-ready Tauri desktop application from this project scope."
   }
 }

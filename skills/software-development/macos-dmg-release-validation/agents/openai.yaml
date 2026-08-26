@@ -1,0 +1,4 @@
+interface:
+  display_name: "macOS DMG Release Validation"
+  short_description: "Harden and validate macOS DMG releases"
+  default_prompt: "Use $macos-dmg-release-validation to harden and verify this application's DMG packaging and release evidence."

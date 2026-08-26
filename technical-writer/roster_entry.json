@@ -14,7 +14,8 @@
     "blog-writer",
     "editor",
     "localization-specialist",
-    "seo-specialist"
+    "seo-specialist",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "API docs with working code samples",
@@ -91,6 +92,10 @@
       {
         "role_id": "seo-specialist",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

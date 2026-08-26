@@ -1,0 +1,4 @@
+interface:
+  display_name: "Web Application Builder"
+  short_description: "Build static-first Worker-backed web apps"
+  default_prompt: "Use $web-application-builder to build a complete static-first web application with Worker-owned trust boundaries, tests, and release evidence."

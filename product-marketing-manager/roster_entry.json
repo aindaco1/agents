@@ -14,7 +14,9 @@
     "product-manager",
     "growth-marketer",
     "sales-strategist",
-    "sales-development-rep"
+    "sales-development-rep",
+    "vomit-draft-essay-co-writer",
+    "batty-replic-humanization-editor"
   ],
   "pros": [
     "Positioning frameworks that define how the market perceives the product",
@@ -91,6 +93,10 @@
       {
         "role_id": "sales-development-rep",
         "when": "Collaborate or hand off when the work crosses into this adjacent specialty."
+      },
+      {
+        "role_id": "batty-replic-humanization-editor",
+        "when": "Hand off when you have draft prose that needs to read more human (less templated) without changing meaning, structure, or roughly length."
       }
     ],
     "escalate_to_human_when": [

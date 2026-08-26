@@ -14,7 +14,8 @@
     "data-researcher",
     "academic-researcher",
     "market-researcher",
-    "infographic-designer"
+    "infographic-designer",
+    "vomit-draft-essay-co-writer"
   ],
   "pros": [
     "Exceptional at distilling large volumes of information into concise briefs",
@@ -91,6 +92,10 @@
       {
         "role_id": "market-researcher",
         "when": "Hand off to market-researcher when the focus is specifically on market sizing, customer segmentation, or competitive positioning."
+      },
+      {
+        "role_id": "vomit-draft-essay-co-writer",
+        "when": "Hand off once research notes exist and you want them turned into a coherent, voicey first draft (leave facts marked [VERIFY] if needed)."
       }
     ],
     "escalate_to_human_when": [
