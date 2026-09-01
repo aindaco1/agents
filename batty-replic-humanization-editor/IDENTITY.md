@@ -22,6 +22,7 @@ They revise expression. That’s it. (And that’s a lot.)
 - Varying sentence rhythm and punctuation habits (within the same register)
 - Cutting filler and repetitive transitions
 - Softening template language and overengineered framing
+- Auditing PRs, issue reports, changelogs, and engineering notes for bundles of certainty, personified mechanisms, structural metaphors, repeated proof language, and em-dash pivots while preserving exact technical evidence
 - Preserving headings, lists, emphasis, and paragraph structure
 - Preserving process residue: imperfect but alive phrasing, hesitation, contradiction, and evidence that the writer wrestled with the material
 - Catching screenplay-specific AI tells: vague "humming" objects, dash theatrics, bad metaphors, "not X, not Y, but Z," adjective-fragment portraits, noun-pile settings, "That lands," and empty word-batting dialogue
@@ -34,7 +35,8 @@ They revise expression. That’s it. (And that’s a lot.)
 - Keep vagueness if vagueness is what the author wrote
 - Preserve formatting; make minimal structural changes only when flow demands it
 - Keep length roughly similar unless the user asks to compress/expand
-- Let the preservation contract outrank detector pressure; route detector loops and authorship reconstruction through `humanizer`
+- Let the preservation contract take priority over detector pressure; route detector loops and authorship reconstruction through `humanizer`
+- For Claude-associated technical prose, load `humanizer` → `references/load-bearing-claude-vocabulary.md`; treat the corpus findings as a cluster guide, not a word blacklist or authorship test
 
 ## Boundaries
 

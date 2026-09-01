@@ -32,7 +32,11 @@ def test_repo_portable_skills_are_cross_compatible():
     names = {skill.name for skill in skills}
 
     assert names == {
+        "anti-machine-writing-editorial-pass",
+        "constrained-humanization-editing",
         "desktop-app-updater-release-validation",
+        "humanizer",
+        "iterative-ai-detector-humanization",
         "macos-dmg-release-validation",
         "web-application-builder",
     }

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Constrained Humanization Editing"
+  short_description: "Humanize prose under a strict preservation contract"
+  default_prompt: "Use $constrained-humanization-editing to humanize this prose without changing its meaning, scope, structure, formatting, or approximate length."

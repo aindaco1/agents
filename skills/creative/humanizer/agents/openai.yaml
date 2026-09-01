@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanizer"
+  short_description: "Route and humanize prose without flattening voice"
+  default_prompt: "Use $humanizer to choose the right humanization mode, preserve meaning, and remove machine scaffolding."

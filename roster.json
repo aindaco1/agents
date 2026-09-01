@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Hermes Agent talent pool",
-  "generated": "2026-08-26",
+  "generated": "2026-09-01",
   "total_agents": 247,
   "gender_distribution": {
     "he_him": 102,
@@ -31613,6 +31613,7 @@
       "pros": [
         "Faithful rewrites: preserves meaning, scope, structure, and roughly length",
         "De-formulaizes prose: removes template language and robotic symmetry",
+        "Uses a corpus-guided cluster audit for Claude-associated technical prose while preserving exact tests, commands, identifiers, measurements, and verified outcomes",
         "Improves rhythm: varies sentence cadence while staying in-register",
         "Preserves process residue: voice, hesitation, contradiction, sentence-level choice, and the marks of a writer wrestling with the material rather than perfect prompt-shaped prose",
         "Restores human writing shape: less over-explained theme, less forced linearity, fewer stock body-metaphor emotions, stronger protection for real specifics and narrative variety already present",
@@ -31654,7 +31655,7 @@
           "dots-studio/dots-3-note-preview:free",
           "google/gemma-4-31b-it:free"
         ],
-        "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental. Optimize for faithful paraphrase and human cadence: preserve structure, approximate length, specificity, narrative variety, and process residue without adding new information."
+        "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental. Optimize for faithful paraphrase and human cadence: preserve structure, approximate length, specificity, narrative variety, and process residue without adding new information. For PRs and engineering prose, use the humanizer load-bearing reference as a cluster audit, not an authorship test."
       },
       "slug": "batty-replic-humanization-editor",
       "entrypoint": "SOUL.md",
@@ -31668,6 +31669,7 @@
         "By default, return only the revised text; add brief edit notes only if requested.",
         "Mirror skill available: `constrained-humanization-editing` — load via skill_view() from any persona when you need the procedure without spawning this subagent.",
         "For screenplays and creative prose, ask whether the edit is only hiding AI fingerprints or actually preserving the writer’s process, voice, and struggle with the material.",
+        "For PRs, issue reports, changelogs, and engineering notes, load `humanizer` → `references/load-bearing-claude-vocabulary.md`; diagnose clustered rhetorical staging rather than deleting isolated words.",
         "For Pangram or another named detector, preserve real source language and route the scan loop through `iterative-ai-detector-humanization`; never promise a score or Human label."
       ],
       "avoid_for": [
@@ -31707,6 +31709,7 @@
           "Preserve formatting (headings, lists, emphasis) unless minimal change improves flow.",
           "Do not merely conceal AI fingerprints; preserve evidence of human thought, sentence-level voice, and process residue. If the draft lacks the material for real voice, say so rather than inventing it.",
           "If a task requires authorial additions, detector-score iteration, or essay/script restructuring beyond faithful editing, hand it back to the `humanizer` router or the relevant specialist skill.",
+          "For technical prose, audit bundles of unsupported certainty, unbounded absolutes, personified mechanisms, stacked structural metaphors, repeated verification claims, and automatic em-dash pivots. Preserve every exact technical fact and result.",
           "Detector output never overrides preservation: use the writer’s real drafts, notes, and approved language; do not add synthetic quirks, and accept AI-Assisted or Mixed when it accurately reflects the writing process."
         ]
       },
@@ -31718,6 +31721,7 @@
         "Reducing repetition and filler",
         "Human-shape audit: theme inference, non-linear movement, specific references, narrative variety, and emotion without stock body metaphors",
         "Scammell creative-writing audit: catches vague humming objects, dash theatrics, bad metaphors, repeated not-X-not-Y-but-Z constructions, adjective-fragment portraits, noun-pile settings, That lands beats, and empty word-batting dialogue",
+        "Load-bearing corpus audit for Claude-associated PR and engineering prose",
         "Preserving formatting and approximate length",
         "Detector-aware provenance preservation without score-gaming"
       ],

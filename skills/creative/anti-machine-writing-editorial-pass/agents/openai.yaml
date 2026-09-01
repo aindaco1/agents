@@ -1,0 +1,4 @@
+interface:
+  display_name: "Anti-Machine Writing Editorial Pass"
+  short_description: "Remove machine rhythm while preserving live prose"
+  default_prompt: "Use $anti-machine-writing-editorial-pass to remove machine rhythm and repetitive structure while preserving the writer's live prose."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Iterative AI-Detector Humanization"
+  short_description: "Revise detector-flagged prose without score gaming"
+  default_prompt: "Use $iterative-ai-detector-humanization to interpret the named detector carefully and revise from genuine human source material without score gaming."
