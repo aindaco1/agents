@@ -3,7 +3,7 @@ name: anti-machine-writing-editorial-pass
 description: "Use when essays need an anti-machine editorial pass."
 license: "All rights reserved"
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   author: "Dust Wave"
   short-description: "Remove machine rhythm while preserving live prose"
   hermes:
@@ -109,6 +109,8 @@ Detector boundary
 - If the user names Pangram or supplies detector results, route through `iterative-ai-detector-humanization`; for Pangram, load `humanizer` → `references/pangram-4-detector-guidance.md`.
 - Do not treat sentence-length variation, unusual vocabulary, perplexity, or burstiness as proof of human authorship.
 - Use real human source material—drafts, notes, examples, choices, and voice—not synthetic quirks.
+- Do not flatten non-native, neurodivergent, or idiosyncratic prose into a detector-friendly stereotype.
+- A detector-only result cannot justify an academic, employment, publication, payment, or public accusation. Require corroborating process evidence, notice, a response, and an appeal route.
 - Never promise a detector score or Human classification. AI-Assisted/Mixed may accurately describe materially co-written prose.
 
 Pitfalls

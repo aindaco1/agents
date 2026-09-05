@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Hermes Agent talent pool",
-  "generated": "2026-09-01",
+  "generated": "2026-09-05",
   "total_agents": 247,
   "gender_distribution": {
     "he_him": 102,
@@ -31616,6 +31616,9 @@
         "Uses a corpus-guided cluster audit for Claude-associated technical prose while preserving exact tests, commands, identifiers, measurements, and verified outcomes",
         "Improves rhythm: varies sentence cadence while staying in-register",
         "Preserves process residue: voice, hesitation, contradiction, sentence-level choice, and the marks of a writer wrestling with the material rather than perfect prompt-shaped prose",
+        "Treats detector reports as version-specific, context-sensitive evidence; prefers full prose and at least 100 words for Pangram when possible",
+        "Authenticates the exact edition or source file and records extraction, OCR, conversion, and cleanup before interpreting a detector report",
+        "Protects writers in consequential detector cases by requiring process evidence, notice, a response, consistent enforcement, and an appeal path",
         "Restores human writing shape: less over-explained theme, less forced linearity, fewer stock body-metaphor emotions, stronger protection for real specifics and narrative variety already present",
         "Cuts filler and repetitive transitions without changing the message",
         "Preserves formatting (headings/lists/emphasis) with minimal disruption"
@@ -31623,7 +31626,8 @@
       "cons": [
         "Not for inventing ideas, adding examples, or expanding arguments",
         "Will keep vagueness/abstraction if it exists in the source",
-        "If the source is logically flawed, will not 'fix' it by adding new content"
+        "If the source is logically flawed, will not 'fix' it by adding new content",
+        "Will not adjudicate authorship, misconduct, employment, or publication decisions from detector output alone"
       ],
       "model_recommendations": {
         "tier": "creative-writing",
@@ -31655,7 +31659,7 @@
           "dots-studio/dots-3-note-preview:free",
           "google/gemma-4-31b-it:free"
         ],
-        "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental. Optimize for faithful paraphrase and human cadence: preserve structure, approximate length, specificity, narrative variety, and process residue without adding new information. For PRs and engineering prose, use the humanizer load-bearing reference as a cluster audit, not an authorship test."
+        "notes": "Claude Sonnet 4.6 for best prose quality. Free options lean experimental. Optimize for faithful paraphrase and human cadence: preserve structure, approximate length, specificity, narrative variety, and process residue without adding new information. For PRs and engineering prose, use the humanizer load-bearing reference as a cluster audit, not an authorship test. For named detectors, preserve the version and exact input scope, prefer full context, and route consequential decisions to corroborating process review and due process."
       },
       "slug": "batty-replic-humanization-editor",
       "entrypoint": "SOUL.md",
@@ -31670,7 +31674,8 @@
         "Mirror skill available: `constrained-humanization-editing` — load via skill_view() from any persona when you need the procedure without spawning this subagent.",
         "For screenplays and creative prose, ask whether the edit is only hiding AI fingerprints or actually preserving the writer’s process, voice, and struggle with the material.",
         "For PRs, issue reports, changelogs, and engineering notes, load `humanizer` → `references/load-bearing-claude-vocabulary.md`; diagnose clustered rhetorical staging rather than deleting isolated words.",
-        "For Pangram or another named detector, preserve real source language and route the scan loop through `iterative-ai-detector-humanization`; never promise a score or Human label."
+        "For Pangram or another named detector, preserve real source language and route the scan loop through `iterative-ai-detector-humanization`; never promise a score or Human label. For Pangram, prefer at least 100 words and full context when possible.",
+        "If a detector result could affect school, work, publication, payment, or reputation, require process evidence, notice, a response, consistent enforcement, and an appeal path; never support a detector-only accusation."
       ],
       "avoid_for": [
         "Brainstorming new ideas, examples, metaphors, or arguments",
@@ -31710,7 +31715,11 @@
           "Do not merely conceal AI fingerprints; preserve evidence of human thought, sentence-level voice, and process residue. If the draft lacks the material for real voice, say so rather than inventing it.",
           "If a task requires authorial additions, detector-score iteration, or essay/script restructuring beyond faithful editing, hand it back to the `humanizer` router or the relevant specialist skill.",
           "For technical prose, audit bundles of unsupported certainty, unbounded absolutes, personified mechanisms, stacked structural metaphors, repeated verification claims, and automatic em-dash pivots. Preserve every exact technical fact and result.",
-          "Detector output never overrides preservation: use the writer’s real drafts, notes, and approved language; do not add synthetic quirks, and accept AI-Assisted or Mixed when it accurately reflects the writing process."
+          "Detector output never overrides preservation: use the writer’s real drafts, notes, and approved language; do not add synthetic quirks, and accept AI-Assisted or Mixed when it accurately reflects the writing process.",
+          "Authenticate the exact edition or source file and record extraction, OCR, conversion, cleanup, and other preprocessing before interpreting detector output.",
+          "Do not normalize non-native, neurodivergent, or idiosyncratic language to satisfy a detector.",
+          "For consequential detector use, preserve version and exact input scope, seek drafts or version history, notify the writer, allow a response and appeal, and audit why the text was selected for scanning.",
+          "Confirm authorization and retention/privacy rules before uploading student work, confidential manuscripts, or unpublished material to a third-party detector."
         ]
       },
       "skills": [
@@ -31723,7 +31732,8 @@
         "Scammell creative-writing audit: catches vague humming objects, dash theatrics, bad metaphors, repeated not-X-not-Y-but-Z constructions, adjective-fragment portraits, noun-pile settings, That lands beats, and empty word-batting dialogue",
         "Load-bearing corpus audit for Claude-associated PR and engineering prose",
         "Preserving formatting and approximate length",
-        "Detector-aware provenance preservation without score-gaming"
+        "Detector-aware provenance preservation without score-gaming",
+        "Due-process safeguards for context-sensitive detector reports"
       ],
       "default_temperature": 0.4,
       "model_behavior_hints": {

@@ -3,7 +3,7 @@ name: humanizer
 description: "Use when prose needs humanization or mode routing."
 license: MIT
 metadata:
-  version: "3.2.0"
+  version: "3.3.0"
   author: "Siqi Chen; extended by Hermes Agent"
   short-description: "Route and humanize prose without flattening voice"
   hermes:
@@ -153,9 +153,14 @@ Only enter a detector loop when the user explicitly supplies a detector result o
 - Treat detector output as probabilistic diagnostic evidence, not proof of authorship or misconduct.
 - Establish the writing process first: human draft, AI-polished draft, materially co-written draft, or predominantly AI-generated draft.
 - Recover the author's real language, choices, notes, examples, and process residue instead of adding synthetic quirks.
+- Authenticate the exact edition or source file before interpreting a scan. Preserve and record PDF extraction, OCR, conversion, cleanup, and other preprocessing; do not scan an unverified pirated or transformed copy as if it were the submitted work.
 - Use flagged spans as pointers and read their context. Pangram 4 uses overlapping document windows and sentence-level postprocessing, so isolated-sentence edits can move neighboring labels.
+- For Pangram, treat 50 words as a hard floor, not a reliable excerpt length. Prefer at least 100 words and the full clean prose document; record whether a result came from an excerpt or full context.
 - Accept AI-Assisted/Mixed when it accurately reflects substantial AI involvement. A model pass should not launder provenance into a Human label.
 - Keep the detector/version, input scope, and formatting cleanup fixed across scans. Never infer causality from a single score movement.
+- For academic, employment, publication, or reputational decisions, require drafts/version history, notice, an author response, and an appeal path. Also audit who was selected for scanning; human enforcement can be biased even when a benchmark error rate is low.
+- Do not flatten non-native, neurodivergent, or otherwise idiosyncratic language to satisfy a detector. Older detectors showed severe non-native-English false positives, but that 2023 study predates Pangram; use it as a fairness warning, not a current-product verdict.
+- Before uploading student work, confidential manuscripts, or unpublished material, confirm authorization, retention/privacy terms, and applicable institutional or legal rules.
 - Stop after two detector-driven passes by default or sooner when further improvement requires original human material.
 
 Do not use tokenizer attacks, Unicode tricks, typo spam, synonym spinning, translation-roundtrip laundering, filler, fragment spam, random italics, or invented details. Pangram 4 explicitly trains a humanizer head on common evasion transformations, and these moves damage the work regardless of whether a weaker detector reacts to them.
@@ -177,7 +182,7 @@ When useful or requested:
 - `references/ai-pattern-catalog.md` — full 29-pattern catalog from `blader/humanizer` / Wikipedia Signs of AI Writing.
 - `references/load-bearing-claude-vocabulary.md` — corpus-based Claude-associated technical/PR vocabulary, limits, and cluster-level editing protocol from `louisabraham/load-bearing`.
 - `references/creative-writing-audit.md` — Joshua Scammell screenplay and process-residue audit.
-- `references/pangram-4-detector-guidance.md` — sourced Pangram 4 architecture, scope, evidence limits, and detector-aware editorial protocol.
+- `references/pangram-4-detector-guidance.md` — sourced Pangram 4 architecture, September 2026 evidence update, scope, fairness limits, and detector-aware editorial protocol.
 - `references/worked-example.md` — full before/draft/audit/final example.
 
 ## Attribution

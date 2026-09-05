@@ -3,7 +3,7 @@ name: constrained-humanization-editing
 description: "Use when humanizing prose without changing its meaning."
 license: "All rights reserved"
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   author: "Dust Wave"
   short-description: "Humanize prose under a strict preservation contract"
   hermes:
@@ -103,6 +103,8 @@ This skill improves expression under a strict preservation contract; it does not
 - Do not add typos, filler, fragments, random variation, invented details, or formatting noise to influence a score.
 - A materially AI-rewritten draft may accurately remain AI-Assisted/Mixed after a faithful edit.
 - Recover wording from the author's drafts, notes, or approved source material when available.
+- Do not rewrite non-native, neurodivergent, or idiosyncratic language into a detector-friendly stereotype. Preserve the writer's actual register.
+- If a result could affect school, work, publication, payment, or reputation, stop at editorial help and route to the evidence audit. A detector-only result is not enough: require process evidence, notice, a response, and an appeal path.
 - If genuine human authorship requires new choices or language, stop and return that work to the author; doing it here would violate the no-new-information rule.
 
 ## When NOT to use this skill

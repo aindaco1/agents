@@ -3,7 +3,7 @@ name: iterative-ai-detector-humanization
 description: "Use when revising prose against a named AI detector."
 license: "All rights reserved"
 metadata:
-  version: "2.0.1"
+  version: "2.1.0"
   author: "Dust Wave"
   short-description: "Revise detector-flagged prose without score gaming"
   hermes:
@@ -52,8 +52,9 @@ Pangram 4 is a supervised deep-learning provenance classifier, not a perplexity 
 
 Follow these rules:
 
-- Scan at least 50 words of complete-sentence natural-language prose.
-- Prefer the full prose document over isolated sentences; inspect the paragraph around every flagged segment.
+- Treat 50 words as Pangram's hard minimum, not a dependable excerpt length. WIRED reports weaker performance below 100 words; prefer at least 100 words and the full prose document.
+- Authenticate the exact edition or source file. Preserve and record extraction, OCR, conversion, cleanup, and other preprocessing before treating a report as evidence.
+- Prefer the full prose document over isolated sentences; inspect the paragraph around every flagged segment and record whether the result came from an excerpt or full context.
 - Record the model version, exact input, document fractions, segment labels, and humanizer flag.
 - Do not read highlighted words as exact forensic boundaries; overlapping windows, CRF decoding, sentence voting, and minimum-run merging affect the displayed spans.
 - A negative or absent humanizer flag is not an independent clearance because Pangram runs that auxiliary head only after the primary detector finds AI evidence.
@@ -73,6 +74,15 @@ When the task asks whether Pangram is reliable—not merely how to respond to on
 - Do not translate a low FPR into “the accusation is probably true.” Posterior risk also depends on prevalence and domain fit.
 - Do not infer a causal style rule from a flagged span. Pangram uses document context and postprocessed boundaries; its own report says isolated and full-context predictions may differ.
 - Treat mixed-authorship claims separately from binary AI-vs-human performance. Mixed labels are thresholded summaries and cannot reconstruct intent, prompts, idea provenance, or the writing history.
+- Audit study relationships before calling evidence independent: API credits, vendor coauthors, consulting, referrals, friendship, and promotional amplification all belong in the description.
+- Audit enforcement separately from model performance. Record why this text was scanned and whether comparable writers were treated the same way.
+- Confirm authorization, retention/privacy terms, and applicable FERPA, GDPR, contractual, or institutional rules before uploading student work, confidential manuscripts, or unpublished material to a third-party detector.
+
+#### Consequential-use boundary
+
+Do not adjudicate academic misconduct, employment, publication, payment, or public accusations from a detector result alone. Preserve the exact input and report; seek drafts, notes, tracked changes, and source history; give the writer the evidence and a chance to respond; and provide an appeal or correction path. Do not publicly identify a writer from a detector-only finding.
+
+The 2023 non-native-English bias paper tested seven older detectors, not Pangram. Its severe TOEFL-essay false positives are a fairness warning, not a measured Pangram error rate. Never normalize a non-native or neurodivergent register into stereotyped “human” prose to appease a score.
 
 ### Score-only or sentence-highlighting detectors
 
