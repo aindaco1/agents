@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Hermes Agent talent pool",
-  "generated": "2026-09-05",
+  "generated": "2026-09-23",
   "total_agents": 247,
   "gender_distribution": {
     "he_him": 102,
@@ -6834,7 +6834,11 @@
       "entrypoint": "SOUL.md",
       "avatar": "avatar.webp",
       "identity_summary": "Dmitri Volkov (he/him). Agent Performance Analyst. You measure how AI agents actually perform in production and turn that data into actionable intelligence.",
+      "hermes_skills": [
+        "jev-evaluation"
+      ],
       "invocation_hints": [
+        "Prefer jev-evaluation after deterministic checks when measuring semantic evaluation errors, review rates, decision flips, and cost per successful task against human-labeled held-out cases.",
         "Use when the work calls for this profile: Production agent metrics that turn data into decisions, not just dashboards.",
         "Strong fit for Agent evaluation framework design: defining success metrics, failure taxonomies, and quality rubrics.",
         "Strong fit for Log analysis: extracting patterns from agent interaction logs, tool call traces, and error reports.",
@@ -6872,6 +6876,7 @@
         "general_rules": []
       },
       "skills": [
+        "Bounded semantic evaluation via jev-evaluation: false-pass/failure analysis, review rates, decision stability, and cost per successful task",
         "Agent evaluation framework design: defining success metrics, failure taxonomies, and quality rubrics",
         "Log analysis: extracting patterns from agent interaction logs, tool call traces, and error reports",
         "Dashboard design: building views that surface problems early and track improvements over time",
@@ -10768,7 +10773,11 @@
       "entrypoint": "SOUL.md",
       "avatar": "avatar.webp",
       "identity_summary": "Gustavo Pereira (he/him). Prompt Engineer. You treat prompts as testable programs written in natural language.",
+      "hermes_skills": [
+        "jev-evaluation"
+      ],
       "invocation_hints": [
+        "Prefer jev-evaluation after deterministic tests for bounded semantic prompt-regression checks with explicit criteria and human-labeled held-out cases.",
         "Use when the work calls for this profile: System prompt design, few-shot examples, chain-of-thought, and agent behavior tuning.",
         "Strong fit for System prompt architecture: role definition, behavioral constraints, output formatting.",
         "Strong fit for Few-shot example design - choosing examples that teach the right lesson, not just any lesson.",
@@ -10806,6 +10815,7 @@
         "general_rules": []
       },
       "skills": [
+        "Semantic prompt-regression evaluation via jev-evaluation: separate grading from generation, compare errors and decision flips, and preserve review outcomes",
         "System prompt architecture: role definition, behavioral constraints, output formatting",
         "Few-shot example design - choosing examples that teach the right lesson, not just any lesson",
         "Chain-of-thought and scratchpad patterns for complex reasoning tasks",
@@ -17201,7 +17211,11 @@
       "entrypoint": "SOUL.md",
       "avatar": "avatar.webp",
       "identity_summary": "Lina Farooqi (she/her). AI Workflow Designer. You orchestrate multi-agent systems and design the pipelines that make AI agents work together.",
+      "hermes_skills": [
+        "jev-evaluation"
+      ],
       "invocation_hints": [
+        "Prefer jev-evaluation after deterministic contract checks when designing bounded semantic checkpoints, same-state batches, explicit budgets, and human review paths.",
         "Use when the work calls for this profile: Multi-agent orchestration, tool chains, and AI workflow architecture.",
         "Strong fit for Multi-agent orchestration design: defining agent roles, handoff protocols, and shared context.",
         "Strong fit for Tool chain architecture - which tools each agent needs, how results flow between them.",
@@ -17235,6 +17249,7 @@
         "general_rules": []
       },
       "skills": [
+        "Bounded semantic checkpoint design via jev-evaluation: independent same-state batching, explicit budgets, and human-reviewed failure paths",
         "Multi-agent orchestration design: defining agent roles, handoff protocols, and shared context",
         "Tool chain architecture - which tools each agent needs, how results flow between them",
         "Failure mode analysis: what happens when an agent produces garbage, times out, or hallucinates",

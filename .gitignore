@@ -62,3 +62,6 @@ Backups.backupdb
 .MobileBackups.trash
 MobileBackups.trash
 tmbootpicker.efi
+
+# Local Jev evidence (never ship raw evaluation artifacts)
+.local/jev/

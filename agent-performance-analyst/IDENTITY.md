@@ -27,6 +27,10 @@ His value isn't just in collecting data. It's in connecting data to decisions. A
 - Benchmark creation: building representative test sets from production traffic
 - Model comparison: evaluating which models perform best for which agent tasks
 
+## Semantic Evaluation
+
+He prefers the shared `jev-evaluation` procedure for bounded semantic evaluation after deterministic checks. He measures false passes, false failures, reviews, decision flips, and cost per successful task against human-labeled held-out cases, not vendor savings claims; uncertain or unavailable results remain in review, and operational gates require human-held-out evaluation.
+
 ## Working Style
 
 - Defines metrics before measuring — never starts with "let's look at the data" without knowing what good looks like

@@ -57,7 +57,7 @@ PROFILE_DIRS = [
     "references",
 ]
 
-TARGET_END_SLUG = "data-ai-ml-generalist"
+SHORT_ROUTING_TOKENS = {"qa", "sql", "rag"}
 STOPWORDS = {
     "about", "after", "also", "and", "build", "deciding", "design", "for", "from", "help", "into",
     "launch", "lightweight", "need", "service", "sharp", "sharper", "that", "the", "their", "them",
@@ -109,13 +109,7 @@ def discover_agents() -> list[Path]:
 
 
 def first_target_agents() -> list[Path]:
-    dirs = discover_agents()
-    selected: list[Path] = []
-    for p in dirs:
-        selected.append(p)
-        if p.name == TARGET_END_SLUG:
-            break
-    return selected
+    return discover_agents()[:50]
 
 
 def validate_agent_dir(agent_dir: Path) -> dict[str, Any]:
@@ -142,24 +136,26 @@ def entry_search_text(entry: dict[str, Any]) -> str:
         value = entry.get(key)
         if isinstance(value, str):
             parts.append(value)
-    for key in ["invocation_hints", "skills", "avoid_for"]:
+    # Poor-fit and handoff metadata describe other agents' work, not this one's.
+    for key in ["invocation_hints", "skills"]:
         value = entry.get(key) or []
         if isinstance(value, list):
             parts.extend(str(item) for item in value)
-    handoffs = (entry.get("handoff_rules") or {}).get("delegate_to") or []
-    for item in handoffs:
-        if isinstance(item, dict):
-            parts.extend(str(item.get(k, "")) for k in ["role_id", "when"])
     return "\n".join(parts).lower()
 
 
 def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> list[dict[str, Any]]:
     prompt_tokens = tokenize(prompt)
     prompt_text = " ".join(prompt_tokens)
+    has_short_tokens = not SHORT_ROUTING_TOKENS.isdisjoint(prompt_tokens)
+    is_pull_request_review = bool(re.search(r"\bpull requests?\b", prompt_text)) and any(
+        token.startswith("review") for token in prompt_tokens
+    )
     ranked: list[dict[str, Any]] = []
 
     for entry in entries:
         haystack = entry_search_text(entry)
+        haystack_tokens = set(tokenize(haystack)) if has_short_tokens else set()
         role_name = str(entry.get("role_name") or "").lower()
         category = str(entry.get("category") or "").lower()
         slug = str(entry.get("slug") or "")
@@ -169,7 +165,7 @@ def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> 
         matched: list[str] = []
 
         for token in sorted(set(prompt_tokens)):
-            if len(token) < 4:
+            if len(token) < 4 and token not in SHORT_ROUTING_TOKENS:
                 continue
             if token in role_tokens:
                 score += 8
@@ -177,7 +173,7 @@ def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> 
             elif token in slug_tokens:
                 score += 6
                 matched.append(f"slug:{token}")
-            elif token in haystack:
+            elif token in (haystack_tokens if len(token) < 4 else haystack):
                 score += 2
                 matched.append(token)
 
@@ -203,6 +199,10 @@ def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> 
             if any(word in role_name for word in ["content", "writer", "editor", "brand", "marketing", "copywriter"]):
                 score += 8
                 matched.append("content-fit")
+
+        if is_pull_request_review and "code reviewer" in role_name:
+            score += 20
+            matched.append("code-review-fit")
 
         if category and category in prompt_text:
             score += 2
@@ -658,8 +658,12 @@ def run_routed_profile(
     dry_run: bool = False,
 ) -> int:
     ranked = route_agents(prompt, top_n=top_n, limit_to_first_50=limit_to_first_50)
-    if not ranked:
-        raise SystemExit(f"No matching agent found for prompt: {prompt}")
+    if not ranked or ranked[0]["score"] <= 0:
+        raise SystemExit(
+            f"No matching agent found for prompt: {prompt}. "
+            "Refusing automatic execution without a positive routing score; "
+            "use a more specific prompt or an explicit slug."
+        )
     selected = ranked[0]["slug"]
     effective_query = query if query is not None else prompt
     return run_profile(
@@ -726,7 +730,10 @@ def parse_args() -> argparse.Namespace:
         help="Directory to write launcher wrappers into",
     )
 
-    return ap.parse_args()
+    args = ap.parse_args()
+    if getattr(args, "top", 1) < 1:
+        ap.error("--top must be a positive integer")
+    return args
 
 
 def main() -> int:

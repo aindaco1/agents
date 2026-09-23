@@ -1,0 +1,1153 @@
+{
+  "schemaVersion": 1,
+  "classification": "public-synthetic",
+  "labelProvenance": "Engineering-authored controls, not independent human labels or a calibration set.",
+  "scope": "Sanitized replayable observations from the live pilot; provider envelope/debug metadata intentionally omitted. Original timing was not remeasured.",
+  "pilotRunner": "2026-09-23-pilot-runner.json",
+  "runs": {
+    "batched": {
+      "createdAt": "2026-09-23T16:51:47.834Z",
+      "policy": {
+        "minimumMargin": 0.1,
+        "models": [
+          "jev-1.13.0"
+        ]
+      },
+      "questionCount": 32,
+      "requestCount": 16,
+      "networkAttempts": 16,
+      "repeats": 2,
+      "splitQuestions": false,
+      "corpusSha256": "9eaf63d8fdc746ddc4d21ac2dd98e9764e2de21d6c0673f2873c7b53669ee7fb",
+      "policySha256": "9241177b9ea1e992a97aade04e61ebd8de34d0f91f33aa032353017dbeafd260",
+      "runnerSha256": "0ad13a5b9f81a952aaab486cebba2ae7b811860f5da16147406a5356cd5d6cd1",
+      "dependencyLockSha256": "fb4240f6a3a9c361b058fcf0c157aa218e52eaed402ccf74381310c778e6586c",
+      "complete": true,
+      "releaseAccepted": false,
+      "summary": {
+        "correct": 32,
+        "falsePasses": 0,
+        "falseFailures": 0,
+        "reviews": 0,
+        "unevaluated": 0,
+        "decisionFlips": 0,
+        "inputTokens": 9692,
+        "outputTokens": 1268,
+        "usageComplete": true,
+        "resolvedModels": [
+          "jev-1.13.0"
+        ],
+        "requestLatencyMs": {
+          "median": 358.5,
+          "p95": 781,
+          "sum": 6655
+        },
+        "estimatedInferenceUsd": 0.000407064,
+        "estimatedWithCreditFeeUsd": 0.00042741720000000005
+      },
+      "rawReportSha256": "48a84bb4a72550fd43014b9265108da0f35fd0b4bf2bc9b563d3ed85177f9468",
+      "cases": [
+        {
+          "id": "handoff-faithful:1:owner+evidence",
+          "caseId": "handoff-faithful",
+          "repeat": 1,
+          "expected": {
+            "owner": "pass",
+            "evidence": "pass"
+          },
+          "requestSha256": "5635a53a1449b9e789e4de7e47dd5291d6c283c1f312f92053340b7e0631b0e5",
+          "elapsedMs": 781,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 593,
+              "output_tokens": 79
+            },
+            "answers": {
+              "owner": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              },
+              "evidence": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "handoff-flawed:1:owner+evidence",
+          "caseId": "handoff-flawed",
+          "repeat": 1,
+          "expected": {
+            "owner": "fail",
+            "evidence": "fail"
+          },
+          "requestSha256": "220cce98f91b630439cd2c861aa4f6a9c8af76336bdfcd954eb262e12284bbd5",
+          "elapsedMs": 729,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 589,
+              "output_tokens": 79
+            },
+            "answers": {
+              "owner": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              },
+              "evidence": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-faithful:1:scope+next_step",
+          "caseId": "uncertainty-faithful",
+          "repeat": 1,
+          "expected": {
+            "scope": "pass",
+            "next_step": "pass"
+          },
+          "requestSha256": "9b540d8ab03e80823989bb0de4c067c30fae68004d420c8e6e47214fedcf430e",
+          "elapsedMs": 658,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 598,
+              "output_tokens": 78
+            },
+            "answers": {
+              "scope": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              },
+              "next_step": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-flawed:1:scope+next_step",
+          "caseId": "uncertainty-flawed",
+          "repeat": 1,
+          "expected": {
+            "scope": "fail",
+            "next_step": "fail"
+          },
+          "requestSha256": "29239d146854a514973cfe09c7c838c343f07eefd7daeb3119718142dcf1aa08",
+          "elapsedMs": 345,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 591,
+              "output_tokens": 78
+            },
+            "answers": {
+              "scope": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              },
+              "next_step": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-faithful:1:grounding+distinction",
+          "caseId": "source-faithful",
+          "repeat": 1,
+          "expected": {
+            "grounding": "pass",
+            "distinction": "pass"
+          },
+          "requestSha256": "a50fc85b3319fa38e1637dae7f6feec5c74200f9cbf72b56f50be3482405dad3",
+          "elapsedMs": 350,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 625,
+              "output_tokens": 82
+            },
+            "answers": {
+              "grounding": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 0.99,
+                  "fail": 0.01,
+                  "uncertain": 0
+                }
+              },
+              "distinction": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-flawed:1:grounding+distinction",
+          "caseId": "source-flawed",
+          "repeat": 1,
+          "expected": {
+            "grounding": "fail",
+            "distinction": "fail"
+          },
+          "requestSha256": "1e5d7d8ef478b1e4c03534af3d667bdf2b4a4f68265435a95a97e43674db1850",
+          "elapsedMs": 432,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 621,
+              "output_tokens": 82
+            },
+            "answers": {
+              "grounding": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0.01,
+                  "fail": 0.99,
+                  "uncertain": 0
+                }
+              },
+              "distinction": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0.01,
+                  "fail": 0.99,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-faithful:1:data_scope+review",
+          "caseId": "omission-faithful",
+          "repeat": 1,
+          "expected": {
+            "data_scope": "pass",
+            "review": "pass"
+          },
+          "requestSha256": "fb6f590dedab558ec7a21a6e05397ba0c194d3a21daa1b31a2e5f0f81abc3d39",
+          "elapsedMs": 393,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 621,
+              "output_tokens": 78
+            },
+            "answers": {
+              "data_scope": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              },
+              "review": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-flawed:1:data_scope+review",
+          "caseId": "omission-flawed",
+          "repeat": 1,
+          "expected": {
+            "data_scope": "fail",
+            "review": "fail"
+          },
+          "requestSha256": "82e17479b15bb69ef3149fb0fd37dcd9eb3ecbfe0f2947172bb9ff31e11b2dee",
+          "elapsedMs": 332,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 608,
+              "output_tokens": 78
+            },
+            "answers": {
+              "data_scope": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 0.99,
+                  "uncertain": 0.01
+                }
+              },
+              "review": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "handoff-faithful:2:owner+evidence",
+          "caseId": "handoff-faithful",
+          "repeat": 2,
+          "expected": {
+            "owner": "pass",
+            "evidence": "pass"
+          },
+          "requestSha256": "5635a53a1449b9e789e4de7e47dd5291d6c283c1f312f92053340b7e0631b0e5",
+          "elapsedMs": 302,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 593,
+              "output_tokens": 79
+            },
+            "answers": {
+              "owner": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              },
+              "evidence": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "handoff-flawed:2:owner+evidence",
+          "caseId": "handoff-flawed",
+          "repeat": 2,
+          "expected": {
+            "owner": "fail",
+            "evidence": "fail"
+          },
+          "requestSha256": "220cce98f91b630439cd2c861aa4f6a9c8af76336bdfcd954eb262e12284bbd5",
+          "elapsedMs": 380,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 589,
+              "output_tokens": 79
+            },
+            "answers": {
+              "owner": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              },
+              "evidence": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-faithful:2:scope+next_step",
+          "caseId": "uncertainty-faithful",
+          "repeat": 2,
+          "expected": {
+            "scope": "pass",
+            "next_step": "pass"
+          },
+          "requestSha256": "9b540d8ab03e80823989bb0de4c067c30fae68004d420c8e6e47214fedcf430e",
+          "elapsedMs": 325,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 598,
+              "output_tokens": 78
+            },
+            "answers": {
+              "scope": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              },
+              "next_step": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-flawed:2:scope+next_step",
+          "caseId": "uncertainty-flawed",
+          "repeat": 2,
+          "expected": {
+            "scope": "fail",
+            "next_step": "fail"
+          },
+          "requestSha256": "29239d146854a514973cfe09c7c838c343f07eefd7daeb3119718142dcf1aa08",
+          "elapsedMs": 305,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 591,
+              "output_tokens": 78
+            },
+            "answers": {
+              "scope": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              },
+              "next_step": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-faithful:2:grounding+distinction",
+          "caseId": "source-faithful",
+          "repeat": 2,
+          "expected": {
+            "grounding": "pass",
+            "distinction": "pass"
+          },
+          "requestSha256": "a50fc85b3319fa38e1637dae7f6feec5c74200f9cbf72b56f50be3482405dad3",
+          "elapsedMs": 294,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 625,
+              "output_tokens": 82
+            },
+            "answers": {
+              "grounding": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 0.98,
+                  "fail": 0.02,
+                  "uncertain": 0
+                }
+              },
+              "distinction": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-flawed:2:grounding+distinction",
+          "caseId": "source-flawed",
+          "repeat": 2,
+          "expected": {
+            "grounding": "fail",
+            "distinction": "fail"
+          },
+          "requestSha256": "1e5d7d8ef478b1e4c03534af3d667bdf2b4a4f68265435a95a97e43674db1850",
+          "elapsedMs": 265,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 621,
+              "output_tokens": 82
+            },
+            "answers": {
+              "grounding": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0.01,
+                  "fail": 0.99,
+                  "uncertain": 0
+                }
+              },
+              "distinction": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0.01,
+                  "fail": 0.99,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-faithful:2:data_scope+review",
+          "caseId": "omission-faithful",
+          "repeat": 2,
+          "expected": {
+            "data_scope": "pass",
+            "review": "pass"
+          },
+          "requestSha256": "fb6f590dedab558ec7a21a6e05397ba0c194d3a21daa1b31a2e5f0f81abc3d39",
+          "elapsedMs": 367,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 621,
+              "output_tokens": 78
+            },
+            "answers": {
+              "data_scope": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              },
+              "review": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-flawed:2:data_scope+review",
+          "caseId": "omission-flawed",
+          "repeat": 2,
+          "expected": {
+            "data_scope": "fail",
+            "review": "fail"
+          },
+          "requestSha256": "82e17479b15bb69ef3149fb0fd37dcd9eb3ecbfe0f2947172bb9ff31e11b2dee",
+          "elapsedMs": 397,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 608,
+              "output_tokens": 78
+            },
+            "answers": {
+              "data_scope": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 0.99,
+                  "uncertain": 0.01
+                }
+              },
+              "review": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "split": {
+      "createdAt": "2026-09-23T16:51:54.672Z",
+      "policy": {
+        "minimumMargin": 0.1,
+        "models": [
+          "jev-1.13.0"
+        ]
+      },
+      "questionCount": 16,
+      "requestCount": 16,
+      "networkAttempts": 16,
+      "repeats": 1,
+      "splitQuestions": true,
+      "corpusSha256": "9eaf63d8fdc746ddc4d21ac2dd98e9764e2de21d6c0673f2873c7b53669ee7fb",
+      "policySha256": "9241177b9ea1e992a97aade04e61ebd8de34d0f91f33aa032353017dbeafd260",
+      "runnerSha256": "0ad13a5b9f81a952aaab486cebba2ae7b811860f5da16147406a5356cd5d6cd1",
+      "dependencyLockSha256": "fb4240f6a3a9c361b058fcf0c157aa218e52eaed402ccf74381310c778e6586c",
+      "complete": true,
+      "releaseAccepted": false,
+      "summary": {
+        "correct": 16,
+        "falsePasses": 0,
+        "falseFailures": 0,
+        "reviews": 0,
+        "unevaluated": 0,
+        "decisionFlips": 0,
+        "inputTokens": 7226,
+        "outputTokens": 658,
+        "usageComplete": true,
+        "resolvedModels": [
+          "jev-1.13.0"
+        ],
+        "requestLatencyMs": {
+          "median": 329,
+          "p95": 887,
+          "sum": 6428
+        },
+        "estimatedInferenceUsd": 0.00030349200000000004,
+        "estimatedWithCreditFeeUsd": 0.00031866660000000004
+      },
+      "rawReportSha256": "3754d62f78a49c8ec7aa7f2042e45643c96ab863498e5c79062063b079388ad2",
+      "cases": [
+        {
+          "id": "handoff-faithful:1:owner",
+          "caseId": "handoff-faithful",
+          "repeat": 1,
+          "expected": {
+            "owner": "pass"
+          },
+          "requestSha256": "35ae65ad8972616dc70802abfc4498da48ab9e994eb5335339992eaebc5797d0",
+          "elapsedMs": 887,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 436,
+              "output_tokens": 40
+            },
+            "answers": {
+              "owner": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "handoff-faithful:1:evidence",
+          "caseId": "handoff-faithful",
+          "repeat": 1,
+          "expected": {
+            "evidence": "pass"
+          },
+          "requestSha256": "dec80aa90979e951ff5c42d67b13fb1a65f3d4f83d5879f0fd807072b84746f6",
+          "elapsedMs": 516,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 442,
+              "output_tokens": 42
+            },
+            "answers": {
+              "evidence": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "handoff-flawed:1:owner",
+          "caseId": "handoff-flawed",
+          "repeat": 1,
+          "expected": {
+            "owner": "fail"
+          },
+          "requestSha256": "1e3cd3bcd9e0f119ddd088cd1ef99ee257c328057c9ab263fb4918dc12e80c84",
+          "elapsedMs": 270,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 432,
+              "output_tokens": 40
+            },
+            "answers": {
+              "owner": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "handoff-flawed:1:evidence",
+          "caseId": "handoff-flawed",
+          "repeat": 1,
+          "expected": {
+            "evidence": "fail"
+          },
+          "requestSha256": "5243f80ccb73a18fec4db06a7f23ff9f95ef83b448e4c044493a05a73f5f85bb",
+          "elapsedMs": 289,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 438,
+              "output_tokens": 42
+            },
+            "answers": {
+              "evidence": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-faithful:1:scope",
+          "caseId": "uncertainty-faithful",
+          "repeat": 1,
+          "expected": {
+            "scope": "pass"
+          },
+          "requestSha256": "88be2e8e4f39e459ba619567b8dd03983934a260744e1c397d9b84e8115b5e3a",
+          "elapsedMs": 754,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 446,
+              "output_tokens": 40
+            },
+            "answers": {
+              "scope": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-faithful:1:next_step",
+          "caseId": "uncertainty-faithful",
+          "repeat": 1,
+          "expected": {
+            "next_step": "pass"
+          },
+          "requestSha256": "7e9d708bcacd4fd96b1a326a2728097268e4e85f288d385480a1fbcfeebee3be",
+          "elapsedMs": 294,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 444,
+              "output_tokens": 41
+            },
+            "answers": {
+              "next_step": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-flawed:1:scope",
+          "caseId": "uncertainty-flawed",
+          "repeat": 1,
+          "expected": {
+            "scope": "fail"
+          },
+          "requestSha256": "bbe6e1b213140989c9c912f733ea0b074ad7ab1b06ddb824d8f07f578095e936",
+          "elapsedMs": 330,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 439,
+              "output_tokens": 40
+            },
+            "answers": {
+              "scope": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "uncertainty-flawed:1:next_step",
+          "caseId": "uncertainty-flawed",
+          "repeat": 1,
+          "expected": {
+            "next_step": "fail"
+          },
+          "requestSha256": "502c7661929fe844bffec6d4235197857887565f032e66a54add53d32909d373",
+          "elapsedMs": 331,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 437,
+              "output_tokens": 41
+            },
+            "answers": {
+              "next_step": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-faithful:1:grounding",
+          "caseId": "source-faithful",
+          "repeat": 1,
+          "expected": {
+            "grounding": "pass"
+          },
+          "requestSha256": "c9892581af9b6f623bda34e78239d986324fa12985c0fc233aff2918f0b0cf9f",
+          "elapsedMs": 328,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 465,
+              "output_tokens": 43
+            },
+            "answers": {
+              "grounding": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 0.98,
+                  "fail": 0.02,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-faithful:1:distinction",
+          "caseId": "source-faithful",
+          "repeat": 1,
+          "expected": {
+            "distinction": "pass"
+          },
+          "requestSha256": "968505a05d0754a9bd58378f7c9df990d25b35ceadedfd636e25c53719e9f863",
+          "elapsedMs": 276,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 474,
+              "output_tokens": 42
+            },
+            "answers": {
+              "distinction": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-flawed:1:grounding",
+          "caseId": "source-flawed",
+          "repeat": 1,
+          "expected": {
+            "grounding": "fail"
+          },
+          "requestSha256": "ed5d6d49f54f32514c759719d49db1bb38623a0e96a750e30170e8d1d98179bc",
+          "elapsedMs": 452,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 461,
+              "output_tokens": 43
+            },
+            "answers": {
+              "grounding": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0.01,
+                  "fail": 0.99,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "source-flawed:1:distinction",
+          "caseId": "source-flawed",
+          "repeat": 1,
+          "expected": {
+            "distinction": "fail"
+          },
+          "requestSha256": "e2ef42bee18056acd11163970ea4b29cbdb38fcca5a6016e08bb3cec07f8416f",
+          "elapsedMs": 308,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 470,
+              "output_tokens": 42
+            },
+            "answers": {
+              "distinction": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0.01,
+                  "fail": 0.98,
+                  "uncertain": 0.01
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-faithful:1:data_scope",
+          "caseId": "omission-faithful",
+          "repeat": 1,
+          "expected": {
+            "data_scope": "pass"
+          },
+          "requestSha256": "580cdf3c1e498abca9c18385a3b1c95892e1d28653efeb4dbfb924e7d7624ec4",
+          "elapsedMs": 293,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 470,
+              "output_tokens": 41
+            },
+            "answers": {
+              "data_scope": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-faithful:1:review",
+          "caseId": "omission-faithful",
+          "repeat": 1,
+          "expected": {
+            "review": "pass"
+          },
+          "requestSha256": "14fcf5ab9440c4c750f41796e4456c58e1c1b8fb9e1ed98c091de5b17120179a",
+          "elapsedMs": 427,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 464,
+              "output_tokens": 40
+            },
+            "answers": {
+              "review": {
+                "type": "choice",
+                "choice": "pass",
+                "probabilities": {
+                  "pass": 1,
+                  "fail": 0,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-flawed:1:data_scope",
+          "caseId": "omission-flawed",
+          "repeat": 1,
+          "expected": {
+            "data_scope": "fail"
+          },
+          "requestSha256": "3145341a1a4db5aee77e2d59c61d3fde96d7206977ed3d7418d5ba54d809862b",
+          "elapsedMs": 314,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 457,
+              "output_tokens": 41
+            },
+            "answers": {
+              "data_scope": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 0.99,
+                  "uncertain": 0.01
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "omission-flawed:1:review",
+          "caseId": "omission-flawed",
+          "repeat": 1,
+          "expected": {
+            "review": "fail"
+          },
+          "requestSha256": "fde8fde1a7b67728a136833e4b57972475bea24559baa52e2e6b0f16b13e977e",
+          "elapsedMs": 359,
+          "response": {
+            "model": "jev-1.13.0",
+            "usage": {
+              "input_tokens": 451,
+              "output_tokens": 40
+            },
+            "answers": {
+              "review": {
+                "type": "choice",
+                "choice": "fail",
+                "probabilities": {
+                  "pass": 0,
+                  "fail": 1,
+                  "uncertain": 0
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

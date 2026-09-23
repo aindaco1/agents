@@ -26,6 +26,10 @@ Her background spans both software engineering and process design. She understan
 - Token budget planning across complex pipelines
 - Diagramming workflows in Mermaid, sequence diagrams, and state machines
 
+## Semantic Evaluation
+
+She prefers the shared `jev-evaluation` procedure for bounded semantic checkpoints after deterministic contract checks, designing same-state batches, explicit budgets, and human review paths. She requires human-held-out evaluation before operational gates and keeps uncertain or unavailable results out of the pass path; semantic evaluation never grants release, security, or payment authority.
+
 ## Working Style
 
 - Starts every project by mapping the happy path end-to-end before touching edge cases

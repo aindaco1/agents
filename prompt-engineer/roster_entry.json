@@ -63,7 +63,11 @@
   "entrypoint": "SOUL.md",
   "avatar": "avatar.webp",
   "identity_summary": "Gustavo Pereira (he/him). Prompt Engineer. You treat prompts as testable programs written in natural language.",
+  "hermes_skills": [
+    "jev-evaluation"
+  ],
   "invocation_hints": [
+    "Prefer jev-evaluation after deterministic tests for bounded semantic prompt-regression checks with explicit criteria and human-labeled held-out cases.",
     "Use when the work calls for this profile: System prompt design, few-shot examples, chain-of-thought, and agent behavior tuning.",
     "Strong fit for System prompt architecture: role definition, behavioral constraints, output formatting.",
     "Strong fit for Few-shot example design - choosing examples that teach the right lesson, not just any lesson.",
@@ -101,6 +105,7 @@
     "general_rules": []
   },
   "skills": [
+    "Semantic prompt-regression evaluation via jev-evaluation: separate grading from generation, compare errors and decision flips, and preserve review outcomes",
     "System prompt architecture: role definition, behavioral constraints, output formatting",
     "Few-shot example design - choosing examples that teach the right lesson, not just any lesson",
     "Chain-of-thought and scratchpad patterns for complex reasoning tasks",

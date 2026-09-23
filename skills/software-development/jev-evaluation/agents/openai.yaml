@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Evaluation"
+  short_description: "Measure agent outputs with bounded Jev checks"
+  default_prompt: "Use $jev-evaluation to compare agent outputs with deterministic checks first, bounded advisory Jev evidence, and honest cost and quality measurements."

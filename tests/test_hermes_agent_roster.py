@@ -3,6 +3,8 @@ from __future__ import annotations
 import importlib.util
 from pathlib import Path
 
+import pytest
+
 
 SCRIPT_PATH = Path(__file__).resolve().parents[1] / "scripts" / "hermes_agent_roster.py"
 spec = importlib.util.spec_from_file_location("hermes_agent_roster", SCRIPT_PATH)
@@ -11,13 +13,12 @@ assert spec is not None and spec.loader is not None
 spec.loader.exec_module(module)
 
 
-def test_first_target_agents_stops_at_data_ai_ml_generalist():
+def test_first_target_agents_selects_exactly_first_50_alphabetical_agents():
     selected = module.first_target_agents()
     discovered = module.discover_agents()
-    sentinel_index = next(i for i, path in enumerate(discovered) if path.name == "data-ai-ml-generalist")
 
-    assert selected == discovered[: sentinel_index + 1]
-    assert selected[-1].name == "data-ai-ml-generalist"
+    assert len(selected) == 50
+    assert selected == discovered[:50]
 
 
 def test_install_launchers_writes_expected_wrappers(tmp_path: Path):
@@ -196,6 +197,38 @@ def test_infer_skill_guidance_includes_explicit_roster_skills():
     assert "mac-app-direct-licensing" in guidance["preferred"]
 
 
+@pytest.mark.parametrize("negative_metadata", [
+    {"avoid_for": ["Compliance audits belong elsewhere."]},
+    {"handoff_rules": {"delegate_to": [{"role_id": "compliance-specialist"}]}},
+    {"handoff_rules": {"delegate_to": [{"when": "Compliance audits need a specialist."}]}},
+])
+def test_route_prompt_does_not_reward_negative_metadata(negative_metadata):
+    entry = {"slug": "copywriter", "role_name": "Copywriter", **negative_metadata}
+
+    ranked = module.route_prompt("compliance", [entry])
+
+    assert ranked[0]["score"] == 0
+    assert ranked[0]["matched_terms"] == []
+
+
+@pytest.mark.parametrize("token", ["qa", "sql", "rag"])
+@pytest.mark.parametrize("field", ["role_name", "slug", "skills"])
+def test_route_prompt_preserves_short_domain_tokens(token, field):
+    specialist = {
+        "slug": "z-specialist",
+        "role_name": "Specialist",
+        field: [token] if field == "skills" else token,
+    }
+    decoy = {"slug": "a-decoy", "skills": ["qatar nosql fragments"]}
+
+    ranked = module.route_prompt(token.upper(), [decoy, specialist], top_n=2)
+
+    assert ranked[0]["slug"] == specialist["slug"]
+    assert ranked[0]["score"] > 0
+    assert ranked[1]["score"] == 0
+    assert ranked[1]["matched_terms"] == []
+
+
 def test_route_prompt_prefers_chief_of_staff_for_planning_and_delegation_prompt():
     entries = [
         {
@@ -241,6 +274,18 @@ def test_route_prompt_prefers_backend_architect_for_api_system_design_prompt():
     ranked = module.route_prompt("Design an API and backend architecture for a lightweight workflow service.", entries, top_n=2)
 
     assert ranked[0]["slug"] == "backend-architect"
+    assert ranked[0]["score"] > ranked[1]["score"]
+
+
+@pytest.mark.parametrize("prompt", [
+    "Review this pull request",
+    "pull request review",
+    "Review these pull requests",
+])
+def test_real_roster_pull_request_review_prefers_code_reviewer(prompt):
+    ranked = module.route_agents(prompt, limit_to_first_50=False)
+
+    assert ranked[0]["slug"] == "senior-code-reviewer"
     assert ranked[0]["score"] > ranked[1]["score"]
 
 
@@ -356,6 +401,37 @@ def test_run_routed_profile_uses_prompt_as_query_when_query_is_missing(monkeypat
 
     assert result == 0
     assert calls == [("chief-of-staff", "Plan my week and tell me what to delegate", True, None, None, False)]
+
+
+@pytest.mark.parametrize("limit_to_first_50", [True, False])
+@pytest.mark.parametrize("dry_run", [False, True])
+def test_real_roster_nonsense_refuses_automatic_execution(monkeypatch, limit_to_first_50, dry_run):
+    prompt = "flibbertigibbet zqxjkv nonsense"
+    calls = []
+    monkeypatch.setattr(module, "run_profile", lambda *args, **kwargs: calls.append((args, kwargs)))
+
+    # Recommendations retain their public shape and deterministic zero-score ordering.
+    ranked = module.route_agents(prompt, limit_to_first_50=limit_to_first_50)
+    assert len(ranked) == 3
+    assert all(item["score"] == 0 and item["matched_terms"] == [] for item in ranked)
+    assert [item["slug"] for item in ranked] == sorted(item["slug"] for item in ranked)
+
+    with pytest.raises(SystemExit, match="No matching agent found"):
+        module.run_routed_profile(prompt, limit_to_first_50=limit_to_first_50, dry_run=dry_run)
+
+    assert calls == []
+
+
+@pytest.mark.parametrize("command", [["route", "task"], ["run", "--route", "task"]])
+@pytest.mark.parametrize("top", ["0", "-1"])
+def test_parse_args_rejects_nonpositive_top(monkeypatch, capsys, command, top):
+    monkeypatch.setattr(module.sys, "argv", [str(SCRIPT_PATH), *command, "--top", top])
+
+    with pytest.raises(SystemExit) as exc:
+        module.parse_args()
+
+    assert exc.value.code == 2
+    assert "--top must be a positive integer" in capsys.readouterr().err
 
 
 def test_run_routed_profile_raises_when_no_matches(monkeypatch):

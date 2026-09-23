@@ -102,12 +102,39 @@ Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives c
 
 Add a portable skill name to a profile's `hermes_skills` list when Hermes should prefer that procedure for the profile. Codex discovers the same package directly after synchronization. Do not copy runtime skill edits back blindly: compare them to the canonical package and import only intentional improvements.
 
+## Jev semantic evaluation
+
+The shared `jev-evaluation` procedure is an opt-in, advisory evaluator, not a
+replacement for the main agent, deterministic tests, or release approval. It
+reuses the hash-locked Platform Cloudflare adapter and defaults to a zero-network
+preview. No ordinary test or routing command calls Jev.
+
+Read [the audit and measured comparison](docs/jev/README.md) and
+[setup/benchmark commands](skills/software-development/jev-evaluation/references/running.md).
+Sync only this package with:
+
+```bash
+python3 scripts/sync_portable_skills.py --skill jev-evaluation
+python3 scripts/sync_portable_skills.py --skill jev-evaluation --check
+```
+
+This synchronizes the default Hermes and Codex skill libraries. It does not
+compile or overwrite other Hermes profiles. Persona-source changes take effect
+when their runtime profiles are deliberately reconciled and compiled later.
+
 ## Verification
 
 Run the roster tests with:
 
 ```bash
 PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 pytest -q tests
+```
+
+Jev's additional offline replay/transport checks require the pinned Platform
+checkout described in the setup guide (no Cloudflare credentials or network):
+
+```bash
+DUSTWAVE_PLATFORM_DIR="/absolute/path/to/platform" node --test tests/jev.test.mjs
 ```
 
 Before publishing, also run `python3 scripts/sync_roster_aggregate.py --check`, validate JSON, inspect `git diff --check`, review the complete diff, fetch `origin`, and confirm the branch is still based on current `origin/main`.

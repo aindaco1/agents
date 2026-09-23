@@ -18,6 +18,8 @@ NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 FRONTMATTER_RE = re.compile(r"\A---\n(?P<yaml>.*?)\n---\n(?P<body>.*)\Z", re.DOTALL)
 CODEX_FRONTMATTER_KEYS = {"name", "description", "license", "allowed-tools", "metadata"}
 IGNORED_NAMES = {".DS_Store"}
+# iCloud conflict copies insert a space and integer before the extension.
+CONFLICT_COPY_RE = re.compile(r" [0-9]+\.[^.]+$")
 
 
 @dataclass(frozen=True)
@@ -56,6 +58,12 @@ def parse_args() -> argparse.Namespace:
         choices=("both", "codex", "hermes"),
         default="both",
         help="Runtime library to sync (default: both)",
+    )
+    parser.add_argument(
+        "--skill",
+        action="append",
+        metavar="NAME",
+        help="Sync only this portable skill; repeat to select multiple (default: all).",
     )
     parser.add_argument(
         "--check",
@@ -172,7 +180,12 @@ def discover_portable_skills(repo: Path) -> list[PortableSkill]:
 def package_files(skill: PortableSkill) -> dict[Path, bytes]:
     files: dict[Path, bytes] = {}
     for path in sorted(skill.source.rglob("*")):
-        if not path.is_file() or path.name in IGNORED_NAMES or "__pycache__" in path.parts:
+        if (
+            not path.is_file()
+            or path.name in IGNORED_NAMES
+            or "__pycache__" in path.parts
+            or CONFLICT_COPY_RE.search(path.name)
+        ):
             continue
         files[path.relative_to(skill.source)] = path.read_bytes()
     return files
@@ -233,6 +246,14 @@ def main() -> int:
 
     try:
         skills = discover_portable_skills(repo)
+        if args.skill:
+            selected = set(args.skill)
+            unknown = selected - {skill.name for skill in skills}
+            if unknown:
+                raise ValueError(
+                    "Unknown portable skill name(s): " + ", ".join(sorted(unknown))
+                )
+            skills = [skill for skill in skills if skill.name in selected]
     except (OSError, ValueError) as exc:
         raise SystemExit(str(exc)) from exc
 

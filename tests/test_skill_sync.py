@@ -37,6 +37,7 @@ def test_repo_portable_skills_are_cross_compatible():
         "desktop-app-updater-release-validation",
         "humanizer",
         "iterative-ai-detector-humanization",
+        "jev-evaluation",
         "macos-dmg-release-validation",
         "web-application-builder",
     }
@@ -54,6 +55,9 @@ def test_portable_skill_profile_links_match_aggregate_roster():
         ]
     }
     expected_links = {
+        "agent-performance-analyst": ["jev-evaluation"],
+        "ai-workflow-designer": ["jev-evaluation"],
+        "prompt-engineer": ["jev-evaluation"],
         "web-application-builder": ["web-application-builder"],
         "desktop-application-builder": [
             "desktop-app-updater-release-validation",
@@ -144,6 +148,22 @@ def test_codex_interface_overrides_generated_ui_metadata():
 
     assert 'default_prompt: "Use $desktop-application-builder' in generated
     assert "Build complete cross-platform desktop apps" in generated
+
+
+def test_codex_mirror_exposes_procedure_links_without_inlining_packages(tmp_path: Path):
+    profile = tmp_path / "test-agent"
+    profile.mkdir()
+    (profile / "IDENTITY_SUMMARY.md").write_text("# Test\n\nShort identity.")
+    (profile / "IDENTITY.md").write_text("# Test\n\nFull identity.")
+    entry = {
+        "role_id": "test-agent", "display_name": "Test", "role_name": "Tester",
+        "emoji": "", "hermes_skills": ["jev-evaluation", "jev-evaluation"],
+    }
+    body = codex_sync.build_body(tmp_path, entry)
+    assert "## Procedure Skills" in body
+    assert body.count("$jev-evaluation") == 1
+    assert "Load only when relevant" in body
+    assert "Full identity." in body
 
 
 def test_codex_interface_requires_explicit_skill_invocation():

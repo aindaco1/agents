@@ -139,6 +139,15 @@ def build_body(repo: Path, entry: dict[str, Any]) -> str:
         identity,
     ]
 
+    procedures = list(dict.fromkeys(entry.get("hermes_skills") or []))
+    if procedures:
+        sections.extend((
+            "## Procedure Skills",
+            "Load only when relevant; keep the procedure in its shared package, "
+            "not duplicated in this persona.\n\n"
+            + "\n".join(f"- ${name}" for name in procedures),
+        ))
+
     delegates = (entry.get("handoff_rules") or {}).get("delegate_to") or []
     if delegates:
         handoffs = "\n".join(

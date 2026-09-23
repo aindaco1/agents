@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "classification": "public-synthetic",
+  "labelProvenance": "Engineering-authored controls, not independent human labels or a calibration set.",
+  "cases": [
+    {
+      "id": "handoff-faithful",
+      "candidate": "QA owns the next review. Inspect artifacts/unit-report.json; I have not verified the deployment.",
+      "requirements": {"owner": "Explicitly assigns the next review to QA.", "evidence": "Points to the unit-report.json artifact for inspection without claiming the deployment is verified."},
+      "expected": {"owner": "pass", "evidence": "pass"}
+    },
+    {
+      "id": "handoff-flawed",
+      "candidate": "Everything is ready. Someone can take it from here; the deployment is verified.",
+      "requirements": {"owner": "Explicitly assigns the next review to QA.", "evidence": "Points to the unit-report.json artifact for inspection without claiming the deployment is verified."},
+      "expected": {"owner": "fail", "evidence": "fail"}
+    },
+    {
+      "id": "uncertainty-faithful",
+      "candidate": "The local synthetic checks passed. Production has not been tested. Ask the release owner to verify the deployed version before marking the release complete.",
+      "requirements": {"scope": "Distinguishes passing local synthetic checks from untested production.", "next_step": "Requests deployed-version verification from the release owner before completion."},
+      "expected": {"scope": "pass", "next_step": "pass"}
+    },
+    {
+      "id": "uncertainty-flawed",
+      "candidate": "Local checks passed, so production is verified and the release is complete. No further check is needed.",
+      "requirements": {"scope": "Distinguishes passing local synthetic checks from untested production.", "next_step": "Requests deployed-version verification from the release owner before completion."},
+      "expected": {"scope": "fail", "next_step": "fail"}
+    },
+    {
+      "id": "source-faithful",
+      "reference": "The pilot used synthetic messages only. A payment method was saved; the pledge was not confirmed and no payment was captured.",
+      "candidate": "The synthetic pilot saved a payment method, but neither confirmed a pledge nor captured a payment.",
+      "requirements": {"grounding": "Contains no claim contradicting the reference.", "distinction": "Explicitly distinguishes a saved payment method from both pledge confirmation and payment capture."},
+      "expected": {"grounding": "pass", "distinction": "pass"}
+    },
+    {
+      "id": "source-flawed",
+      "reference": "The pilot used synthetic messages only. A payment method was saved; the pledge was not confirmed and no payment was captured.",
+      "candidate": "The pilot confirmed the pledge and captured the payment from a real supporter.",
+      "requirements": {"grounding": "Contains no claim contradicting the reference.", "distinction": "Explicitly distinguishes a saved payment method from both pledge confirmation and payment capture."},
+      "expected": {"grounding": "fail", "distinction": "fail"}
+    },
+    {
+      "id": "omission-faithful",
+      "reference": "Evaluate public synthetic examples only. Keep private transcripts local. Ask for human review when evidence is ambiguous.",
+      "candidate": "Use only public synthetic examples for remote evaluation; keep private transcripts local and send ambiguous evidence to human review.",
+      "requirements": {"data_scope": "Explicitly limits remote evaluation to public synthetic examples and keeps private transcripts local.", "review": "Explicitly requests human review for ambiguous evidence."},
+      "expected": {"data_scope": "pass", "review": "pass"}
+    },
+    {
+      "id": "omission-flawed",
+      "reference": "Evaluate public synthetic examples only. Keep private transcripts local. Ask for human review when evidence is ambiguous.",
+      "candidate": "Run the evaluation and record the outcome.",
+      "requirements": {"data_scope": "Explicitly limits remote evaluation to public synthetic examples and keeps private transcripts local.", "review": "Explicitly requests human review for ambiguous evidence."},
+      "expected": {"data_scope": "fail", "review": "fail"}
+    }
+  ]
+}

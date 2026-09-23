@@ -1,0 +1,90 @@
+{
+  "observedAt": "2026-09-23T16:51:47.834Z",
+  "scope": "Public synthetic engineering controls; not a calibrated quality gate or agent end-to-end benchmark",
+  "price": {
+    "inputUsdPerMillion": 0.042,
+    "date": "2026-09-23",
+    "billingVerified": false
+  },
+  "corpusSha256": "9eaf63d8fdc746ddc4d21ac2dd98e9764e2de21d6c0673f2873c7b53669ee7fb",
+  "policySha256": "9241177b9ea1e992a97aade04e61ebd8de34d0f91f33aa032353017dbeafd260",
+  "runnerSha256": "0ad13a5b9f81a952aaab486cebba2ae7b811860f5da16147406a5356cd5d6cd1",
+  "dependencyLockSha256": "fb4240f6a3a9c361b058fcf0c157aa218e52eaed402ccf74381310c778e6586c",
+  "batched": {
+    "correct": 32,
+    "falsePasses": 0,
+    "falseFailures": 0,
+    "reviews": 0,
+    "unevaluated": 0,
+    "decisionFlips": 0,
+    "inputTokens": 9692,
+    "outputTokens": 1268,
+    "usageComplete": true,
+    "resolvedModels": [
+      "jev-1.13.0"
+    ],
+    "requestLatencyMs": {
+      "median": 358.5,
+      "p95": 781,
+      "sum": 6655
+    },
+    "estimatedInferenceUsd": 0.000407064,
+    "estimatedWithCreditFeeUsd": 0.00042741720000000005,
+    "requests": 16,
+    "questions": 32,
+    "byRepeat": [
+      {
+        "repeat": 1,
+        "requests": 8,
+        "inputTokens": 4846,
+        "summedRequestMs": 4020
+      },
+      {
+        "repeat": 2,
+        "requests": 8,
+        "inputTokens": 4846,
+        "summedRequestMs": 2635
+      }
+    ]
+  },
+  "split": {
+    "correct": 16,
+    "falsePasses": 0,
+    "falseFailures": 0,
+    "reviews": 0,
+    "unevaluated": 0,
+    "decisionFlips": 0,
+    "inputTokens": 7226,
+    "outputTokens": 658,
+    "usageComplete": true,
+    "resolvedModels": [
+      "jev-1.13.0"
+    ],
+    "requestLatencyMs": {
+      "median": 329,
+      "p95": 887,
+      "sum": 6428
+    },
+    "estimatedInferenceUsd": 0.00030349200000000004,
+    "estimatedWithCreditFeeUsd": 0.00031866660000000004,
+    "requests": 16,
+    "questions": 16
+  },
+  "normalizedComparison": {
+    "inputTokenReductionPct": 32.9366177691669,
+    "summedRequestTimeReductionPct": 48.234287492221526,
+    "requestReductionPct": 50.0
+  },
+  "estimatedInferenceUsdTotal": 0.000710556,
+  "reservedEstimateUsdTotal": 0.064512,
+  "rawEvidence": {
+    "batched": {
+      "path": ".local/jev/batched/report.json",
+      "sha256": "48a84bb4a72550fd43014b9265108da0f35fd0b4bf2bc9b563d3ed85177f9468"
+    },
+    "split": {
+      "path": ".local/jev/split/report.json",
+      "sha256": "3754d62f78a49c8ec7aa7f2042e45643c96ab863498e5c79062063b079388ad2"
+    }
+  }
+}

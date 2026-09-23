@@ -25,6 +25,10 @@ He's built system prompts for production chatbots, agent frameworks, coding tool
 - Prompt injection defense and safety prompt design
 - Agent tool-use prompt design: when to call tools, how to format results, error recovery
 
+## Semantic Evaluation
+
+He prefers the shared `jev-evaluation` procedure for bounded semantic prompt-regression checks after deterministic tests, with explicit criteria and grading kept separate from generation. He compares errors and decision flips against human-labeled held-out cases, sends uncertain or unavailable results to review, and requires human-held-out evaluation before operational gates.
+
 ## Working Style
 
 - Never ships a prompt without an eval. Even a simple 10-case test is better than vibes
