@@ -42,6 +42,28 @@ def make_skill(repo: Path, name: str = "safe-package"):
     return portable_sync.validate_skill_dir(source, "testing")
 
 
+def test_pytest_ignores_conflict_copies_but_collects_legitimate_numbered_tests(tmp_path: Path):
+    conftest = ROOT / "tests" / "conftest.py"
+    if conftest.exists():
+        (tmp_path / "conftest.py").write_bytes(conftest.read_bytes())
+    legitimate = ["test_real.py", "test_v2.py", "test_chapter 2 notes.py"]
+    conflicts = ["test_real 2.py", "test_real 123.py"]
+    for name in legitimate:
+        (tmp_path / name).write_text("def test_real():\n    assert True\n", encoding="utf-8")
+    for name in conflicts:
+        (tmp_path / name).write_text("raise RuntimeError('Conflict copies must not execute')\n", encoding="utf-8")
+    result = subprocess.run(
+        [sys.executable, "-m", "pytest", "-q", str(tmp_path)],
+        capture_output=True, text=True, cwd=tmp_path,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert "3 passed" in result.stdout
+    for name in conflicts:
+        assert (tmp_path / name).read_text(encoding="utf-8") == (
+            "raise RuntimeError('Conflict copies must not execute')\n"
+        )
+
+
 def test_sync_excludes_conflict_filenames_without_ignoring_digits(tmp_path: Path):
     skill = make_skill(tmp_path / "repo")
     conflicts = {

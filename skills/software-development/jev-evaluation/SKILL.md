@@ -39,13 +39,18 @@ An unavailable judge is unevaluated, never a pass.
    and model allowlist before comparing variants. Keep expected labels out of
    model inputs. Hold out independently human-labeled realistic cases separately
    from engineering controls. Completion: hashes and label provenance are recorded.
-4. Preview before live. The packaged benchmark accepts only its built-in public
+4. Prove the controls before live. Use a faithful simulated judge and a deliberately
+   naïve baseline on the same frozen corpus; require the exact predicted false-pass
+   count before spending. See [controlled offline probes](references/offline-controls.md).
+   The packaged benchmark accepts only its built-in public
    synthetic corpus and defaults to zero network. Use its hash-locked shared
    Platform adapter; never copy a new Cloudflare client into each persona.
-   See [running the benchmark](references/running.md) for setup and exact commands.
+   The separate `scripts/live-probe.mjs` accepts caller-owned public synthetic
+   controls with explicit `--max-usd` and a new `--out` JSON file. See
+   [running the tools](references/running.md) for setup, schema and exact commands.
 5. Opt in explicitly to a bounded live run. Preflight the complete batch before
    credentials/network: maximum questions, conservative spend estimate, request
-   bytes, timeout, and new evidence directory. No automatic retries, fallback,
+   bytes, timeout, and new evidence path. No automatic retries, fallback,
    credit purchases, or caches. Checkpoint pending intent before each call; failure
    to persist blocks transport. Stop after a transport/validation failure. An
    interrupted pending request may still be billed; never silently replay it.
@@ -89,6 +94,14 @@ should link to it rather than duplicate it.
   rubric, parser, model version, and authorization-scope keys plus invalidation.
 - A price-based reservation is not a billing cap. Read the account dashboard for
   actual rates, credits and limits; never auto-top-up.
+- Wrangler OAuth tokens have short expiration. Check the live clock after credential
+  I/O, not at batch start; refuse missing/invalid expiry or 15 minutes or less remaining.
+  Ask the operator to run `wrangler login`; never refresh automatically. An explicit
+  environment API token takes precedence over the cache.
+- Never use `2>&1` into a JSON evidence file. Keep stdout JSON-only and progress on
+  stderr, with different paths for `--out`, redirected stdout and logs. For legacy
+  mixed logs only, strip a known non-JSON prefix on read, then parse and validate
+  the whole remaining JSON document. Do not silently repair canonical evidence.
 
 ## Verification
 
