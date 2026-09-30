@@ -1,0 +1,4 @@
+interface:
+  display_name: "Vector Artwork Reconstruction"
+  short_description: "Rebuild AI graphics with type, vectors, and sourced texture"
+  default_prompt: "Use $vector-artwork-reconstruction to rebuild this graphic as editable artwork, preserve its wording and visual character, and report any detector checks accurately."

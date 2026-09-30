@@ -1,7 +1,7 @@
 {
   "generated_from": "/Users/aindaco1/Library/Mobile Documents/com~apple~CloudDocs/agents",
   "target_profiles_root": "/Users/aindaco1/.hermes/profiles",
-  "count": 247,
+  "count": 248,
   "items": [
     {
       "slug": "3d-graphics-engineer",
@@ -2719,6 +2719,17 @@
       "reasoning_effort": "none",
       "alias": "claude",
       "tier": "creative-writing"
+    },
+    {
+      "slug": "vector-reconstruction-designer",
+      "profile_dir": "/Users/aindaco1/.hermes/profiles/vector-reconstruction-designer",
+      "display_name": "Vector Reconstruction Designer",
+      "role_name": "Vector Reconstruction Designer",
+      "provider": "openrouter",
+      "model": "anthropic/claude-sonnet-4.6",
+      "reasoning_effort": "medium",
+      "alias": "premium",
+      "tier": "strong-general"
     }
   ]
 }

@@ -39,6 +39,7 @@ def test_repo_portable_skills_are_cross_compatible():
         "iterative-ai-detector-humanization",
         "jev-evaluation",
         "macos-dmg-release-validation",
+        "vector-artwork-reconstruction",
         "web-application-builder",
     }
     for skill in skills:
@@ -55,6 +56,7 @@ def test_portable_skill_profile_links_match_aggregate_roster():
         ]
     }
     expected_links = {
+        "vector-reconstruction-designer": ["vector-artwork-reconstruction"],
         "agent-performance-analyst": ["jev-evaluation"],
         "ai-workflow-designer": ["jev-evaluation"],
         "prompt-engineer": ["jev-evaluation"],

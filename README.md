@@ -1,6 +1,6 @@
 # Agents roster
 
-This repository is the canonical authoring source for a roster of specialist agents used by Hermes and mirrored into Codex-compatible skills. The repository currently contains 247 profiles.
+This repository is the canonical authoring source for a roster of specialist agents used by Hermes and mirrored into Codex-compatible skills. The repository currently contains 248 profiles.
 
 ## Source of truth
 
