@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Control Loop"
+  short_description: "Design measurable, reviewable code improvement loops"
+  default_prompt: "Use $design-control-loop to design and build a code improvement loop using this repository’s tools."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Narrow React Prop Types"
+  short_description: "Derive strict React props from production usage"
+  default_prompt: "Use $narrow-react-prop-types to narrow React component props using their production contracts."

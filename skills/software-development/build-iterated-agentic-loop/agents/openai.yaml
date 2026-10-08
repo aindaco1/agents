@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Iterated Agentic Loop"
+  short_description: "Build bounded Codex or Hermes coding workflows"
+  default_prompt: "Use $build-iterated-agentic-loop to build a repeatable coding workflow for this repository."

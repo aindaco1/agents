@@ -33,6 +33,12 @@ def test_repo_portable_skills_are_cross_compatible():
 
     assert names == {
         "anti-machine-writing-editorial-pass",
+        "build-iterated-agentic-loop",
+        "design-control-loop",
+        "improve-agent-instructions",
+        "narrow-react-prop-types",
+        "show-me",
+        "visual-pr",
         "constrained-humanization-editing",
         "desktop-app-updater-release-validation",
         "humanizer",

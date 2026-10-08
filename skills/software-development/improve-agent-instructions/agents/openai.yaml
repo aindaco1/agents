@@ -1,0 +1,4 @@
+interface:
+  display_name: "Improve Agent Instructions"
+  short_description: "Clarify Codex and Hermes instruction files"
+  default_prompt: "Use $improve-agent-instructions to improve the selected agent instruction file while preserving its rules."

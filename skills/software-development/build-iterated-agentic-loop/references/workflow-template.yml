@@ -1,0 +1,189 @@
+# AUTHORING TEMPLATE: replace every REPLACE_* token and setup stub before use.
+# Choose one runtime; remove the unused install/login/run steps and secrets.
+# Install agent-iteration.py even without /iterate: it also implements the PR bound.
+# Add schedule / issue_comment only when requested. Pin actions per repo policy.
+name: 'Agent: REPLACE_TASK_TITLE'
+
+on:
+  workflow_dispatch:
+    inputs:
+      ignore_bound:
+        description: 'Deliberately allow another open PR for this loop'
+        type: boolean
+        default: false
+  # schedule:
+  #   - cron: 'REPLACE_AUTHORIZED_CRON'
+  # issue_comment:
+  #   types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: agent-REPLACE_TASK_SLUG
+  cancel-in-progress: false
+
+env:
+  LOOP_ID: agent-REPLACE_TASK_SLUG
+  LOOP_LABEL: agent-REPLACE_TASK_SLUG
+  BRANCH_PREFIX: agent/REPLACE_TASK_SLUG
+  BASE_BRANCH: ${{ github.event.repository.default_branch }}
+  AGENT_RUNTIME: REPLACE_CODEX_OR_HERMES
+
+jobs:
+  improve:
+    if: >-
+      github.event_name != 'issue_comment' ||
+      (github.event.issue.pull_request && startsWith(github.event.comment.body, '/iterate'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      # Gate code and control files always come from the trusted default branch.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BASE_BRANCH }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Gate new work or authorized iteration
+        id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 .github/scripts/agent-iteration.py gate \
+            --workflow "$LOOP_ID" --label "$LOOP_LABEL" \
+            --branch-prefix "$BRANCH_PREFIX" --base "$BASE_BRANCH" \
+            --repo "$GITHUB_REPOSITORY" --event "$GITHUB_EVENT_PATH" \
+            --event-name "$GITHUB_EVENT_NAME" > "$RUNNER_TEMP/gate.json"
+          jq -r 'to_entries[] | "\(.key)=\(.value)"' "$RUNNER_TEMP/gate.json" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare trusted controls and checkout target
+        if: steps.gate.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.gate.outputs.number }}
+          PR_BRANCH: ${{ steps.gate.outputs.branch }}
+          PR_SHA: ${{ steps.gate.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp .github/scripts/agent-iteration.py "$RUNNER_TEMP/agent-iteration.py"
+          # This script must check scope (including untracked files) and run
+          # repo checks from CWD without depending on its own script directory.
+          cp .github/scripts/validate-REPLACE_TASK_SLUG.sh "$RUNNER_TEMP/validate.sh"
+          cat .github/agent-prompts/REPLACE_TASK_SLUG.md > "$RUNNER_TEMP/agent-prompt.md"
+          if [ "$GITHUB_EVENT_NAME" = issue_comment ]; then
+            python3 "$RUNNER_TEMP/agent-iteration.py" prompt \
+              --workflow "$LOOP_ID" --repo "$GITHUB_REPOSITORY" \
+              --event "$GITHUB_EVENT_PATH" >> "$RUNNER_TEMP/agent-prompt.md"
+            # Fetch the validated SHA; no unchecked fork or branch checkout.
+            git -c 'credential.helper=!gh auth git-credential' fetch origin "$PR_SHA"
+            git checkout -B "$PR_BRANCH" "$PR_SHA"
+            LOOP_BRANCH="$PR_BRANCH"
+          else
+            LOOP_BRANCH="$BRANCH_PREFIX/$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+            git checkout -b "$LOOP_BRANCH"
+          fi
+          printf 'LOOP_BRANCH=%s\nSTART_SHA=%s\n' "$LOOP_BRANCH" "$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true' && env.AGENT_RUNTIME == 'codex'
+        with:
+          node-version: '24'
+      - name: Install pinned Codex
+        if: steps.gate.outputs.run == 'true' && env.AGENT_RUNTIME == 'codex'
+        run: npm install -g '@openai/codex@REPLACE_CODEX_VERSION'
+      - name: Install pinned Hermes in its own environment
+        if: steps.gate.outputs.run == 'true' && env.AGENT_RUNTIME == 'hermes'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 -m venv "$RUNNER_TEMP/hermes-venv"
+          "$RUNNER_TEMP/hermes-venv/bin/pip" install 'git+https://github.com/NousResearch/hermes-agent.git@REPLACE_HERMES_COMMIT'
+          printf '%s\n' "$RUNNER_TEMP/hermes-venv/bin" >> "$GITHUB_PATH"
+
+      - name: Repository setup
+        if: steps.gate.outputs.run == 'true'
+        shell: bash
+        run: |
+          # Replace with verified package-manager/runtime setup and locked install.
+          echo 'REPLACE_REPOSITORY_SETUP' >&2
+          exit 1
+
+      - name: Run Codex
+        if: steps.gate.outputs.run == 'true' && env.AGENT_RUNTIME == 'codex'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          printenv OPENAI_API_KEY | codex login --with-api-key
+          codex exec --cd "$GITHUB_WORKSPACE" --sandbox workspace-write \
+            --output-last-message "$RUNNER_TEMP/pr-body.md" - \
+            < "$RUNNER_TEMP/agent-prompt.md" > "$RUNNER_TEMP/agent-output.log" 2>&1
+
+      - name: Run Hermes
+        if: steps.gate.outputs.run == 'true' && env.AGENT_RUNTIME == 'hermes'
+        env:
+          HERMES_HOME: ${{ runner.temp }}/loop-hermes
+          # Replace provider/model and matching secret together, or use an
+          # existing authorized CI provider. Do not use a personal profile.
+          HERMES_PROVIDER: REPLACE_HERMES_PROVIDER
+          HERMES_MODEL: REPLACE_HERMES_MODEL
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$HERMES_HOME"
+          hermes --toolsets terminal,file --provider "$HERMES_PROVIDER" \
+            --model "$HERMES_MODEL" -z "$(cat "$RUNNER_TEMP/agent-prompt.md")" \
+            > "$RUNNER_TEMP/pr-body.md" 2> "$RUNNER_TEMP/agent-output.log"
+
+      - name: Independently validate and detect changes
+        id: changes
+        if: steps.gate.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s "$RUNNER_TEMP/pr-body.md"
+          # The agent must leave edits, not make its own commits.
+          test "$(git rev-parse HEAD)" = "$START_SHA"
+          bash "$RUNNER_TEMP/validate.sh"
+          git diff --check
+          git diff --cached --check
+          if [ -z "$(git status --porcelain --untracked-files=all)" ]; then
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+          else
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish validated changes
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ steps.gate.outputs.number }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Safe only after the scope gate has checked all changed/untracked paths.
+          git add -A
+          git commit -m 'chore: REPLACE_TASK_SLUG iteration'
+          gh auth setup-git
+          git push origin "HEAD:$LOOP_BRANCH"
+          # Remove footer generation when /iterate is disabled.
+          python3 "$RUNNER_TEMP/agent-iteration.py" footer --workflow "$LOOP_ID" >> "$RUNNER_TEMP/pr-body.md"
+          if [ -n "$PR_NUMBER" ]; then
+            gh pr edit "$PR_NUMBER" --body-file "$RUNNER_TEMP/pr-body.md"
+          else
+            # Idempotently ensure the label so future runs can enforce the bound.
+            gh label create "$LOOP_LABEL" --force --color 0E8A16 --description 'Bounded agent loop'
+            gh pr create --base "$BASE_BRANCH" --head "$LOOP_BRANCH" \
+              --label "$LOOP_LABEL" --title 'REPLACE_TASK_TITLE' \
+              --body-file "$RUNNER_TEMP/pr-body.md"
+          fi

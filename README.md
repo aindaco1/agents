@@ -102,6 +102,19 @@ Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives c
 
 Add a portable skill name to a profile's `hermes_skills` list when Hermes should prefer that procedure for the profile. Codex discovers the same package directly after synchronization. Do not copy runtime skill edits back blindly: compare them to the canonical package and import only intentional improvements.
 
+### HumanLayer adaptations
+
+Six procedures from [HumanLayer's skills](https://github.com/humanlayer/skills) are
+adapted for both runtimes: `show-me`, `visual-pr`,
+`improve-agent-instructions` (upstream `improve-claude-md`),
+`narrow-react-prop-types`, `build-iterated-agentic-loop`, and `design-control-loop`.
+They live under `skills/software-development/` and use the same portable sync
+command. Invoke with `$skill-name` in Codex or `/skill-name` in Hermes.
+
+See [source revision, adaptation notes, and focused sync commands](docs/humanlayer-skills.md).
+The automation workflows are reference templates; installing these skills does
+not enable schedules, create PRs, or start provider runs.
+
 ## Jev semantic evaluation
 
 The shared `jev-evaluation` procedure is an opt-in, advisory evaluator, not a
