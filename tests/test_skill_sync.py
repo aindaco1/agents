@@ -32,6 +32,7 @@ def test_repo_portable_skills_are_cross_compatible():
     names = {skill.name for skill in skills}
 
     assert names == {
+        "alonso-film-feedback",
         "anti-machine-writing-editorial-pass",
         "build-iterated-agentic-loop",
         "design-control-loop",

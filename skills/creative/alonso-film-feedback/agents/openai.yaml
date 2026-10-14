@@ -1,0 +1,4 @@
+interface:
+  display_name: "Alonso Film Feedback"
+  short_description: "Visual, poetic screenplay and rough-cut feedback"
+  default_prompt: "Use $alonso-film-feedback to review this screenplay or film cut with concise, specific notes on visual storytelling, layered meaning, economy, and subversive form."
