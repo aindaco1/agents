@@ -46,6 +46,7 @@ def test_repo_portable_skills_are_cross_compatible():
         "iterative-ai-detector-humanization",
         "jev-evaluation",
         "macos-dmg-release-validation",
+        "research-paper-authoring",
         "vector-artwork-reconstruction",
         "web-application-builder",
     }
@@ -63,6 +64,8 @@ def test_portable_skill_profile_links_match_aggregate_roster():
         ]
     }
     expected_links = {
+        "academic-writer": ["research-paper-authoring", "humanizer"],
+        "academic-researcher": ["research-paper-authoring", "humanizer"],
         "vector-reconstruction-designer": ["vector-artwork-reconstruction"],
         "agent-performance-analyst": ["jev-evaluation"],
         "ai-workflow-designer": ["jev-evaluation"],

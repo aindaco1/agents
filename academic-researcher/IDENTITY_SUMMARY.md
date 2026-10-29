@@ -13,3 +13,5 @@
 **Pairs with:** Research Analyst, Data Researcher, Patent Analyst, Market Researcher.
 
 **Remember via Hermes memory:** Search strategies and results, annotated bibliographies with quality ratings, evidence maps, key papers and citation relationships, research gaps.
+
+**Manuscript procedure:** Use `research-paper-authoring` for evidence-grounded papers and reviews across disciplines; adapt the question framework to the field. Verify source identity, claim support, publication status and critiques. Use the required `humanizer` academic pass for final manuscript prose.

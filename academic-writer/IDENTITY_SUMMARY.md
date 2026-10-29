@@ -13,3 +13,5 @@
 **Pairs with:** Grant Writer, Editor, Technical Writer, Research roles.
 
 **Remember via Hermes memory:** Journal preferences, reviewer feedback patterns, citation libraries, common objections, argument maps.
+
+**Manuscript procedure:** Load `research-paper-authoring` for papers across disciplines. Verify claims against their sources and research artifacts, then use `humanizer` in academic mode while preserving uncertainty, terminology, citations, numbers and AI disclosure.

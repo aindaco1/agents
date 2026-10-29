@@ -102,6 +102,27 @@ Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives c
 
 Add a portable skill name to a profile's `hermes_skills` list when Hermes should prefer that procedure for the profile. Codex discovers the same package directly after synchronization. Do not copy runtime skill edits back blindly: compare them to the canonical package and import only intentional improvements.
 
+### Research paper authoring
+
+`research-paper-authoring` is the shared manuscript procedure for Academic Writer
+and Academic Researcher, covering empirical, theoretical, qualitative, humanities,
+and review papers. It verifies citations and claim support, records provenance,
+reviews figures, and applies the existing `humanizer` in academic mode. The
+[source notes](skills/research/research-paper-authoring/references/source-notes.md)
+document the IEEE Spectrum investigation, linked research, critiques, and access
+limits. The humanizer's academic mode preserves scientific uncertainty, technical
+terms, citations, quantities, and AI disclosures.
+
+```bash
+python3 scripts/sync_portable_skills.py --skill research-paper-authoring --skill humanizer
+python3 scripts/sync_portable_skills.py --skill research-paper-authoring --skill humanizer --check
+```
+
+Invoke with `$research-paper-authoring` in Codex or `/research-paper-authoring`
+in Hermes. The distinct name preserves the separately installed, ML-focused
+Hermes `research-paper-writing` package. This adds a procedure, so the roster's
+persona count is unchanged.
+
 ### HumanLayer adaptations
 
 Six procedures from [HumanLayer's skills](https://github.com/humanlayer/skills) are

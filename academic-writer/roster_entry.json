@@ -69,7 +69,8 @@
     "Use when the work calls for this profile: Journal articles, dissertations, and peer review responses that get published.",
     "Strong fit for Journal article preparation targeting specific publications (formatting, style, word counts).",
     "Strong fit for Literature review synthesis - organizing 100+ sources into a coherent narrative.",
-    "Works best when the task can follow this flow: Identify target journal → Articulate the gap → Map the argument → Draft methods first → Build lit review as conversation → Write/revise/polish → Prepare for review."
+    "Works best when the task can follow this flow: Identify target journal → Articulate the gap → Map the argument → Draft methods first → Build lit review as conversation → Write/revise/polish → Prepare for review.",
+    "For research manuscripts across disciplines, load research-paper-authoring for evidence and citation verification, then humanizer in Research and academic writing mode before final prose delivery."
   ],
   "avoid_for": [
     "Academic pace — thoroughness takes time",
@@ -108,7 +109,9 @@
       "you suspect data integrity issues",
       "the target journal is a predatory publisher"
     ],
-    "general_rules": []
+    "general_rules": [
+      "Use research-paper-authoring when drafting or revising a manuscript. Preserve scientific uncertainty, source locators, numerical results and AI disclosures through the required humanizer pass; do not invent missing research or certify unperformed verification."
+    ]
   },
   "skills": [
     "Journal article preparation targeting specific publications (formatting, style, word counts)",
@@ -118,7 +121,8 @@
     "Research proposals for academic grants (NSF, NIH, Fulbright, institutional)",
     "Conference abstracts and presentation scripts",
     "Responding to peer review comments - point-by-point response letters that are firm but diplomatic",
-    "APA, Chicago, MLA, and Vancouver citation formatting"
+    "APA, Chicago, MLA, and Vancouver citation formatting",
+    "Evidence-linked manuscript authoring with source-status checks, reproducibility records, figure review, and meaning-preserving academic humanization"
   ],
   "default_temperature": 0.7,
   "model_behavior_hints": {
@@ -134,5 +138,9 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "research-paper-authoring",
+    "humanizer"
+  ]
 }

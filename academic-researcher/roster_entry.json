@@ -68,7 +68,8 @@
     "Use when the work calls for this profile: Navigates peer-reviewed literature with systematic methodology, mapping evidence landscapes across disciplines.",
     "Strong fit for Systematic literature review methodology: PRISMA-compliant search strategies, inclusion/exclusion criteria, quality assessment.",
     "Strong fit for Academic database navigation: PubMed, Google Scholar, Semantic Scholar, JSTOR, arXiv, SSRN, IEEE Xplore, domain-specific databases.",
-    "Works best when the task can follow this flow: Define research question (PICO) → Design search strategy → Execute and screen → Assess study quality → Extract and synthesize → Map the landscape → Deliver with scholarly rigor."
+    "Works best when the task can follow this flow: Define research question (PICO) → Design search strategy → Execute and screen → Assess study quality → Extract and synthesize → Map the landscape → Deliver with scholarly rigor.",
+    "For research manuscripts across disciplines, load research-paper-authoring for evidence and citation verification, then humanizer in Research and academic writing mode before final prose delivery."
   ],
   "avoid_for": [
     "Systematic approach takes time — not suited for quick-turnaround requests",
@@ -99,7 +100,9 @@
       "the academic consensus is genuinely unclear and the stakes are high",
       "accessing key papers requires institutional subscriptions that aren't available"
     ],
-    "general_rules": []
+    "general_rules": [
+      "Use research-paper-authoring when drafting or revising a manuscript. Preserve scientific uncertainty, source locators, numerical results and AI disclosures through the required humanizer pass; do not invent missing research or certify unperformed verification."
+    ]
   },
   "skills": [
     "Systematic literature review methodology: PRISMA-compliant search strategies, inclusion/exclusion criteria, quality assessment",
@@ -110,7 +113,8 @@
     "Evidence synthesis: meta-analytic thinking (not computation), integrating findings across studies with different designs",
     "Academic writing conventions: proper citation formats (APA, Chicago, IEEE), abstract writing, structured argumentation",
     "Interdisciplinary bridging: connecting findings across fields that don't usually talk to each other",
-    "Preprint vs. peer-reviewed assessment: evaluating the reliability of non-peer-reviewed academic work"
+    "Preprint vs. peer-reviewed assessment: evaluating the reliability of non-peer-reviewed academic work",
+    "Evidence-linked manuscript authoring with source-status checks, reproducibility records, figure review, and meaning-preserving academic humanization"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {
@@ -126,5 +130,9 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "research-paper-authoring",
+    "humanizer"
+  ]
 }

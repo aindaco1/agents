@@ -3,13 +3,13 @@ name: humanizer
 description: "Use when prose needs humanization or mode routing."
 license: MIT
 metadata:
-  version: "3.3.0"
+  version: "3.4.0"
   author: "Siqi Chen; extended by Hermes Agent"
   short-description: "Route and humanize prose without flattening voice"
   hermes:
     tags: [writing, editing, humanize, anti-ai-slop, voice, prose, text]
     homepage: https://github.com/blader/humanizer
-    related_skills: [constrained-humanization-editing, anti-machine-writing-editorial-pass, iterative-ai-detector-humanization]
+    related_skills: [constrained-humanization-editing, anti-machine-writing-editorial-pass, iterative-ai-detector-humanization, research-paper-authoring]
 ---
 
 # Humanizer: master routing skill
@@ -31,9 +31,12 @@ Pick one mode before editing. Do not blend contracts.
 | Detector loop | User names Pangram, ZeroGPT, GPTZero, Originality, Copyleaks, Turnitin, gives a score, or pastes flagged spans | Recover real authorship from human source material; interpret spans cautiously; never promise a classification | `iterative-ai-detector-humanization` |
 | Voice/reference style | User provides a writing sample or asks to sound like a specific author/reference | Match cadence and selection patterns, not borrowed content | `reference-style-rewriting` or `gonzo-reference-rewrite-pass` when authorial |
 | Documentation | Technical docs, README, API guide, codebase docs | Preserve code blocks, commands, URLs, headings, facts; improve scanability | This skill plus docs-specific judgment |
+| Research and academic writing | Research papers, abstracts, theses, literature reviews, or reviewer responses | Preserve evidential strength, technical terms, citations, quantitative details, and disclosure; improve clarity | This skill + `references/academic-writing-audit.md` |
 | Claude-associated technical prose | PR descriptions, issue reports, changelogs, or engineering notes with clustered certainty, personified systems, mechanical metaphors, verification stacks, or dense em dashes | Preserve technical evidence; remove accumulated rhetorical staging | This skill + `references/load-bearing-claude-vocabulary.md` |
 
 If multiple modes apply, the strictest preservation contract wins.
+
+For scholarly prose, the academic preservation contract remains active even during a constrained edit, voice match, or detector-aware review. Genre conventions and justified scientific uncertainty are not defects to remove.
 
 ## Non-negotiables
 
@@ -57,6 +60,8 @@ If multiple modes apply, the strictest preservation contract wins.
 ## Fast audit: highest-yield AI tells
 
 Use this before the long catalog.
+
+These are editorial prompts, not proof of AI authorship or poor research. Judge each phrase in context; do not convert vocabulary patterns into an accusation or a detector-avoidance recipe.
 
 ### Content and rhetoric
 - Inflated significance: "pivotal", "testament", "underscores", "broader landscape".
@@ -111,6 +116,10 @@ Look for:
 Match these patterns without copying phrases or importing ideas. Voice is selection and rhythm, not costume.
 
 ## Genre-specific guidance
+
+### Research and academic writing
+
+Load `references/academic-writing-audit.md`. Preserve defined terminology and meaningful repetition; never spin technical synonyms to make prose appear human. Retain uncertainty, study boundaries, statistical qualifications, and AI-use disclosures. Flag unsupported claims or suspect references separately instead of polishing them into authority. For new manuscript development or evidence repair, use `research-paper-authoring`; a copyedit alone does not certify the research.
 
 ### Docs and technical writing
 
@@ -179,6 +188,7 @@ When useful or requested:
 
 ## Supporting references
 
+- `references/academic-writing-audit.md` — scientific meaning preservation, citation/claim checks, and academic style limits informed by the IEEE Spectrum investigation and linked research.
 - `references/ai-pattern-catalog.md` — full 29-pattern catalog from `blader/humanizer` / Wikipedia Signs of AI Writing.
 - `references/load-bearing-claude-vocabulary.md` — corpus-based Claude-associated technical/PR vocabulary, limits, and cluster-level editing protocol from `louisabraham/load-bearing`.
 - `references/creative-writing-audit.md` — Joshua Scammell screenplay and process-residue audit.
@@ -188,3 +198,5 @@ When useful or requested:
 ## Attribution
 
 This skill began as a Hermes port of [blader/humanizer](https://github.com/blader/humanizer) by Siqi Chen, MIT licensed, based on Wikipedia's "Signs of AI writing" guide by WikiProject AI Cleanup. The full original pattern catalog is preserved in `references/ai-pattern-catalog.md`. Later Hermes additions add routing, constrained-editing contracts, docs-specific preservation, the Joshua Scammell creative-writing audit, the `louisabraham/load-bearing` technical-prose cluster audit, and Pangram-informed detector safeguards that prioritize truthful provenance over score-gaming.
+
+The academic mode adds evidence-preserving edits and source-status cautions; see its reference for attribution and limits.

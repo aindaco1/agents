@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Paper Authoring"
+  short_description: "Write research papers grounded in verifiable evidence"
+  default_prompt: "Use $research-paper-authoring to draft or revise my research paper, verify its evidence and citations, and apply the humanizer academic pass."
