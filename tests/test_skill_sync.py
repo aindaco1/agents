@@ -36,6 +36,8 @@ def test_repo_portable_skills_are_cross_compatible():
         "anti-machine-writing-editorial-pass",
         "build-iterated-agentic-loop",
         "design-control-loop",
+        "development-task",
+        "review-development-lessons",
         "improve-agent-instructions",
         "narrow-react-prop-types",
         "show-me",
@@ -67,8 +69,8 @@ def test_portable_skill_profile_links_match_aggregate_roster():
         "academic-writer": ["research-paper-authoring", "humanizer"],
         "academic-researcher": ["research-paper-authoring", "humanizer"],
         "vector-reconstruction-designer": ["vector-artwork-reconstruction"],
-        "agent-performance-analyst": ["jev-evaluation"],
-        "ai-workflow-designer": ["jev-evaluation"],
+        "agent-performance-analyst": ["jev-evaluation", "review-development-lessons"],
+        "ai-workflow-designer": ["jev-evaluation", "review-development-lessons"],
         "prompt-engineer": ["jev-evaluation"],
         "web-application-builder": ["web-application-builder"],
         "desktop-application-builder": [
@@ -244,7 +246,9 @@ def test_codex_sync_repairs_missing_ui_metadata(tmp_path: Path):
         "--dest",
         str(destination),
     ]
-    synced = subprocess.run(command, text=True, capture_output=True, check=False)
+    planned = subprocess.run(command + ["--plan"], text=True, capture_output=True, check=False)
+    assert planned.returncode == 0, planned.stderr
+    synced = subprocess.run(command + ["--apply", json.loads(planned.stdout)["plan_hash"]], text=True, capture_output=True, check=False)
     assert synced.returncode == 0, synced.stderr
     metadata = (skill_dir / "agents" / "openai.yaml").read_text(encoding="utf-8")
     assert "Use $test-agent" in metadata

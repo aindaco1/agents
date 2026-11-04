@@ -44,7 +44,7 @@
     },
     "local": {
       "provider": "mlx-local",
-      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+      "model": "mlx-community/Qwen3.8-27B-4bit"
     },
     "codex": {
       "provider": "openai-codex",
@@ -64,7 +64,8 @@
   "avatar": "avatar.webp",
   "identity_summary": "Lina Farooqi (she/her). AI Workflow Designer. You orchestrate multi-agent systems and design the pipelines that make AI agents work together.",
   "hermes_skills": [
-    "jev-evaluation"
+    "jev-evaluation",
+    "review-development-lessons"
   ],
   "invocation_hints": [
     "Prefer jev-evaluation after deterministic contract checks when designing bounded semantic checkpoints, same-state batches, explicit budgets, and human review paths.",

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review development lessons"
+  short_description: "Propose verified improvements from completed tasks"
+  default_prompt: "Use $review-development-lessons to review these completed tasks and produce scoped, evidence-backed proposals."

@@ -12,7 +12,7 @@ This roster routes every profile through the Hermes stack configured in `~/.herm
 | `premium` | openrouter | anthropic/claude-sonnet-4.6 | Strong general default |
 | `claude` | openrouter | anthropic/claude-sonnet-4.6 | Creative writing, nuanced prose |
 | `cheap` | openrouter | openrouter/free | Structured/routine work |
-| `local` | mlx-local | mlx-community/Qwen2.5-7B-Instruct-4bit | Private/offline iteration |
+| `local` | mlx-local | mlx-community/Qwen3.8-27B-4bit | Private/offline iteration |
 | `local-heavy` | mlx-local | mlx-community/Qwen3-30B-A3B-Instruct-2507-4bit | Heavier private/offline reasoning |
 | `codex` | openai-codex | gpt-5.6-sol | Difficult coding and implementation |
 
@@ -122,7 +122,7 @@ Each `roster_entry.json` (and the mirrored entry in `roster.json`) carries a `mo
   "primary":   { "provider": "openrouter",   "model": "anthropic/claude-sonnet-4.6" },
   "secondary": { "provider": "openrouter",   "model": "anthropic/claude-opus-4.7"   },
   "cheap":     { "provider": "openrouter",   "model": "openrouter/free"             },
-  "local":     { "provider": "mlx-local", "model": "mlx-community/Qwen2.5-7B-Instruct-4bit" },
+  "local":     { "provider": "mlx-local", "model": "mlx-community/Qwen3.8-27B-4bit" },
   "codex":     { "provider": "openai-codex", "model": "gpt-5.6-sol" },
   "free_openrouter": [ "nousresearch/hermes-3-llama-3.1-405b:free", "..." ],
   "notes": "..."
@@ -138,3 +138,5 @@ To resync this file after OpenRouter's free tier changes:
 ```bash
 python3 ~/.hermes/skills/autonomous-ai-agents/hermes-roster-model-sync/scripts/sync.py
 ```
+
+Local model alias reconciled against this Mac’s model map on November 4, 2026. Other catalog entries retain their previously recorded verification dates.

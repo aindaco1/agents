@@ -516,7 +516,8 @@ def compile_selected(agent_dirs: list[Path], *, apply_hash: str | None = None,
         for rel in PROFILE_DIRS:
             path = profile / rel
             if path.is_symlink():
-                if rel != "skills" or path.resolve() != (DEFAULT_HERMES_HOME / "skills").resolve():
+                allowed_skills = {(DEFAULT_HERMES_HOME / "skills").resolve(), (profile / "skills.local").absolute()}
+                if rel != "skills" or path.resolve() not in allowed_skills:
                     raise publication.PublicationError(f"Symlink is not an expected runtime directory: {path}")
             elif path.exists() and not path.is_dir():
                 raise publication.PublicationError(f"Expected a runtime directory: {path}")
@@ -551,6 +552,11 @@ def compile_selected(agent_dirs: list[Path], *, apply_hash: str | None = None,
             path = profile / rel
             if path.is_symlink():
                 continue
+            if rel == "skills" and not path.exists() and (DEFAULT_HERMES_HOME / "skills").is_dir():
+                # Match the installed library on first creation. Private storage
+                # and its release pointer require the separate tested migration.
+                path.symlink_to(DEFAULT_HERMES_HOME / "skills")
+                continue
             publication.safe_path(profile, rel).mkdir(parents=True, exist_ok=True)
         env = profile / ".env"
         if not env.exists() and not env.is_symlink():
@@ -559,7 +565,7 @@ def compile_selected(agent_dirs: list[Path], *, apply_hash: str | None = None,
     return {"mode": "applied", "plan_hash": combined_hash, "profiles": results}
 
 
-def route_agents(prompt: str, top_n: int = 3, limit_to_first_50: bool = True) -> list[dict[str, Any]]:
+def route_agents(prompt: str, top_n: int = 3, limit_to_first_50: bool = False) -> list[dict[str, Any]]:
     candidates = first_target_agents() if limit_to_first_50 else discover_agents()
     entries = [validate_agent_dir(path) for path in candidates]
     return route_prompt(prompt, entries, top_n=top_n)
@@ -609,7 +615,8 @@ def run_profile(
     dry_run: bool = False,
 ) -> int:
     state = DEFAULT_HERMES_HOME / "roster-state" / slug
-    if (state / "pending.json").exists():
+    isolation_state = DEFAULT_HERMES_HOME / "skill-isolation-state" / slug
+    if (state / "pending.json").exists() or (isolation_state / "pending.json").exists():
         raise SystemExit(f"Profile publication was interrupted; run the roster recover command for {slug}")
     agent_dir = ROOT / slug
     if not agent_dir.is_dir():
@@ -660,7 +667,7 @@ def run_routed_profile(
     prompt: str,
     query: str | None = None,
     top_n: int = 3,
-    limit_to_first_50: bool = True,
+    limit_to_first_50: bool = False,
     delegated: bool = False,
     alias_override: str | None = None,
     tier_override: str | None = None,
@@ -733,7 +740,8 @@ def parse_args() -> argparse.Namespace:
     p_run.add_argument("--query", help="Optional non-interactive query")
     p_run.add_argument("--route", dest="route_prompt", help="Route this task prompt to the best matching agent and run it")
     p_run.add_argument("--top", type=int, default=3, help="How many ranked matches to consider when routing")
-    p_run.add_argument("--all", action="store_true", help="Route across all discovered agents instead of the first 50")
+    p_run.add_argument("--all", action="store_true", help="Use the full roster (now the default)")
+    p_run.add_argument("--first-50", action="store_true", help="Explicit legacy alphabetical subset")
     p_run.add_argument("--delegate", action="store_true", help="Run the selected profile as a delegated Hermes subprocess; use worktree mode automatically inside git repos")
     p_run.add_argument("--alias-override", help="Override the profile's resolved Hermes model alias")
     p_run.add_argument("--tier-override", help="Override the profile's capability tier before alias resolution")
@@ -742,7 +750,9 @@ def parse_args() -> argparse.Namespace:
     p_route = sub.add_parser("route", help="Recommend the best matching agent for a task prompt")
     p_route.add_argument("prompt", help="Task prompt to route")
     p_route.add_argument("--top", type=int, default=3, help="How many ranked matches to return")
-    p_route.add_argument("--all", action="store_true", help="Route across all discovered agents instead of the first 50")
+    p_route.add_argument("--all", action="store_true", help="Use the full roster (now the default)")
+
+    p_route.add_argument("--first-50", action="store_true", help="Explicit legacy alphabetical subset")
 
     p_install = sub.add_parser("install-launchers", help="Install agent-list/agent-compile/agent-run wrappers")
     p_install.add_argument(
@@ -752,6 +762,8 @@ def parse_args() -> argparse.Namespace:
     )
 
     args = ap.parse_args()
+    if getattr(args, "all", False) and getattr(args, "first_50", False):
+        ap.error("--all and --first-50 are mutually exclusive")
     if getattr(args, "top", 1) < 1:
         ap.error("--top must be a positive integer")
     return args
@@ -797,7 +809,7 @@ def main() -> int:
                 args.route_prompt,
                 query=args.query,
                 top_n=args.top,
-                limit_to_first_50=not args.all,
+                limit_to_first_50=args.first_50,
                 delegated=args.delegate,
                 alias_override=args.alias_override,
                 tier_override=args.tier_override,
@@ -814,7 +826,7 @@ def main() -> int:
             dry_run=args.dry_run,
         )
     if args.cmd == "route":
-        ranked = route_agents(args.prompt, top_n=args.top, limit_to_first_50=not args.all)
+        ranked = route_agents(args.prompt, top_n=args.top, limit_to_first_50=args.first_50)
         print(json.dumps({"prompt": args.prompt, "matches": ranked}, indent=2, ensure_ascii=False))
         return 0
     if args.cmd == "install-launchers":

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "skills": {
+    "alonso-film-feedback": "maintained",
+    "anti-machine-writing-editorial-pass": "maintained",
+    "build-iterated-agentic-loop": "maintained",
+    "constrained-humanization-editing": "maintained",
+    "design-control-loop": "maintained",
+    "desktop-app-updater-release-validation": "maintained",
+    "development-task": "maintained",
+    "humanizer": "maintained",
+    "improve-agent-instructions": "maintained",
+    "iterative-ai-detector-humanization": "maintained",
+    "jev-evaluation": "maintained",
+    "macos-dmg-release-validation": "maintained",
+    "narrow-react-prop-types": "maintained",
+    "research-paper-authoring": "maintained",
+    "review-development-lessons": "maintained",
+    "show-me": "maintained",
+    "vector-artwork-reconstruction": "maintained",
+    "visual-pr": "maintained",
+    "web-application-builder": "maintained"
+  }
+}

@@ -87,7 +87,8 @@ individually, so check receipts if a later profile fails.
 
 ```bash
 python3 scripts/sync_codex_skills.py --check
-python3 scripts/sync_codex_skills.py
+python3 scripts/sync_codex_skills.py --plan
+python3 scripts/sync_codex_skills.py --apply <plan_hash>
 ```
 
 Roster mirrors are persona/routing skills generated from `IDENTITY_SUMMARY.md`, `IDENTITY.md`, and handoff metadata. Optional `codex_interface` metadata in `roster_entry.json` is the source of truth for a profile's Codex display name, short description, and default prompt.
@@ -107,7 +108,8 @@ Validate and synchronize the same source packages into both local libraries:
 
 ```bash
 python3 scripts/sync_portable_skills.py --check
-python3 scripts/sync_portable_skills.py
+python3 scripts/sync_portable_skills.py --plan
+python3 scripts/sync_portable_skills.py --apply <plan_hash>
 ```
 
 Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives categorized packages under `~/.hermes/skills/<category>/<name>/`. Use `--target codex` or `--target hermes` when only one runtime should be checked or updated.
@@ -126,7 +128,8 @@ limits. The humanizer's academic mode preserves scientific uncertainty, technica
 terms, citations, quantities, and AI disclosures.
 
 ```bash
-python3 scripts/sync_portable_skills.py --skill research-paper-authoring --skill humanizer
+python3 scripts/sync_portable_skills.py --skill research-paper-authoring --skill humanizer --plan
+python3 scripts/sync_portable_skills.py --skill research-paper-authoring --skill humanizer --apply <plan_hash>
 python3 scripts/sync_portable_skills.py --skill research-paper-authoring --skill humanizer --check
 ```
 
@@ -160,7 +163,8 @@ Read [the audit and measured comparison](docs/jev/README.md) and
 Sync only this package with:
 
 ```bash
-python3 scripts/sync_portable_skills.py --skill jev-evaluation
+python3 scripts/sync_portable_skills.py --skill jev-evaluation --plan
+python3 scripts/sync_portable_skills.py --skill jev-evaluation --apply <plan_hash>
 python3 scripts/sync_portable_skills.py --skill jev-evaluation --check
 ```
 
@@ -184,3 +188,36 @@ DUSTWAVE_PLATFORM_DIR="/absolute/path/to/platform" node --test tests/jev.test.mj
 ```
 
 Before publishing, also run `python3 scripts/sync_roster_aggregate.py --check`, validate JSON, inspect `git diff --check`, review the complete diff, fetch `origin`, and confirm the branch is still based on current `origin/main`.
+
+## Publication ownership and development workflow
+
+Both publishers default to a read-only JSON preview. Apply the exact `plan_hash`
+with the same selection flags. `--check` remains a read-only content comparison.
+Existing modified copies require explicit `--adopt-existing` during their initial
+baseline; later conflicting local/source edits stop publication. Each package has
+private local transaction backups; no unrelated destination files are deleted.
+
+`skills/ownership.json` declares maintained and retired canonical procedures.
+Maintained procedures are published to both runtimes and pinned/locked in Hermes
+using its existing usage-sidecar lock protocol. Retired procedures are not
+recreated; existing copies and archives are retained for explicit disposition.
+A lock controls Hermes tools; it is not a separate operating-system identity.
+
+`development-task` and `review-development-lessons` are the common development
+and review procedures. See [the task/review contract](docs/development-workflow.md).
+Full-roster routing is now the default; `--first-50` selects the legacy subset.
+
+For a bounded skills-isolation pilot, use
+`scripts/isolate_hermes_skills.py <slug>` to preview and repeat with
+`--apply <plan_hash>`. The tool only migrates the known global skills symlink.
+It publishes a content-addressed local shared snapshot and switches the profile
+to its own writable `skills.local` directory, preserving all original shared
+content. Only `skills.external_dirs` changes in config. The `.no-bundled-skills`
+marker prevents ordinary bundled reseeding; Hermes may retain essential built-ins.
+Use `--restore` for interrupted migration or rollback; newer settings cause a
+conflict and private learned skills remain recoverable. Publish only to idle
+profiles. Unselected profiles retain their existing library wiring.
+
+Shared snapshots are pinned until explicitly refreshed. To refresh a pilot,
+review/restore its previous migration and reconcile retained `skills.local` first;
+the tool refuses to discard a populated private library. Do not bypass that check.

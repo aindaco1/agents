@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Hermes Agent talent pool",
-  "generated": "2026-10-29",
+  "generated": "2026-11-04",
   "total_agents": 248,
   "gender_distribution": {
     "he_him": 102,
@@ -55,7 +55,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -184,7 +184,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -313,7 +313,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -437,7 +437,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -571,7 +571,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -692,7 +692,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -818,7 +818,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -944,7 +944,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1076,7 +1076,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1210,7 +1210,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1337,7 +1337,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1467,7 +1467,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1595,7 +1595,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1724,7 +1724,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1852,7 +1852,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -1984,7 +1984,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2120,7 +2120,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2242,7 +2242,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2371,7 +2371,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2497,7 +2497,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2622,7 +2622,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2756,7 +2756,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -2903,7 +2903,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3037,7 +3037,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3166,7 +3166,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3294,7 +3294,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3425,7 +3425,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3553,7 +3553,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3683,7 +3683,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3771,7 +3771,10 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "development-task"
+      ]
     },
     {
       "role_id": "product-manager",
@@ -3820,7 +3823,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -3948,7 +3951,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4077,7 +4080,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4207,7 +4210,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4339,7 +4342,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4466,7 +4469,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4589,7 +4592,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4722,7 +4725,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4844,7 +4847,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -4972,7 +4975,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5100,7 +5103,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5233,7 +5236,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5362,7 +5365,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5493,7 +5496,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5629,7 +5632,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5751,7 +5754,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -5883,7 +5886,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6020,7 +6023,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6156,7 +6159,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6287,7 +6290,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6418,7 +6421,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6549,7 +6552,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6679,7 +6682,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6815,7 +6818,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -6835,7 +6838,8 @@
       "avatar": "avatar.webp",
       "identity_summary": "Dmitri Volkov (he/him). Agent Performance Analyst. You measure how AI agents actually perform in production and turn that data into actionable intelligence.",
       "hermes_skills": [
-        "jev-evaluation"
+        "jev-evaluation",
+        "review-development-lessons"
       ],
       "invocation_hints": [
         "Prefer jev-evaluation after deterministic checks when measuring semantic evaluation errors, review rates, decision flips, and cost per successful task against human-labeled held-out cases.",
@@ -6950,7 +6954,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7089,7 +7093,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7233,7 +7237,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7363,7 +7367,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7508,7 +7512,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7634,7 +7638,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7761,7 +7765,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -7895,7 +7899,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8036,7 +8040,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8170,7 +8174,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8296,7 +8300,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8427,7 +8431,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8565,7 +8569,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8693,7 +8697,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8822,7 +8826,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -8952,7 +8956,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9081,7 +9085,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9210,7 +9214,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9338,7 +9342,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9466,7 +9470,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9595,7 +9599,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9724,7 +9728,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9850,7 +9854,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -9983,7 +9987,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10119,7 +10123,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10247,7 +10251,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10377,7 +10381,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10510,7 +10514,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10640,7 +10644,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10770,7 +10774,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -10905,7 +10909,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11037,7 +11041,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11165,7 +11169,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11287,7 +11291,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11417,7 +11421,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11548,7 +11552,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11681,7 +11685,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11809,7 +11813,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -11937,7 +11941,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12062,7 +12066,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12191,7 +12195,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12324,7 +12328,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12454,7 +12458,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12584,7 +12588,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12714,7 +12718,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12854,7 +12858,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -12980,7 +12984,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13111,7 +13115,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13244,7 +13248,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13378,7 +13382,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13507,7 +13511,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13635,7 +13639,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13774,7 +13778,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -13917,7 +13921,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14047,7 +14051,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14189,7 +14193,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14316,7 +14320,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14457,7 +14461,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14586,7 +14590,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14712,7 +14716,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14846,7 +14850,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -14978,7 +14982,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15112,7 +15116,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15248,7 +15252,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15381,7 +15385,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15513,7 +15517,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15648,7 +15652,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15776,7 +15780,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -15902,7 +15906,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16038,7 +16042,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16167,7 +16171,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16295,7 +16299,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16425,7 +16429,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16550,7 +16554,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16682,7 +16686,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16809,7 +16813,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -16940,7 +16944,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17079,7 +17083,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17208,7 +17212,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17228,7 +17232,8 @@
       "avatar": "avatar.webp",
       "identity_summary": "Lina Farooqi (she/her). AI Workflow Designer. You orchestrate multi-agent systems and design the pipelines that make AI agents work together.",
       "hermes_skills": [
-        "jev-evaluation"
+        "jev-evaluation",
+        "review-development-lessons"
       ],
       "invocation_hints": [
         "Prefer jev-evaluation after deterministic contract checks when designing bounded semantic checkpoints, same-state batches, explicit budgets, and human review paths.",
@@ -17338,7 +17343,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17468,7 +17473,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17601,7 +17606,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17725,7 +17730,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17856,7 +17861,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -17991,7 +17996,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18121,7 +18126,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18249,7 +18254,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18378,7 +18383,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18508,7 +18513,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18638,7 +18643,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18767,7 +18772,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -18897,7 +18902,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19021,7 +19026,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19149,7 +19154,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19281,7 +19286,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19406,7 +19411,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19534,7 +19539,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19668,7 +19673,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19802,7 +19807,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -19932,7 +19937,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20058,7 +20063,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20184,7 +20189,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20314,7 +20319,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20439,7 +20444,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20573,7 +20578,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20706,7 +20711,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20835,7 +20840,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -20967,7 +20972,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21102,7 +21107,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21232,7 +21237,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21369,7 +21374,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21498,7 +21503,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21623,7 +21628,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21759,7 +21764,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -21895,7 +21900,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22025,7 +22030,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22154,7 +22159,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22283,7 +22288,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22406,7 +22411,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22527,7 +22532,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22657,7 +22662,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22783,7 +22788,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -22913,7 +22918,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23041,7 +23046,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23171,7 +23176,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23304,7 +23309,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23433,7 +23438,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23564,7 +23569,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23694,7 +23699,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23824,7 +23829,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -23956,7 +23961,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24092,7 +24097,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24221,7 +24226,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24353,7 +24358,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24485,7 +24490,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24614,7 +24619,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24739,7 +24744,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -24873,7 +24878,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25006,7 +25011,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25135,7 +25140,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25267,7 +25272,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25388,7 +25393,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25519,7 +25524,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25648,7 +25653,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25785,7 +25790,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -25913,7 +25918,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26039,7 +26044,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26174,7 +26179,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26318,7 +26323,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26444,7 +26449,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26571,7 +26576,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26698,7 +26703,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26838,7 +26843,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -26975,7 +26980,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27101,7 +27106,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27235,7 +27240,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27368,7 +27373,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27498,7 +27503,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27626,7 +27631,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27756,7 +27761,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -27898,7 +27903,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28017,7 +28022,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28146,7 +28151,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28280,7 +28285,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28409,7 +28414,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28541,7 +28546,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28667,7 +28672,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28791,7 +28796,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -28918,7 +28923,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29047,7 +29052,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29177,7 +29182,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29317,7 +29322,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29445,7 +29450,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29570,7 +29575,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29701,7 +29706,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29845,7 +29850,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -29973,7 +29978,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30099,7 +30104,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30228,7 +30233,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30352,7 +30357,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30475,7 +30480,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30611,7 +30616,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30747,7 +30752,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -30880,7 +30885,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31009,7 +31014,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31135,7 +31140,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31264,7 +31269,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31395,7 +31400,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31530,7 +31535,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31677,7 +31682,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31838,7 +31843,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -31974,7 +31979,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -32117,7 +32122,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",
@@ -32261,7 +32266,7 @@
         },
         "local": {
           "provider": "mlx-local",
-          "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+          "model": "mlx-community/Qwen3.8-27B-4bit"
         },
         "codex": {
           "provider": "openai-codex",

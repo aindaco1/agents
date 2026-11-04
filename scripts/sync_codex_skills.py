@@ -14,9 +14,11 @@ import argparse
 import json
 import re
 import sys
-import tempfile
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import managed_publication as publication
 
 
 SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -53,6 +55,9 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Report drift without writing. Exit 1 when changes are needed.",
     )
+    parser.add_argument("--plan", action="store_true", help="Print publication preview JSON")
+    parser.add_argument("--apply", metavar="PLAN_HASH", help="Apply the exact preview")
+    parser.add_argument("--adopt-existing", action="store_true", help="Reconcile legacy generated copies explicitly")
     return parser.parse_args()
 
 
@@ -224,24 +229,10 @@ def preserve_or_build_frontmatter(
     return build_frontmatter(entry)
 
 
-def atomic_write(path: Path, content: str) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(
-        "w",
-        encoding="utf-8",
-        dir=path.parent,
-        prefix=f".{path.name}.",
-        delete=False,
-    ) as handle:
-        handle.write(content)
-        temp_path = Path(handle.name)
-    temp_path.replace(path)
-
-
 def main() -> int:
     args = parse_args()
     repo = args.repo.expanduser().resolve()
-    destination = args.dest.expanduser().resolve()
+    destination = args.dest.expanduser().absolute()
     replace_collisions = set(args.replace_collision)
     entries = load_roster(repo)
 
@@ -269,10 +260,11 @@ def main() -> int:
     changed_roles: list[str] = []
     changed_metadata: list[str] = []
 
+    prepared = []
     for entry in entries:
         role_id = entry["role_id"]
         skill_dir = destination / role_id
-        skill_path = skill_dir / "SKILL.md"
+        skill_path = publication.safe_path(skill_dir, "SKILL.md")
         current = (
             skill_path.read_text(encoding="utf-8") if skill_path.is_file() else None
         )
@@ -291,10 +283,8 @@ def main() -> int:
             action = "created" if current is None else "updated"
             counts[action] += 1
             changed_roles.append(role_id)
-            if not args.check:
-                atomic_write(skill_path, expected)
 
-        metadata_path = skill_dir / "agents" / "openai.yaml"
+        metadata_path = publication.safe_path(skill_dir, "agents/openai.yaml")
         current_metadata = (
             metadata_path.read_text(encoding="utf-8")
             if metadata_path.is_file()
@@ -307,8 +297,31 @@ def main() -> int:
             action = "created" if current_metadata is None else "updated"
             metadata_counts[action] += 1
             changed_metadata.append(role_id)
-            if not args.check:
-                atomic_write(metadata_path, expected_metadata)
+
+        files = {"SKILL.md": expected.encode(), "agents/openai.yaml": expected_metadata.encode()}
+        state = destination / ".persona-state" / role_id
+        source = {"owner": "agents-roster", "role_id": role_id,
+                  "files": {name: publication.digest(data) for name, data in files.items()}}
+        plan = publication.preview(skill_dir, state, files, source=source,
+                                   adopt=args.adopt_existing or role_id in replace_collisions)
+        prepared.append((skill_dir, state, files, plan))
+
+    if args.apply and (args.check or args.plan):
+        raise SystemExit("--apply cannot be combined with --check or --plan")
+    plans = [plan for _, _, _, plan in prepared]
+    combined = publication.digest(publication.json_bytes(plans))
+    if args.plan or (not args.check and not args.apply):
+        print(json.dumps({"plan_hash": combined, "packages": plans, "preserved_collisions": skipped}, indent=2))
+        return 0
+    if args.apply:
+        if args.apply != combined:
+            raise publication.PublicationError("Stale persona preview; inspect a fresh preview")
+        conflicts = [p["root"] + ":" + f["path"] for p in plans for f in p["files"] if f["action"] == "conflict"]
+        if conflicts:
+            raise publication.PublicationError("Unresolved persona conflicts: " + ", ".join(conflicts))
+        for root, state, files, plan in prepared:
+            publication.publish(root, state, files, expected=plan["plan_hash"],
+                                source=plan["source"], adopt=plan["adopt_existing"])
 
     mode = "check" if args.check else "sync"
     print(
@@ -334,4 +347,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except (OSError, ValueError) as exc:
+        raise SystemExit(str(exc)) from exc

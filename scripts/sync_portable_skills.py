@@ -4,14 +4,18 @@
 from __future__ import annotations
 
 import argparse
+import json
+import fcntl
 import re
 import sys
-import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import managed_publication as publication
 
 
 NAME_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -70,6 +74,9 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Validate and report drift without writing; exit 1 if sync is needed.",
     )
+    parser.add_argument("--plan", action="store_true", help="Print the exact publication preview as JSON")
+    parser.add_argument("--apply", metavar="PLAN_HASH", help="Apply an exact preview to both selected runtimes")
+    parser.add_argument("--adopt-existing", action="store_true", help="Explicitly reconcile legacy modified copies")
     return parser.parse_args()
 
 
@@ -180,6 +187,8 @@ def discover_portable_skills(repo: Path) -> list[PortableSkill]:
 def package_files(skill: PortableSkill) -> dict[Path, bytes]:
     files: dict[Path, bytes] = {}
     for path in sorted(skill.source.rglob("*")):
+        if path.is_symlink():
+            raise ValueError(f"Skill packages cannot contain symlinks: {path}")
         if (
             not path.is_file()
             or path.name in IGNORED_NAMES
@@ -193,6 +202,8 @@ def package_files(skill: PortableSkill) -> dict[Path, bytes]:
 
 def destination_state(skill: PortableSkill, destination: Path) -> tuple[str, list[Path]]:
     expected = package_files(skill)
+    for rel in expected:
+        publication.safe_path(destination, str(rel))
     missing_or_changed = [
         rel
         for rel, content in expected.items()
@@ -205,23 +216,60 @@ def destination_state(skill: PortableSkill, destination: Path) -> tuple[str, lis
     return "unchanged", []
 
 
-def atomic_write(path: Path, content: bytes) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with tempfile.NamedTemporaryFile(
-        "wb", dir=path.parent, prefix=f".{path.name}.", delete=False
-    ) as handle:
-        handle.write(content)
-        temp_path = Path(handle.name)
-    temp_path.replace(path)
+def package_plan(skill: PortableSkill, destination: Path, *, adopt=False) -> tuple[dict, dict[str, bytes], Path]:
+    files = {str(p): b for p, b in package_files(skill).items()}
+    state = destination.parent / ".portable-state" / skill.name
+    source = {"owner": "agents-repository", "name": skill.name,
+              "files": {name: publication.digest(data) for name, data in files.items()}}
+    plan = publication.preview(destination, state, files, source=source, adopt=adopt)
+    return plan, files, state
 
 
 def sync_package(skill: PortableSkill, destination: Path, check: bool) -> str:
-    state, changed_files = destination_state(skill, destination)
-    if state != "unchanged" and not check:
-        expected = package_files(skill)
-        for rel in changed_files:
-            atomic_write(destination / rel, expected[rel])
-    return state
+    status, _ = destination_state(skill, destination)
+    plan, files, state = package_plan(skill, destination)
+    if not check:
+        publication.publish(destination, state, files, expected=plan["plan_hash"], source=plan["source"])
+    return status
+
+
+def protect_hermes_skills(root: Path, names: list[str]) -> None:
+    """Use Hermes' own .usage.json lock protocol; preserve unrelated telemetry."""
+    root = publication.safe_path(root)
+    root.mkdir(parents=True, exist_ok=True)
+    lock = publication.safe_path(root, ".usage.json.lock")
+    with lock.open("a+b") as handle:
+        fcntl.flock(handle, fcntl.LOCK_EX)
+        try:
+            path = publication.safe_path(root, ".usage.json")
+            raw = publication.read_file(path)
+            data = json.loads(raw) if raw else {}
+            if not isinstance(data, dict):
+                raise ValueError("Hermes usage metadata must be a mapping")
+            for name in names:
+                record = data.setdefault(name, {})
+                if not isinstance(record, dict):
+                    raise ValueError(f"Invalid Hermes usage record: {name}")
+                record.update(pinned=True, locked=True, state="active")
+                record["portable_owner"] = "agents-repository"
+            publication.atomic_write(path, publication.json_bytes(data))
+        finally:
+            fcntl.flock(handle, fcntl.LOCK_UN)
+
+
+def maintained_skills(repo: Path, skills: list[PortableSkill]) -> list[PortableSkill]:
+    path = repo / "skills" / "ownership.json"
+    if not path.exists():
+        return skills
+    policy = json.loads(path.read_text())
+    if policy.get("schema") != 1 or not isinstance(policy.get("skills"), dict):
+        raise ValueError("Invalid skill ownership policy")
+    names = {s.name for s in skills}
+    if set(policy["skills"]) != names:
+        raise ValueError("Ownership policy must account for every canonical procedure")
+    if any(v not in {"maintained", "retired"} for v in policy["skills"].values()):
+        raise ValueError("Unknown ownership disposition")
+    return [s for s in skills if policy["skills"][s.name] == "maintained"]
 
 
 def target_destinations(
@@ -241,11 +289,11 @@ def target_destinations(
 def main() -> int:
     args = parse_args()
     repo = args.repo.expanduser().resolve()
-    codex_dest = args.codex_dest.expanduser().resolve()
-    hermes_dest = args.hermes_dest.expanduser().resolve()
+    codex_dest = args.codex_dest.expanduser().absolute()
+    hermes_dest = args.hermes_dest.expanduser().absolute()
 
     try:
-        skills = discover_portable_skills(repo)
+        skills = maintained_skills(repo, discover_portable_skills(repo))
         if args.skill:
             selected = set(args.skill)
             unknown = selected - {skill.name for skill in skills}
@@ -257,16 +305,37 @@ def main() -> int:
     except (OSError, ValueError) as exc:
         raise SystemExit(str(exc)) from exc
 
+    if args.apply and (args.check or args.plan):
+        raise SystemExit("--apply cannot be combined with --check or --plan")
     counts = {"created": 0, "updated": 0, "unchanged": 0}
     changed: list[str] = []
+    prepared = []
     for skill in skills:
-        for runtime, destination in target_destinations(
-            skill, args.target, codex_dest, hermes_dest
-        ):
-            state = sync_package(skill, destination, args.check)
-            counts[state] += 1
-            if state != "unchanged":
+        for runtime, destination in target_destinations(skill, args.target, codex_dest, hermes_dest):
+            status, _ = destination_state(skill, destination)
+            counts[status] += 1
+            if status != "unchanged":
                 changed.append(f"{runtime}:{skill.name}")
+            plan, files, state = package_plan(skill, destination, adopt=args.adopt_existing)
+            prepared.append((runtime, skill, destination, plan, files, state))
+    plans = [{"runtime": rt, "name": sk.name, **plan} for rt, sk, _, plan, _, _ in prepared]
+    combined = publication.digest(publication.json_bytes(plans))
+    if args.plan or (not args.check and not args.apply):
+        print(json.dumps({"plan_hash": combined, "packages": plans}, indent=2))
+        return 0
+    if args.apply:
+        if args.apply != combined:
+            raise publication.PublicationError("Stale skill preview; inspect a fresh preview")
+        conflicts = [p["name"] + ":" + f["path"] for p in plans for f in p["files"] if f["action"] == "conflict"]
+        if conflicts:
+            raise publication.PublicationError("Unresolved skill conflicts: " + ", ".join(conflicts))
+        # Protect maintained Hermes packages before publication so retention cannot
+        # archive them between a restore and the ownership declaration.
+        if args.target in {"both", "hermes"}:
+            protect_hermes_skills(hermes_dest, [sk.name for sk in skills])
+        for rt, skill, destination, plan, files, state in prepared:
+            publication.publish(destination, state, files, expected=plan["plan_hash"],
+                                source=plan["source"], adopt=args.adopt_existing)
 
     mode = "check" if args.check else "sync"
     print(
@@ -279,4 +348,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except (OSError, ValueError) as exc:
+        raise SystemExit(str(exc)) from exc

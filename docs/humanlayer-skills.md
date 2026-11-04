@@ -36,7 +36,7 @@ session to refresh.
 Sync just these packages without refreshing unrelated procedures or personas:
 
 ```bash
-python3 scripts/sync_portable_skills.py \
+python3 scripts/sync_portable_skills.py --plan \
   --skill show-me \
   --skill visual-pr \
   --skill improve-agent-instructions \
@@ -45,7 +45,7 @@ python3 scripts/sync_portable_skills.py \
   --skill design-control-loop
 ```
 
-Repeat with `--check` to verify both mirrors. Codex receives flat packages under
+Apply the returned `plan_hash` by replacing `--plan` with `--apply <plan_hash>` and retaining the same selections. Repeat with `--check` to verify both mirrors. Codex receives flat packages under
 `~/.agents/skills/`; the default Hermes library receives them under
 `~/.hermes/skills/software-development/`. Isolated Hermes profiles may have their
 own libraries; this command does not compile or overwrite those profiles.

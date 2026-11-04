@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -117,6 +118,7 @@ def snapshot(root: Path) -> dict[Path, bytes | None]:
     return {
         path.relative_to(root): path.read_bytes() if path.is_file() else None
         for path in root.rglob("*")
+        if ".portable-state" not in path.parts and path.name not in {".usage.json", ".usage.json.lock"}
     }
 
 
@@ -148,7 +150,11 @@ def test_cli_syncs_only_selected_skills(tmp_path: Path, selected: tuple[str, ...
     assert f"skills={len(set(selected))}, target=both" in checked.stdout
     assert snapshot(destinations) == before
 
-    synced = subprocess.run(command, capture_output=True, text=True)
+    command.append("--adopt-existing")
+    planned = subprocess.run(command + ["--plan"], capture_output=True, text=True)
+    assert planned.returncode == 0, planned.stderr
+    token = json.loads(planned.stdout)["plan_hash"]
+    synced = subprocess.run(command + ["--apply", token], capture_output=True, text=True)
     assert synced.returncode == 0, synced.stdout + synced.stderr
     assert f"skills={len(set(selected))}, target=both" in synced.stdout
     expected = dict(before)

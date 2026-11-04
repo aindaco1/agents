@@ -6,6 +6,10 @@ existing values. Existing skill directories and shared-library links survive;
 skill isolation is a separate migration. Codex's memories and configuration are
 outside this compiler's scope.
 
+New profiles link to an installed shared skill library, preserving discovery
+until the explicit isolation migration. If no library exists yet, compilation
+creates an empty private directory and leaves installing skills to runtime setup.
+
 From the repository root:
 
 ```sh

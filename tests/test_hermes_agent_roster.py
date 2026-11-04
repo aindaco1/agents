@@ -353,7 +353,7 @@ def test_run_routed_profile_executes_top_match(monkeypatch):
     def fake_route_agents(prompt: str, top_n: int = 3, limit_to_first_50: bool = True):
         assert prompt == "Plan my week and tell me what to delegate"
         assert top_n == 3
-        assert limit_to_first_50 is True
+        assert limit_to_first_50 is False
         return [
             {"slug": "chief-of-staff", "score": 20},
             {"slug": "account-manager", "score": 8},
@@ -443,3 +443,8 @@ def test_run_routed_profile_raises_when_no_matches(monkeypatch):
         assert "No matching agent found" in str(exc)
     else:
         raise AssertionError("Expected SystemExit when no matches are returned")
+
+
+def test_default_routing_covers_specialists_beyond_first_50():
+    assert module.route_agents("frontend developer responsive components")[0]["slug"] == "frontend-developer"
+    assert module.route_agents("frontend developer responsive components") == module.route_agents("frontend developer responsive components", limit_to_first_50=False)

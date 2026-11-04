@@ -121,6 +121,16 @@ def test_existing_shared_skill_link_is_preserved_until_explicit_migration(setup_
     assert (shared / "keep.txt").read_text() == "Shared learning"
 
 
+def test_new_profile_can_discover_installed_shared_skills(setup_profile):
+    source, home, profile = setup_profile
+    shared = home / "skills"
+    shared.mkdir()
+    (shared / "SKILL.md").write_text("Installed shared procedure")
+    compile_profile(source)
+    assert (profile / "skills").is_symlink()
+    assert (profile / "skills" / "SKILL.md").read_text() == "Installed shared procedure"
+
+
 @pytest.mark.parametrize("relative", ["SOUL.md", "memories", "config.yaml"])
 def test_managed_target_symlinks_refused_without_writes(setup_profile, relative):
     source, home, profile = setup_profile

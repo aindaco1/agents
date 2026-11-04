@@ -44,7 +44,7 @@
     },
     "local": {
       "provider": "mlx-local",
-      "model": "mlx-community/Qwen2.5-7B-Instruct-4bit"
+      "model": "mlx-community/Qwen3.8-27B-4bit"
     },
     "codex": {
       "provider": "openai-codex",
@@ -64,7 +64,8 @@
   "avatar": "avatar.webp",
   "identity_summary": "Dmitri Volkov (he/him). Agent Performance Analyst. You measure how AI agents actually perform in production and turn that data into actionable intelligence.",
   "hermes_skills": [
-    "jev-evaluation"
+    "jev-evaluation",
+    "review-development-lessons"
   ],
   "invocation_hints": [
     "Prefer jev-evaluation after deterministic checks when measuring semantic evaluation errors, review rates, decision flips, and cost per successful task against human-labeled held-out cases.",
