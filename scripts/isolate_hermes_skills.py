@@ -7,6 +7,7 @@ import json
 import os
 from pathlib import Path
 import re
+import stat
 import sys
 import tempfile
 
@@ -84,12 +85,14 @@ def preview(home: Path, slug: str) -> tuple[dict, dict[str, bytes], bytes]:
         raise ValueError("Existing skills.local requires reconciliation")
     files, names = inventory(home / "skills")
     hashes = {p: pub.digest(b) for p, b in files.items()}
-    release_id = pub.digest(pub.json_bytes(hashes))
+    modes = {p: stat.S_IMODE((home / "skills" / p).stat().st_mode) & 0o555 for p in files}
+    release_id = pub.digest(pub.json_bytes({"files": hashes, "modes": modes}))
     release = home / "skill-releases" / release_id
     raw = pub.safe_path(profile, "config.yaml").read_bytes()
     config = config_with_release(raw, release)
     result = {"profile": str(profile), "slug": slug, "release": str(release),
-              "files": hashes, "names": names, "config_before": pub.digest(raw),
+              "files": hashes, "modes": modes, "names": names, "config_before": pub.digest(raw),
+              "implementation_sha256": pub.digest(Path(__file__).read_bytes()),
               "config_after": pub.digest(config), "previous_link": os.readlink(link),
               "marker_before": pub.fingerprint(pub.read_file(pub.safe_path(profile, ".no-bundled-skills")))}
     result["plan_hash"] = pub.digest(pub.json_bytes(result))
@@ -103,12 +106,14 @@ def create_release(home: Path, plan: dict, files: dict[str, bytes]) -> None:
             actual, names = inventory(release)
             if {p: pub.digest(b) for p, b in actual.items()} != plan["files"]:
                 raise ValueError("Existing immutable skill release has drifted")
+            if any(stat.S_IMODE((release / p).stat().st_mode) != mode for p, mode in plan["modes"].items()):
+                raise ValueError("Existing immutable skill release permissions have drifted")
             return
         pub.safe_path(release.parent).mkdir(parents=True, exist_ok=True)
         staged = Path(tempfile.mkdtemp(prefix=".staged-", dir=release.parent))
         for name, data in files.items():
-            pub.atomic_write(staged / name, data, 0o444)
-        pub.atomic_write(staged / ".release.json", pub.json_bytes({"files": plan["files"], "names": plan["names"]}), 0o444)
+            pub.atomic_write(staged / name, data, plan["modes"][name])
+        pub.atomic_write(staged / ".release.json", pub.json_bytes({"files": plan["files"], "modes": plan["modes"], "names": plan["names"]}), 0o444)
         for p in sorted(staged.rglob("*"), reverse=True):
             if p.is_dir():
                 p.chmod(0o555)

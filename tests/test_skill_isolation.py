@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
 import sys
+import subprocess
 
 import pytest
 import yaml
@@ -83,3 +84,18 @@ def test_existing_private_directory_is_not_replaced(tmp_path):
     with pytest.raises(ValueError, match="private libraries"):
         isolate.preview(home, "test-agent")
     assert (profile / "skills/keep.txt").read_text() == "keep"
+
+
+def test_snapshot_keeps_helpers_executable_and_detects_permission_drift(tmp_path):
+    home, source, profile, config = fixture(tmp_path)
+    helper = source / "helper.sh"
+    helper.write_text("#!/bin/sh\nprintf 'helper works'\n")
+    helper.chmod(0o755)
+    plan, _, _ = isolate.preview(home, "test-agent")
+    result = isolate.apply(home, "test-agent", plan["plan_hash"])
+    published = Path(result["release"]) / "testing/shared/helper.sh"
+    assert published.stat().st_mode & 0o777 == 0o555
+    assert subprocess.check_output([str(published)], text=True) == "helper works"
+    published.chmod(0o444)
+    with pytest.raises(ValueError, match="permissions have drifted"):
+        isolate.create_release(home, plan, isolate.inventory(home / "skills")[0])
