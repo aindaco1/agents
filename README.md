@@ -35,7 +35,12 @@ Hermes materializes these sources under `~/.hermes/profiles/<slug>/`. Those dire
 | `roster_entry.json` | `roster_entry.json` |
 | `*.webp`, `*.txt` | `assets/` |
 
-If a profile was edited directly in Hermes, compare these mapped files before compiling. Import intentional authoring or memory changes into this repository first; compiling overwrites the mapped runtime copies.
+`MEMORY.md`, `USER.md`, and `config.yaml` are seeded only when missing. Recompiling
+preserves existing memory and configuration byte-for-byte, including comments and
+unknown settings. Private skills, credentials, sessions, and databases are retained.
+Generated persona/reference files use a publication baseline: local-only edits survive,
+and simultaneous source/local changes require reconciliation. See
+[safe profile publication](docs/profile-publication.md) for preview, recovery, and rollback.
 
 ## Common commands
 
@@ -43,7 +48,7 @@ The launchers in `~/.local/bin` call `scripts/hermes_agent_roster.py` in this ch
 
 ```bash
 agent-list
-agent-compile chief-of-staff
+agent-compile chief-of-staff --dry-run
 agent-route --all --top 5 "Plan and delegate this release"
 agent-run chief-of-staff --dry-run
 agent-run chief-of-staff --alias-override codex --dry-run
@@ -61,13 +66,20 @@ python3 ~/.hermes/skills/autonomous-ai-agents/hermes-roster-model-sync/scripts/s
 
 Review the dry run, then repeat without `--dry-run`. Preserve role-specific notes and annotations when reviewing the resulting diff.
 
-To compile one changed profile into Hermes:
+To preview one changed profile, then apply its exact returned `plan_hash`:
 
 ```bash
-agent-compile <slug>
+agent-compile <slug> --dry-run
+agent-compile <slug> --apply <plan_hash>
 ```
 
-For a complete roster refresh, pass the slugs returned by `agent-list`. A complete compile updates `generated/hermes_profiles_manifest.json`.
+For a legacy profile without a baseline, add `--adopt-existing` to both calls and
+review the listed changes first. For an isolated staging home, add
+`--hermes-home /absolute/path/to/staging-home` to both calls. Never point tests at
+the live home. Transactions and manifests live locally under
+`~/.hermes/roster-state/<slug>/`; the old `generated/hermes_profiles_manifest.json`
+is a historical export, not the publication authority. A batch commits profiles
+individually, so check receipts if a later profile fails.
 
 ## Codex skill mirrors
 

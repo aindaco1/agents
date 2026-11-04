@@ -5,12 +5,15 @@ import argparse
 import json
 import os
 import re
-import shutil
 import subprocess
 import sys
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
+
+# Also support importlib-based test/consumer loading of this CLI module.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import managed_publication as publication
 
 try:
     import yaml  # type: ignore
@@ -459,98 +462,101 @@ def build_agent_context(entry: dict[str, Any], identity_summary: str, identity_m
     return "\n".join(lines).rstrip() + "\n"
 
 
-def ensure_profile_dirs(profile_dir: Path) -> None:
-    profile_dir.mkdir(parents=True, exist_ok=True)
-    for rel in PROFILE_DIRS:
-        (profile_dir / rel).mkdir(parents=True, exist_ok=True)
+COMPILER_VERSION = 2
+SEED_FILES = {"memories/MEMORY.md", "memories/USER.md", "config.yaml"}
 
 
-def write_profile(
-    agent_dir: Path,
-    entry: dict[str, Any],
-    base_cfg: dict[str, Any],
-    model_map: dict[str, Any] | None = None,
-) -> dict[str, Any]:
-    slug = agent_dir.name
-    profile_dir = PROFILES_ROOT / slug
-    ensure_profile_dirs(profile_dir)
+def source_revision() -> str:
+    result = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"],
+                            capture_output=True, text=True, check=False)
+    return result.stdout.strip() if result.returncode == 0 else "unversioned"
 
-    shutil.copy2(agent_dir / "SOUL.md", profile_dir / "SOUL.md")
-    shutil.copy2(agent_dir / "MEMORY.md", profile_dir / "memories" / "MEMORY.md")
-    shutil.copy2(agent_dir / "USER.md", profile_dir / "memories" / "USER.md")
-    shutil.copy2(agent_dir / "IDENTITY.md", profile_dir / "references" / "IDENTITY.md")
-    shutil.copy2(agent_dir / "IDENTITY_SUMMARY.md", profile_dir / "references" / "IDENTITY_SUMMARY.md")
-    shutil.copy2(agent_dir / "roster_entry.json", profile_dir / "roster_entry.json")
 
+def profile_files(agent_dir: Path, entry: dict[str, Any], base_cfg: dict[str, Any],
+                  model_map: dict[str, Any] | None = None) -> dict[str, bytes]:
+    mapping = {
+        "SOUL.md": "SOUL.md", "MEMORY.md": "memories/MEMORY.md",
+        "USER.md": "memories/USER.md", "IDENTITY.md": "references/IDENTITY.md",
+        "IDENTITY_SUMMARY.md": "references/IDENTITY_SUMMARY.md",
+        "roster_entry.json": "roster_entry.json",
+    }
+    files = {dest: publication.safe_path(agent_dir, src).read_bytes()
+             for src, dest in mapping.items()}
     for pattern in OPTIONAL_AGENT_GLOBS:
         for src in agent_dir.glob(pattern):
-            shutil.copy2(src, profile_dir / "assets" / src.name)
-
-    identity_summary = (agent_dir / "IDENTITY_SUMMARY.md").read_text(encoding="utf-8")
-    identity_md = (agent_dir / "IDENTITY.md").read_text(encoding="utf-8")
-    agent_context = build_agent_context(entry, identity_summary, identity_md)
-    (profile_dir / "context" / "AGENT_CONTEXT.md").write_text(agent_context, encoding="utf-8")
-
+            files["assets/" + src.name] = publication.safe_path(agent_dir, src.name).read_bytes()
+    files["context/AGENT_CONTEXT.md"] = build_agent_context(
+        entry, files["references/IDENTITY_SUMMARY.md"].decode(),
+        files["references/IDENTITY.md"].decode()).encode()
     runtime = select_profile_runtime(entry, base_cfg, model_map=model_map)
     cfg = deepcopy(base_cfg)
-    cfg.setdefault("model", {})
-    cfg["model"]["provider"] = runtime["provider"]
-    cfg["model"]["default"] = runtime["model"]
+    cfg.setdefault("model", {}).update(provider=runtime["provider"], default=runtime["model"])
     cfg["fallback_providers"] = runtime["fallback_providers"]
-    cfg.setdefault("agent", {})
-    cfg["agent"]["reasoning_effort"] = runtime["reasoning_effort"]
-    dump_yaml(profile_dir / "config.yaml", cfg)
-
-    env_target = DEFAULT_HERMES_HOME / ".env"
-    env_link = profile_dir / ".env"
-    if env_link.exists() or env_link.is_symlink():
-        env_link.unlink()
-    env_link.symlink_to(env_target)
-
-    skills_target = DEFAULT_HERMES_HOME / "skills"
-    skills_link = profile_dir / "skills"
-    if skills_link.exists() or skills_link.is_symlink():
-        if skills_link.is_symlink() or skills_link.is_file():
-            skills_link.unlink()
-        elif skills_link.is_dir():
-            shutil.rmtree(skills_link)
-    skills_link.symlink_to(skills_target, target_is_directory=True)
-
-    metadata = {
-        "slug": slug,
-        "profile_dir": str(profile_dir),
-        "display_name": entry.get("display_name"),
-        "role_name": entry.get("role_name"),
-        "provider": runtime["provider"],
-        "model": runtime["model"],
-        "reasoning_effort": runtime["reasoning_effort"],
-        "alias": runtime["alias"],
-        "tier": runtime["tier"],
-    }
-    return metadata
+    cfg.setdefault("agent", {})["reasoning_effort"] = runtime["reasoning_effort"]
+    files["config.yaml"] = yaml.safe_dump(cfg, sort_keys=False, allow_unicode=True).encode()
+    return files
 
 
-def write_manifest(items: list[dict[str, Any]]) -> None:
-    GENERATED_ROOT.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "generated_from": str(ROOT),
-        "target_profiles_root": str(PROFILES_ROOT),
-        "count": len(items),
-        "items": items,
-    }
-    MANIFEST_PATH.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+def profile_source(files: dict[str, bytes]) -> dict:
+    return {"compiler_version": COMPILER_VERSION, "revision": source_revision(),
+            "compiler_sha256": publication.digest(Path(__file__).read_bytes()),
+            "publisher_sha256": publication.digest(Path(publication.__file__).read_bytes()),
+            "files": {name: publication.digest(content) for name, content in files.items()}}
 
 
-def compile_selected(agent_dirs: list[Path]) -> list[dict[str, Any]]:
+def compile_selected(agent_dirs: list[Path], *, apply_hash: str | None = None,
+                     adopt_existing: bool = False) -> dict:
     base_cfg = load_yaml(DEFAULT_HERMES_HOME / "config.yaml")
-    model_map = load_model_map() if MODEL_MAP_PATH.is_file() else None
-    PROFILES_ROOT.mkdir(parents=True, exist_ok=True)
-    written = []
-    for agent_dir in agent_dirs:
+    model_map = load_model_map(MODEL_MAP_PATH)
+    plans = []
+    prepared = []
+    for agent_dir in sorted(set(agent_dirs)):
         entry = validate_agent_dir(agent_dir)
-        written.append(write_profile(agent_dir, entry, base_cfg, model_map=model_map))
-    write_manifest(written)
-    return written
+        profile = PROFILES_ROOT / agent_dir.name
+        for rel in PROFILE_DIRS:
+            path = profile / rel
+            if path.is_symlink():
+                if rel != "skills" or path.resolve() != (DEFAULT_HERMES_HOME / "skills").resolve():
+                    raise publication.PublicationError(f"Symlink is not an expected runtime directory: {path}")
+            elif path.exists() and not path.is_dir():
+                raise publication.PublicationError(f"Expected a runtime directory: {path}")
+        # Validate existing config without printing any private values.
+        existing_cfg = publication.safe_path(profile, "config.yaml")
+        if existing_cfg.exists():
+            load_yaml(existing_cfg)
+        files = profile_files(agent_dir, entry, base_cfg, model_map)
+        source = profile_source(files)
+        state = DEFAULT_HERMES_HOME / "roster-state" / agent_dir.name
+        plan = publication.preview(profile, state, files, seeds=SEED_FILES,
+                                   source=source, adopt=adopt_existing)
+        plans.append({"slug": agent_dir.name, **plan})
+        prepared.append((profile, state, files, source, plan))
+    combined_hash = publication.digest(publication.json_bytes(plans))
+    if apply_hash is None:
+        return {"mode": "preview", "plan_hash": combined_hash, "profiles": plans}
+    if apply_hash != combined_hash:
+        raise publication.PublicationError("Stale compile preview; inspect a fresh preview")
+    conflicts = [p["slug"] + ":" + r["path"] for p in plans for r in p["files"]
+                 if r["action"] == "conflict"]
+    if conflicts:
+        raise publication.PublicationError("Unresolved local/source conflict: " + ", ".join(conflicts))
+    results = []
+    # Each profile has its own recoverable transaction. An interrupted batch can
+    # leave earlier profiles committed; their receipts are retained on disk.
+    for profile, state, files, source, plan in prepared:
+        result = publication.publish(profile, state, files, expected=plan["plan_hash"],
+                                     seeds=SEED_FILES, source=source, adopt=adopt_existing)
+        # Initialize runtime-only scaffolding without replacing existing paths.
+        for rel in PROFILE_DIRS:
+            path = profile / rel
+            if path.is_symlink():
+                continue
+            publication.safe_path(profile, rel).mkdir(parents=True, exist_ok=True)
+        env = profile / ".env"
+        if not env.exists() and not env.is_symlink():
+            env.symlink_to(DEFAULT_HERMES_HOME / ".env")
+        results.append({"slug": profile.name, **result})
+    return {"mode": "applied", "plan_hash": combined_hash, "profiles": results}
 
 
 def route_agents(prompt: str, top_n: int = 3, limit_to_first_50: bool = True) -> list[dict[str, Any]]:
@@ -602,6 +608,9 @@ def run_profile(
     tier_override: str | None = None,
     dry_run: bool = False,
 ) -> int:
+    state = DEFAULT_HERMES_HOME / "roster-state" / slug
+    if (state / "pending.json").exists():
+        raise SystemExit(f"Profile publication was interrupted; run the roster recover command for {slug}")
     agent_dir = ROOT / slug
     if not agent_dir.is_dir():
         raise SystemExit(f"Unknown slug: {slug}")
@@ -704,8 +713,20 @@ def parse_args() -> argparse.Namespace:
 
     p_compile = sub.add_parser("compile", help="Compile one or more agents by slug")
     p_compile.add_argument("slugs", nargs="+", help="Agent slugs")
+    for command in (p_compile,):
+        command.add_argument("--apply", metavar="PLAN_HASH", help="Apply the exact reviewed preview")
+        command.add_argument("--dry-run", action="store_true", help="Read-only preview (the default)")
+        command.add_argument("--adopt-existing", action="store_true", help="Baseline existing generated files; requires an exact preview hash to apply")
+        command.add_argument("--hermes-home", type=Path, help="Explicit isolated Hermes home for tests or staging")
 
-    p_first = sub.add_parser("compile-first-50", help="Compile the first 50 alphabetical agents")
+    p_first = sub.add_parser("compile-first-50", help="Preview the first 50 alphabetical agents")
+    p_first.add_argument("--apply", metavar="PLAN_HASH")
+    p_first.add_argument("--adopt-existing", action="store_true")
+    p_first.add_argument("--hermes-home", type=Path)
+    p_recover = sub.add_parser("recover", help="Recover an interrupted compile or roll back its latest transaction")
+    p_recover.add_argument("slug")
+    p_recover.add_argument("--transaction", help="Completed transaction ID to roll back")
+    p_recover.add_argument("--hermes-home", type=Path)
 
     p_run = sub.add_parser("run", help="Run Hermes with a generated profile")
     p_run.add_argument("slug", nargs="?", help="Agent slug")
@@ -737,7 +758,22 @@ def parse_args() -> argparse.Namespace:
 
 
 def main() -> int:
+    global DEFAULT_HERMES_HOME, PROFILES_ROOT, MODEL_MAP_PATH
     args = parse_args()
+    if getattr(args, "hermes_home", None):
+        DEFAULT_HERMES_HOME = args.hermes_home.expanduser().absolute()
+        PROFILES_ROOT = DEFAULT_HERMES_HOME / "profiles"
+        MODEL_MAP_PATH = DEFAULT_HERMES_HOME / "model-map.json"
+    if getattr(args, "apply", None) and getattr(args, "dry_run", False):
+        raise SystemExit("--apply and --dry-run are mutually exclusive")
+    if args.cmd == "recover":
+        if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", args.slug):
+            raise SystemExit("Invalid profile slug")
+        result = publication.recover(PROFILES_ROOT / args.slug,
+                                     DEFAULT_HERMES_HOME / "roster-state" / args.slug,
+                                     args.transaction)
+        print(json.dumps(result, indent=2))
+        return 0
     if args.cmd == "list":
         for p in discover_agents():
             print(p.name)
@@ -747,13 +783,13 @@ def main() -> int:
         missing = [slug for slug in args.slugs if slug not in lookup]
         if missing:
             raise SystemExit(f"Unknown slugs: {', '.join(missing)}")
-        written = compile_selected([lookup[s] for s in args.slugs])
-        print(json.dumps({"compiled": written}, indent=2, ensure_ascii=False))
+        result = compile_selected([lookup[s] for s in args.slugs], apply_hash=args.apply, adopt_existing=args.adopt_existing)
+        print(json.dumps(result, indent=2, ensure_ascii=False))
         return 0
     if args.cmd == "compile-first-50":
         selected = first_target_agents()
-        written = compile_selected(selected)
-        print(json.dumps({"compiled_count": len(written), "last_slug": selected[-1].name if selected else None}, indent=2))
+        result = compile_selected(selected, apply_hash=args.apply, adopt_existing=args.adopt_existing)
+        print(json.dumps(result, indent=2))
         return 0
     if args.cmd == "run":
         if args.route_prompt:
@@ -789,4 +825,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    try:
+        raise SystemExit(main())
+    except (publication.PublicationError, OSError, ValueError) as exc:
+        raise SystemExit(str(exc)) from exc
