@@ -64,3 +64,27 @@ PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 python3 -m pytest -q tests
 
 Local locks do not coordinate writers on different Macs. Keep runtime state and
 publication locks outside iCloud; synchronize reviewed authoring through Git.
+
+## Codex persona export names
+
+`codex_skill_name` in the canonical roster entry controls the Codex directory,
+frontmatter name, default invocation and generated handoff name. The canonical
+`role_id` and Hermes profile name remain stable. Procedure references in
+`hermes_skills` continue to name procedures, not persona exports.
+
+The `web-application-builder` persona exports as `web-application-builder-persona`.
+Its original name belongs to the maintained implementation procedure. Publish
+through the usual Codex preview/apply protocol; do not replace that procedure
+with `--replace-collision`. Both packages must be discoverable after publication.
+The persona's transaction state remains keyed by canonical role ID.
+
+Alias validation rejects traversal, invalid/duplicate export names and aliases
+that collide with canonical procedure names. Existing tuned descriptions are
+preserved, but the frontmatter name and default prompt must identify the actual
+export. Renaming an already-published persona requires a separately reviewed
+migration; this publisher refuses to move an existing transaction to a new root.
+
+For stateful canaries, use the SQLite capture/compare commands in the
+[pilot harness contract](pilot-harness.md). A fingerprint or integrity check alone
+does not establish logical data preservation. Retain private snapshots and stop
+on unexplained logical changes; do not automatically restore runtime databases.

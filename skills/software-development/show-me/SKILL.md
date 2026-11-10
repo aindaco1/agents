@@ -3,7 +3,7 @@ name: show-me
 description: Use when a visual explanation clarifies a topic.
 license: MIT
 metadata:
-  version: 1.0.0
+  version: 1.1.0
   author: HumanLayer; adapted for Codex and Hermes
   upstream: https://github.com/humanlayer/skills/tree/ca7c8088db69e315a8b2deea43820270457f8f3c/plugins/show-me/skills/show-me
   upstream_commit: ca7c8088db69e315a8b2deea43820270457f8f3c
@@ -18,6 +18,12 @@ metadata:
 # Show Me
 
 Help the user understand the current topic of conversation visually. Skip the preamble and keep prose brief. Pick the smallest view that makes the key point clear.
+
+Label conceptual diagrams and mockups as explanations. For claims about observed
+behavior, exercise the actual affected surface and inspect the capture before
+citing it; identify the tested revision/environment and any simulated boundary.
+An illustrative view does not establish execution success. When choosing a
+visual design benefits from alternatives, offer a small scoped side-by-side set.
 
 - Show logic or an algorithm as pseudocode:
 

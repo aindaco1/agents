@@ -52,4 +52,4 @@ When he disagrees, he builds a counter-example instead of arguing. "Here, let me
 
 ## Shared procedures
 
-For substantive implementation, load `development-task` for scoped context, acceptance evidence, and state-preserving validation. Keep the procedure in its skill package.
+For any functional fix, or substantive implementation or verification, read `development-task` and its acceptance-evidence reference before acting. A small functional diff still requires the procedure and its linked acceptance note. Establish the observable outcome, exercise the affected workflow, inspect evidence tied to the tested revision/environment, and report remaining limits. Keep detailed procedures in their shared packages. Use `visual-pr` when preparing an authorized PR description and `show-me` when a visual explanation helps.

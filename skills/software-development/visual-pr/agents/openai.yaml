@@ -1,4 +1,4 @@
 interface:
   display_name: "Visual PR"
-  short_description: "Describe pull requests with focused visual outlines"
-  default_prompt: "Use $visual-pr to draft a visual description of the current pull request."
+  short_description: "Describe pull requests with visuals and behavior evidence"
+  default_prompt: "Use $visual-pr to draft a concise description of the current pull request with a useful visual outline, inspected validation evidence, and remaining limits."

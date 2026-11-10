@@ -3,7 +3,7 @@ name: improve-agent-instructions
 description: Use when improving AGENTS.md or Hermes instructions.
 license: MIT
 metadata:
-  version: 1.0.0
+  version: 1.1.0
   author: HumanLayer; adapted for Codex and Hermes
   upstream: https://github.com/humanlayer/skills/tree/ca7c8088db69e315a8b2deea43820270457f8f3c/plugins/improve-claude-md/skills/improve-claude-md
   upstream_commit: ca7c8088db69e315a8b2deea43820270457f8f3c
@@ -68,6 +68,17 @@ Shorten without changing the contract:
 ```
 
 Preserve existing nested-file precedence; moving a local rule into a parent file changes its scope. Edit the canonical source when the runtime copy is generated, using the repo's existing sync mechanism.
+
+## When agents cannot exercise a project
+
+Inventory relevant verification capabilities: setup/start/stop and readiness;
+synthetic seed/reset and test login; focused tests/builds/interactions/capture;
+logs/profiling and read-only deployed-version lookup; cleanup and recovery.
+For each relevant capability, document prerequisites, working directory,
+command/tool, success signal and side effects. Use existing tools; add helpers
+only for demonstrated gaps. Preserve authorization boundaries. Evaluate a concrete
+task in a fresh session with the documented tools; file presence or a passing
+text check does not establish instruction adherence.
 
 ## Verify and report
 

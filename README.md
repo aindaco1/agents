@@ -93,6 +93,17 @@ python3 scripts/sync_codex_skills.py --apply <plan_hash>
 
 Roster mirrors are persona/routing skills generated from `IDENTITY_SUMMARY.md`, `IDENTITY.md`, and handoff metadata. Optional `codex_interface` metadata in `roster_entry.json` is the source of truth for a profile's Codex display name, short description, and default prompt.
 
+Optional `codex_skill_name` gives a persona a distinct Codex export without changing
+its canonical role ID or Hermes profile. Marisol exports as
+`$web-application-builder-persona`; `$web-application-builder` remains the shared
+implementation procedure. Both are installed independently. Export names must be
+unique; aliases cannot occupy a portable procedure's name. Changing an already
+published export name requires a separate migration, so old copies are never
+silently orphaned or overwritten. See [publication](docs/profile-publication.md).
+
+Agent evaluations use the [guarded pilot harness](docs/pilot-harness.md), with
+private SQLite before/after snapshots and enforced runtime isolation.
+
 ## Portable procedure skills
 
 Reusable procedures that should work unchanged in Codex and Hermes live under `skills/<category>/<name>/`. These are distinct from agent personas: profiles say who should handle a task; procedure skills say how a recurring workflow should be executed and verified.

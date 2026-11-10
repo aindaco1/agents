@@ -66,6 +66,8 @@ def test_portable_skill_profile_links_match_aggregate_roster():
         ]
     }
     expected_links = {
+        "core-development-generalist": ["development-task", "visual-pr", "show-me"],
+        "senior-code-reviewer": ["development-task", "visual-pr"],
         "academic-writer": ["research-paper-authoring", "humanizer"],
         "academic-researcher": ["research-paper-authoring", "humanizer"],
         "vector-reconstruction-designer": ["vector-artwork-reconstruction"],
@@ -257,3 +259,24 @@ def test_codex_sync_repairs_missing_ui_metadata(tmp_path: Path):
         command + ["--check"], text=True, capture_output=True, check=False
     )
     assert checked.returncode == 0, checked.stdout + checked.stderr
+
+
+@pytest.mark.parametrize('slug', ['core-development-generalist', 'senior-code-reviewer'])
+def test_evidence_pilot_profile_guidance_reaches_both_runtimes(slug):
+    roster = load_module('evidence_roster', ROOT / 'scripts' / 'hermes_agent_roster.py')
+    profile = ROOT / slug
+    entry = json.loads((profile / 'roster_entry.json').read_text())
+    summary = (profile / 'IDENTITY_SUMMARY.md').read_text()
+    identity = (profile / 'IDENTITY.md').read_text()
+    codex = codex_sync.build_body(ROOT, entry)
+    hermes = roster.build_agent_context(entry, summary, identity)
+    for rendered in (codex, hermes):
+        assert summary.strip() in rendered
+        for skill in entry['hermes_skills']:
+            assert skill in rendered
+    packages = {s.name: s for s in portable_sync.discover_portable_skills(ROOT)}
+    for skill in entry['hermes_skills']:
+        assert skill in packages
+    source = packages['development-task'].source
+    assert (source / 'references' / 'acceptance-evidence.md').is_file()
+    assert 'references/acceptance-evidence.md' in (source / 'SKILL.md').read_text()

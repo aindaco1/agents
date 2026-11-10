@@ -84,6 +84,25 @@ def sentence(text: str) -> str:
     return text if text.endswith((".", "!", "?")) else f"{text}."
 
 
+def codex_skill_name(entry: dict[str, Any]) -> str:
+    """Codex export identity; the canonical role/Hermes profile keeps its slug."""
+    name = entry.get("codex_skill_name", entry["role_id"])
+    if not isinstance(name, str) or len(name) > 63 or not SKILL_NAME_RE.fullmatch(name):
+        raise SystemExit(f"{entry['role_id']}: invalid codex_skill_name: {name!r}")
+    return name
+
+
+def validate_export_names(repo: Path, entries: list[dict[str, Any]]) -> dict[str, str]:
+    names = {entry['role_id']: codex_skill_name(entry) for entry in entries}
+    if len(set(names.values())) != len(names):
+        raise SystemExit("Duplicate Codex persona export names")
+    procedures = {p.parent.name for p in (repo / 'skills').glob('*/*/SKILL.md')}
+    for role, name in names.items():
+        if name != role and name in procedures:
+            raise SystemExit(f"{role}: Codex alias conflicts with portable procedure {name}")
+    return names
+
+
 def yaml_single_quote(text: str) -> str:
     return "'" + text.replace("'", "''") + "'"
 
@@ -121,7 +140,7 @@ def strip_first_heading(markdown: str) -> str:
     return re.sub(r"^#[^\n]*\n+", "", markdown.strip(), count=1).strip()
 
 
-def build_body(repo: Path, entry: dict[str, Any]) -> str:
+def build_body(repo: Path, entry: dict[str, Any], export_names=None) -> str:
     role_id = entry["role_id"]
     profile_dir = repo / role_id
     summary_path = profile_dir / "IDENTITY_SUMMARY.md"
@@ -155,8 +174,10 @@ def build_body(repo: Path, entry: dict[str, Any]) -> str:
 
     delegates = (entry.get("handoff_rules") or {}).get("delegate_to") or []
     if delegates:
+        export_names = export_names or {}
         handoffs = "\n".join(
-            f"- **{item['role_id']}** — {item['when']}" for item in delegates
+            f"- **{export_names.get(item['role_id'], item['role_id'])}** — {item['when']}"
+            for item in delegates
         )
         sections.extend(("## Handoffs", handoffs))
 
@@ -167,7 +188,7 @@ def build_frontmatter(entry: dict[str, Any]) -> str:
     description = build_description(entry)
     return (
         "---\n"
-        f"name: {entry['role_id']}\n"
+        f"name: {codex_skill_name(entry)}\n"
         f"description: {yaml_single_quote(description)}\n"
         "---\n"
     )
@@ -175,6 +196,7 @@ def build_frontmatter(entry: dict[str, Any]) -> str:
 
 def default_openai_yaml(entry: dict[str, Any]) -> str:
     role_id = entry["role_id"]
+    export_name = codex_skill_name(entry)
     configured = entry.get("codex_interface") or {}
     if not isinstance(configured, dict):
         raise SystemExit(f"{role_id}: codex_interface must be an object")
@@ -185,7 +207,7 @@ def default_openai_yaml(entry: dict[str, Any]) -> str:
     )
     if len(short_description) > 64:
         short_description = f"Use the {entry['role_name']} specialist profile"
-    prompt = configured.get("default_prompt") or f"Use ${role_id} to help with this task."
+    prompt = configured.get("default_prompt") or f"Use ${export_name} to help with this task."
 
     values = {
         "display_name": display_name,
@@ -199,9 +221,9 @@ def default_openai_yaml(entry: dict[str, Any]) -> str:
         raise SystemExit(
             f"{role_id}: Codex short_description must contain 25-64 characters"
         )
-    if f"${role_id}" not in prompt:
+    if not re.search(r"\$" + re.escape(export_name) + r"(?![a-z0-9-])", prompt):
         raise SystemExit(
-            f"{role_id}: Codex default_prompt must mention ${role_id}"
+            f"{role_id}: Codex default_prompt must mention ${export_name}"
         )
 
     return (
@@ -225,6 +247,9 @@ def preserve_or_build_frontmatter(
             raise SystemExit(
                 f"{entry['role_id']}: existing generated mirror has invalid frontmatter"
             )
+        name = codex_skill_name(entry)
+        if not re.search(r"(?m)^name: *['\"]?" + re.escape(name) + r"['\"]? *$", match['yaml']):
+            raise SystemExit(f"{entry['role_id']}: existing mirror name differs from {name}")
         return current[: match.end()].rstrip("\n") + "\n"
     return build_frontmatter(entry)
 
@@ -246,6 +271,7 @@ def main() -> int:
     ]
     if invalid:
         raise SystemExit(f"Invalid skill role IDs: {invalid}")
+    export_names = validate_export_names(repo, entries)
 
     unknown_replacements = replace_collisions - set(role_ids)
     if unknown_replacements:
@@ -263,7 +289,7 @@ def main() -> int:
     prepared = []
     for entry in entries:
         role_id = entry["role_id"]
-        skill_dir = destination / role_id
+        skill_dir = destination / export_names[role_id]
         skill_path = publication.safe_path(skill_dir, "SKILL.md")
         current = (
             skill_path.read_text(encoding="utf-8") if skill_path.is_file() else None
@@ -276,7 +302,7 @@ def main() -> int:
             continue
 
         frontmatter = preserve_or_build_frontmatter(current, entry)
-        expected = frontmatter + "\n" + build_body(repo, entry)
+        expected = frontmatter + "\n" + build_body(repo, entry, export_names)
         if current == expected:
             counts["unchanged"] += 1
         else:
@@ -300,6 +326,12 @@ def main() -> int:
 
         files = {"SKILL.md": expected.encode(), "agents/openai.yaml": expected_metadata.encode()}
         state = destination / ".persona-state" / role_id
+        previous = publication.read_json(state / 'manifest.json', {})
+        if previous.get('transaction'):
+            journal = publication.read_json(
+                state / 'transactions' / previous['transaction'] / 'journal.json', {})
+            if journal.get('root') != str(skill_dir.absolute()):
+                raise SystemExit(f"{role_id}: changing an already-published export name requires a separate migration")
         source = {"owner": "agents-roster", "role_id": role_id,
                   "files": {name: publication.digest(data) for name, data in files.items()}}
         plan = publication.preview(skill_dir, state, files, source=source,

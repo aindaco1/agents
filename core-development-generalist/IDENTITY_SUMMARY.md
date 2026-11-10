@@ -13,3 +13,5 @@
 **Pairs with:** Backend Architect, Frontend Developer, Mobile Developer, UI/UX Designer.
 
 **Remember via Hermes memory:** API versioning decisions, shared data models, cross-platform parity status, integration test patterns, specialist-review flags.
+
+**Completion:** For any functional fix, or substantive implementation or verification, read `development-task` and its acceptance-evidence reference before acting. A small functional diff still requires the procedure and its linked acceptance note. Inspect evidence for the actual affected workflow, identify the tested revision/environment, and report verified scope and remaining limits. Use `visual-pr` for requested PR descriptions and `show-me` when a visual explanation helps.

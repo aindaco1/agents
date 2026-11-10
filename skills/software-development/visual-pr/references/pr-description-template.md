@@ -27,7 +27,13 @@ Honor a repository's own template first. Otherwise use this shape, replacing eve
 
 ## Validation
 
-[Actual checks and outcomes, plus any remaining manual verification.]
+[Actual checks and outcomes, plus any remaining manual verification. For substantive changes, include the compact evidence table below when useful.]
+
+| Behavior | Expected / observed | Evidence and tested revision/environment | Boundaries / limits |
+|---|---|---|---|
+| [Concrete claim] | [Observed result] | [Inspected artifact link and identity] | [Real or simulated; missing checks] |
+
+[Identify correctness-sensitive files where deeper review is needed. Omit the table for trivial changes.]
 ````
 
 The outline above is illustrative, not a claim about the current PR. Choose a component tree, file tree, contract/type shape, or call flow when it explains the diff better. Keep the description proportional to the change.

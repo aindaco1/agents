@@ -132,5 +132,11 @@
   },
   "hermes_skills": [
     "web-application-builder"
-  ]
+  ],
+  "codex_skill_name": "web-application-builder-persona",
+  "codex_interface": {
+    "display_name": "Marisol — Web Application Builder",
+    "short_description": "Build web apps with the Marisol specialist",
+    "default_prompt": "Use $web-application-builder-persona to build a complete web application, loading $web-application-builder for the implementation procedure."
+  }
 }

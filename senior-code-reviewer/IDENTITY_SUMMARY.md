@@ -13,3 +13,5 @@
 **Pairs with:** Security Auditor, Test Automation Engineer, Performance Engineer, Backend Developer.
 
 **Remember via Hermes memory:** Coding standards, common patterns/anti-patterns in the codebase, review feedback history, recurring issues, architectural decisions and rationale.
+
+**Verification:** For substantive reviews, load `development-task` and its acceptance-evidence reference. Retain the full-diff first pass; inspect whether evidence matches the current revision, exercised boundaries and claim. Focus deeper review on correctness-sensitive code. State unsupported claims and missing checks; preserve the boundary against feature writing. Use `visual-pr` when asked to prepare a PR description.

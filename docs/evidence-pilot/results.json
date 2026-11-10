@@ -1,0 +1,97 @@
+{
+  "status": "passed",
+  "comparisons": 32,
+  "candidate_passes": 16,
+  "baseline_semantic_passes": 16,
+  "substantive_evidence": {
+    "baseline": 0,
+    "candidate": 14,
+    "total_each": 14
+  },
+  "adjudication": "Primary implementing agent inspected frozen-criteria transcript/artifact outcomes; not blinded human review. Automatic assertions check artifact integrity, fixture preservation, procedure loading and note provenance, not semantic truth.",
+  "claims": "Semantic parity on this corpus; better evidence retention and procedure loading. No universal accuracy or resource-efficiency claim.",
+  "metrics": [
+    {
+      "runtime": "codex",
+      "variant": "baseline",
+      "runs": 8,
+      "median_seconds": 43.7,
+      "sum_seconds": 355.9,
+      "tool_calls": 56,
+      "input_tokens": 803135,
+      "uncached_input_tokens": 118335,
+      "output_tokens": 9651,
+      "auxiliary_tokens": 0,
+      "linked_evidence_count": 0,
+      "procedure_load_count": 3
+    },
+    {
+      "runtime": "codex",
+      "variant": "candidate-final",
+      "runs": 8,
+      "median_seconds": 70.1,
+      "sum_seconds": 672.2,
+      "tool_calls": 84,
+      "input_tokens": 1266450,
+      "uncached_input_tokens": 149522,
+      "output_tokens": 19976,
+      "auxiliary_tokens": 0,
+      "linked_evidence_count": 7,
+      "procedure_load_count": 7
+    },
+    {
+      "runtime": "hermes",
+      "variant": "baseline",
+      "runs": 8,
+      "median_seconds": 64.1,
+      "sum_seconds": 558.5,
+      "tool_calls": 67,
+      "input_tokens": 385456,
+      "uncached_input_tokens": 116784,
+      "output_tokens": 9738,
+      "auxiliary_tokens": 2332,
+      "linked_evidence_count": 0,
+      "procedure_load_count": 0
+    },
+    {
+      "runtime": "hermes",
+      "variant": "candidate-final",
+      "runs": 8,
+      "median_seconds": 99.7,
+      "sum_seconds": 848.2,
+      "tool_calls": 107,
+      "input_tokens": 715300,
+      "uncached_input_tokens": 160420,
+      "output_tokens": 18727,
+      "auxiliary_tokens": 2333,
+      "linked_evidence_count": 7,
+      "procedure_load_count": 7
+    }
+  ],
+  "publication": {
+    "procedures": [
+      "development-task",
+      "visual-pr",
+      "show-me",
+      "improve-agent-instructions"
+    ],
+    "profiles": [
+      "core-development-generalist",
+      "senior-code-reviewer"
+    ],
+    "runtimes": [
+      "Codex",
+      "Hermes"
+    ],
+    "plan_hashes": {
+      "portable": "c966dcc484bb3a7565c8348c7558244352c1c84f130800d8b3cd09c0c382f8f6",
+      "core-local": "2b10f5d59dcbbac2fcfa1004b73f4fe7a6368211cf71eecd6624dc36de4c45b5",
+      "hermes-profiles": "ca190e01ab8d9391e632c4cf0696e914f39e3d5348507841fea14e2fa96c76fe",
+      "codex-personas": "bb4747ae7f99ec94957af517debd92021e91a88539380d47b0f42258c9ce359a"
+    },
+    "installed_package_destinations_verified": 12,
+    "state_preservation": "passed with database preservation qualification"
+  },
+  "cases_sha256": "b421c62c7c4cbad25d44030c2829951713102c90cd2c804b45cf0aaffd8b04a9",
+  "candidate_manifest_sha256": "e14777581e33f5ec0f25cf3fa76874ad4445dc7bbb03821eb0df7b1a0f4e6ae3"
+}

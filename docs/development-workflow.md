@@ -5,6 +5,18 @@
 canonical portable skills and use the normal publisher. Neither changes personal
 memory policy or enables a schedule.
 
+For substantive implementation and review, use the shared
+[acceptance-evidence contract](../skills/software-development/development-task/references/acceptance-evidence.md)
+and [task record](../skills/software-development/development-task/templates/task-record.md).
+Establish observable criteria, exercise the affected workflow and inspect evidence
+tied to its tested revision/environment. State real/simulated boundaries, expected
+versus observed results and missing checks. Relevant edits invalidate affected
+evidence. Keep trivial changes lightweight and retain existing role boundaries.
+
+The richer Markdown record can be attached as evidence in the unchanged JSON
+format below. Hash validation establishes identity/freshness, not whether a claim
+is true. Runtime discovery and behavioral adherence require fresh-session checks.
+
 Keep outcomes and evidence in a local task directory. The optional JSON record
 used by `scripts/learning_review.py` has this shape:
 
@@ -48,3 +60,8 @@ held-out cases before tuning. Record acceptance, retries/corrections, wall time,
 context/token usage, and actual cost when available. Missing measurements remain
 missing. Deterministic fixture success does not establish improved model behavior.
 Review two cycles before expanding unattended operation.
+
+The November 2026 [two-profile evidence pilot](evidence-pilot/README.md) records
+behavioral results, publication receipts, resource observations and limitations.
+New pilots use the [guarded harness](pilot-harness.md), which retains SQLite
+snapshots and logical differences and fails closed on isolation or state drift.

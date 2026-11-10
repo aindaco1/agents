@@ -121,5 +121,9 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "development-task",
+    "visual-pr"
+  ]
 }

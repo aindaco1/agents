@@ -1,4 +1,4 @@
 interface:
   display_name: "Development task"
-  short_description: "Implement with scoped context and verified outcomes"
-  default_prompt: "Use $development-task to implement this change and verify the requested outcome."
+  short_description: "Implement or review changes with acceptance evidence"
+  default_prompt: "Use $development-task to implement or verify this change, inspect acceptance evidence, and report the verified scope and remaining limits."

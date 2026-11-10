@@ -153,10 +153,13 @@ tree during installation verification.
 The three agents' identity references, invocation/capability metadata and
 `hermes_skills` links were updated, along with the generated aggregate. SOUL.md
 writes were denied by the instruction-file guard and were not retried. No runtime
-profile, memory, model alias or config was overwritten. Avoid bulk compilation as
-a shortcut: the existing compiler overwrites runtime memories/config and replaces
-its manifest with the selected batch. This work verifies generated context and
-Codex mirrors without recompiling live Hermes profiles.
+profile, memory, model alias or config was overwritten.
+
+Historical limitation at the September audit: bulk compilation overwrote runtime
+memories/config and replaced the selected manifest. The current compiler has since
+been corrected; follow [safe profile publication](../profile-publication.md).
+The September work verified generated context and Codex mirrors without
+recompiling live Hermes profiles.
 
 ## Verification completed
 
