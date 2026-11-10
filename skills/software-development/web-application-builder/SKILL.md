@@ -3,7 +3,7 @@ name: web-application-builder
 description: "Use when building a complete static-first web application."
 license: "All rights reserved"
 metadata:
-  version: "1.0.0"
+  version: "1.0.1"
   author: "Dust Wave"
   short-description: "Build static-first Worker-backed web apps"
   hermes:

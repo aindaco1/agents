@@ -95,7 +95,7 @@ Roster mirrors are persona/routing skills generated from `IDENTITY_SUMMARY.md`, 
 
 Optional `codex_skill_name` gives a persona a distinct Codex export without changing
 its canonical role ID or Hermes profile. Marisol exports as
-`$web-application-builder-persona`; `$web-application-builder` remains the shared
+`$web-application-builder-marisol`; `$web-application-builder` remains the shared
 implementation procedure. Both are installed independently. Export names must be
 unique; aliases cannot occupy a portable procedure's name. Changing an already
 published export name requires a separate migration, so old copies are never

@@ -102,6 +102,114 @@ def test_stale_alias_preview_and_later_rename_fail_closed(tmp_path):
 def test_real_web_persona_alias_retains_canonical_role_and_procedure():
     entry = json.loads((ROOT/'web-application-builder/roster_entry.json').read_text())
     assert entry['role_id'] == 'web-application-builder'
-    assert entry['codex_skill_name'] == 'web-application-builder-persona'
+    assert entry['codex_skill_name'] == 'web-application-builder-marisol'
     assert entry['hermes_skills'] == ['web-application-builder']
-    assert '$web-application-builder-persona' in codex_sync.default_openai_yaml(entry)
+    assert '$web-application-builder-marisol' in codex_sync.default_openai_yaml(entry)
+
+
+def publish_fixture(command):
+    preview = call(command, '--plan')
+    assert preview.returncode == 0, preview.stderr
+    result = call(command, '--apply', json.loads(preview.stdout)['plan_hash'])
+    assert result.returncode == 0, result.stderr
+
+
+def package_bytes(root):
+    return {str(p.relative_to(root)): p.read_bytes() for p in root.rglob('*') if p.is_file()}
+
+
+def test_initial_alias_retirement_new_name_and_rollback_preserve_separate_packages(tmp_path):
+    repo, dest, entry, command = fixture(tmp_path)
+    publish_fixture(command)
+    old = dest/entry['codex_skill_name']
+    (old/'private.txt').write_text('Unrelated material stays in its original location')
+    old_bytes = package_bytes(old)
+    procedure = package_bytes(dest/entry['role_id'])
+    state = dest/'.persona-state'/entry['role_id']
+    transaction = json.loads((state/'manifest.json').read_text())['transaction']
+    journal = json.loads((state/'transactions'/transaction/'journal.json').read_text())
+    assert journal['before_manifest'] is None
+    assert all(row['before_data'] is None for row in journal['writes'])
+    original = dict(entry)
+    entry['codex_skill_name'] = 'web-application-builder-marisol'
+    (repo/entry['role_id']/'roster_entry.json').write_text(json.dumps(entry))
+    assert 'separate migration' in call(command, '--plan').stderr
+
+    codex_sync.publication.recover(old, state, transaction)
+    assert package_bytes(old) == {'private.txt': old_bytes['private.txt']}
+    publish_fixture(command)
+    new = dest/entry['codex_skill_name']
+    assert 'name: web-application-builder-marisol\n' in (new/'SKILL.md').read_text()
+    assert '- $web-application-builder\n' in (new/'SKILL.md').read_text()
+    assert '$web-application-builder-marisol' in (new/'agents/openai.yaml').read_text()
+    assert call(command, '--check').returncode == 0
+    assert package_bytes(dest/entry['role_id']) == procedure
+
+    current = json.loads((state/'manifest.json').read_text())['transaction']
+    codex_sync.publication.recover(new, state, current)
+    (repo/entry['role_id']/'roster_entry.json').write_text(json.dumps(original))
+    publish_fixture(command)
+    assert package_bytes(old) == old_bytes
+    assert not (new/'SKILL.md').exists()
+    assert package_bytes(dest/entry['role_id']) == procedure
+
+
+def test_alias_retirement_refuses_later_edits_and_concurrent_writer(tmp_path):
+    _, dest, entry, command = fixture(tmp_path)
+    publish_fixture(command)
+    old = dest/entry['codex_skill_name']
+    state = dest/'.persona-state'/entry['role_id']
+    transaction = json.loads((state/'manifest.json').read_text())['transaction']
+    original = (old/'SKILL.md').read_bytes()
+    (old/'SKILL.md').write_bytes(original + b'\nLocal edit\n')
+    changed = package_bytes(old)
+    with pytest.raises(codex_sync.publication.PublicationError, match='later edit'):
+        codex_sync.publication.recover(old, state, transaction)
+    assert package_bytes(old) == changed
+    (old/'SKILL.md').write_bytes(original)
+    with codex_sync.publication.writer_lock(state):
+        with pytest.raises(codex_sync.publication.PublicationError, match='Another publisher'):
+            codex_sync.publication.recover(old, state, transaction)
+    assert (old/'SKILL.md').read_bytes() == original
+
+
+@pytest.mark.parametrize('failure', ['stale', 'write'])
+def test_failed_new_alias_publication_can_restore_old_export(tmp_path, monkeypatch, failure):
+    repo, dest, entry, command = fixture(tmp_path)
+    publish_fixture(command)
+    old = dest/entry['codex_skill_name']
+    old_bytes = package_bytes(old)
+    procedure = package_bytes(dest/entry['role_id'])
+    state = dest/'.persona-state'/entry['role_id']
+    transaction = json.loads((state/'manifest.json').read_text())['transaction']
+    codex_sync.publication.recover(old, state, transaction)
+    original = dict(entry)
+    entry['codex_skill_name'] = 'web-application-builder-marisol'
+    source = repo/entry['role_id']/'roster_entry.json'
+    source.write_text(json.dumps(entry))
+    preview = json.loads(call(command, '--plan').stdout)
+    new = dest/entry['codex_skill_name']
+    if failure == 'stale':
+        source.write_text(json.dumps(dict(entry, display_name='Source changed after preview')))
+        assert 'Stale' in call(command, '--apply', preview['plan_hash']).stderr
+    else:
+        plan = preview['packages'][0]
+        files = {'SKILL.md': (codex_sync.build_frontmatter(entry) + '\n' +
+                             codex_sync.build_body(repo, entry)).encode(),
+                 'agents/openai.yaml': codex_sync.default_openai_yaml(entry).encode()}
+        real_write = codex_sync.publication.atomic_write
+        def fail_metadata(path, data, mode=0o600):
+            if path == new/'agents/openai.yaml':
+                raise OSError('Synthetic destination failure')
+            return real_write(path, data, mode)
+        with monkeypatch.context() as patch:
+            patch.setattr(codex_sync.publication, 'atomic_write', fail_metadata)
+            with pytest.raises(OSError, match='Synthetic'):
+                codex_sync.publication.publish(new, state, files, expected=plan['plan_hash'],
+                                               source=plan['source'])
+    assert not (new/'SKILL.md').exists()
+    assert not (state/'pending.json').exists()
+    source.write_text(json.dumps(original))
+    publish_fixture(command)
+    assert package_bytes(old) == old_bytes
+    assert package_bytes(dest/entry['role_id']) == procedure

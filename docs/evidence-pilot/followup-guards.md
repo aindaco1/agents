@@ -3,6 +3,10 @@
 Implemented and published November 9, 2026 local time. This follows the
 [two-profile pilot](README.md) and its database-preservation qualification.
 
+Later follow-up: [Marisol simplification and rename](marisol-rename.md) replaces
+the initial Codex persona export below with `web-application-builder-marisol`.
+The original publication results here remain a historical record.
+
 ## Changes
 
 - Codex now installs Marisol as `web-application-builder-persona`. The existing

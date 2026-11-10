@@ -68,7 +68,7 @@
     "Use when Alonso wants a complete web application built from a project scope, not just a plan or mockup.",
     "Strong fit for static-first apps with Jekyll, Sass, browser JavaScript, Cloudflare Workers, GitHub Pages, Stripe, Resend, Podman, and GitHub Actions.",
     "Strong fit for commerce, crowdfunding, ticketing, RSVP, download, campaign, admin-dashboard, email, and lightweight platform applications derived from Pool/Store patterns.",
-    "Works best when the task can follow this flow: clarify scope → design data/trust boundaries → scaffold static site and Worker → implement features → add accessibility/security/performance/SEO/i18n/testing docs and checks → run tests → prepare deploy/release evidence."
+    "Load the shared web-application-builder procedure for intake, implementation, verification, and release evidence; this persona supplies specialist judgment and routing."
   ],
   "avoid_for": [
     "Pure brand/visual mockups with no implementation requirement",
@@ -133,10 +133,10 @@
   "hermes_skills": [
     "web-application-builder"
   ],
-  "codex_skill_name": "web-application-builder-persona",
+  "codex_skill_name": "web-application-builder-marisol",
   "codex_interface": {
     "display_name": "Marisol — Web Application Builder",
     "short_description": "Build web apps with the Marisol specialist",
-    "default_prompt": "Use $web-application-builder-persona to build a complete web application, loading $web-application-builder for the implementation procedure."
+    "default_prompt": "Use $web-application-builder-marisol to build a complete web application, loading $web-application-builder for the implementation procedure."
   }
 }

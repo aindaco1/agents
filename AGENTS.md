@@ -39,7 +39,7 @@ directory. Keep publication locks and backups outside iCloud.
 
 Edit canonical sources, regenerate `roster.json` when entries change, and publish
 tested packages to both runtimes. Preserve the `web-application-builder`
-procedure; its Codex persona exports as `web-application-builder-persona`.
+procedure; its Codex persona exports as `web-application-builder-marisol`.
 Give new procedures short trigger-first frontmatter and Codex UI
 metadata. Keep commands, scope boundaries, and explicit user preferences intact.
 Use `development-task` for substantive implementation or verification and

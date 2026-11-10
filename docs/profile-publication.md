@@ -72,7 +72,7 @@ frontmatter name, default invocation and generated handoff name. The canonical
 `role_id` and Hermes profile name remain stable. Procedure references in
 `hermes_skills` continue to name procedures, not persona exports.
 
-The `web-application-builder` persona exports as `web-application-builder-persona`.
+The `web-application-builder` persona exports as `web-application-builder-marisol`.
 Its original name belongs to the maintained implementation procedure. Publish
 through the usual Codex preview/apply protocol; do not replace that procedure
 with `--replace-collision`. Both packages must be discoverable after publication.
@@ -83,6 +83,27 @@ that collide with canonical procedure names. Existing tuned descriptions are
 preserved, but the frontmatter name and default prompt must identify the actual
 export. Renaming an already-published persona requires a separately reviewed
 migration; this publisher refuses to move an existing transaction to a new root.
+
+The November 2026 Marisol rename uses the existing recovery workflow.
+The old `web-application-builder-persona`
+export was still its initial creation transaction: no previous manifest, two
+created managed files, and no later edits. After testing that exact shape in
+temporary homes, retain the old package/source and transaction, retire the old
+managed files with `managed_publication.recover(old_root, state, transaction)`,
+then preview and apply the new export through the normal publisher. The state
+directory stays keyed by `web-application-builder`.
+
+Recovery checks the current transaction and file hashes under the writer lock;
+it refuses later edits or another writer and leaves unrelated files untouched.
+The new publication still needs a fresh exact-hash preview. If it fails, recover
+any pending new publication and republish the retained old source through a new
+preview/apply. Do not reuse this initial-creation recipe for an export with a
+longer publication history. Do not delete populated directories or edit state
+manifests by hand. Preserve both transaction histories and verify that runtime
+discovery finds only the new persona name plus the separate procedure.
+
+See [Marisol simplification and rename](evidence-pilot/marisol-rename.md) for the
+source boundaries, migration checks, and publication evidence.
 
 For stateful canaries, use the SQLite capture/compare commands in the
 [pilot harness contract](pilot-harness.md). A fingerprint or integrity check alone
