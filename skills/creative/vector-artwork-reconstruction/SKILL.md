@@ -3,18 +3,20 @@ name: vector-artwork-reconstruction
 description: "Use when rebuilding AI graphics as editable vector artwork."
 license: "All rights reserved"
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   author: "Dust Wave"
   short-description: "Reconstruct graphics with type, vectors, and sourced textures"
   companion-agent: "vector-reconstruction-designer"
   hermes:
     tags: [graphic-design, vector, svg, typography, reconstruction, image-detectors]
-    related_skills: []
+    related_skills: [rough-sketch-vectorization]
 ---
 
 # Vector Artwork Reconstruction
 
 Rebuild a supplied graphic using actual fonts, deliberate vector geometry, and documented raster assets. Preserve the design's purpose and visual character while replacing inconsistent generated details. Deliver an editable master and an inspected raster export.
+
+When a supplied sketch should remain rough, loose, or hand-drawn, use the shared `rough-sketch-vectorization` procedure. It preserves the source's varied shapes and irregular pencil marks. Do not apply this workflow's repeated-motif regularization to those sketch details.
 
 ## When to Use
 

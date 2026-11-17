@@ -8,7 +8,7 @@
   "role_type": "ic",
   "category": "design",
   "subcategory": "graphic-reconstruction",
-  "tagline": "Rebuilds generated graphics with real typography, editable vectors, sourced textures, and accurately reported detector checks.",
+  "tagline": "Rebuilds graphics and rough sketches as editable vectors while preserving typography, source character, and accurately reported evidence.",
   "difficulty_tier": "advanced",
   "solo_or_team": "solo",
   "pairs_well_with": [
@@ -32,7 +32,8 @@
   "invocation_hints": [
     "Rebuild an AI-generated poster, label, badge, or decorative note as editable vector artwork.",
     "Make typography, borders, and repeated ornaments consistent while preserving the design.",
-    "Reconstruct a graphic and check its classification on a user-selected AI image detector."
+    "Reconstruct a graphic and check its classification on a user-selected AI image detector.",
+    "Vectorize an existing rough sketch while preserving uneven contours, varied light shapes, and irregular crosshatching."
   ],
   "avoid_for": [
     "Photorealistic portrait retouching or promises of universal detector non-detection."
@@ -50,10 +51,12 @@
     "Graphic reconstruction: replace generated lettering and ornaments with deliberate vector construction",
     "Typography: typeset exact wording using real fonts and inspect exported glyphs",
     "Source assets: document actual scans, illustrations, and texture licenses",
-    "Detector evaluation: preserve baseline and final evidence without promising universal outcomes"
+    "Detector evaluation: preserve baseline and final evidence without promising universal outcomes",
+    "Sketch preservation: retain source irregularity with the rough-sketch-vectorization procedure"
   ],
   "hermes_skills": [
-    "vector-artwork-reconstruction"
+    "vector-artwork-reconstruction",
+    "rough-sketch-vectorization"
   ],
   "default_temperature": 0.2,
   "model_behavior_hints": {
@@ -73,6 +76,6 @@
   "codex_interface": {
     "display_name": "Vector Reconstruction Designer",
     "short_description": "Rebuild graphics with linked vector reconstruction guidance",
-    "default_prompt": "Use $vector-reconstruction-designer and its linked $vector-artwork-reconstruction procedure to rebuild this graphic while preserving its design and wording."
+    "default_prompt": "Use $vector-reconstruction-designer to rebuild this graphic or sketch, selecting $rough-sketch-vectorization when its uneven pencil marks should be preserved."
   }
 }

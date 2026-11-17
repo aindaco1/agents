@@ -1,0 +1,4 @@
+interface:
+  display_name: "Rough Sketch Vectorization"
+  short_description: "Keep pencil irregularity when converting sketches to SVG"
+  default_prompt: "Use $rough-sketch-vectorization to recreate this sketch as editable vectors, preserving its uneven shapes and varied pencil marks."

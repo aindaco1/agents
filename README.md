@@ -127,6 +127,19 @@ Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives c
 
 Add a portable skill name to a profile's `hermes_skills` list when Hermes should prefer that procedure for the profile. Codex discovers the same package directly after synchronization. Do not copy runtime skill edits back blindly: compare them to the canonical package and import only intentional improvements.
 
+### Rough sketch vectorization
+
+`rough-sketch-vectorization` preserves a supplied sketch's uneven contours,
+varied shapes, and broken hatching as actual vector paths. It includes a portable
+Potrace helper, editable-label overlay support, and the accepted chile example.
+The Vector Reconstruction Designer selects it when a sketch should remain rough;
+`vector-artwork-reconstruction` remains the procedure for constructed graphics.
+
+Invoke `$rough-sketch-vectorization` in Codex or `/rough-sketch-vectorization`
+in Hermes, or launch `agent-run vector-reconstruction-designer`. Author the
+shared package under `skills/creative/rough-sketch-vectorization/` and publish it
+with the portable skill preview/apply commands above.
+
 ### Research paper authoring
 
 `research-paper-authoring` is the shared manuscript procedure for Academic Writer

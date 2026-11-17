@@ -17,9 +17,12 @@ Use the repository's existing synchronization, rather than separate hand-edited 
 After editing the canonical procedure, run from the agents repository:
 
 ```sh
-python3 scripts/sync_portable_skills.py --skill vector-artwork-reconstruction
+python3 scripts/sync_portable_skills.py --skill vector-artwork-reconstruction --plan
+python3 scripts/sync_portable_skills.py --skill vector-artwork-reconstruction --apply PLAN_HASH
 python3 scripts/sync_portable_skills.py --skill vector-artwork-reconstruction --check
 ```
+
+Inspect the preview and use its exact returned `PLAN_HASH` with the same selection. For rough-sketch preservation, the companion also routes to `rough-sketch-vectorization`; publish that separate procedure by name when it changes.
 
 For future persona edits, follow the repository README's profile compilation and Codex mirroring workflow. The Hermes profile links to the shared Hermes skills library, so procedure updates need no profile rebuild.
 

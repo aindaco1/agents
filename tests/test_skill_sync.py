@@ -49,6 +49,7 @@ def test_repo_portable_skills_are_cross_compatible():
         "jev-evaluation",
         "macos-dmg-release-validation",
         "research-paper-authoring",
+        "rough-sketch-vectorization",
         "vector-artwork-reconstruction",
         "web-application-builder",
     }
@@ -70,7 +71,7 @@ def test_portable_skill_profile_links_match_aggregate_roster():
         "senior-code-reviewer": ["development-task", "visual-pr"],
         "academic-writer": ["research-paper-authoring", "humanizer"],
         "academic-researcher": ["research-paper-authoring", "humanizer"],
-        "vector-reconstruction-designer": ["vector-artwork-reconstruction"],
+        "vector-reconstruction-designer": ["vector-artwork-reconstruction", "rough-sketch-vectorization"],
         "agent-performance-analyst": ["jev-evaluation", "review-development-lessons"],
         "ai-workflow-designer": ["jev-evaluation", "review-development-lessons"],
         "prompt-engineer": ["jev-evaluation"],
