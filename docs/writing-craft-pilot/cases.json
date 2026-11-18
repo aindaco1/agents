@@ -1,0 +1,417 @@
+{
+  "schema": 1,
+  "cases_sha256": "09658f74cbc2147f2852f23de1da5f3002aa63c74f812a31c36f9aef5cfd06b0",
+  "cases": [
+    {
+      "id": "P01",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "01",
+        "03"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "b6455a62d3f741c76d18eed2b558bbd9964b2fa2e7d6f4e3f1dc24237a07b742",
+      "source_id": "19412",
+      "source_paragraphs": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "P02",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "03",
+        "10"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "0c4fdeb46170dfe01d13354ab472645557ad065de796a62be0c645169bbbbccb",
+      "source_id": "19419",
+      "source_paragraphs": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "P03",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "04",
+        "10"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "a6321e4a9e64321e86be1dd5f8ac654e24b5dbeeb6da7b9d5665762de622a055",
+      "source_id": "19418",
+      "source_paragraphs": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "P04",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "07",
+        "08"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "099935bc0b9ac904548587a2ec853cbd9db66978db59370cef7dc6dac2a916b0",
+      "source_id": "19484",
+      "source_paragraphs": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "P05",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "02",
+        "09"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "a68552354c84d704278b4fe2098e18680aa546aca7b81032581e1d29cd4d2f75",
+      "source_id": "19423",
+      "source_paragraphs": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "P06",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "02",
+        "06"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "3d32004abcf0c2e9a7cd97982a1939867d5814331ef06f60f39924844f3c3821",
+      "source_id": "19587",
+      "source_paragraphs": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "P07",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "05",
+        "11"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "2b9b258152fcc84114b28e4dd7ce9b8c66cfe7e5543e86c86838325d4e82e02e",
+      "source_id": "182369",
+      "source_paragraphs": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "P08",
+      "category": "preservation",
+      "entry": "constrained-humanization-editing",
+      "cards": [
+        "03",
+        "05"
+      ],
+      "criteria": [
+        "No added facts or stance drift.",
+        "Preserve deliberate repetition, qualifications and asides.",
+        "Every change should address a demonstrable problem; unchanged is valid.",
+        "Preserve paragraph count and direct quotations."
+      ],
+      "prompt_sha256": "072eea65077f88b59ced77c99e56eecd77f0206ee3bd54eae8fa65745dc8cebe",
+      "source_id": "147083",
+      "source_paragraphs": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "id": "E01",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "07",
+        "08"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "c0ed5981b57a887742a2f03490daddf442557eef92b099f07160e22ef407ae73"
+    },
+    {
+      "id": "E02",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "02",
+        "09"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "5246139adf6aa305f42b3973be4b0efb080e4a7ac82f0b97b46bc53bf4a343cc"
+    },
+    {
+      "id": "E03",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "06",
+        "04"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "3866b9e236a193ab9bbf80936481783724d8c9e1ccb7cbf91ebd0ca8f3ef694b"
+    },
+    {
+      "id": "E04",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "01",
+        "10"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "70e76d0120a7045b16081afa18873702ffac805f97aa0ad67e9c67ae5f5c0f43"
+    },
+    {
+      "id": "E05",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "07",
+        "08"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "7604e04e07ea14ee1ccd7ecfba1821abb662f98e4aa9e358c187f9292fe426d4"
+    },
+    {
+      "id": "E06",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "02",
+        "11"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "d6a80650cbf811da6f2795dc2e745c63b20f6c79f484e1ead8ae2256bbec49d4"
+    },
+    {
+      "id": "E07",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "04",
+        "05"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "dd8b41695cb03c3690d53fdec6a7822c0d11f8a2a24747346365849371d6e8c0"
+    },
+    {
+      "id": "E08",
+      "category": "editing",
+      "entry": "humanizer",
+      "cards": [
+        "03",
+        "07"
+      ],
+      "criteria": [
+        "No new facts, motives or authority.",
+        "Preserve protected details and requested form.",
+        "Improve clarity or remove identified padding without making the voice generic."
+      ],
+      "prompt_sha256": "3da1938ce01a3ca2f4b3c5fb30241dbc3bdeb938b3d22a66e0d3e5165953546e"
+    },
+    {
+      "id": "D01",
+      "category": "drafting",
+      "entry": "creative-writer",
+      "cards": [
+        "02",
+        "09"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "113b5e132c33be4db4fd39079b1bfa2782ae35ece7c1118d0f929ac561eb8552"
+    },
+    {
+      "id": "D02",
+      "category": "drafting",
+      "entry": "creative-writer",
+      "cards": [
+        "02",
+        "07"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "063b85619b3b99a2fc2d055bb79133b3d59d5ce99d8f4a2c29269c4848ca358d"
+    },
+    {
+      "id": "D03",
+      "category": "drafting",
+      "entry": "creative-writer",
+      "cards": [
+        "12",
+        "11"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "77a4a759339567799b10a03418cba396a7b6b6825429880c080c1f47ba7ee8ff"
+    },
+    {
+      "id": "D04",
+      "category": "drafting",
+      "entry": "creative-writer",
+      "cards": [
+        "01",
+        "10"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "e0b7ebc357b2708c897365765e7cfbff0d9297b745154f42a63ec24c65113d70"
+    },
+    {
+      "id": "D05",
+      "category": "drafting",
+      "entry": "reference-style-rewriting",
+      "cards": [
+        "03",
+        "04"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "59e5530452b8dc8e619736a3d31e695ede85679408768b69c394b046275d8a1a"
+    },
+    {
+      "id": "D06",
+      "category": "drafting",
+      "entry": "gonzo-reference-rewrite-pass",
+      "cards": [
+        "05",
+        "10"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "af0e6fa8a66f12801197266f6e40472813e7206b52ca178e83d4e5b5caa556a1"
+    },
+    {
+      "id": "D07",
+      "category": "drafting",
+      "entry": "creative-writer",
+      "cards": [
+        "07",
+        "08"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "200c11154e180b59acdac5a4a91ddf92512ccf7e3336b523e4bf2484e1b41c50"
+    },
+    {
+      "id": "D08",
+      "category": "drafting",
+      "entry": "creative-writer",
+      "cards": [
+        "09",
+        "11"
+      ],
+      "criteria": [
+        "Use only supplied facts; no invented scene, motive, quote or conclusion.",
+        "Preserve uncertainty, requested register and the writer\u2019s position.",
+        "Make purposeful choices about attention, rhythm and ending without importing reference phrasing."
+      ],
+      "prompt_sha256": "43bb41a7435b30068b8495bafba20b39f36360b9dd33520750578fa02f84ebc7"
+    }
+  ]
+}

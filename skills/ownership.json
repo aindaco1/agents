@@ -8,18 +8,22 @@
     "design-control-loop": "maintained",
     "desktop-app-updater-release-validation": "maintained",
     "development-task": "maintained",
+    "film-subtitle-editing": "maintained",
+    "gonzo-reference-rewrite-pass": "maintained",
     "humanizer": "maintained",
     "improve-agent-instructions": "maintained",
     "iterative-ai-detector-humanization": "maintained",
     "jev-evaluation": "maintained",
     "macos-dmg-release-validation": "maintained",
     "narrow-react-prop-types": "maintained",
+    "reference-style-rewriting": "maintained",
     "research-paper-authoring": "maintained",
     "review-development-lessons": "maintained",
     "rough-sketch-vectorization": "maintained",
     "show-me": "maintained",
     "vector-artwork-reconstruction": "maintained",
     "visual-pr": "maintained",
-    "web-application-builder": "maintained"
+    "web-application-builder": "maintained",
+    "writing-craft-library": "maintained"
   }
 }

@@ -1,0 +1,1256 @@
+{
+  "case_count": 24,
+  "completed_pairs": 24,
+  "judged_pairs": 24,
+  "votes": {
+    "preservation": {
+      "tie": 8
+    },
+    "editing": {
+      "tie": 8
+    },
+    "drafting": {
+      "tie": 8
+    }
+  },
+  "resources": {
+    "baseline": {
+      "answers": 24,
+      "elapsed_seconds_sum": 570.222,
+      "median_elapsed_seconds": 16.193,
+      "observed_api_calls": 24,
+      "tokens": {
+        "session_total_tokens": 124905,
+        "session_input_tokens": 105942,
+        "session_output_tokens": 18963,
+        "session_cache_read_tokens": 0,
+        "session_prompt_tokens": 105942
+      }
+    },
+    "candidate": {
+      "answers": 24,
+      "elapsed_seconds_sum": 608.838,
+      "median_elapsed_seconds": 14.122,
+      "observed_api_calls": 24,
+      "tokens": {
+        "session_total_tokens": 163968,
+        "session_input_tokens": 136317,
+        "session_output_tokens": 20611,
+        "session_cache_read_tokens": 7040,
+        "session_prompt_tokens": 143357
+      }
+    },
+    "judge": {
+      "answers": 24,
+      "elapsed_seconds_sum": 306.962,
+      "median_elapsed_seconds": 8.928,
+      "observed_api_calls": 24,
+      "tokens": {
+        "session_total_tokens": 46228,
+        "session_input_tokens": 36730,
+        "session_output_tokens": 9498,
+        "session_cache_read_tokens": 0,
+        "session_prompt_tokens": 36730
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "P01",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 185,
+          "output_words": 185,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 185,
+          "output_words": 185,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, preserving all three paragraphs, quotations, deliberate repetition, qualifications, rhythm and stance. Neither introduces a factual change or unnecessary edit; leaving these sound passages alone satisfies the task.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P02",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 193,
+          "output_words": 193,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 193,
+          "output_words": 193,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, appropriately leaving sound passages alone. Each preserves the two paragraphs, quotations, qualifications, deliberate repetition of \"weatherbeaten,\" and varied sentence rhythms without adding facts or shifting stance.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P03",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 145,
+          "output_words": 145,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 145,
+          "output_words": 145,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, preserving its two paragraphs, quotations, deliberate repetition, qualifications, rhythm and critical stance. Neither introduces facts or makes unnecessary edits; no demonstrable clarity problem requires intervention.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P04",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 159,
+          "output_words": 157,
+          "word_ratio": 0.9874,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 159,
+          "output_words": 157,
+          "word_ratio": 0.9874,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "The answers are identical. Both repair the final sentence’s awkward coordination by changing “and the similarities in their ripple effects” to “and in their ripple effects,” preserving the comparison without adding facts or changing stance. Both otherwise leave the excerpt untouched, retaining quotations, paragraph count, qualifications and rhythm.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P05",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 196,
+          "output_words": 196,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 196,
+          "output_words": 196,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, appropriately leaving sound passages alone. Both preserve all facts, stance, quotations, qualifications, deliberate rhythm, paragraph count and length.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P06",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 177,
+          "output_words": 177,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 177,
+          "output_words": 177,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, appropriately leaving sound passages alone. Each preserves the two paragraphs, quotations, names, qualifications, aside, rhythm and stance without adding facts or making unnecessary edits.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P07",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 199,
+          "output_words": 199,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 199,
+          "output_words": 199,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, preserving all three paragraphs, deliberate rhythm, qualifications, asides, names and stance. Neither introduces facts or makes unnecessary edits; leaving these sound passages alone satisfies the preservation task.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "P08",
+      "category": "preservation",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 142,
+          "output_words": 142,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 142,
+          "output_words": 142,
+          "word_ratio": 1.0,
+          "within_length_bound": true,
+          "same_paragraph_count": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the source unchanged, preserving all three paragraphs, deliberate repetition, qualifications, rhythm, and stance. Neither introduces facts or unnecessary edits; leaving these sound passages alone satisfies the task.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E01",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 67,
+          "output_words": 49,
+          "word_ratio": 0.7313,
+          "protected_code_url": true
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 67,
+          "output_words": 50,
+          "word_ratio": 0.7463,
+          "protected_code_url": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both remove the introductory padding while preserving the code and URL byte-for-byte, the attachment exclusion, the version 2.4 test of 318 records, the untested larger collections, and the private-notes handling instruction. Their sentence and paragraph differences are equally defensible; neither adds capabilities or guarantees.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E02",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 85,
+          "output_words": 50,
+          "word_ratio": 0.5882
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 85,
+          "output_words": 56,
+          "word_ratio": 0.6588
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both remove the three generic claims while retaining every concrete fact and the paragraph’s modest scale. B compresses the discussion wording and combines the cost and budget sentences without losing meaning; A’s slightly fuller phrasing is equally effective. Neither adds a scene, motive, testimony or policy claim.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E03",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": true,
+          "source_words": 62,
+          "output_words": 62,
+          "word_ratio": 1.0,
+          "verbatim_transcript": true
+        },
+        "candidate": {
+          "unchanged": true,
+          "source_words": 62,
+          "output_words": 62,
+          "word_ratio": 1.0,
+          "verbatim_transcript": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both reproduce the transcript verbatim, preserving every question, reply, speaker label and line break. No unmistakable typo required correction.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E04",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 84,
+          "output_words": 69,
+          "word_ratio": 0.8214
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 84,
+          "output_words": 69,
+          "word_ratio": 0.8214
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "The revisions are identical. Both remove the vague claims about a “pivotal exploration” and “complex interplay,” letting the precise mixed judgment—initial amusement followed by disengagement—stand. Every stated film detail and the first-person voice remain intact, with no invented material.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E05",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 74,
+          "output_words": 60,
+          "word_ratio": 0.8108,
+          "quantitative_strings": true
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 74,
+          "output_words": 60,
+          "word_ratio": 0.8108,
+          "quantitative_strings": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "The edits are identical. Both remove the inflated opening while preserving all quantitative details, study limitations, and explicit uncertainty, without adding design details or strengthening the evidence.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E06",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 62,
+          "output_words": 42,
+          "word_ratio": 0.6774,
+          "exact_action_sentences": true
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 62,
+          "output_words": 42,
+          "word_ratio": 0.6774,
+          "exact_action_sentences": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both answers identically remove only the two generic framing sentences, preserve the three action sentences exactly, retain the narrator’s uncertainty and remaining wording, and return one paragraph without additions.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E07",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": true,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 56,
+          "output_words": 36,
+          "word_ratio": 0.6429
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 56,
+          "output_words": 36,
+          "word_ratio": 0.6429
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "The answers are identical. Both remove the explanatory final sentence, preserve the deliberate repeated structure and every supplied event, and let “Nobody changed the form” deliver the satirical ending.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "E08",
+      "category": "editing",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "unchanged": false,
+          "source_words": 111,
+          "output_words": 102,
+          "word_ratio": 0.9189,
+          "within_length_bound": true,
+          "exact_first_sentence": true
+        },
+        "candidate": {
+          "unchanged": false,
+          "source_words": 111,
+          "output_words": 103,
+          "word_ratio": 0.9279,
+          "within_length_bound": true,
+          "exact_first_sentence": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both remove padding from the second sentence while preserving the first sentence exactly, all facts and uncertainty, and the one-paragraph form. Both remain within 10% of the original word count. “Those things” versus “all of that” is an equally defensible phrasing choice with no material difference.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D01",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 116,
+          "requested_word_range": [
+            100,
+            140
+          ],
+          "within_length_bound": true
+        },
+        "candidate": {
+          "output_words": 103,
+          "requested_word_range": [
+            100,
+            140
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both meet the 100–140-word limit, retain all supplied events and the uncertainty about sustaining the rental, and introduce no unsupported facts. Both foreground the dissatisfied viewer who wanted another viewing. A ends by distinguishing firm desire from uncertain sustainability; B carries that tension into its final sentence. These are equally defensible craft choices.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D02",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 91,
+          "requested_word_range": [
+            90,
+            130
+          ],
+          "within_length_bound": true
+        },
+        "candidate": {
+          "output_words": 94,
+          "requested_word_range": [
+            90,
+            130
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both meet the word range, preserve the incident, note wording and explicit uncertainty, and end with the requested question rather than an answer. A connects the two stated times to the narrator’s limited availability; B contrasts the note’s promised time with the work deadline. These are equally defensible, fact-grounded transitions, not invented events or motives.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D03",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 79,
+          "requested_word_range": [
+            80,
+            110
+          ],
+          "within_length_bound": false
+        },
+        "candidate": {
+          "output_words": 81,
+          "requested_word_range": [
+            80,
+            110
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both preserve every supplied fact, express gratitude warmly and plainly, and request the receipt without adding unsupported events or promises. A’s one-word shortfall is a minor compliance issue; otherwise the differences are stylistic and equally defensible.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [
+            "At 79 words including the greeting, the note falls one word below the requested 80–110 words."
+          ],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D04",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 108,
+          "requested_word_range": [
+            100,
+            140
+          ],
+          "within_length_bound": true
+        },
+        "candidate": {
+          "output_words": 115,
+          "requested_word_range": [
+            100,
+            140
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both meet the 100–140-word limit, retain the supplied actions and formal details, and preserve the moving ending, restlessness, and uncertainty about the delay. A closes by explicitly holding those responses together; B distinguishes emotional effect from confidence in the pacing. Both are purposeful, faithful choices without invented facts or symbolism.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D05",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 97,
+          "requested_word_range": [
+            90,
+            130
+          ],
+          "within_length_bound": true
+        },
+        "candidate": {
+          "output_words": 96,
+          "requested_word_range": [
+            90,
+            130
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both meet the word range and preserve the supplied events, preference, and uncertainty. A’s counting-and-report conceit and B’s distinction between rejection and explanation provide restrained humor and purposeful repetition without inventing events or motives. Their different endings are equally defensible within the requested voice.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D06",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 81,
+          "requested_word_range": [
+            70,
+            100
+          ],
+          "within_length_bound": true
+        },
+        "candidate": {
+          "output_words": 82,
+          "requested_word_range": [
+            70,
+            100
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both preserve every supplied fact, the unresolved uncertainty, and the exact final question while meeting the 70–100-word limit. A adds irony through “a small contribution to the work we are committed to reducing”; B uses the deadpan restatement that the commitment is “now available in two formats.” Both additions are grounded in the draft, retain its restrained register, and add no event or motive.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D07",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "exact_quoted_text": true,
+          "email": true,
+          "output_words": 69,
+          "requested_word_range": [
+            70,
+            100
+          ],
+          "within_length_bound": false
+        },
+        "candidate": {
+          "exact_quoted_text": true,
+          "email": true,
+          "output_words": 70,
+          "requested_word_range": [
+            70,
+            100
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both preserve the exact quotation, uncertainty and all practical details in a plain notice. A meets the minimum at 70 words; B has 69 words. That one-word shortfall is a minor compliance difference, not a meaningful fidelity or craft difference.",
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        },
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [
+            "At 69 words, the notice is one word below the required 70–100-word range."
+          ],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 5
+        }
+      }
+    },
+    {
+      "id": "D08",
+      "category": "drafting",
+      "paired_outputs_complete": true,
+      "identical_outputs": false,
+      "checks": {
+        "baseline": {
+          "output_words": 52,
+          "requested_word_range": [
+            50,
+            80
+          ],
+          "within_length_bound": true
+        },
+        "candidate": {
+          "output_words": 51,
+          "requested_word_range": [
+            50,
+            80
+          ],
+          "within_length_bound": true
+        }
+      },
+      "judge": {
+        "winner": "tie",
+        "reason": "Both meet the 50–80 word limit, use only supplied facts, and preserve indecision without adding motives, future action, or an explanatory metaphor. A ends on explicit uncertainty; B places that uncertainty before the final image of the key on the table. These are equally defensible ending choices.",
+        "baseline": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 4
+        },
+        "candidate": {
+          "critical_failures": [],
+          "constraint_failures": [],
+          "unnecessary_edits": [],
+          "fidelity": 5,
+          "craft": 4
+        }
+      }
+    }
+  ],
+  "judge_flagged_issues": [
+    {
+      "id": "D03",
+      "variant": "baseline",
+      "critical": [],
+      "constraints": [
+        "At 79 words including the greeting, the note falls one word below the requested 80–110 words."
+      ]
+    },
+    {
+      "id": "D07",
+      "variant": "baseline",
+      "critical": [],
+      "constraints": [
+        "At 69 words, the notice is one word below the required 70–100-word range."
+      ]
+    }
+  ],
+  "guarded_runs": [
+    {
+      "path": "generation-audit/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-001/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-002/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-003/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-004/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-005/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-006/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-007/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-008/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "generation-audit/run-009/report.json",
+      "status": "failed",
+      "databases_unchanged": false
+    },
+    {
+      "path": "drafting-v2-baseline-audit/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "drafting-v2-baseline-audit/run-001/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "drafting-v2-baseline-audit/run-002/report.json",
+      "status": "failed",
+      "databases_unchanged": false
+    },
+    {
+      "path": "drafting-v2-candidate-audit/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "drafting-v2-candidate-audit/run-001/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "drafting-v2-candidate-audit/run-002/report.json",
+      "status": "failed",
+      "databases_unchanged": false
+    },
+    {
+      "path": "drafting-v2-final-baseline-audit/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "drafting-v2-final-candidate-audit/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "judge-audit-0-8/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "judge-audit-0-8/run-001/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "judge-audit-12-16/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "judge-audit-16-20/run-000/report.json",
+      "status": "failed",
+      "databases_unchanged": false
+    },
+    {
+      "path": "judge-audit-20-24/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    },
+    {
+      "path": "judge-audit-8-12/run-000/report.json",
+      "status": "passed",
+      "databases_unchanged": true
+    }
+  ],
+  "word_count_convention": "Whitespace-delimited output tokens as an approximate word count; exact protected strings checked separately.",
+  "acceptance": {
+    "material_fidelity_gate": true,
+    "preservation_gate": true,
+    "preference_gate": false,
+    "unchanged_live_state_gate": false,
+    "overall_pilot_accepted": false,
+    "decision": "Publish the requested library and canonical procedures as optional resources; do not claim a demonstrated general quality gain or expand unattended use."
+  },
+  "limitations": [
+    "Fresh same-model judge, not independent human evaluation.",
+    "Procedure packets and up to two cards supplied explicitly; autonomous retrieval was not evaluated.",
+    "One sample per task/condition; selected historical published text may be known to the model.",
+    "Synthetic drafting/editing briefs and historical preservation excerpts; the user’s personal voice was not evaluated.",
+    "Combined procedure/library bundle; no isolated estimate of individual card effects.",
+    "Interrupted and state-drift failures retained. All final paired answers completed, but some generating/judging runs failed the unchanged-live-state gate.",
+    "First four baseline draft answers excluded when the drafting runner settings were corrected; all drafting pairs regenerated under matched explicit timeouts.",
+    "Short, tightly constrained tasks and a conservative fidelity-first judge may produce a ceiling effect; no preference wins does not establish that craft references can never help."
+  ],
+  "runtime": {
+    "model": "gpt-6-astra",
+    "reasoning": "xhigh",
+    "execution": "Installed Hermes AIAgent through repository pilot_harness.py",
+    "codex_scope": "Fresh native skills/list discovery and package parity; no Codex behavioral inference run."
+  },
+  "publication": {
+    "packages": 12,
+    "codex_catalog_verified": true,
+    "hermes_profiles": [
+      "batty-replic-humanization-editor",
+      "editor",
+      "creative-writer",
+      "ghostwriter"
+    ],
+    "protected_files_unchanged": 2607,
+    "protected_files_checked": 2609,
+    "protected_file_drift": [
+      "/Users/aindaco1/.codex/memories/raw_memories.md",
+      "/Users/aindaco1/.codex/memories/MEMORY.md"
+    ],
+    "protected_file_preservation_status": "failed",
+    "publication_database_comparison": "passed; all four stores logically unchanged across publication and native discovery",
+    "canonical_versions": {
+      "humanizer": "3.5.0",
+      "anti-machine-writing-editorial-pass": "1.2.0",
+      "constrained-humanization-editing": "1.2.0",
+      "reference-style-rewriting": "1.0.0",
+      "gonzo-reference-rewrite-pass": "1.0.0",
+      "writing-craft-library": "1.0.0"
+    }
+  },
+  "validation": {
+    "tests_passed": 156,
+    "tests_skipped": 1,
+    "skip_reason": "Optional rough-sketch tracing test requires Pillow, absent from the explicit evaluation venv.",
+    "roster_aggregate_check": "passed",
+    "codex_persona_check": "passed",
+    "portable_skill_check": "passed",
+    "git_diff_check": "passed"
+  },
+  "identical_pair_count": 13
+}

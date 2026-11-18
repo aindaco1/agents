@@ -1,0 +1,103 @@
+{
+  "schema": 1,
+  "cards": [
+    {
+      "id": "01-qualified-judgment",
+      "title": "Qualify a judgment without dissolving it",
+      "source_ids": [
+        "19416",
+        "36797",
+        "36904"
+      ]
+    },
+    {
+      "id": "02-detail-to-question",
+      "title": "Let an observed detail open a question",
+      "source_ids": [
+        "37337",
+        "90169"
+      ]
+    },
+    {
+      "id": "03-sustained-syntax",
+      "title": "Let a long sentence accumulate meaning",
+      "source_ids": [
+        "19470",
+        "37609"
+      ]
+    },
+    {
+      "id": "04-purposeful-repetition",
+      "title": "Preserve repetition that changes the pressure",
+      "source_ids": [
+        "37675",
+        "89705"
+      ]
+    },
+    {
+      "id": "05-comic-distance",
+      "title": "Let humor expose the narrator's position",
+      "source_ids": [
+        "37357",
+        "89578"
+      ]
+    },
+    {
+      "id": "06-distinct-speakers",
+      "title": "Follow an answer and keep speakers distinct",
+      "source_ids": [
+        "37613",
+        "36820"
+      ]
+    },
+    {
+      "id": "07-visible-inquiry",
+      "title": "Keep an inquiry's uncertainty visible",
+      "source_ids": [
+        "37337",
+        "37366"
+      ]
+    },
+    {
+      "id": "08-attribution-and-inference",
+      "title": "Separate the evidence from the writer's inference",
+      "source_ids": [
+        "37391",
+        "37419"
+      ]
+    },
+    {
+      "id": "09-concrete-return",
+      "title": "End by returning with a changed meaning",
+      "source_ids": [
+        "19420",
+        "19416",
+        "90239"
+      ]
+    },
+    {
+      "id": "10-specific-criticism",
+      "title": "Explain where a response comes from",
+      "source_ids": [
+        "19487",
+        "37124"
+      ]
+    },
+    {
+      "id": "11-empathy-with-limits",
+      "title": "Consider a perspective without inventing its interior",
+      "source_ids": [
+        "37265",
+        "37294"
+      ]
+    },
+    {
+      "id": "12-action-and-distinction",
+      "title": "Replace an unhelpful abstraction with a precise distinction",
+      "source_ids": [
+        "37333",
+        "37415"
+      ]
+    }
+  ]
+}

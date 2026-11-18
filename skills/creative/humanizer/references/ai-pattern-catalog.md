@@ -230,15 +230,17 @@
 > The product launches in Q3. User research showed a preference for simplicity. Next step: schedule a follow-up meeting.
 
 
-### 19. Curly Quotation Marks
+### 19. Quotation marks and apostrophes
 
-**Problem:** ChatGPT uses curly quotes ("...") instead of straight quotes ("...").
+Quote shape is a typography choice. Alonso prefers straight marks in editable English prose, including fictional dialogue. Keep the original characters in verbatim source quotations and code.
 
-**Before:**
-> He said "the project is on track" but others disagreed.
+**Before**
 
-**After:**
-> He said "the project is on track" but others disagreed.
+`“That’s Jo’s chair,” I said.`
+
+**After**
+
+`"That's Jo's chair," I said.`
 
 
 ## COMMUNICATION PATTERNS

@@ -127,6 +127,10 @@ Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives c
 
 Add a portable skill name to a profile's `hermes_skills` list when Hermes should prefer that procedure for the profile. Codex discovers the same package directly after synchronization. Do not copy runtime skill edits back blindly: compare them to the canonical package and import only intentional improvements.
 
+### Film subtitle editing
+
+Use `$film-subtitle-editing` in Codex or `/film-subtitle-editing` in Hermes for dialogue cleanup, translation, audio checks, and synchronization to a particular cut. The [shared procedure](skills/creative/film-subtitle-editing/SKILL.md) complements the localization specialist and audio/video engineer. Its SRT checker can compare a translation against locked source timings and speaker markers.
+
 ### Rough sketch vectorization
 
 `rough-sketch-vectorization` preserves a supplied sketch's uneven contours,

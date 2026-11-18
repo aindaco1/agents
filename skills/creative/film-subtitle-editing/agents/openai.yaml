@@ -1,0 +1,4 @@
+interface:
+  display_name: "Film Subtitle Editing"
+  short_description: "Clean, translate, check and sync film subtitles"
+  default_prompt: "Use $film-subtitle-editing to clean these subtitles, check unclear dialogue against the supplied film, and flag any unresolved readings."

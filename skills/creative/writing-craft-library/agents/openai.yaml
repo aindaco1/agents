@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing craft library"
+  short_description: "Choose craft techniques while preserving the writer's voice"
+  default_prompt: "Use $writing-craft-library to choose one or two relevant writing techniques, preserve what already works, and improve this draft without importing facts or phrasing."

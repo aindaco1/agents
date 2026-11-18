@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gonzo reference rewrite"
+  short_description: "Shape lively essays from a reference without imitation"
+  default_prompt: "Use $gonzo-reference-rewrite-pass to apply high-level reference techniques while preserving my facts, intended voice, and approved scope."

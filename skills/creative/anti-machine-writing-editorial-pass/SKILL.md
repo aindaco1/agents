@@ -3,7 +3,7 @@ name: anti-machine-writing-editorial-pass
 description: "Use when essays need an anti-machine editorial pass."
 license: "All rights reserved"
 metadata:
-  version: "1.1.0"
+  version: "1.3.0"
   author: "Dust Wave"
   short-description: "Remove machine rhythm while preserving live prose"
   hermes:
@@ -56,16 +56,20 @@ Process
    - human digression
    - attitude without over-explaining
    Use those as the tonal anchor for the rest of the piece.
+   When positive examples would help, use `writing-craft-library` and at most two
+   relevant cards. Treat lists, repetition, asides, long sentences, and explicit
+   conclusions as choices to assess in context. Keep them when they do useful
+   work; a pattern's presence alone is not a reason to edit.
 
 3. Rewrite by changing sentence behavior, not just words
    The problem is often rhythm, not vocabulary.
    Better moves:
-   - collapse repetitive short lines into one longer, more textured sentence
+   - first try removing only the paragraph break between a setup and its follow-up. Read the same two sentences aloud together. A dry correction may work precisely because the second sentence stays short.
    - replace abstract escalation with one concrete image or social detail
    - vary sentence openings and clause lengths
    - let one sentence do sideways work instead of stacking 4 interchangeable lines
-   - combine adjacent mini-paragraphs if they create artificial drama
-   - keep a few punchy lines, but make them earned
+   - keep the break when it marks a different speaker, a change in the scene, or a pause the following line uses. Apply the user's formatting constraints first.
+   - trace a repeated noun across a transition before replacing it. A change in who uses the word, or what it describes, can carry the argument.
 
 4. Prefer lived phrasing over generic emphasis
    Example pattern:
@@ -75,7 +79,7 @@ Process
 
 5. Restore human narrative shape when the brief allows it
    Use the study-backed tells as a practical checklist:
-   - **Infer, don't explain:** remove the extra sentence that announces the theme.
+   - **Read the ending with and without its last sentence.** Cut a recap when the reader already has its entire meaning. Keep an explicit conclusion that revises an earlier belief, identifies a remaining doubt, or changes whom the writer is addressing.
    - **Let time move sideways:** essays, memoir, cultural criticism, fiction, and newsletters can jump backward or forward instead of marching point-by-point.
    - **Emotion through behavior:** swap stock bodily feeling for action, attention, interruption, dialogue, omission, or a precise object.
    - **Specific references:** name the actual song, film, street, shop, app, tool, institution, or text when it is true and known. Do not fabricate specificity.

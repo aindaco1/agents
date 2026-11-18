@@ -23,6 +23,12 @@ In a faithful edit, preserve these. If one looks wrong, flag it for evidence che
 5. Keep appropriate disciplinary form, including passive voice, conventional headings, careful repetition and restrained tone when useful. Do not import creative-writing advice about scenes, nonlinear movement, fragments, or process residue into a methods section.
 6. Check abstract and conclusion against the body after shortening them. Do not broaden the population, strengthen novelty, remove contrary evidence, or promote exploratory results to confirmed findings.
 
+## Results that reverse across conditions
+
+When the same approaches change rank on the same measure, tell the reader which approach did better in each condition. Name the measure so the direction is clear, especially when lower values are better. Give each approach's reported value alongside its condition, with the original units, denominators, uncertainty, and table or figure reference wherever supplied. Check those pairings against the source after editing.
+
+If a value is missing or the conditions use different measures, report only the comparisons the source supports. An observed reversal alone gives no basis for claiming statistical significance or explaining its cause.
+
 ## Keep editing and verification distinct
 
 Real-looking citations, fluent prose, and clean figures do not establish trustworthy research. Flag unverifiable references, unsupported certainty, inconsistent quantities, and nonsensical figure labels. Do not invent missing citations or redraw a result to look plausible. For evidence repair or full manuscript development, return to `research-paper-authoring`.

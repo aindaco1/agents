@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reference-style rewriting"
+  short_description: "Borrow writing techniques while preserving your voice"
+  default_prompt: "Use $reference-style-rewriting to apply high-level reference techniques while preserving my facts, intended voice, and approved scope."

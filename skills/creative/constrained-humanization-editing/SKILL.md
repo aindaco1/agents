@@ -3,7 +3,7 @@ name: constrained-humanization-editing
 description: "Use when humanizing prose without changing its meaning."
 license: "All rights reserved"
 metadata:
-  version: "1.1.0"
+  version: "1.3.0"
   author: "Dust Wave"
   short-description: "Humanize prose under a strict preservation contract"
   hermes:
@@ -23,6 +23,7 @@ Extracted from the `batty-replic-humanization-editor` profile (Batty Replic). Co
 - Scope
 - Structure — headings, section order, paragraph count (±10%)
 - Formatting — lists, emphasis, code blocks, links
+- A request to keep the original breaks or exact paragraph count takes precedence over the general tolerance. Apply the paragraph-break preference only where reflow is allowed, within the stated limits. Keep dialogue turns, quoted verse, and screenplay beats in their supplied form.
 - Roughly the original length — ±10% token count
 
 ## What this skill does NOT do
@@ -67,7 +68,7 @@ Use these as a final diagnostic pass, but stay inside the preservation contract.
 3. **Treat this as a limit, not the main event.** If many paragraphs need heavy reconstruction, the source draft was generated badly or needs developmental rewriting. Do not manufacture rhythm through endless polishing.
 4. **Make one pass per failure mode:**
    - Pass 1 — Kill formulaic transitions and throat-clears
-   - Pass 2 — Break up sentence-rhythm patterns (no three long sentences in a row)
+   - Pass 2 — Repair rhythm only where it obscures meaning or creates unearned emphasis. Preserve purposeful repetition and sustained long sentences; do not enforce sentence-length quotas. When examples would help, consult `writing-craft-library` without relaxing this preservation contract.
    - Pass 3 — For technical prose, audit vocabulary bundles rather than single words: unsupported certainty, unbounded absolutes, personified mechanisms, stacked structural metaphors, repeated verification claims, and em-dash density. Load `humanizer` → `references/load-bearing-claude-vocabulary.md` when this pattern is active; preserve exact evidence.
    - Pass 4 — Replace abstract stand-in words with concrete ones *only where the concrete word is already implied*
    - Pass 5 — Loosen hedging where it's redundant

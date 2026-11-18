@@ -3,13 +3,13 @@ name: humanizer
 description: "Use when prose needs humanization or mode routing."
 license: MIT
 metadata:
-  version: "3.4.0"
+  version: "3.6.3"
   author: "Siqi Chen; extended by Hermes Agent"
   short-description: "Route and humanize prose without flattening voice"
   hermes:
     tags: [writing, editing, humanize, anti-ai-slop, voice, prose, text]
     homepage: https://github.com/blader/humanizer
-    related_skills: [constrained-humanization-editing, anti-machine-writing-editorial-pass, iterative-ai-detector-humanization, research-paper-authoring]
+    related_skills: [constrained-humanization-editing, anti-machine-writing-editorial-pass, iterative-ai-detector-humanization, research-paper-authoring, writing-craft-library, reference-style-rewriting, gonzo-reference-rewrite-pass]
 ---
 
 # Humanizer: master routing skill
@@ -115,11 +115,20 @@ Look for:
 
 Match these patterns without copying phrases or importing ideas. Voice is selection and rhythm, not costume.
 
+For essays, criticism, interviews, or creative nonfiction that would benefit from
+positive examples, load `writing-craft-library` and at most two relevant cards.
+Use them to address a specific problem, including deciding to leave a passage
+alone. Keep the user's voice and the strictest preservation contract primary.
+Deliberate repetition and sustained long sentences can be effective; no count or
+punctuation pattern justifies an edit without a problem in context.
+
 ## Genre-specific guidance
 
 ### Research and academic writing
 
 Load `references/academic-writing-audit.md`. Preserve defined terminology and meaningful repetition; never spin technical synonyms to make prose appear human. Retain uncertainty, study boundaries, statistical qualifications, and AI-use disclosures. Flag unsupported claims or suspect references separately instead of polishing them into authority. For new manuscript development or evidence repair, use `research-paper-authoring`; a copyedit alone does not certify the research.
+
+When a comparison reverses across conditions, [say which approach did better where](references/academic-writing-audit.md#results-that-reverse-across-conditions) and give the source values that support each comparison.
 
 ### Docs and technical writing
 
@@ -140,6 +149,9 @@ Humanize for clarity, not personality.
 
 ### Essays, newsletters, criticism
 
+- When an edit permits reflow, read a short follow-up in the same paragraph as its setup, with both sentences intact. If it finishes the thought, narrows a claim, or lets a joke land in the writer's voice, keep them together. Alonso prefers this in his essays when repeated breaks give every line the same emphasis. Keep a break that changes speaker, scene, or direction, or buys a deliberate pause. Honor requests for fixed formatting.
+- Before cutting a repeated word across a break, check what it refers to on each side. A critic may carry a word from a scene into a judgment of the performance. Before cutting a qualification, check who knows what at that point. A later interview or observation may have changed the writer's mind.
+- For examples of these decisions and their limits, see [Paragraphs, transitions and endings](references/paragraphs-transitions-endings.md).
 - Preserve alive paragraphs and use them as the tonal anchor.
 - Let time move sideways when the form allows it.
 - Replace abstract escalation with one concrete image, room, institution, behavior, quote, or contradiction when already available.
@@ -154,6 +166,8 @@ Use `references/creative-writing-audit.md` for the detailed Scammell pass. Short
 - Fix word-batting dialogue where characters trade labels without pressure or stakes.
 - Replace adjective-fragment portraits and noun-pile settings with details that reveal selection.
 - Preserve the marks of the writer wrestling with the material. Perfect structure without residue feels dead.
+
+During the final read, use the [story-fact check](references/creative-writing-audit.md#story-fact-check) on revised dialogue, narration, and action.
 
 ## Detector-aware work
 
@@ -175,6 +189,12 @@ Only enter a detector loop when the user explicitly supplies a detector result o
 Do not use tokenizer attacks, Unicode tricks, typo spam, synonym spinning, translation-roundtrip laundering, filler, fragment spam, random italics, or invented details. Pangram 4 explicitly trains a humanizer head on common evasion transformations, and these moves damage the work regardless of whether a weaker detector reacts to them.
 
 ## Output rules
+
+For Alonso's English prose, use straight double quotes (`"`) and straight single
+quotes and apostrophes (`'`). On the final pass, convert `“` and `”` to `"`, and
+`‘` and `’` to `'`, throughout editable prose, including dialogue, contractions,
+and possessives. Preserve verbatim source quotations and technical literals
+exactly. Follow any explicit request for different typography.
 
 Default:
 - Return the revised text only when the user asks for a practical humanization.

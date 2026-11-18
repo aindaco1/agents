@@ -31,3 +31,9 @@ Before finalizing a creative humanization pass, ask:
 ### Editing rule
 
 For constrained edits, do not invent new scenes, facts, metaphors, or autobiographical detail to solve these problems. If the draft lacks the material needed for real voice, mark the gap or ask for source material. For authorial rewrites, add specificity, friction, side beats, and sentence-level choices only when the user has allowed that scope.
+
+### Story-fact check
+
+Compare a creative edit with its source before delivery. For any rewritten line that makes a factual claim, check what the source establishes about who acted, who knew what, how certain they were, and when it happened. If the edit gives a character a new commitment, source of information, action, or history, restore the original meaning with the smallest change the line permits. Keep the editor's wording wherever both versions tell the same story. Leave changes in rhythm, emphasis, and phrasing alone unless they alter what happened. When the brief expressly allows changes to events or backstory, honor that scope.
+
+This adapts STE80's check for changes in facts and certainty to scenes. [STE80 fidelity rules](https://github.com/Dodaios/ste80-humanizer/blob/ace4484da2d81dda97861e004c37c0a2e93896d1/SKILL.md#fidelity-rules)

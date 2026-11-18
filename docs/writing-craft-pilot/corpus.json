@@ -1,0 +1,330 @@
+{
+  "schema": 1,
+  "frozen_on": "2026-11-18",
+  "sources": [
+    {
+      "id": 19416,
+      "author": "Stephanie Zacharek",
+      "title": "\u201cGosford Park\u201d",
+      "pub_date": "2001-12-26",
+      "wayback_ts": "20111024160638",
+      "wayback_url": "https://web.archive.org/web/20111024160638/https://www.salon.com/2001/12/26/gosford_park/",
+      "split": "development"
+    },
+    {
+      "id": 19420,
+      "author": "Stephanie Zacharek",
+      "title": "\"Kate & Leopold\"",
+      "pub_date": "2001-12-25",
+      "wayback_ts": "20191015062158",
+      "wayback_url": "https://web.archive.org/web/20191015062158/https://www.salon.com/2001/12/25/kate_leopold/",
+      "split": "development"
+    },
+    {
+      "id": 19470,
+      "author": "Stephanie Zacharek",
+      "title": "\u201cUncle Tungsten\u201d by Oliver Sacks",
+      "pub_date": "2001-12-18",
+      "wayback_ts": "20160627081945",
+      "wayback_url": "https://web.archive.org/web/20160627081945/https://www.salon.com/2001/12/18/sacks/",
+      "split": "development"
+    },
+    {
+      "id": 19487,
+      "author": "Stephanie Zacharek",
+      "title": "\u201cThe Royal Tenenbaums\u201d",
+      "pub_date": "2001-12-14",
+      "wayback_ts": "20120207053346",
+      "wayback_url": "https://web.archive.org/web/20120207053346/https://www.salon.com/2001/12/14/tenenbaums/",
+      "split": "development"
+    },
+    {
+      "id": 37609,
+      "author": "Laura Miller",
+      "title": "The Jesus symbol, the witch and the wardrobe",
+      "pub_date": "2005-12-07",
+      "wayback_ts": "20130105101516",
+      "wayback_url": "https://web.archive.org/web/20130105101516/https://www.salon.com/2005/12/07/narnia_3/",
+      "split": "development"
+    },
+    {
+      "id": 36797,
+      "author": "Laura Miller",
+      "title": "The banality of evil",
+      "pub_date": "2005-11-23",
+      "wayback_ts": "20130106064359",
+      "wayback_url": "https://web.archive.org/web/20130106064359/https://www.salon.com/2005/11/23/rendell_4/",
+      "split": "development"
+    },
+    {
+      "id": 36904,
+      "author": "Laura Miller",
+      "title": "Why myths still matter",
+      "pub_date": "2005-11-16",
+      "wayback_ts": "20130105101511",
+      "wayback_url": "https://web.archive.org/web/20130105101511/https://www.salon.com/2005/11/16/myths_4/",
+      "split": "development"
+    },
+    {
+      "id": 37124,
+      "author": "Laura Miller",
+      "title": "Interview with \u2026 Jesus?",
+      "pub_date": "2005-11-03",
+      "wayback_ts": "20120508124040",
+      "wayback_url": "https://web.archive.org/web/20120508124040/https://www.salon.com/2005/11/03/rice_22/",
+      "split": "development"
+    },
+    {
+      "id": 37357,
+      "author": "Heather Havrilesky",
+      "title": "I Like to Watch",
+      "pub_date": "2005-12-18",
+      "wayback_ts": "20191114155319",
+      "wayback_url": "https://web.archive.org/web/20191114155319/https://www.salon.com/2005/12/18/i_like_95/",
+      "split": "development"
+    },
+    {
+      "id": 37613,
+      "author": "Heather Havrilesky",
+      "title": "Cut from a different cloth",
+      "pub_date": "2005-12-07",
+      "wayback_ts": "20111105220607",
+      "wayback_url": "https://web.archive.org/web/20111105220607/https://www.salon.com/2005/12/07/mccarroll/",
+      "split": "development"
+    },
+    {
+      "id": 37675,
+      "author": "Heather Havrilesky",
+      "title": "I Like to Watch",
+      "pub_date": "2005-12-04",
+      "wayback_ts": "20191120125313",
+      "wayback_url": "https://web.archive.org/web/20191120125313/https://www.salon.com/2005/12/04/i_like_93/",
+      "split": "development"
+    },
+    {
+      "id": 36820,
+      "author": "Heather Havrilesky",
+      "title": "Bad santas",
+      "pub_date": "2005-11-22",
+      "wayback_ts": "20190921094515",
+      "wayback_url": "https://web.archive.org/web/20190921094515/https://www.salon.com/2005/11/22/cusack_ramis/",
+      "split": "development"
+    },
+    {
+      "id": 89705,
+      "author": "Mary Elizabeth Williams",
+      "title": "The post-surgery secret your doctors won\u2019t share",
+      "pub_date": "2011-12-29",
+      "wayback_ts": "20111230082610",
+      "wayback_url": "https://web.archive.org/web/20111230082610/https://www.salon.com/2011/12/29/the_post_surgery_secret_your_doctors_wont_share/",
+      "split": "development"
+    },
+    {
+      "id": 90169,
+      "author": "Mary Elizabeth Williams",
+      "title": "Why I still believe in Santa",
+      "pub_date": "2011-12-20",
+      "wayback_ts": "20111221010646",
+      "wayback_url": "https://web.archive.org/web/20111221010646/https://www.salon.com/2011/12/20/why_i_still_believe_in_santa/",
+      "split": "development"
+    },
+    {
+      "id": 90239,
+      "author": "Mary Elizabeth Williams",
+      "title": "Why did the Duggars photograph a stillborn baby?",
+      "pub_date": "2011-12-16",
+      "wayback_ts": "20111217004540",
+      "wayback_url": "https://web.archive.org/web/20111217004540/https://www.salon.com/2011/12/16/why_did_the_duggars_photograph_a_stillborn_baby/",
+      "split": "development"
+    },
+    {
+      "id": 89578,
+      "author": "Mary Elizabeth Williams",
+      "title": "The year in viral videos",
+      "pub_date": "2011-12-30",
+      "wayback_ts": "20111231025026",
+      "wayback_url": "https://web.archive.org/web/20111231025026/https://www.salon.com/2011/12/30/the_year_in_viral_videos/",
+      "split": "development"
+    },
+    {
+      "id": 37337,
+      "author": "Andrew Leonard",
+      "title": "China and Elvis -- at home in the Memphis airport",
+      "pub_date": "2005-12-19",
+      "wayback_ts": "20191117002246",
+      "wayback_url": "https://web.archive.org/web/20191117002246/https://www.salon.com/2005/12/19/memphis_4/",
+      "split": "development"
+    },
+    {
+      "id": 37391,
+      "author": "Andrew Leonard",
+      "title": "Peru's bio-piracy gestapo terrorizes the West",
+      "pub_date": "2005-12-16",
+      "wayback_ts": "20191122003104",
+      "wayback_url": "https://web.archive.org/web/20191122003104/https://www.salon.com/2005/12/16/camu_camu/",
+      "split": "development"
+    },
+    {
+      "id": 37366,
+      "author": "Andrew Leonard",
+      "title": "Pond scum to the rescue",
+      "pub_date": "2005-12-16",
+      "wayback_ts": "20121117143137",
+      "wayback_url": "https://web.archive.org/web/20121117143137/https://www.salon.com/2005/12/16/algae_2/",
+      "split": "development"
+    },
+    {
+      "id": 37419,
+      "author": "Andrew Leonard",
+      "title": "Lessons from George Orwell on how to talk about offshoring",
+      "pub_date": "2005-12-14",
+      "wayback_ts": "20191115223709",
+      "wayback_url": "https://web.archive.org/web/20191115223709/https://www.salon.com/2005/12/14/mankiw_2/",
+      "split": "development"
+    },
+    {
+      "id": 37265,
+      "author": "Cary Tennis",
+      "title": "My mother sends me useless junk for Christmas",
+      "pub_date": "2005-12-22",
+      "wayback_ts": "20191117173857",
+      "wayback_url": "https://web.archive.org/web/20191117173857/https://www.salon.com/2005/12/22/mother_gifts/",
+      "split": "development"
+    },
+    {
+      "id": 37294,
+      "author": "Cary Tennis",
+      "title": "My husband\u2019s dog is incontinent and I can\u2019t stand it",
+      "pub_date": "2005-12-21",
+      "wayback_ts": "20150113234416",
+      "wayback_url": "https://web.archive.org/web/20150113234416/https://www.salon.com/2005/12/21/incontinent_dog/",
+      "split": "development"
+    },
+    {
+      "id": 37333,
+      "author": "Cary Tennis",
+      "title": "How do I tell my new boss I'm pregnant?",
+      "pub_date": "2005-12-20",
+      "wayback_ts": "20191116231859",
+      "wayback_url": "https://web.archive.org/web/20191116231859/https://www.salon.com/2005/12/20/pregnant_2/",
+      "split": "development"
+    },
+    {
+      "id": 37415,
+      "author": "Cary Tennis",
+      "title": "How can I improve relations between the sexes?",
+      "pub_date": "2005-12-15",
+      "wayback_ts": "20191116234234",
+      "wayback_url": "https://web.archive.org/web/20191116234234/https://www.salon.com/2005/12/15/the_sexes/",
+      "split": "development"
+    },
+    {
+      "id": 19412,
+      "author": "Charles Taylor",
+      "title": "\"Charlotte Gray\"",
+      "pub_date": "2001-12-28",
+      "wayback_ts": "20191021045211",
+      "wayback_url": "https://web.archive.org/web/20191021045211/https://www.salon.com/2001/12/28/charlotte_gray/",
+      "split": "heldout"
+    },
+    {
+      "id": 19419,
+      "author": "Charles Taylor",
+      "title": "\"The Shipping News\"",
+      "pub_date": "2001-12-25",
+      "wayback_ts": "20191022124640",
+      "wayback_url": "https://web.archive.org/web/20191022124640/https://www.salon.com/2001/12/25/shipping_news/",
+      "split": "heldout"
+    },
+    {
+      "id": 19418,
+      "author": "Charles Taylor",
+      "title": "\"Ali\"",
+      "pub_date": "2001-12-25",
+      "wayback_ts": "20191013202657",
+      "wayback_url": "https://web.archive.org/web/20191013202657/https://www.salon.com/2001/12/25/ali_3/",
+      "split": "heldout"
+    },
+    {
+      "id": 19484,
+      "author": "Charles Taylor",
+      "title": "Trauma culture",
+      "pub_date": "2001-12-15",
+      "wayback_ts": "20191019221347",
+      "wayback_url": "https://web.archive.org/web/20191019221347/https://www.salon.com/2001/12/15/linenthal/",
+      "split": "heldout"
+    },
+    {
+      "id": 19423,
+      "author": "Andrew O'Hehir",
+      "title": "\u201cLantana\u201d",
+      "pub_date": "2001-12-21",
+      "wayback_ts": "20111123145127",
+      "wayback_url": "https://web.archive.org/web/20111123145127/https://www.salon.com/2001/12/21/lantana/",
+      "split": "heldout"
+    },
+    {
+      "id": 19499,
+      "author": "Andrew O'Hehir",
+      "title": "\"Kandahar\"",
+      "pub_date": "2001-12-14",
+      "wayback_ts": "20191016215118",
+      "wayback_url": "https://web.archive.org/web/20191016215118/https://www.salon.com/2001/12/14/kandahar/",
+      "split": "heldout"
+    },
+    {
+      "id": 19587,
+      "author": "Andrew O'Hehir",
+      "title": "The fellowship of the ravenous movie press",
+      "pub_date": "2001-12-06",
+      "wayback_ts": "20120125231810",
+      "wayback_url": "https://web.archive.org/web/20120125231810/https://www.salon.com/2001/12/06/lotr_junket/",
+      "split": "heldout"
+    },
+    {
+      "id": 19926,
+      "author": "Andrew O'Hehir",
+      "title": "Pop goes the art film",
+      "pub_date": "2001-12-31",
+      "wayback_ts": "20191022032157",
+      "wayback_url": "https://web.archive.org/web/20191022032157/https://www.salon.com/2001/12/31/andrew_top_ten_2/",
+      "split": "heldout"
+    },
+    {
+      "id": 182369,
+      "author": "Anne Lamott",
+      "title": "The thorn in my side: I tried to let go of my poisonous grudge against another writer",
+      "pub_date": "2017-04-02",
+      "wayback_ts": "20170403020236",
+      "wayback_url": "https://web.archive.org/web/20170403020236/https://www.salon.com/2017/04/02/the-thorn-in-my-side-i-tried-to-let-go-of-my-poisonous-grudge-against-another-writer/",
+      "split": "heldout"
+    },
+    {
+      "id": 147083,
+      "author": "Anne Lamott",
+      "title": "A slow walk into the amazing now",
+      "pub_date": "2014-11-11",
+      "wayback_ts": "20141113110258",
+      "wayback_url": "https://web.archive.org/web/20141113110258/https://www.salon.com/2014/11/12/a_slow_walk_into_the_amazing_now/",
+      "split": "heldout"
+    },
+    {
+      "id": 129890,
+      "author": "Anne Lamott",
+      "title": "Me, the overly sensitive child",
+      "pub_date": "2013-10-28",
+      "wayback_ts": "20131029013607",
+      "wayback_url": "https://web.archive.org/web/20131029013607/https://www.salon.com/2013/10/28/me_the_overly_sensitive_child/",
+      "split": "heldout"
+    },
+    {
+      "id": 72578,
+      "author": "Anne Lamott",
+      "title": "Why I hate Mother\u2019s Day",
+      "pub_date": "2010-05-08",
+      "wayback_ts": "20111029133758",
+      "wayback_url": "https://web.archive.org/web/20111029133758/https://www.salon.com/2010/05/08/hate_mothers_day_anne_lamott/",
+      "split": "heldout"
+    }
+  ]
+}
