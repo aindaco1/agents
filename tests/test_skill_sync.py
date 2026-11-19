@@ -39,6 +39,7 @@ def test_repo_portable_skills_are_cross_compatible():
         "development-task",
         "review-development-lessons",
         "improve-agent-instructions",
+        "interface-interaction-review",
         "narrow-react-prop-types",
         "show-me",
         "visual-pr",
@@ -73,6 +74,8 @@ def test_portable_skill_profile_links_match_aggregate_roster():
     expected_links = {
         "core-development-generalist": ["development-task", "visual-pr", "show-me"],
         "senior-code-reviewer": ["development-task", "visual-pr"],
+        "ui-designer": ["interface-interaction-review"],
+        "ui-ux-engineer": ["interface-interaction-review"],
         "academic-writer": ["research-paper-authoring", "humanizer"],
         "academic-researcher": ["research-paper-authoring", "humanizer"],
         "vector-reconstruction-designer": ["vector-artwork-reconstruction", "rough-sketch-vectorization"],

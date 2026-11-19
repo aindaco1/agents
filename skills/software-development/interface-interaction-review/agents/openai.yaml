@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interface Interaction Review"
+  short_description: "Compare control behaviors and specify a replayable check"
+  default_prompt: "Use $interface-interaction-review to compare ways this control could behave and give me a concrete acceptance check for the recommended choice."

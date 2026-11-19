@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "description": "Hermes Agent talent pool",
-  "generated": "2026-11-17",
+  "generated": "2026-11-19",
   "total_agents": 248,
   "gender_distribution": {
     "he_him": 102,
@@ -18966,6 +18966,9 @@
         "Responsive design strategy: not just \"make it smaller\" but rethinking information hierarchy per breakpoint",
         "CSS and HTML implementation: can turn her own designs into production-quality markup"
       ],
+      "hermes_skills": [
+        "interface-interaction-review"
+      ],
       "default_temperature": 0.35,
       "model_behavior_hints": {
         "reasoning_effort": "medium",
@@ -30957,6 +30960,9 @@
         "Information architecture within interfaces: content organization, navigation patterns, progressive disclosure",
         "Form design: input types, validation patterns, error messaging, multi-step flows",
         "Dark mode and theming: designing component systems that adapt to multiple themes"
+      ],
+      "hermes_skills": [
+        "interface-interaction-review"
       ],
       "default_temperature": 0.2,
       "model_behavior_hints": {

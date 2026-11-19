@@ -127,6 +127,15 @@ Codex receives flat packages under `~/.agents/skills/<name>/`. Hermes receives c
 
 Add a portable skill name to a profile's `hermes_skills` list when Hermes should prefer that procedure for the profile. Codex discovers the same package directly after synchronization. Do not copy runtime skill edits back blindly: compare them to the canonical package and import only intentional improvements.
 
+### Interface interaction review
+
+Yuki Tanabe (UI Designer) and Mansur Lozano (UI/UX Engineer) use the
+[shared procedure](skills/software-development/interface-interaction-review/SKILL.md)
+to compare control behaviors and hand off a decision with an observable check.
+Invoke `$interface-interaction-review` in Codex or `/interface-interaction-review`
+in Hermes. The [worked example](skills/software-development/interface-interaction-review/references/composer.md)
+follows three interaction decisions in Pablo Stanley's *The life of a composer*.
+
 ### Film subtitle editing
 
 Use `$film-subtitle-editing` in Codex or `/film-subtitle-editing` in Hermes for dialogue cleanup, translation, audio checks, and synchronization to a particular cut. The [shared procedure](skills/creative/film-subtitle-editing/SKILL.md) complements the localization specialist and audio/video engineer. Its SRT checker can compare a translation against locked source timings and speaker markers.

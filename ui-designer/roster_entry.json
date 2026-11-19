@@ -111,6 +111,9 @@
     "Form design: input types, validation patterns, error messaging, multi-step flows",
     "Dark mode and theming: designing component systems that adapt to multiple themes"
   ],
+  "hermes_skills": [
+    "interface-interaction-review"
+  ],
   "default_temperature": 0.2,
   "model_behavior_hints": {
     "reasoning_effort": "low",

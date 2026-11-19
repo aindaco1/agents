@@ -106,6 +106,9 @@
     "Responsive design strategy: not just \"make it smaller\" but rethinking information hierarchy per breakpoint",
     "CSS and HTML implementation: can turn her own designs into production-quality markup"
   ],
+  "hermes_skills": [
+    "interface-interaction-review"
+  ],
   "default_temperature": 0.35,
   "model_behavior_hints": {
     "reasoning_effort": "medium",
