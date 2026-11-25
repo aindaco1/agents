@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dust Wave Equipment Intake"
+  short_description: "Add photographed gear to the Notion equipment database"
+  default_prompt: "Use $dustwave-equipment-intake to add this equipment to Dust Wave's existing Notion Equipment database with faithful equipment photos, supported details, and Dust Wave set in the Location property."

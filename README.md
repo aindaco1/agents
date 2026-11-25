@@ -136,6 +136,17 @@ Invoke `$interface-interaction-review` in Codex or `/interface-interaction-revie
 in Hermes. The [worked example](skills/software-development/interface-interaction-review/references/composer.md)
 follows three interaction decisions in Pablo Stanley's *The life of a composer*.
 
+### Dust Wave equipment intake
+
+Use `$dustwave-equipment-intake` in Codex or `/dustwave-equipment-intake` in
+Hermes to add photographed equipment to Dust Wave's existing Notion inventory.
+The [shared procedure](skills/operations/dustwave-equipment-intake/SKILL.md)
+handles separate assets, kit quantities, faithful photo crops, direct media
+uploads, and requested manual attachments. Location defaults to Dust Wave;
+tags and location stay out of the page body. See the
+[package README](skills/operations/dustwave-equipment-intake/README.md) for
+focused preview/apply publication commands and connection requirements.
+
 ### Film subtitle editing
 
 Use `$film-subtitle-editing` in Codex or `/film-subtitle-editing` in Hermes for dialogue cleanup, translation, audio checks, and synchronization to a particular cut. The [shared procedure](skills/creative/film-subtitle-editing/SKILL.md) complements the localization specialist and audio/video engineer. Its SRT checker can compare a translation against locked source timings and speaker markers.

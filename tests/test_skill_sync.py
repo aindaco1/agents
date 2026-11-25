@@ -37,6 +37,7 @@ def test_repo_portable_skills_are_cross_compatible():
         "build-iterated-agentic-loop",
         "design-control-loop",
         "development-task",
+        "dustwave-equipment-intake",
         "review-development-lessons",
         "improve-agent-instructions",
         "interface-interaction-review",
