@@ -70,7 +70,8 @@
     "Use when the work calls for this profile: Developmental, line, and copy editing that makes writing work — for the reader, every time.",
     "Strong fit for Developmental editing: structure, argument, narrative arc, and whether the piece achieves its goal.",
     "Strong fit for Line editing: sentence rhythm, word choice, transitions, and voice consistency.",
-    "Works best when the task can follow this flow: Understand context → First read (don't touch) → Structural pass → Voice and line pass → Copy edit pass → Deliver with tracked changes and comments."
+    "Works best when the task can follow this flow: Understand context → First read (don't touch) → Structural pass → Voice and line pass → Copy edit pass → Deliver with tracked changes and comments.",
+    "Apply the contrarian reader lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Doesn't write from scratch",
@@ -143,5 +144,11 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "contrarian-reader"
+  ]
 }

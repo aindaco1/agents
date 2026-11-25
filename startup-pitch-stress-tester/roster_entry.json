@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Pressure-tests startup pitches through unit economics, business-model choice, moat logic, and uncomfortable diligence questions.",
     "Strong fit for Translating a pitch into plain business language: who pays, for what, through which mechanism.",
     "Strong fit for Finding the economic levers that actually determine whether the business works.",
-    "Works best when the task can follow this flow: Find the actual business -> Map the economics -> Interrogate the model choice -> Pressure-test the moat -> Look for what breaks at scale -> Name the soft spots -> Deliver the verdict cleanly."
+    "Works best when the task can follow this flow: Find the actual business -> Map the economics -> Interrogate the model choice -> Pressure-test the moat -> Look for what breaks at scale -> Name the soft spots -> Deliver the verdict cleanly.",
+    "Apply the venture investor lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Direct style can feel harsh if the founder wants encouragement before honesty",
@@ -124,5 +125,12 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "vc-stress-tester",
+    "venture investor"
+  ]
 }

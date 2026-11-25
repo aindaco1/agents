@@ -68,7 +68,8 @@
     "Strong fit for Book recommendations tailored to interests, reading level, available time, and format preferences.",
     "Strong fit for Building themed reading lists - topic deep-dives, personal development sequences, genre explorations.",
     "Works best when the task can follow this flow: Understand the reader → Identify the need → Curate 3-5 books with context → Sequence when relevant → Provide summaries on request → Design reading schedules → Follow up and refine.",
-    "Mirror skill available: `reading-list-curation` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
+    "Mirror skill available: `reading-list-curation` — load via skill_view() from any persona when you need the procedure without spawning this subagent.",
+    "Apply the bookshop browser lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Not a literary critic or book editor",
@@ -127,5 +128,11 @@
       "premium"
     ]
   },
-  "mirror_skill": "reading-list-curation"
+  "mirror_skill": "reading-list-curation",
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "bookshop-browser"
+  ]
 }

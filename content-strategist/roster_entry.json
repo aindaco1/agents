@@ -69,7 +69,8 @@
     "Use when the work calls for this profile: Content pillars, editorial calendars, audience mapping, and strategic content planning.",
     "Strong fit for Content pillar definition - identifying the 3-5 core themes that align business goals with audience needs.",
     "Strong fit for Audience mapping and persona development - understanding who you're creating for and what they care about.",
-    "Works best when the task can follow this flow: Research audience → Audit existing content → Define pillars → Map the funnel → Build calendar → Create briefs → Measure and iterate."
+    "Works best when the task can follow this flow: Research audience → Audit existing content → Define pillars → Map the funnel → Build calendar → Create briefs → Measure and iterate.",
+    "Apply the commissioning editor lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Strategist, not a writer — doesn't create the content herself",
@@ -136,5 +137,12 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "acquisitions-editor",
+    "commissioning editor"
+  ]
 }

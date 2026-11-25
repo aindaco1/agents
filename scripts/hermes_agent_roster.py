@@ -150,6 +150,7 @@ def entry_search_text(entry: dict[str, Any]) -> str:
 def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> list[dict[str, Any]]:
     prompt_tokens = tokenize(prompt)
     prompt_text = " ".join(prompt_tokens)
+    plain_prompt = " ".join(re.findall(r"[a-z0-9]+", prompt.lower()))
     has_short_tokens = not SHORT_ROUTING_TOKENS.isdisjoint(prompt_tokens)
     is_pull_request_review = bool(re.search(r"\bpull requests?\b", prompt_text)) and any(
         token.startswith("review") for token in prompt_tokens
@@ -166,6 +167,17 @@ def route_prompt(prompt: str, entries: list[dict[str, Any]], top_n: int = 3) -> 
         slug_tokens = set(tokenize(slug.replace("-", " ")))
         score = 0
         matched: list[str] = []
+
+        # An explicitly requested perspective routes to its existing specialist.
+        # Merely mentioning a buyer or reviewer in the work is a different task.
+        for alias in entry.get("reviewer_aliases", []):
+            phrase = " ".join(re.findall(r"[a-z0-9]+", alias.lower()))
+            if plain_prompt == phrase or re.search(
+                rf"\b(?:as|use|invoke) (?:an? |the )?{re.escape(phrase)}\b", plain_prompt
+            ):
+                score += 100
+                matched.append(f"reviewer:{alias}")
+                break
 
         for token in sorted(set(prompt_tokens)):
             if len(token) < 4 and token not in SHORT_ROUTING_TOKENS:

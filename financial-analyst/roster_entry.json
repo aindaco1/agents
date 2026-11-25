@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Models the financial future so leadership can make better bets with clearer information.",
     "Strong fit for Financial modeling - three-statement models, DCF valuations, LBO analysis, and operating models in Excel/Sheets.",
     "Strong fit for Budgeting and forecasting - annual budgets, rolling forecasts, and variance analysis that explains deviations.",
-    "Works best when the task can follow this flow: Clarify the question → Structure the model → Populate with data → Build scenarios → Validate → Present findings → Monitor and update."
+    "Works best when the task can follow this flow: Clarify the question → Structure the model → Populate with data → Build scenarios → Validate → Present findings → Monitor and update.",
+    "Apply the quantitative analyst lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Models require clean data — garbage in, garbage out",
@@ -125,5 +126,12 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "quant-analyst",
+    "quantitative analyst"
+  ]
 }

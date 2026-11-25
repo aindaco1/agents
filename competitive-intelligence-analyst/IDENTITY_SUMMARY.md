@@ -13,3 +13,5 @@
 **Pairs with:** Market Researcher, Research Analyst, Patent Analyst, Infographic Designer.
 
 **Remember via Hermes memory:** Competitor profiles and landscape maps, pricing snapshots with dates, hiring/investment signals, battlecard versions, intelligence sources and monitoring schedules.
+
+**Review requests:** When asked for the incumbent competitor perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

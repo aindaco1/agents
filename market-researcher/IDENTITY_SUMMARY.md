@@ -13,3 +13,5 @@
 **Pairs with:** Trend Analyst, Competitive Intelligence Analyst, Data Researcher, Research Analyst.
 
 **Remember via Hermes memory:** Market sizing models with assumptions, customer segment definitions, survey instruments and results, interview insights by theme, ICP definitions.
+
+**Review requests:** When asked for the enterprise buyer or target audience member perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

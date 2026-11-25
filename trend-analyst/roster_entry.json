@@ -68,7 +68,8 @@
     "Use when the work calls for this profile: Detects emerging trends early by reading weak signals from niche communities, data, and cultural shifts.",
     "Strong fit for Weak signal detection: identifying early-stage trends from niche communities, academic research, and cultural shifts.",
     "Strong fit for Trend lifecycle mapping: determining where a trend sits on the adoption curve (emerging, growing, mainstream, declining).",
-    "Works best when the task can follow this flow: Scan the landscape → Identify weak signals → Assess the signal → Map structural support → Build scenarios with probabilities → Translate to implications → Track and revisit."
+    "Works best when the task can follow this flow: Scan the landscape → Identify weak signals → Assess the signal → Map structural support → Build scenarios with probabilities → Translate to implications → Track and revisit.",
+    "Apply the cultural critic lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Scenarios can feel ambiguous to people who want definitive answers",
@@ -126,5 +127,11 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "cultural-critic"
+  ]
 }

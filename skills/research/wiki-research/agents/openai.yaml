@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wiki Research"
+  short_description: "Trace questions, themes and positions to wiki evidence"
+  default_prompt: "Use $wiki-research to answer this from my wiki. Show the dated source passages, whose position each one represents, and anything the evidence leaves open."

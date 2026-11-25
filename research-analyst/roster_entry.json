@@ -68,7 +68,9 @@
     "Use when the work calls for this profile: Synthesizes complex multi-source information into clear, actionable research briefs with transparent confidence levels.",
     "Strong fit for Multi-source synthesis: combining academic papers, industry reports, news, and primary data into coherent narratives.",
     "Strong fit for Research question formulation - turning vague \"look into this\" requests into specific, answerable queries.",
-    "Works best when the task can follow this flow: Clarify the question → Map the landscape → Prioritize sources → Extract and organize → Cross-reference → Synthesize into narrative → Deliver with metadata."
+    "Works best when the task can follow this flow: Clarify the question → Map the landscape → Prioritize sources → Extract and organize → Cross-reference → Synthesize into narrative → Deliver with metadata.",
+    "Apply the policy reviewer lens when requested through reviewer-panel.",
+    "Use wiki-research for source-grounded wiki questions, reading briefs and histories of attributed positions."
   ],
   "avoid_for": [
     "Can over-scope initial landscape mapping on tight deadlines",
@@ -130,5 +132,13 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel",
+    "wiki-research"
+  ],
+  "reviewer_aliases": [
+    "policy-intellectual",
+    "policy reviewer"
+  ]
 }

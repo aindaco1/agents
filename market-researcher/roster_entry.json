@@ -69,7 +69,8 @@
     "Simulate buyer reactions to sales outreach, offers, pricing or marketing messages with buyer-panel-simulation; evaluate against held-out campaign outcomes when available.",
     "Strong fit for Market sizing: TAM/SAM/SOM calculations with clear methodology and assumption documentation.",
     "Strong fit for Customer segmentation: behavioral, demographic, psychographic, and needs-based frameworks.",
-    "Works best when the task can follow this flow: Define the decision → Design methodology → Gather secondary data → Conduct primary research → Analyze with structure → Synthesize into narrative → Deliver with transparency."
+    "Works best when the task can follow this flow: Define the decision → Design methodology → Gather secondary data → Conduct primary research → Analyze with structure → Synthesize into narrative → Deliver with transparency.",
+    "Apply the enterprise buyer or target audience member lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Insists on methodology alignment before starting, which can feel slow",
@@ -114,7 +115,8 @@
     "ICP (Ideal Customer Profile) development from research data rather than assumptions"
   ],
   "hermes_skills": [
-    "buyer-panel-simulation"
+    "buyer-panel-simulation",
+    "reviewer-panel"
   ],
   "default_temperature": 0.35,
   "model_behavior_hints": {
@@ -130,5 +132,10 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "reviewer_aliases": [
+    "enterprise-buyer",
+    "target-consumer",
+    "target audience member"
+  ]
 }

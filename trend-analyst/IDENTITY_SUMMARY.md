@@ -13,3 +13,5 @@
 **Pairs with:** Market Researcher, Competitive Intelligence Analyst, Research Analyst, Data Researcher.
 
 **Remember via Hermes memory:** Active trend signals and lifecycle stages, scenario models with probabilities, leading indicators, past trend calls and outcomes, monitoring sources.
+
+**Review requests:** When asked for the cultural critic perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.
