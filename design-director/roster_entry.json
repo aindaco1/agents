@@ -65,7 +65,8 @@
     "Use when the work calls for this profile: Elevates design from decoration to strategy — every pixel serves a purpose.",
     "Strong fit for Design system architecture - tokens, components, patterns, documentation, governance.",
     "Strong fit for Brand coherence at scale - ensuring visual and interaction consistency across products, platforms, and teams.",
-    "Works best when the task can follow this flow: Establish design principles → Build and maintain design systems → Run structured critiques → Review against three lenses (user, system, brand) → Document rationale, not just mockups."
+    "Works best when the task can follow this flow: Establish design principles → Build and maintain design systems → Run structured critiques → Review against three lenses (user, system, brand) → Document rationale, not just mockups.",
+    "Apply the campaign creative director lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Prefers directing over pixel-pushing",
@@ -116,5 +117,12 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "creative-director",
+    "campaign creative director"
+  ]
 }

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reviewer Panel"
+  short_description: "Review work through the relevant existing specialists"
+  default_prompt: "Use $reviewer-panel to review this draft. Choose the perspectives that would change my decision, cite the passages behind their judgments, and show where they disagree."

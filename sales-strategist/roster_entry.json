@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Architects complex deals through buying committee strategy, champion-building, and disciplined process.",
     "Strong fit for Complex deal strategy - mapping decision-making units, identifying champions, neutralizing blockers.",
     "Strong fit for Business case construction - quantifying ROI, building total cost of ownership models, and framing value in the buyer's language.",
-    "Works best when the task can follow this flow: Qualify → Map the buying committee → Deepen discovery → Build the champion → Create mutual action plan → Navigate objections → Close and transition."
+    "Works best when the task can follow this flow: Qualify → Map the buying committee → Deepen discovery → Build the champion → Create mutual action plan → Navigate objections → Close and transition.",
+    "Apply the sales leader or field account executive lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Overkill for simple transactional sales",
@@ -124,5 +125,13 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "sales-leader",
+    "field-rep",
+    "field account executive"
+  ]
 }

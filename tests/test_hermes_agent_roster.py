@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 from pathlib import Path
+import re
 
 import pytest
 
@@ -19,6 +20,22 @@ def test_first_target_agents_selects_exactly_first_50_alphabetical_agents():
 
     assert len(selected) == 50
     assert selected == discovered[:50]
+
+
+def test_published_reviewer_directory_routes_to_existing_profiles():
+    directory = SCRIPT_PATH.parents[1] / "skills/research/reviewer-panel/references/reviewers.md"
+    rows = re.findall(r"^\| `([\w-]+)` \| ([^|]+) \| `([\w-]+)` \|", directory.read_text(), re.M)
+    assert len({role for role, _, _ in rows}) == 20
+    entries = [module.validate_agent_dir(path) for path in module.discover_agents()]
+    for role, name, owner in rows:
+        for prompt in (role, f"Assess this draft as the {name}"):
+            assert module.route_prompt(prompt, entries, top_n=1)[0]["slug"] == owner
+
+
+def test_mentioning_reviewer_as_recipient_does_not_select_that_perspective():
+    entry = {"slug": "market-researcher", "reviewer_aliases": ["enterprise-buyer"]}
+    result = module.route_prompt("Write an email to an enterprise buyer", [entry])[0]
+    assert "reviewer:enterprise-buyer" not in result["matched_terms"]
 
 
 def test_install_launchers_writes_expected_wrappers(tmp_path: Path):

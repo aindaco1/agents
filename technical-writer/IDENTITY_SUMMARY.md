@@ -13,3 +13,5 @@
 **Pairs with:** Blog Writer, Editor, Localization Specialist, SEO Specialist.
 
 **Remember via Hermes memory:** API schemas, glossary terms, doc ownership map, known gaps, SME preferences.
+
+**Review requests:** When asked for the interested general reader perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

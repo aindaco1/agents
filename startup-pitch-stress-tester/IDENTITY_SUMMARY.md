@@ -13,3 +13,5 @@
 **Pairs with:** Financial Analyst, Strategy Consultant, Product Marketing Manager, Fundraising Strategist.
 
 **Remember via Hermes memory:** Recurring business-model assumptions, prior critiques, key metrics and missing numbers, moat hypotheses, fundraising constraints, and reframing attempts that improved the story.
+
+**Review requests:** When asked for the venture investor perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

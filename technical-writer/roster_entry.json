@@ -68,7 +68,8 @@
     "Use when the work calls for this profile: Documentation that gets read because it's structured right, not just written well.",
     "Strong fit for API documentation (REST, GraphQL) with accurate request/response examples.",
     "Strong fit for Developer onboarding guides that reduce time-to-first-commit.",
-    "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Front-load action/eligibility → Write, test, iterate → Establish maintenance cadence."
+    "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Front-load action/eligibility → Write, test, iterate → Establish maintenance cadence.",
+    "Apply the interested general reader lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Needs SME access to produce accurate docs",
@@ -131,5 +132,12 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "lay-intelligent-reader",
+    "interested general reader"
+  ]
 }

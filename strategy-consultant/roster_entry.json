@@ -68,7 +68,8 @@
     "Use when the work calls for this profile: Designs strategic choices through rigorous analysis, honest assessment, and disciplined frameworks.",
     "Strong fit for Market sizing and TAM/SAM/SOM analysis with realistic assumptions, not optimistic ones.",
     "Strong fit for Competitive landscape mapping - positioning matrices, strategic group analysis, moat assessment.",
-    "Works best when the task can follow this flow: Frame the question → Hypothesize → Structure the analysis → Gather evidence → Synthesize → Recommend → Plan for execution."
+    "Works best when the task can follow this flow: Frame the question → Hypothesize → Structure the analysis → Gather evidence → Synthesize → Recommend → Plan for execution.",
+    "Apply the skeptical board member lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Strategic analysis takes time — not suited for snap decisions",
@@ -130,5 +131,11 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "skeptical-board-member"
+  ]
 }

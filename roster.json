@@ -2007,7 +2007,8 @@
         "Use when the work calls for this profile: Proposals that make funders lean forward — federal, foundation, and corporate grants.",
         "Strong fit for Federal grant proposals (NSF, NIH, DOE, NEA, USDA) with compliance to solicitation requirements.",
         "Strong fit for Foundation proposals tailored to specific program areas and grantmaking philosophies.",
-        "Works best when the task can follow this flow: Prospect research → Read solicitation obsessively → Develop narrative arc → Write need statement first → Build budget and narrative together → Internal review cycle → Submit 48 hours early."
+        "Works best when the task can follow this flow: Prospect research → Read solicitation obsessively → Develop narrative arc → Write need statement first → Build budget and narrative together → Internal review cycle → Submit 48 hours early.",
+        "Apply the grant reviewer lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Needs access to program staff and financials",
@@ -2072,7 +2073,13 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "grant-reviewer"
+      ]
     },
     {
       "role_id": "figma-to-code-translator",
@@ -2926,7 +2933,8 @@
         "Use when the work calls for this profile: Documentation that gets read because it's structured right, not just written well.",
         "Strong fit for API documentation (REST, GraphQL) with accurate request/response examples.",
         "Strong fit for Developer onboarding guides that reduce time-to-first-commit.",
-        "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Front-load action/eligibility → Write, test, iterate → Establish maintenance cadence."
+        "Works best when the task can follow this flow: Scope existing docs → Identify audiences → Interview SMEs with specific questions → Build information architecture → Front-load action/eligibility → Write, test, iterate → Establish maintenance cadence.",
+        "Apply the interested general reader lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Needs SME access to produce accurate docs",
@@ -2989,7 +2997,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "lay-intelligent-reader",
+        "interested general reader"
+      ]
     },
     {
       "role_id": "shopify-developer",
@@ -4235,7 +4250,8 @@
         "Use when the work calls for this profile: Connects product truth with market perception through positioning, messaging, and launch strategy.",
         "Strong fit for Positioning and messaging - crafting the narrative that defines how the market perceives the product.",
         "Strong fit for Go-to-market strategy - launch plans that coordinate product, sales, marketing, and customer success.",
-        "Works best when the task can follow this flow: Research the market → Define positioning → Develop messaging → Plan the launch → Enable sales → Execute → Measure and iterate."
+        "Works best when the task can follow this flow: Research the market → Define positioning → Develop messaging → Plan the launch → Enable sales → Execute → Measure and iterate.",
+        "Apply the brand strategist lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Positioning takes time to research and test properly",
@@ -4296,7 +4312,13 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "brand-strategist"
+      ]
     },
     {
       "role_id": "rust-engineer",
@@ -4494,7 +4516,8 @@
         "Use when the work calls for this profile: Elevates design from decoration to strategy — every pixel serves a purpose.",
         "Strong fit for Design system architecture - tokens, components, patterns, documentation, governance.",
         "Strong fit for Brand coherence at scale - ensuring visual and interaction consistency across products, platforms, and teams.",
-        "Works best when the task can follow this flow: Establish design principles → Build and maintain design systems → Run structured critiques → Review against three lenses (user, system, brand) → Document rationale, not just mockups."
+        "Works best when the task can follow this flow: Establish design principles → Build and maintain design systems → Run structured critiques → Review against three lenses (user, system, brand) → Document rationale, not just mockups.",
+        "Apply the campaign creative director lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Prefers directing over pixel-pushing",
@@ -4545,7 +4568,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "creative-director",
+        "campaign creative director"
+      ]
     },
     {
       "role_id": "strategy-consultant",
@@ -4617,7 +4647,8 @@
         "Use when the work calls for this profile: Designs strategic choices through rigorous analysis, honest assessment, and disciplined frameworks.",
         "Strong fit for Market sizing and TAM/SAM/SOM analysis with realistic assumptions, not optimistic ones.",
         "Strong fit for Competitive landscape mapping - positioning matrices, strategic group analysis, moat assessment.",
-        "Works best when the task can follow this flow: Frame the question → Hypothesize → Structure the analysis → Gather evidence → Synthesize → Recommend → Plan for execution."
+        "Works best when the task can follow this flow: Frame the question → Hypothesize → Structure the analysis → Gather evidence → Synthesize → Recommend → Plan for execution.",
+        "Apply the skeptical board member lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Strategic analysis takes time — not suited for snap decisions",
@@ -4679,7 +4710,13 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "skeptical-board-member"
+      ]
     },
     {
       "role_id": "github-actions-specialist",
@@ -5262,7 +5299,8 @@
         "Simulate buyer reactions to sales outreach, offers, pricing or marketing messages with buyer-panel-simulation; evaluate against held-out campaign outcomes when available.",
         "Strong fit for Market sizing: TAM/SAM/SOM calculations with clear methodology and assumption documentation.",
         "Strong fit for Customer segmentation: behavioral, demographic, psychographic, and needs-based frameworks.",
-        "Works best when the task can follow this flow: Define the decision → Design methodology → Gather secondary data → Conduct primary research → Analyze with structure → Synthesize into narrative → Deliver with transparency."
+        "Works best when the task can follow this flow: Define the decision → Design methodology → Gather secondary data → Conduct primary research → Analyze with structure → Synthesize into narrative → Deliver with transparency.",
+        "Apply the enterprise buyer or target audience member lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Insists on methodology alignment before starting, which can feel slow",
@@ -5307,7 +5345,8 @@
         "ICP (Ideal Customer Profile) development from research data rather than assumptions"
       ],
       "hermes_skills": [
-        "buyer-panel-simulation"
+        "buyer-panel-simulation",
+        "reviewer-panel"
       ],
       "default_temperature": 0.35,
       "model_behavior_hints": {
@@ -5323,7 +5362,12 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "reviewer_aliases": [
+        "enterprise-buyer",
+        "target-consumer",
+        "target audience member"
+      ]
     },
     {
       "role_id": "mlops-engineer",
@@ -6984,7 +7028,8 @@
         "Strong fit for Systematic literature review methodology: PRISMA-compliant search strategies, inclusion/exclusion criteria, quality assessment.",
         "Strong fit for Academic database navigation: PubMed, Google Scholar, Semantic Scholar, JSTOR, arXiv, SSRN, IEEE Xplore, domain-specific databases.",
         "Works best when the task can follow this flow: Define research question (PICO) → Design search strategy → Execute and screen → Assess study quality → Extract and synthesize → Map the landscape → Deliver with scholarly rigor.",
-        "For research manuscripts across disciplines, load research-paper-authoring for evidence and citation verification, then humanizer in Research and academic writing mode before final prose delivery."
+        "For research manuscripts across disciplines, load research-paper-authoring for evidence and citation verification, then humanizer in Research and academic writing mode before final prose delivery.",
+        "Apply the academic peer reviewer lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Systematic approach takes time — not suited for quick-turnaround requests",
@@ -7048,7 +7093,12 @@
       },
       "hermes_skills": [
         "research-paper-authoring",
-        "humanizer"
+        "humanizer",
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "peer-reviewer",
+        "academic peer reviewer"
       ]
     },
     {
@@ -8726,7 +8776,8 @@
         "Use when the work calls for this profile: Models the financial future so leadership can make better bets with clearer information.",
         "Strong fit for Financial modeling - three-statement models, DCF valuations, LBO analysis, and operating models in Excel/Sheets.",
         "Strong fit for Budgeting and forecasting - annual budgets, rolling forecasts, and variance analysis that explains deviations.",
-        "Works best when the task can follow this flow: Clarify the question → Structure the model → Populate with data → Build scenarios → Validate → Present findings → Monitor and update."
+        "Works best when the task can follow this flow: Clarify the question → Structure the model → Populate with data → Build scenarios → Validate → Present findings → Monitor and update.",
+        "Apply the quantitative analyst lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Models require clean data — garbage in, garbage out",
@@ -8784,7 +8835,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "quant-analyst",
+        "quantitative analyst"
+      ]
     },
     {
       "role_id": "nlp-engineer",
@@ -13411,7 +13469,8 @@
         "Use when the work calls for this profile: Full-cycle revenue — from cold outreach to closed-won to renewal.",
         "Strong fit for Prospecting sequences - cold email, LinkedIn outreach, and multi-touch cadences that get replies without being obnoxious.",
         "Strong fit for Discovery call frameworks that surface real pain, budget, and decision-making authority.",
-        "Works best when the task can follow this flow: Map current state → Identify the constraint → Research the buyer → Build the approach → Instrument for learning → Iterate fast."
+        "Works best when the task can follow this flow: Map current state → Identify the constraint → Research the buyer → Build the approach → Instrument for learning → Iterate fast.",
+        "Apply the revenue operations analyst lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Breadth over depth — a pricing specialist or enterprise AE goes deeper",
@@ -13469,7 +13528,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "revenue-ops-analyst",
+        "revenue operations analyst"
+      ]
     },
     {
       "role_id": "fundraising-strategist",
@@ -14490,7 +14556,8 @@
         "Use when the work calls for this profile: Detects emerging trends early by reading weak signals from niche communities, data, and cultural shifts.",
         "Strong fit for Weak signal detection: identifying early-stage trends from niche communities, academic research, and cultural shifts.",
         "Strong fit for Trend lifecycle mapping: determining where a trend sits on the adoption curve (emerging, growing, mainstream, declining).",
-        "Works best when the task can follow this flow: Scan the landscape → Identify weak signals → Assess the signal → Map structural support → Build scenarios with probabilities → Translate to implications → Track and revisit."
+        "Works best when the task can follow this flow: Scan the landscape → Identify weak signals → Assess the signal → Map structural support → Build scenarios with probabilities → Translate to implications → Track and revisit.",
+        "Apply the cultural critic lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Scenarios can feel ambiguous to people who want definitive answers",
@@ -14548,7 +14615,13 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "cultural-critic"
+      ]
     },
     {
       "role_id": "salesforce-admin",
@@ -19058,7 +19131,8 @@
         "Use when the work calls for this profile: Pressure-tests startup pitches through unit economics, business-model choice, moat logic, and uncomfortable diligence questions.",
         "Strong fit for Translating a pitch into plain business language: who pays, for what, through which mechanism.",
         "Strong fit for Finding the economic levers that actually determine whether the business works.",
-        "Works best when the task can follow this flow: Find the actual business -> Map the economics -> Interrogate the model choice -> Pressure-test the moat -> Look for what breaks at scale -> Name the soft spots -> Deliver the verdict cleanly."
+        "Works best when the task can follow this flow: Find the actual business -> Map the economics -> Interrogate the model choice -> Pressure-test the moat -> Look for what breaks at scale -> Name the soft spots -> Deliver the verdict cleanly.",
+        "Apply the venture investor lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Direct style can feel harsh if the founder wants encouragement before honesty",
@@ -19115,7 +19189,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "vc-stress-tester",
+        "venture investor"
+      ]
     },
     {
       "role_id": "backend-architect",
@@ -21139,7 +21220,8 @@
         "Use when the work calls for this profile: Architects complex deals through buying committee strategy, champion-building, and disciplined process.",
         "Strong fit for Complex deal strategy - mapping decision-making units, identifying champions, neutralizing blockers.",
         "Strong fit for Business case construction - quantifying ROI, building total cost of ownership models, and framing value in the buyer's language.",
-        "Works best when the task can follow this flow: Qualify → Map the buying committee → Deepen discovery → Build the champion → Create mutual action plan → Navigate objections → Close and transition."
+        "Works best when the task can follow this flow: Qualify → Map the buying committee → Deepen discovery → Build the champion → Create mutual action plan → Navigate objections → Close and transition.",
+        "Apply the sales leader or field account executive lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Overkill for simple transactional sales",
@@ -21196,7 +21278,15 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "sales-leader",
+        "field-rep",
+        "field account executive"
+      ]
     },
     {
       "role_id": "content-strategist",
@@ -21269,7 +21359,8 @@
         "Use when the work calls for this profile: Content pillars, editorial calendars, audience mapping, and strategic content planning.",
         "Strong fit for Content pillar definition - identifying the 3-5 core themes that align business goals with audience needs.",
         "Strong fit for Audience mapping and persona development - understanding who you're creating for and what they care about.",
-        "Works best when the task can follow this flow: Research audience → Audit existing content → Define pillars → Map the funnel → Build calendar → Create briefs → Measure and iterate."
+        "Works best when the task can follow this flow: Research audience → Audit existing content → Define pillars → Map the funnel → Build calendar → Create briefs → Measure and iterate.",
+        "Apply the commissioning editor lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Strategist, not a writer — doesn't create the content herself",
@@ -21336,7 +21427,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "acquisitions-editor",
+        "commissioning editor"
+      ]
     },
     {
       "role_id": "research-director",
@@ -23471,7 +23569,8 @@
         "Strong fit for Book recommendations tailored to interests, reading level, available time, and format preferences.",
         "Strong fit for Building themed reading lists - topic deep-dives, personal development sequences, genre explorations.",
         "Works best when the task can follow this flow: Understand the reader → Identify the need → Curate 3-5 books with context → Sequence when relevant → Provide summaries on request → Design reading schedules → Follow up and refine.",
-        "Mirror skill available: `reading-list-curation` — load via skill_view() from any persona when you need the procedure without spawning this subagent."
+        "Mirror skill available: `reading-list-curation` — load via skill_view() from any persona when you need the procedure without spawning this subagent.",
+        "Apply the bookshop browser lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Not a literary critic or book editor",
@@ -23530,7 +23629,13 @@
           "premium"
         ]
       },
-      "mirror_skill": "reading-list-curation"
+      "mirror_skill": "reading-list-curation",
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "bookshop-browser"
+      ]
     },
     {
       "role_id": "fitness-coach",
@@ -24914,7 +25019,8 @@
         "Use when the work calls for this profile: Turns publicly available competitor data into strategic intelligence that informs real business decisions.",
         "Strong fit for Competitive landscape mapping: identifying direct, indirect, and emerging competitors with positioning analysis.",
         "Strong fit for Win/loss analysis frameworks: structured approaches to understanding why deals are won or lost.",
-        "Works best when the task can follow this flow: Define intelligence need → Identify competitive set → Establish collection sources → Gather and timestamp → Analyze for patterns → Synthesize with strategic framing → Deliver in the right format."
+        "Works best when the task can follow this flow: Define intelligence need → Identify competitive set → Establish collection sources → Gather and timestamp → Analyze for patterns → Synthesize with strategic framing → Deliver in the right format.",
+        "Apply the incumbent competitor lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Requires regular time investment to maintain intelligence freshness",
@@ -24976,7 +25082,14 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "incumbent-adversary",
+        "incumbent competitor"
+      ]
     },
     {
       "role_id": "tutor",
@@ -29742,7 +29855,8 @@
         "Use when the work calls for this profile: Developmental, line, and copy editing that makes writing work — for the reader, every time.",
         "Strong fit for Developmental editing: structure, argument, narrative arc, and whether the piece achieves its goal.",
         "Strong fit for Line editing: sentence rhythm, word choice, transitions, and voice consistency.",
-        "Works best when the task can follow this flow: Understand context → First read (don't touch) → Structural pass → Voice and line pass → Copy edit pass → Deliver with tracked changes and comments."
+        "Works best when the task can follow this flow: Understand context → First read (don't touch) → Structural pass → Voice and line pass → Copy edit pass → Deliver with tracked changes and comments.",
+        "Apply the contrarian reader lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Doesn't write from scratch",
@@ -29815,7 +29929,13 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "contrarian-reader"
+      ]
     },
     {
       "role_id": "paid-ads-manager",
@@ -30516,7 +30636,8 @@
         "Use when the work calls for this profile: Inbox relationships built on consistency, voice, and subject lines that earn the open.",
         "Strong fit for Weekly/biweekly newsletter writing that maintains voice and quality at a relentless pace.",
         "Strong fit for Subject lines that earn opens without resorting to clickbait or ALL CAPS.",
-        "Works best when the task can follow this flow: Gather throughout the week → Open with a hook → Write body with curated links → Craft subject line last (3 options) → Add the P.S. → Review metrics after send."
+        "Works best when the task can follow this flow: Gather throughout the week → Open with a hook → Write body with curated links → Craft subject line last (3 options) → Add the P.S. → Review metrics after send.",
+        "Apply the impatient subscriber lens when requested through reviewer-panel."
       ],
       "avoid_for": [
         "Needs consistent content pipeline to work from",
@@ -30581,7 +30702,13 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel"
+      ],
+      "reviewer_aliases": [
+        "impatient-subscriber"
+      ]
     },
     {
       "role_id": "script-writer",
@@ -30788,7 +30915,9 @@
         "Use when the work calls for this profile: Synthesizes complex multi-source information into clear, actionable research briefs with transparent confidence levels.",
         "Strong fit for Multi-source synthesis: combining academic papers, industry reports, news, and primary data into coherent narratives.",
         "Strong fit for Research question formulation - turning vague \"look into this\" requests into specific, answerable queries.",
-        "Works best when the task can follow this flow: Clarify the question → Map the landscape → Prioritize sources → Extract and organize → Cross-reference → Synthesize into narrative → Deliver with metadata."
+        "Works best when the task can follow this flow: Clarify the question → Map the landscape → Prioritize sources → Extract and organize → Cross-reference → Synthesize into narrative → Deliver with metadata.",
+        "Apply the policy reviewer lens when requested through reviewer-panel.",
+        "Use wiki-research for source-grounded wiki questions, reading briefs and histories of attributed positions."
       ],
       "avoid_for": [
         "Can over-scope initial landscape mapping on tight deadlines",
@@ -30850,7 +30979,15 @@
           "local",
           "codex"
         ]
-      }
+      },
+      "hermes_skills": [
+        "reviewer-panel",
+        "wiki-research"
+      ],
+      "reviewer_aliases": [
+        "policy-intellectual",
+        "policy reviewer"
+      ]
     },
     {
       "role_id": "ui-designer",

@@ -69,7 +69,8 @@
     "Strong fit for Systematic literature review methodology: PRISMA-compliant search strategies, inclusion/exclusion criteria, quality assessment.",
     "Strong fit for Academic database navigation: PubMed, Google Scholar, Semantic Scholar, JSTOR, arXiv, SSRN, IEEE Xplore, domain-specific databases.",
     "Works best when the task can follow this flow: Define research question (PICO) → Design search strategy → Execute and screen → Assess study quality → Extract and synthesize → Map the landscape → Deliver with scholarly rigor.",
-    "For research manuscripts across disciplines, load research-paper-authoring for evidence and citation verification, then humanizer in Research and academic writing mode before final prose delivery."
+    "For research manuscripts across disciplines, load research-paper-authoring for evidence and citation verification, then humanizer in Research and academic writing mode before final prose delivery.",
+    "Apply the academic peer reviewer lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Systematic approach takes time — not suited for quick-turnaround requests",
@@ -133,6 +134,11 @@
   },
   "hermes_skills": [
     "research-paper-authoring",
-    "humanizer"
+    "humanizer",
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "peer-reviewer",
+    "academic peer reviewer"
   ]
 }

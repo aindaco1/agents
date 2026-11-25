@@ -67,7 +67,8 @@
     "Use when the work calls for this profile: Full-cycle revenue — from cold outreach to closed-won to renewal.",
     "Strong fit for Prospecting sequences - cold email, LinkedIn outreach, and multi-touch cadences that get replies without being obnoxious.",
     "Strong fit for Discovery call frameworks that surface real pain, budget, and decision-making authority.",
-    "Works best when the task can follow this flow: Map current state → Identify the constraint → Research the buyer → Build the approach → Instrument for learning → Iterate fast."
+    "Works best when the task can follow this flow: Map current state → Identify the constraint → Research the buyer → Build the approach → Instrument for learning → Iterate fast.",
+    "Apply the revenue operations analyst lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Breadth over depth — a pricing specialist or enterprise AE goes deeper",
@@ -125,5 +126,12 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "revenue-ops-analyst",
+    "revenue operations analyst"
+  ]
 }

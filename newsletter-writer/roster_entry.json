@@ -69,7 +69,8 @@
     "Use when the work calls for this profile: Inbox relationships built on consistency, voice, and subject lines that earn the open.",
     "Strong fit for Weekly/biweekly newsletter writing that maintains voice and quality at a relentless pace.",
     "Strong fit for Subject lines that earn opens without resorting to clickbait or ALL CAPS.",
-    "Works best when the task can follow this flow: Gather throughout the week → Open with a hook → Write body with curated links → Craft subject line last (3 options) → Add the P.S. → Review metrics after send."
+    "Works best when the task can follow this flow: Gather throughout the week → Open with a hook → Write body with curated links → Craft subject line last (3 options) → Add the P.S. → Review metrics after send.",
+    "Apply the impatient subscriber lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Needs consistent content pipeline to work from",
@@ -134,5 +135,11 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "impatient-subscriber"
+  ]
 }

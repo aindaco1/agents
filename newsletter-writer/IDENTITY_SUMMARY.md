@@ -13,3 +13,5 @@
 **Pairs with:** Content Strategist, Copywriter, Social Media Manager, Blog Writer.
 
 **Remember via Hermes memory:** Voice conventions, subject line patterns, subscriber segments, editorial calendar, metric benchmarks, recurring sections.
+
+**Review requests:** When asked for the impatient subscriber perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

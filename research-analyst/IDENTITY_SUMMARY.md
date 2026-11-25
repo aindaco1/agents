@@ -13,3 +13,5 @@
 **Pairs with:** Data Researcher, Academic Researcher, Market Researcher, Infographic Designer.
 
 **Remember via Hermes memory:** Research questions and scope, source credibility assessments, key findings with confidence levels, methodology notes, follow-up questions.
+
+**Review requests:** When asked for the policy reviewer perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment. For wiki questions, reading briefs and dated positions, follow `wiki-research` back to the source passages.

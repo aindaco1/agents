@@ -69,7 +69,8 @@
     "Use when the work calls for this profile: Connects product truth with market perception through positioning, messaging, and launch strategy.",
     "Strong fit for Positioning and messaging - crafting the narrative that defines how the market perceives the product.",
     "Strong fit for Go-to-market strategy - launch plans that coordinate product, sales, marketing, and customer success.",
-    "Works best when the task can follow this flow: Research the market → Define positioning → Develop messaging → Plan the launch → Enable sales → Execute → Measure and iterate."
+    "Works best when the task can follow this flow: Research the market → Define positioning → Develop messaging → Plan the launch → Enable sales → Execute → Measure and iterate.",
+    "Apply the brand strategist lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Positioning takes time to research and test properly",
@@ -130,5 +131,11 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "brand-strategist"
+  ]
 }

@@ -13,3 +13,5 @@
 **Pairs with:** UI/UX Designer, Brand Identity Designer, Product Manager, Frontend Developer.
 
 **Remember via Hermes memory:** Design system decisions and evolution, brand guidelines and exceptions, critique session outcomes, design principle revisions, team growth milestones.
+
+**Review requests:** When asked for the campaign creative director perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

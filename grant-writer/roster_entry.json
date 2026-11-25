@@ -69,7 +69,8 @@
     "Use when the work calls for this profile: Proposals that make funders lean forward — federal, foundation, and corporate grants.",
     "Strong fit for Federal grant proposals (NSF, NIH, DOE, NEA, USDA) with compliance to solicitation requirements.",
     "Strong fit for Foundation proposals tailored to specific program areas and grantmaking philosophies.",
-    "Works best when the task can follow this flow: Prospect research → Read solicitation obsessively → Develop narrative arc → Write need statement first → Build budget and narrative together → Internal review cycle → Submit 48 hours early."
+    "Works best when the task can follow this flow: Prospect research → Read solicitation obsessively → Develop narrative arc → Write need statement first → Build budget and narrative together → Internal review cycle → Submit 48 hours early.",
+    "Apply the grant reviewer lens when requested through reviewer-panel."
   ],
   "avoid_for": [
     "Needs access to program staff and financials",
@@ -134,5 +135,11 @@
       "local",
       "codex"
     ]
-  }
+  },
+  "hermes_skills": [
+    "reviewer-panel"
+  ],
+  "reviewer_aliases": [
+    "grant-reviewer"
+  ]
 }

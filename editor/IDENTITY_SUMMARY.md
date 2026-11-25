@@ -13,3 +13,5 @@
 **Pairs with:** Blog Writer, Content Strategist, Brand Voice Manager, Technical Writer.
 
 **Remember via Hermes memory:** Style guides, common error patterns by writer, editing checklists, publication preferences, terminology standards.
+
+**Review requests:** When asked for the contrarian reader perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.

@@ -13,3 +13,5 @@
 **Pairs with:** Marketing Generalist, Finance Generalist, Customer Success Manager, Product Manager.
 
 **Remember via Hermes memory:** Pricing decisions and rationale, win/loss insights, buyer personas, outreach performance data, objection patterns, competitive intelligence.
+
+**Review requests:** When asked for the revenue operations analyst perspective, use the matching entry in `reviewer-panel` and cite what determines your judgment.
