@@ -1,0 +1,4 @@
+interface:
+  display_name: "Buyer Panel Simulation"
+  short_description: "Find comparable buyers and test offers or sales messages"
+  default_prompt: "Use $buyer-panel-simulation to find public examples if I lack customer notes, compare my offers, and show which buyer objections I can test."

@@ -1,0 +1,17 @@
+{
+  "context": "A local independent cinema emails organizers who previously asked about weekday group screenings. Each gets the same available dates, film, price, and booking link.",
+  "question": "Within two business days of this email, would the organizer request a 48-hour hold on a screening date?",
+  "control": "deposit_on_hold",
+  "arms": {
+    "deposit_on_hold": "Weekday group screening: 20 seats for $240. Request a 48-hour date hold. A nonrefundable $100 deposit, credited against the total, is due when you request the hold. Reply with a date.",
+    "deposit_on_confirmation": "Weekday group screening: 20 seats for $240. Request a 48-hour date hold. A nonrefundable $100 deposit, credited against the total, is due when you confirm at the end of the hold. Reply with a date."
+  },
+  "cases": [
+    {"id":"school-1","segment":"schools","basis":"illustrative","source":"Invented example S1","evidence":"A teacher is selecting between two available afternoons for 20 students. The $240 is in the activities budget. The principal can sign off tomorrow. Before sign-off, the teacher can request a free reservation and cannot commit any funds."},
+    {"id":"school-2","segment":"schools","basis":"illustrative","source":"Invented example S2","evidence":"The school's film club has 20 confirmed attendees, an approved $250 budget and a purchasing card. The date they agreed on is available. Their usual practice is to reserve as soon as dates open."},
+    {"id":"school-3","segment":"schools","basis":"illustrative","source":"Invented example S3","evidence":"A coordinator asked for dates before the bus contract changed. Buses can now transport this class only on Saturdays. The school has no other way to transport students."},
+    {"id":"club-1","segment":"community clubs","basis":"illustrative","source":"Invented example C1","evidence":"The club pays all event costs from member contributions and has no cash on hand today. Members vote tomorrow between two available dates. The organizer usually places a free hold while collecting votes and deposits."},
+    {"id":"club-2","segment":"community clubs","basis":"illustrative","source":"Invented example C2","evidence":"A society has funding for $240 and 20 seats. It will choose the venue based on whether it permits a guest speaker after the film. The organizer has asked about this once and has yet to receive an answer."},
+    {"id":"club-3","segment":"community clubs","basis":"illustrative","source":"Invented example C3","evidence":"The coordinator has an approved card and a date agreed by all members, but a strict $180 total budget for the event. Member rules prohibit charging a top-up."}
+  ]
+}

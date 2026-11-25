@@ -1,0 +1,27 @@
+{
+  "context": "Hypothetical sales study. A local cinema is considering two emails for school organizers who have inquired about a weekday group screening. Each email offers the same available dates and price. The public sources describe comparable buying situations. The outreach and offers are invented.",
+  "question": "Would the organizer request a date hold by email within two business days?",
+  "control": "pay_at_request",
+  "arms": {
+    "pay_at_request": "A weekday group screening costs $240 for 20 seats. Reply with a date to hold it for 48 hours. The $100 nonrefundable deposit is due at the time of your request and is credited to the $240 total.",
+    "pay_at_confirmation": "A weekday group screening costs $240 for 20 seats. Reply with a date to hold it for 48 hours. The $100 nonrefundable deposit is due when you confirm at the end of the hold and is credited to the $240 total."
+  },
+  "cases": [
+    {
+      "id": "pta-sponsor",
+      "segment": "PTA-sponsored outing",
+      "basis": "public-analogue",
+      "source": "P.S. 748 PTA minutes, May 1, 2025, p. 1, June Field Trip. Brooklyn, NY. Records a planned sponsorship; payment terms and booking outcome are unknown.",
+      "source_url": "https://www.ps748scholars.com/_files/ugd/90565b_5c20a1f3927a4296a9cbcd2a52aae552.pdf",
+      "evidence": "A parent association plans to sponsor a movie-theater outing for grades 3–5. At the meeting the date has yet to be determined. The available information does not establish a spending limit, authority to pay a deposit, or the date the organizers must decide."
+    },
+    {
+      "id": "district-trip-sponsor",
+      "segment": "District trip approval",
+      "basis": "public-analogue",
+      "source": "Issaquah School District, Field Trips FAQ, expenses and sources of funds, accessed 2026-11-25. Washington state. Describes an institutional rule; the organizer and proposed screening are hypothetical.",
+      "source_url": "https://www.isd411.org/programs-services/athletics-and-activities/field-trips",
+      "evidence": "Consider a trip sponsor working under a process that requires an expense and funding plan to submit a field-trip request. The totals must match. Whether this organizer has secured funds or may place a free hold before approval is unknown."
+    }
+  ]
+}

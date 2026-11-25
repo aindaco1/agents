@@ -153,6 +153,10 @@ in Hermes, or launch `agent-run vector-reconstruction-designer`. Author the
 shared package under `skills/creative/rough-sketch-vectorization/` and publish it
 with the portable skill preview/apply commands above.
 
+### Buyer panel simulation
+
+Use `$buyer-panel-simulation` in Codex or `/buyer-panel-simulation` in Hermes to compare offers, pricing or sales outreach for the same buyer cases. The Market Researcher uses the [procedure](skills/research/buyer-panel-simulation/SKILL.md) to surface objections and design a human check. The [group-screening study](skills/research/buyer-panel-simulation/examples/group-screening.json) runs with an optional local MLX chat model. The [research and roadmap](skills/research/buyer-panel-simulation/references/research-and-roadmap.md) compares Simile's papers with open-source alternatives.
+
 ### Research paper authoring
 
 `research-paper-authoring` is the shared manuscript procedure for Academic Writer
